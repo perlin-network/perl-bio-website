@@ -7,10 +7,10 @@ function Splash() {
     const svgString = encodeURIComponent(renderToStaticMarkup(<BackgroundSVG />));
     return (        
  
-
+            
             <div
             style={{
-                backgroundImage: `url("data:image/svg+xml,${svgString}")`, backgroundSize: "cover", minHeight:'100%', paddingBottom:'200px'
+                backgroundColor:'#333336',mixBlendMode:'pass-through',  backgroundImage: `url("data:image/svg+xml,${svgString}")`, backgroundSize: "cover", minHeight:'100%', paddingBottom:'200px'
             }}
             > 
             <div className='content-container' style={{marginLeft:'5%', marginRight:'5%', display:'flex', flexDirection:'column'}}>
@@ -28,9 +28,7 @@ function Splash() {
                 </div>
                 </div>
             </div>
-            </div>
-
-            
+            </div>           
             
         
     )
