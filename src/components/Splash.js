@@ -1,3 +1,4 @@
+import { Button } from '@material-ui/core';
 import React from 'react'
 import { renderToStaticMarkup } from "react-dom/server";
 import {ReactComponent as BackgroundSVG} from '../assets/Splash/background.svg'
@@ -15,8 +16,10 @@ function Splash() {
             > 
             <div className='content-container' style={{marginLeft:'5%', marginRight:'5%', display:'flex', flexDirection:'column'}}>
             <a href='/' rel='noopener'>
-            <div className='logo' style={{display:'flex', justifyContent:'flex-start', marginTop:'5%'}}>
-                <img src={LogoSvg} style={{maxHeight:"83.22px", justifyContent:"flex-start"}} alt=''/>                
+            <div className='logo' style={{display:'flex', justifyContent:'flex-start', marginTop:'5%', maxHeight:"83.22px", maxWidth:"376px"}}>
+                <Button style={{width:'100%', justifyContent:"flex-start", borderRadius:"16px"}}>
+                <img src={LogoSvg} style={{minHeight:"83.22px",}} alt=''/>               
+                </Button>
             </div>
                 </a>
             <div className='text-container' style={{display:'flex', flexDirection:'column', justifyContent:'flex-start', marginTop:'120px'}}>
