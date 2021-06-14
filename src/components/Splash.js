@@ -1,13 +1,9 @@
 import { Button } from '@material-ui/core';
 import React from 'react'
-import { renderToStaticMarkup } from "react-dom/server";
-import {ReactComponent as BackgroundSVG} from '../assets/Splash/background.svg'
 import LogoSvg from '../assets/Splash/logo.svg'
 import TreeSvg from '../assets/Splash/tree.svg'
 
 function Splash() {
-    const svgString = encodeURIComponent(renderToStaticMarkup(<BackgroundSVG />));
-    //backgroundImage: `url("data:image/svg+xml,${svgString}")`
     return (        
  
             
