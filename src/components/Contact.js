@@ -4,7 +4,7 @@ import {titleTextstyle, contentTextStyle} from '../styles/common.js'
 function Contact() {
     return (
         <div className='contact-container' style={{background:"#333336", paddingTop:'120px'}}>
-            <div className='contact-content' style={{margin:'5%'}}>
+            <div className='contact-content' style={{margin:'0% 5%'}}>
                 <div className='contact-title' style={{...titleTextstyle, fontSize:'36px'}}>
                     Contact
                 </div>
@@ -31,7 +31,7 @@ function Contact() {
                             </p>
                             <p>
                                 <label for='message'>
-                                    <textarea name="message" placeholder='Message' style={{...formInputStyle}}/>                                
+                                    <textarea name="message" placeholder='Message' style={{...contentTextStyle, ...formInputStyle}}/>                                
                                 </label>
                             </p>                            
                             <p>
@@ -49,6 +49,7 @@ export default Contact;
 
 let formInputStyle={
     background:'inherit', 
+    fontSize:'18px',
     color:'white', 
     minWidth:'350px',
     minHeight:'40px', 
