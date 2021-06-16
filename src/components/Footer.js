@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
-import {titleTextstyle, contentTextStyle} from '../styles/common.js'
+import {contentTextStyle} from '../styles/common.js'
 
 function Footer() {
     return (
