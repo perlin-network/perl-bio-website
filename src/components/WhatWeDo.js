@@ -34,16 +34,20 @@ function WhatWeDo() {
                 <Grid container direction='row' justify='space-between'>
                     {gridItems.map(i=>{
                         return(
-                            <Grid item style={{maxWidth:"720px", background:'linear-gradient(180deg, #3C423C 0%, #333336 266.93%)'}}>
+                            <Grid item style={{maxWidth:"720px", borderRadius:'16px',  background:'linear-gradient(180deg, #3C423C 0%, #333336 266.93%)'}}>
                                 <div className='grid-item-container' style={{margin:"5%"}}>
                                 <div className='grid-item-icon'>
                                     <img src={i.icon} alt=''/>                                    
                                 </div>
-                                <div className='grid-item-title' style={{...titleTextstyle, fontSize:"36px"}}>
+                                <div className='grid-item-title' style={{...titleTextstyle, minHeight:'95px', fontSize:"36px"}}>
                                     {i.title}
                                 </div>
                                 <div className='grid-item-content' style={{...contentTextStyle, marginTop:"70px", fontSize:"18px"}}>
-                                    {i.content}
+                                {i.content.split('\n').map(str=>{
+                                            return(
+                                                <p>{str}</p>
+                                            )
+                                        })}
                                 </div>
                                 </div>
                             </Grid>

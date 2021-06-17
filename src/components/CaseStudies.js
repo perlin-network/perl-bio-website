@@ -37,7 +37,7 @@ The NPR+ project area contains a total of 22 protected species considered by the
                     <Grid container justify='space-between'>
                         {gridItems.map(i=>{
                             return(
-                                <Grid item style={{background:'linear-gradient(180deg, #3C423C 0%, #333336 154.11%)', borderRadius:'12px', maxWidth:'720px'}}>
+                                <Grid item style={{background:'linear-gradient(180deg, #3C423C 0%, #333336 154.11%)', borderRadius:'16px', maxWidth:'720px'}}>
                                     <div className='grid-content-container' style={{margin:'5%'}}>
                                         <div className='grid-item-icon'>
                                             <img src={i.icon} alt=''/>
@@ -45,8 +45,12 @@ The NPR+ project area contains a total of 22 protected species considered by the
                                         <div className='grid-item-title' style={{...titleTextstyle, fontSize:'36px', minHeight:'100px', marginTop:'60px'}}>
                                             {i.title}
                                         </div>
-                                        <div className='grid-item-content' style={{...contentTextStyle, fonteSize:"18px", marginTop:'40px'}}>
-                                            {i.content}
+                                        <div className='grid-item-content' style={{...contentTextStyle, fontSize:"18px", marginTop:'40px'}}>
+                                            {i.content.split('\n').map(str=>{
+                                            return(
+                                                <p>{str}</p>
+                                            )
+                                        })}
                                         </div>
                                     </div>
                                 </Grid>

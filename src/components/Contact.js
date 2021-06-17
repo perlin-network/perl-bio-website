@@ -9,7 +9,7 @@ function Contact() {
                 <div className='contact-title' style={{...titleTextstyle, fontSize:'36px'}}>
                     Contact
                 </div>
-                <div className='contact-form-container' style={{...contentTextStyle, background:'linear-gradient(180deg, #3C423C 0%, #333336 154.11%)',maxWidth:'970px', fontSize:'18px', marginTop:'70px', borderRadius:'12px'}}>
+                <div className='contact-form-container' style={{...contentTextStyle, background:'linear-gradient(180deg, #3C423C 0%, #333336 154.11%)',maxWidth:'970px', fontSize:'18px', marginTop:'70px', borderRadius:'16px'}}>
                     <div className='contact-form-wrapper' style={{padding:'5%'}}>
                     <div className='contact-form-title' style={{maxWidth:'640px'}}>
                         We are here to help and answer any questions you might have. We look forward to hearing from you
@@ -63,8 +63,8 @@ let submitButtonStyle={
     ...titleTextstyle, 
     marginTop:"20px",
     minHeight:'70px',
-    minWidth:'350px',
-    fontSize:'36px', 
+    minWidth:'200px',
+    fontSize:'24px', 
     background:'#91D873',
     borderRadius:'16px',
     color:'black',
