@@ -8,7 +8,7 @@ function About() {
             title:"Dorjee Sun",
             // content:"test content",
             content:`Dorjee is the founder and CEO of Bioeconomy. He is also co-founder of PERL.eco and is an advisor to blockchain projects.
-
+            
             Previously as founder of Carbon Conservation, Dorjee secured $400M+ with project partners and clients such as Rio Tinto, Bank of America Merrill Lynch, Olam and Twitter. One such project in Aceh, Indonesia, won the Carbon Finance Deal of the Year award and was also the subject of an award-winning documentary, “The Burning Season”, narrated by Hugh Jackman.  
             
             TIME Magazine named him a “Hero of the Environment” and the African Rainforest Conservancy honoured Dorjee with an Earth Day Award and by naming a newly discovered blue spotted species of chameleon from the Tanzania rainforest, the “kinyongia dorjeesuni”. 
@@ -18,9 +18,9 @@ function About() {
             email:"test@example.com"
         },
         {
-            "title":"Ralph Strebel",
-            "content":`Ralph has worked in the climate change sector since 2007, almost exclusively with forest carbon projects. In 2007 he began to advise Carbon Conservation Pte Ltd and became a full-time employee in 2008, going on to lead the Forest Carbon team from 2009-2014. 
-
+            title:"Ralph Strebel",
+            content:`Ralph has worked in the climate change sector since 2007, almost exclusively with forest carbon projects. In 2007 he began to advise Carbon Conservation Pte Ltd and became a full-time employee in 2008, going on to lead the Forest Carbon team from 2009-2014. 
+            \n
             During that time frame as VP of Forest Carbon, he led the company’s forest carbon projects. Ralph has substantial experience in all aspects of forest carbon projects, from assessments to project development, from origination on through ongoing monitoring, reporting and verification (MRV). He successfully developed the world’s first REDD+ Improved Forest Management project in Africa, worked assessing and developing numerous large-scale REDD+ projects in Indonesia and was the lead author of the Republic of Congo’s successful application to join the World Bank’s Forest Carbon Partnership Facility, including establishing the National Reference Emission Levels for the country.
             
             Ralph is a long-term board member of the Greenhouse Gas Management Institute (GHGMI) and is currently chair-person of the Board. GHGMI’s work involves educating on the basics of GHG accounting, auditing and management, training professionals to meet the highest standards of expertise and ethical conduct, and conducting forward-looking research into critical GHG measurement, reporting, and verification (MRV) issues. Ralph is also an experienced trial lawyer, having over a decade of courtroom experience in trial courts in Arizona and Colorado and has been lead counsel on a number of published appellate court opinions from the Colorado Court of Appeals and Colorado Supreme Court.
@@ -28,11 +28,11 @@ function About() {
             Ralph holds degrees from the University of Colorado – Boulder (International Affairs / Political Science) and Lancaster University (Hons. Law). He is a licensed attorney in the States of Colorado and Arizona as well as being a qualified solicitor in England and Wales.
             
             `,
-            "email":"test@example.com"
+            email:"test@example.com"
         },
         {
-            "title":"Mark Harding",
-            "content":`Mark has led teams developing carbon projects across Asia with a specific focus and expertise in palm oil plantations and deep history on a range of Clean Development Mechanism (CDM) project types including demand side efficiency, renewable energy, industrial fuel switching, coal mine methane, biomass and waste water. Mark has experience across all aspects of the CDM project cycle and has particular expertise in identifying and developing CDM opportunities and setting CDM approval strategy.
+            title:"Mark Harding",
+            content:`Mark has led teams developing carbon projects across Asia with a specific focus and expertise in palm oil plantations and deep history on a range of Clean Development Mechanism (CDM) project types including demand side efficiency, renewable energy, industrial fuel switching, coal mine methane, biomass and waste water. Mark has experience across all aspects of the CDM project cycle and has particular expertise in identifying and developing CDM opportunities and setting CDM approval strategy.
 
             Mark has over a decade of experience in Asia and is fluent in spoken Mandarin. Mark has worked in Shanghai as a Climate Change and Energy and Resources lawyer for a large multinational law firm where he was responsible for developing their Greater China climate change practice. As well as carbon, Mark advised clients in relation to the establishment and investment into clean energy funds in China and in relation to the acquisition of clean energy and technology companies. Mark also previously worked as a business consultant in Hong Kong focusing on strategic market management and advising client’s with specific issues in relation to the implementation of their business strategy in Asia.
             
@@ -40,7 +40,7 @@ function About() {
             
             Mark is a Barrister and Solicitor of the High Courts of New South Wales, Australia and Auckland, New Zealand and holds a law degree with honors (LLB Hons) and a Bachelor of Science from the University of Auckland.
             `,
-            "email":"test@example.com"
+            email:"test@example.com"
         }
     ]
     
@@ -53,19 +53,26 @@ function About() {
                 <Grid container direction="row" justify="space-evenly" alignItems="stretch" spacing={10}>
                 {aboutInfo.map(i=>{
                     return(
-                        <Grid item direction='column' justify='space-between' key={i.title}  style={{maxWidth:"400px", borderRadius:"16px", background:" linear-gradient(180deg, #3C423C 0%, rgba(51, 51, 54, 0) 100%)", textAlign:"center"}}>
-                            <div className='content-container' style={{display:'flex', flexDirection:'column'}}>
-                                <div className='grid-title-text' style={{...contentTextStyle, justifyContent:"flex-start", color:"#A5AFA8"}}>
-                                    {i.title}
-                                </div>
-                                <div className='grid-content-text' style={{...contentTextStyle, marginTop:"50px", fontSize:"18px", }}>
-                                    <article>{i.content}</article>
-                                </div>                       
-                                </div>
-                                <hr style={{marginTop:"32px", justifyContent:"flex-end", maxWidth:"96px"}}/>
+                        <Grid container direction='column' justify='space-between' key={i.title}  style={{maxWidth:"400px", borderRadius:"16px", background:" linear-gradient(180deg, #3C423C 0%, rgba(51, 51, 54, 0) 100%)", textAlign:"center"}}>
+                            <Grid item justify='flex-start'>
+                                    <div className='grid-title-text' style={{...contentTextStyle, marginTop:"50px",marginBottom:"50px", justifyContent:"flex-start", color:"#A5AFA8"}}>
+                                        {i.title}
+                                    </div>
+                                    <div className='grid-content-text' text={i.content} style={{...contentTextStyle, marginLeft:"5%", marginRight:"5%", marginTop:"50px", fontSize:"18px", }}>
+                                        {i.content.split('\n').map(str=>{
+                                            return(
+                                                <p>{str}</p>
+                                            )
+                                        })}
+                                    </div>
+                            </Grid>
+                            <Grid item justify='flex-end'>
                                 <div className='grid-email-text' style={{...contentTextStyle, justifyContent:"flex-end", fontSize:"18px", color:"#91D873" }}>
-                                    {i.email}
+                                    <hr style={{marginTop:"32px", justifyContent:"flex-end", maxWidth:"96px"}}/>
+                                    {/* {i.email} */}
                                 </div>
+                            </Grid> 
+                            
                         </Grid>
                     )
                 })}

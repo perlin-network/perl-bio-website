@@ -11,4 +11,9 @@ let contentTextStyle={
     color:"white",
     fontSize:"24px"
 }
-export {titleTextstyle, contentTextStyle};
+let verticalDividedrStyle={
+    borderLeft:"1px solid #D2D7D4", 
+    marginRight:"26px", 
+    opacity:0.4
+}
+export {titleTextstyle, contentTextStyle, verticalDividedrStyle};

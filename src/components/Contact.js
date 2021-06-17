@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from '@material-ui/core';
 import {titleTextstyle, contentTextStyle} from '../styles/common.js'
 
 function Contact() {
@@ -35,7 +36,7 @@ function Contact() {
                                 </label>
                             </p>                            
                             <p>
-                                <button type="submit" style={{...submitButtonStyle}}>{`Send >`}</button>
+                                <Button type="submit" style={{...submitButtonStyle}}>{`Send >`}</Button>
                             </p>
                         </form>
                         </div>
@@ -60,11 +61,13 @@ let formInputStyle={
 }
 let submitButtonStyle={
     ...titleTextstyle, 
+    marginTop:"20px",
     minHeight:'70px',
     minWidth:'350px',
     fontSize:'36px', 
     background:'#91D873',
     borderRadius:'16px',
-    color:'black'
+    color:'black',
+    cursor:'pointer'
 
 }
