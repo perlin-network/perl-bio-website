@@ -2,6 +2,7 @@ import { Button } from '@material-ui/core';
 import React from 'react'
 import LogoSvg from '../assets/Splash/logo.svg'
 import TreeSvg from '../assets/Splash/tree.svg'
+import {titleTextstyle, contentTextStyle} from '../styles/common.js'
 
 function Splash() {
     return (        
@@ -37,16 +38,3 @@ function Splash() {
     )
 }
 export default Splash;
-let titleTextstyle={
-    fontFamily:"Bai Jamjuree, sans serif",
-    fontStyle: "normal",
-    fontWeight: "bold", 
-    fontSize:"72px",
-    color:"#91D873"
-}
-let contentTextStyle={
-    ...titleTextstyle,
-    fontWeight:"500",
-    color:"white",
-    fontSize:"24px"
-}
