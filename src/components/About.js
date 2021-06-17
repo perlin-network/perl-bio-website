@@ -50,7 +50,7 @@ function About() {
                 Who we are
             </div>
             <div className="about-grid" style={{marginTop:"64px"}}>
-                <Grid container direction="row" justify="space-evenly" alignItems="stretch" spacing={10}>
+                <Grid container direction="row" justify="space-evenly" alignItems="stretch">
                 {aboutInfo.map(i=>{
                     return(
                         <Grid container direction='column' justify='space-between' key={i.title}  style={{maxWidth:"400px", borderRadius:"16px", background:" linear-gradient(180deg, #3C423C 0%, rgba(51, 51, 54, 0) 100%)", textAlign:"center"}}>
