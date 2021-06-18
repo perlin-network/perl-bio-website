@@ -14,12 +14,12 @@ function Splash() {
             }}
             > 
             <div className='navbar-container' style={{marginLeft:'5%', marginRight:'5%', display:'flex', flexDirection:'column'}}>
-                <a href='/' rel='noopener'>
                     <Button style={{ width:"100%",justifyContent:"flex-start", borderRadius:"16px",  maxWidth:"376px",marginTop:'5%', maxHeight:"83.22px",}}>
-                        <img src={LogoSvg} style={{minHeight:"83.22px",}} alt=''/>
-                        
+                        <a href='/' rel='noopener noreferrer' >
+                            <img src={LogoSvg} style={{minHeight:"83.22px",}} alt=''/>
+                            
+                        </a>
                     </Button>
-                </a>
             </div>
             <div className='hero-body' style={{display:'flex', marginLeft:'5%', marginRight:'5%', marginTop:'120px', flexDirection:window.innerWidth < 768 ?'column':'row'}}>
                 <div className='text-container' style={{display: 'flex', flexDirection:'column', justifyContent:'flex-start', maxWidth:window.innerWidth < 768 ?'100%':'50%'}}>
