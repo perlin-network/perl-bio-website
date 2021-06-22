@@ -1,3 +1,4 @@
+/* eslint no-use-before-define: 0 */  // 
 import Splash from './components/Splash';
 import About from './components/About';
 import WhatWeDo from './components/WhatWeDo';
@@ -9,10 +10,10 @@ function App() {
   return (
     <div className="App" style={AppStyle}>
       <Splash/>
-      <About/>
+      {/* <About/>
       <WhatWeDo/>
       <CaseStudies/>
-      <Contact/>
+      <Contact/> */}
       <Footer/>
     </div>
   );
