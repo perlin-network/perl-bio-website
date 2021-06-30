@@ -1,7 +1,9 @@
 import { Grid } from '@material-ui/core'
 import React from 'react'
 import {titleTextstyle, contentTextStyle} from '../styles/common.js'
-
+import UnknownPng from '../assets/About/unknown.png'
+import DorjeePng from '../assets/About/dorjee.png'
+import RalphPng from '../assets/About/ralph.png'
 function About() {
     let aboutInfo=[
         {
@@ -13,9 +15,12 @@ function About() {
             
             TIME Magazine named him a “Hero of the Environment” and the African Rainforest Conservancy honoured Dorjee with an Earth Day Award and by naming a newly discovered blue spotted species of chameleon from the Tanzania rainforest, the “kinyongia dorjeesuni”. 
             
-            Dorjee is on the Advisory panel of Al Gore’s Climate Reality, was the founding Secretariat of the Fire Free Alliance comprised of top oil palm companies such as Asia Pacific Resources International Holding Ltd. (APRIL), Asian Agri, Musim Mas, Wilmar, Sime Darby, IOI Corporation and NGOs PM.Haze, Rumah Pohon, IDH (The Sustainable Trade Initiative). He is also Special Advisor to the International Chamber of Commerce (ICC) and convenes the ICC Carbon Council comprising of 100+ of the top companies in the world. Dorjee has organized various high level conferences such as in the Green Governor’s Gala during the United Nations Framework Convention on Climate Change (UNFCCC) 13th Conference of Parties which resulted in a historic joint declaration supporting the exploration of Avoided Deforestation signed on by the Governors of Aceh, Papua, West Papua in Indonesia and Amazonas, Brazil. A Green Governors’ Roundtable together with the Asian Development Bank during the Asia-Pacific Economic Cooperation (APEC) Conference in Singapore bringing together governors and leaders from Indonesia, Malaysia, Laos and various NGOs to discuss Reducing Emissions from Deforestation in Developing Countries (REDD) and climate change. 
+            Dorjee is on the Advisory panel of Al Gore’s Climate Reality, was the founding Secretariat of the Fire Free Alliance comprised of top oil palm companies such as Asia Pacific Resources International Holding Ltd. (APRIL), Asian Agri, Musim Mas, Wilmar, Sime Darby, IOI Corporation and NGOs PM.Haze, Rumah Pohon, IDH (The Sustainable Trade Initiative). He is also Special Advisor to the International Chamber of Commerce (ICC) and convenes the ICC Carbon Council comprising of 100+ of the top companies in the world.
+            
+            Dorjee has organized various high level conferences such as in the Green Governor’s Gala during the United Nations Framework Convention on Climate Change (UNFCCC) 13th Conference of Parties which resulted in a historic joint declaration supporting the exploration of Avoided Deforestation signed on by the Governors of Aceh, Papua, West Papua in Indonesia and Amazonas, Brazil. A Green Governors’ Roundtable together with the Asian Development Bank during the Asia-Pacific Economic Cooperation (APEC) Conference in Singapore bringing together governors and leaders from Indonesia, Malaysia, Laos and various NGOs to discuss Reducing Emissions from Deforestation in Developing Countries (REDD) and climate change. 
             `,
-            email:"test@example.com"
+            email:"test@example.com",
+            portrait:DorjeePng
         },
         {
             title:"Ralph Strebel",
@@ -28,7 +33,8 @@ function About() {
             Ralph holds degrees from the University of Colorado – Boulder (International Affairs / Political Science) and Lancaster University (Hons. Law). He is a licensed attorney in the States of Colorado and Arizona as well as being a qualified solicitor in England and Wales.
             
             `,
-            email:"test@example.com"
+            email:"test@example.com",
+            portrait:RalphPng
         },
         {
             title:"Mark Harding",
@@ -40,7 +46,8 @@ function About() {
             
             Mark is a Barrister and Solicitor of the High Courts of New South Wales, Australia and Auckland, New Zealand and holds a law degree with honors (LLB Hons) and a Bachelor of Science from the University of Auckland.
             `,
-            email:"test@example.com"
+            email:"test@example.com",
+            portrait:UnknownPng
         }
     ]
     
@@ -49,35 +56,41 @@ function About() {
             <div className='about-header' style={{...titleTextstyle, fontSize:"48px" }}>
                 Who we are
             </div>
-            <div className="about-grid" style={{marginTop:"64px"}}>
-                <Grid container direction="row" justify="space-between" alignItems="stretch">
+            <div className='about-text' style={{...contentTextStyle, fontSize:"32px", marginTop:'25px'}}>
+                Bioeceonomy has expertise in advising and leading businesses on their ecological projects. With significant experience in the climate change sector, Bioeconomy is focusing on helping businesses reach their sustainability goals.
+            </div>
+            <Grid className="about-grid" style={{marginTop:"64px"}}>
+                
                 {aboutInfo.map(i=>{
                     return(
-                        <Grid container direction='column' justify='space-between' key={i.title}  style={{maxWidth:"400px", borderRadius:"16px", background:" linear-gradient(180deg, #3C423C 0%, rgba(51, 51, 54, 0) 100%)", textAlign:"center"}}>
-                            <Grid item justify='flex-start'>
-                                    <div className='grid-title-text' style={{...contentTextStyle, marginTop:"50px",marginBottom:"50px", justifyContent:"flex-start", color:"#A5AFA8"}}>
-                                        {i.title}
-                                    </div>
-                                    <div className='grid-content-text' text={i.content} style={{...contentTextStyle, marginLeft:"5%", marginRight:"5%", marginTop:"50px", fontSize:"18px", }}>
-                                        {i.content.split('\n').map(str=>{
-                                            return(
-                                                <p>{str}</p>
-                                            )
-                                        })}
-                                    </div>
+                            <Grid item style={{background:" linear-gradient(180deg, #3C423C 0%, rgba(51, 51, 54, 0) 100%)",  borderRadius:"16px",}}>
+                                <Grid container direction='row' justify='space-between' key={i.title}  style={{maxWidth:"100%", marginBottom:"50px", padding:'5% 2%'}}>
+                                    <Grid item style={{margin:'50px 5%'}}>
+                                        <img src={i.portrait} alt={UnknownPng}/>
+                                    </Grid>
+                                    <Grid item style={{maxWidth:'75%',}}>
+                                        <p className='grid-title-text' style={{...contentTextStyle, margin:'50px 5%', justifyContent:"flex-start", color:"#A5AFA8"}}>
+                                            {i.title}
+                                        </p>
+                                        <div className='grid-content-text' text={i.content} style={{...contentTextStyle, marginLeft:"5%", marginRight:"5%", marginTop:"50px", fontSize:"18px", }}>
+                                            {i.content.split('\n').map(str=>{
+                                                return(
+                                                    <p>{str}</p>
+                                                )
+                                            })}
+                                        </div>
+                                    </Grid>
+                                    {/* <Grid item justify='flex-end'>
+                                        <div className='grid-email-text' style={{...contentTextStyle, justifyContent:"flex-end", fontSize:"18px", color:"#91D873" }}>
+                                            <hr style={{marginTop:"32px", justifyContent:"flex-end", maxWidth:"96px"}}/>
+                                            {i.email}
+                                        </div>
+                                    </Grid>  */}
+                                </Grid>
                             </Grid>
-                            <Grid item justify='flex-end'>
-                                <div className='grid-email-text' style={{...contentTextStyle, justifyContent:"flex-end", fontSize:"18px", color:"#91D873" }}>
-                                    <hr style={{marginTop:"32px", justifyContent:"flex-end", maxWidth:"96px"}}/>
-                                    {/* {i.email} */}
-                                </div>
-                            </Grid> 
-                            
-                        </Grid>
                     )
                 })}
-                </Grid>
-            </div>
+            </Grid>
 
 
             

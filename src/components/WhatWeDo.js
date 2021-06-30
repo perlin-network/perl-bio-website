@@ -3,6 +3,7 @@ import {Grid} from '@material-ui/core'
 import {titleTextstyle, contentTextStyle} from '../styles/common.js'
 import IconLeft from '../assets/WWD/IconLeft.png'
 import IconRight from '../assets/WWD/IconRight.png'
+import CaseStudies from './CaseStudies.js'
 function WhatWeDo() {
     let gridItems=[
         {
@@ -34,7 +35,7 @@ function WhatWeDo() {
                 <Grid container direction='row' justify='space-between'>
                     {gridItems.map(i=>{
                         return(
-                            <Grid item style={{maxWidth:"720px", borderRadius:'16px',  background:'linear-gradient(180deg, #3C423C 0%, #333336 266.93%)'}}>
+                            <Grid item style={{maxWidth:"620px", borderRadius:'16px',  background:'linear-gradient(180deg, #3C423C 0%, #333336 266.93%)', marginBottom:'72px'}}>
                                 <div className='grid-item-container' style={{margin:"5%"}}>
                                 <div className='grid-item-icon'>
                                     <img src={i.icon} alt=''/>                                    
@@ -57,6 +58,7 @@ function WhatWeDo() {
                 </Grid>
             </div>
             </div>
+            <CaseStudies/>
         </div>
     )
 }
