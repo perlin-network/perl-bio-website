@@ -1,7 +1,6 @@
 import React from 'react'
 import { Grid, Link, Button } from '@material-ui/core';
 import TreeSvg from '../assets/Splash/tree.png'
-import Background from '../assets/Splash/background.png'
 import {titleTextstyle, contentTextStyle, buttonStyle} from '../styles/common.js'
 import PartnerPerlEco from './PartnerPerlEco'
 function Splash() {
@@ -26,8 +25,8 @@ function Splash() {
                             </div>
                         </Grid>
                         <Grid item style={{marginTop:'50px'}}>
-                            <Link href='/who'>
-                                <Button style={{...buttonStyle, ...contentTextStyle, background:"#91D873", color:'black', fontWeight:'bold'}}>
+                            <Link href='/who' style={{textDecoration:'none', zIndex:'0'}}>
+                                <Button style={{...buttonStyle, ...contentTextStyle, background:"#91D873", color:'black', fontWeight:'bold', marginBottom:'72px'}}>
                                     {`Learn More`}
                                 </Button>
                             </Link>

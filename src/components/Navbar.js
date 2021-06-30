@@ -27,7 +27,7 @@ export default function Navbar() {
     ]
     return (
         <Slide appear={trigger} direction="down" in={!trigger}>
-        <div className='navbar-container' style={{backgroundColor:'#333336',mixBlendMode:'pass-through', position:'sticky', top:0}}>
+        <div className='navbar-container' style={{backgroundColor:'#333336',mixBlendMode:'pass-through', position:'sticky', top:0, zIndex:1}}>
             <Grid container direction='row' justify='space-between'>
                 <Grid item justify='flex-start' style={{marginLeft:'4%'}}>
                     <Button style={{ width:"100%",justifyContent:"flex-start", borderRadius:"16px",  maxWidth:"376px",marginTop:'5%', maxHeight:"83.22px",}}>
