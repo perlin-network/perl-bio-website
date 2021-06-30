@@ -1,5 +1,3 @@
-import { BorderRight } from "@material-ui/icons";
-
 let titleTextstyle={
     fontFamily:"Bai Jamjuree, sans serif",
     fontStyle: "normal",
