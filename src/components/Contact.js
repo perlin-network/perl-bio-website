@@ -14,7 +14,8 @@ function Contact() {
                     <div className='contact-form-title' style={{maxWidth:'640px'}}>
                         We are here to help and answer any questions you might have. We look forward to hearing from you
                     </div>
-                        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                        <form name="contact" method="POST">
+                            <input type='hidden' name='form-name' value='contact'/>
                             <p>
                                 <label for='name'>
                                     <input type="text" name="name" placeholder='Full Name' style={{...formInputStyle}}/>

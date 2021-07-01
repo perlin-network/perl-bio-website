@@ -3,24 +3,23 @@ import {Grid} from '@material-ui/core'
 import {titleTextstyle, contentTextStyle} from '../styles/common.js'
 import IconLeft from '../assets/WWD/IconLeft.png'
 import IconRight from '../assets/WWD/IconRight.png'
+import CaseStudies from './CaseStudies.js'
 function WhatWeDo() {
     let gridItems=[
         {
             icon:IconLeft,
             id:'left-box', 
             title:"Carbon and Biodiversity",
-            content:`Bioeconomy has a deep understanding of environmental projects and consults organizations on creating effective and scalable activities. We develop strategy, project baselines and methodologies, particularly by leveraging the PERL.eco blockchain network. 
+            content:`Bioeconomy has a deep understanding of environmental projects and consults organisations on creating effective and scalable activities. We develop strategy, project baselines and methodologies, particularly by leveraging the PERL.eco blockchain network. 
 
-            Organizations can tokenize carbon or biodiversity credits, and encourage conservation of biodiversity. They can use platforms to incentivise the collection and uploading of biodiversity genomic data. 
+            Organisations can explore opportunities with carbon or biodiversity credits, and encourage the conservation of biodiversity. They can use platforms to incentivise the collection and uploading of biodiversity genomic data.
             `
         },
         {
             icon:IconRight,
             id:'right-box', 
             title:"Decentralized finance and blockchain technologies",
-            content:`Bioeconomy has a deep understanding of environmental projects and consults organizations on creating effective and scalable activities. We develop strategy, project baselines and methodologies, particularly by leveraging the PERL.eco blockchain network. 
-
-            Organizations can tokenize carbon or biodiversity credits, and encourage conservation of biodiversity. They can use platforms to incentivise the collection and uploading of biodiversity genomic data. 
+            content:`Bioeconomy also helps organisations capitalise on opportunities created by decentralized finance and other blockchain technologies, such as non-fungible tokens (NFTs) to fund the conservation of critically endangered species.
             `
         }
     ]
@@ -34,7 +33,7 @@ function WhatWeDo() {
                 <Grid container direction='row' justify='space-between'>
                     {gridItems.map(i=>{
                         return(
-                            <Grid item style={{maxWidth:"720px", borderRadius:'16px',  background:'linear-gradient(180deg, #3C423C 0%, #333336 266.93%)'}}>
+                            <Grid item style={{maxWidth:"620px", borderRadius:'16px',  background:'linear-gradient(180deg, #3C423C 0%, #333336 266.93%)', marginBottom:'72px'}}>
                                 <div className='grid-item-container' style={{margin:"5%"}}>
                                 <div className='grid-item-icon'>
                                     <img src={i.icon} alt=''/>                                    
@@ -42,7 +41,7 @@ function WhatWeDo() {
                                 <div className='grid-item-title' style={{...titleTextstyle, minHeight:'95px', fontSize:"36px"}}>
                                     {i.title}
                                 </div>
-                                <div className='grid-item-content' style={{...contentTextStyle, marginTop:"70px", fontSize:"18px"}}>
+                                <div className='grid-item-content' style={{...contentTextStyle, marginTop:"25px", fontSize:"18px"}}>
                                 {i.content.split('\n').map(str=>{
                                             return(
                                                 <p>{str}</p>
@@ -57,6 +56,7 @@ function WhatWeDo() {
                 </Grid>
             </div>
             </div>
+            <CaseStudies/>
         </div>
     )
 }

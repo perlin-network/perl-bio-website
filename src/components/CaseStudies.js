@@ -28,16 +28,16 @@ The NPR+ project area contains a total of 22 protected species considered by the
         }
     ]
     return (
-        <div className='case-studies-container' style={{background:'#333336', paddingTop:'120px'}}>
+        <div className='case-studies-container' style={{background:'#333336', paddingTop:'50px'}}>
             <div className='case-studies-content' style={{margin: '0 5%'}}>
                 <div className='case-studies-title' style={{...titleTextstyle, fontSize:'48px'}}>
                     Case Studies
                 </div>
                 <div className='case-studies-grid' style={{marginTop:'80px'}}>
-                    <Grid container justify='space-between'>
+                    <Grid container direction='column' justify='space-between'>
                         {gridItems.map(i=>{
                             return(
-                                <Grid item style={{background:'linear-gradient(180deg, #3C423C 0%, #333336 154.11%)', borderRadius:'16px', maxWidth:'720px'}}>
+                                <Grid item style={{background:'linear-gradient(180deg, #3C423C 0%, #333336 154.11%)', borderRadius:'16px', marginBottom:'72px'}}>
                                     <div className='grid-content-container' style={{margin:'5%'}}>
                                         <div className='grid-item-icon'>
                                             <img src={i.icon} alt=''/>
