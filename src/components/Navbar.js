@@ -37,7 +37,7 @@ export default function Navbar() {
                     </Button>                
                 </Grid>
                 <Grid item justify='flex-end' style={{marginRight:'5%', marginTop:'50px'}}>
-                    <Grid container justify='space-evenly' spacing={5} style={{...contentTextStyle, color:'white'}}>
+                    <Grid container justify='space-evenly' spacing={5} style={{...contentTextStyle, fontSize:'20px', color:'white'}}>
                         {navLinks.map(i=>{
                             return(
                                 <Grid item>
@@ -49,7 +49,7 @@ export default function Navbar() {
                         })}                    
                     </Grid>
                 </Grid>
-            </Grid>
+            </Grid>        
         </div>
         </Slide>
     )
