@@ -1,5 +1,6 @@
 import React from 'react' 
 import LogoSvg from '../assets/Splash/logo.svg'
+import Background from '../assets/Splash/background.png'
 import {Button, Grid, Link, Slide, useScrollTrigger} from '@material-ui/core'
 import { contentTextStyle } from '../styles/common'
 import { useLocation } from 'react-router-dom'
@@ -27,7 +28,7 @@ export default function Navbar() {
     ]
     return (
         <Slide appear={trigger} direction="down" in={!trigger}>
-        <div className='navbar-container' style={{backgroundColor:'#333336',mixBlendMode:'pass-through', position:'sticky', top:0, zIndex:1}}>
+        <div className='navbar-container' style={{backgroundColor:'#333336', paddingBottom:'25px', mixBlendMode:'pass-through', position:'sticky', top:0, zIndex:1}}>
             <Grid container direction='row' justify='space-between'>
                 <Grid item justify='flex-start' style={{marginLeft:'4%'}}>
                     <Button style={{ width:"100%",justifyContent:"flex-start", borderRadius:"16px",  maxWidth:"376px",marginTop:'5%', maxHeight:"83.22px",}}>

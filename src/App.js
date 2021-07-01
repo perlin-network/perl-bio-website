@@ -4,7 +4,7 @@ import About from './components/About';
 import WhatWeDo from './components/WhatWeDo';
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import { Toolbar, Fab, useScrollTrigger, Zoom } from '@material-ui/core';
+import { Fab, useScrollTrigger, Zoom } from '@material-ui/core';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import {BrowserRouter as Router,
   Switch,
@@ -24,7 +24,7 @@ function App() {
     <Router>
       <div className="App" style={AppStyle}>
         <Navbar/>
-        <Toolbar id='top-anchor'/>
+        <div id='top-anchor' style={{width:'0px', height:'0px'}}/>
         <Switch>
           <Route exact path='/contact'>
             <Contact/>

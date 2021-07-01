@@ -7,7 +7,7 @@ import { contentTextStyle, buttonStyle } from '../styles/common'
 
 export default function PartnerPerlEco() {
     return (
-        <div className='partner-perl-eco-container' style={{backgroundImage: `url(${Background})`, backgroundSize:'cover', backgroundRepeat:'no-repeat'}}>
+        <div className='partner-perl-eco-container' style={{backgroundImage: `url(${Background})`, backgroundSize:'cover', backgroundRepeat:'no-repeat', borderRadius:'16px', padding:'5%'}}>
             <Grid container justify='space-between'>
                 <Grid item justify='flex-start'>
                     <Grid container direction='column'>
