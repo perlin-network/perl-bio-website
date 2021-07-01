@@ -38,13 +38,19 @@ function About() {
         },
         {
             title:"Mark Harding",
-            content:`Mark has led teams developing carbon projects across Asia with a specific focus and expertise in palm oil plantations and deep history on a range of Clean Development Mechanism (CDM) project types including demand side efficiency, renewable energy, industrial fuel switching, coal mine methane, biomass and waste water. Mark has experience across all aspects of the CDM project cycle and has particular expertise in identifying and developing CDM opportunities and setting CDM approval strategy.
+            content:`Mark has spent his career at the intersection of the environment and business, with his specialist expertise in sustainability, carbon project development and biodiversity with a special interest in primary industry.  
 
-            Mark has over a decade of experience in Asia and is fluent in spoken Mandarin. Mark has worked in Shanghai as a Climate Change and Energy and Resources lawyer for a large multinational law firm where he was responsible for developing their Greater China climate change practice. As well as carbon, Mark advised clients in relation to the establishment and investment into clean energy funds in China and in relation to the acquisition of clean energy and technology companies. Mark also previously worked as a business consultant in Hong Kong focusing on strategic market management and advising client’s with specific issues in relation to the implementation of their business strategy in Asia.
+            Educated in marine ecology and law, Mark has spent considerable time both in New Zealand and internationally working in the legal, climate and sustainability spaces.
             
-            Mark has worked for New Zealand’s largest law firm, Russell McVeagh where he specialized in environmental, energy and resources law. During this time, he acted for large power generators, and was part of the team for the consenting of a large hydro dam, as well as New Zealand’s first wind farm.
+            Fluent in Mandarin, Mark has spent about 15 years working in Asia, working in Shanghai as a Climate Change and Energy and Resources lawyer for a large multinational law firm where Mark was responsible for developing their Greater China climate change practice. 
             
-            Mark is a Barrister and Solicitor of the High Courts of New South Wales, Australia and Auckland, New Zealand and holds a law degree with honors (LLB Hons) and a Bachelor of Science from the University of Auckland.
+            Mark is a veteran of the carbon industry being involved since 2006 when Mark started his own CDM project development company, and later joined Carbon Conservation, and oversaw their non-forest carbon project pipeline working throughout Asia and worldwide on carbon development projects. These included demand side efficiency, renewable energy, industrial fuel switching, coal mine methane, biomass, waste water and a variety of land use projects. 
+            
+            In addition to carbon development, Mark has worked with a variety of large agribusiness, forestry and mining clients in relation to sustainability matters advising on aspects of sustainability related to their operations. Mark has helped many large clients develop their sustainability programs and reporting frameworks. 
+            
+            Mark also has experience in New Zealand working as a resource management lawyer, across a variety of infrastructure and land use projects representing both developers and local government authorities.
+            
+            Mark advises on carbon development, climate and sustainability matters with a focus on the preservation of biodiversity, both in New Zealand and throughout the world.
             `,
             email:"test@example.com",
             portrait:UnknownPng
