@@ -49,7 +49,7 @@ function App() {
           location='bottom'
           buttonText='Acknowledge'
           style={{fontFamily: "Bai Jamjuree, sans-serif",}}
-          buttonStyle={{fontWeight:'bold', fontFamily: "Bai Jamjuree, sans-serif", borderRadius:"16px",background: "#91D873", minHeight:'35px'}}
+          buttonStyle={{fontWeight:'500', fontFamily: "Bai Jamjuree, sans-serif", borderRadius:"16px",background: "#91D873", minHeight:'35px'}}
           expires={150}>
             This website uses cookies to enhance the user experience. <a href="https://www.cookiesandyou.com/" target='_blank' rel='noreferrer' style={{color:'white'}}>Learn More</a>
         </CookieConsent>
