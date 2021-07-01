@@ -1,6 +1,5 @@
 import React from 'react' 
 import LogoSvg from '../assets/Splash/logo.svg'
-import Background from '../assets/Splash/background.png'
 import {Button, Grid, Link, Slide, useScrollTrigger} from '@material-ui/core'
 import { contentTextStyle } from '../styles/common'
 import { useLocation } from 'react-router-dom'
