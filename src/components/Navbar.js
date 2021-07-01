@@ -36,7 +36,7 @@ export default function Navbar() {
                         </Link>
                     </Button>                
                 </Grid>
-                <Grid item justify='flex-end' style={{marginRight:'5%', marginTop:'50px'}}>
+                <Grid item justify='flex-end' style={{marginTop:'50px', marginRight:'5%', marginLeft:"5%"}}>
                     <Grid container justify='space-evenly' spacing={5} style={{...contentTextStyle, fontSize:'20px', color:'white'}}>
                         {navLinks.map(i=>{
                             return(

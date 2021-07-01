@@ -11,7 +11,7 @@ function Splash() {
                 backgroundColor:'#333336', mixBlendMode:'pass-through',  backgroundSize: "cover", minHeight:'100vh', 
             }}
             > 
-            <div className='splash-background' style={{backgroundImage: `url(${Background})`, backgroundSize:'cover', backgroundRepeat:'no-repeat', backgroundPosition:'center center', padding:'5%'}}>
+            <div className='splash-background' style={{backgroundImage: `url(${Background})`, backgroundSize:'fit', backgroundRepeat:'no-repeat', backgroundPosition:'center center', padding:'5%'}}>
             <Grid container justify='space-between' style={{maxWidth:'100%', marginTop:'120px', }}>
                 <Grid item justify='flex-start'>
                     <Grid container direction='column' >
@@ -39,10 +39,10 @@ function Splash() {
                 </Grid> 
             </Grid>
             </div>
-            <div className='partner-container' style={{marginTop:'75px', maxWidth:'100%',margin:'0% 5%'}}>
+            <div className='partner-container' style={{marginTop:'75px', maxWidth:'100%',margin:'0% 5%', backgroundColor:'#333336'}}>
                 <p style={{...contentTextStyle, color:"#A5AFA8", }}>Partners</p>
                 <Grid container direction='column'>
-                    <Grid item style={{marginTop:'75px',}}>
+                    <Grid item style={{marginTop:'35px',}}>
                         <PartnerPerlEco />
                     </Grid>
                 </Grid>
