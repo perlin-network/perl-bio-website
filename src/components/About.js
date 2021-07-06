@@ -4,6 +4,7 @@ import {titleTextstyle, contentTextStyle} from '../styles/common.js'
 import UnknownPng from '../assets/About/unknown.png'
 import DorjeePng from '../assets/About/dorjee.png'
 import RalphPng from '../assets/About/ralph.png'
+import markPng from '../assets/About/mark.png'
 function About() {
     let aboutInfo=[
         {
@@ -53,7 +54,7 @@ function About() {
             Mark advises on carbon development, climate and sustainability matters with a focus on the preservation of biodiversity, both in New Zealand and throughout the world.
             `,
             email:"test@example.com",
-            portrait:UnknownPng
+            portrait:markPng
         }
     ]
     
@@ -71,8 +72,8 @@ function About() {
                     return(
                             <Grid item style={{background:" linear-gradient(180deg, #3C423C 0%, rgba(51, 51, 54, 0) 100%)",  borderRadius:"16px",}}>
                                 <Grid container direction='row' justify='space-between' key={i.title}  style={{maxWidth:"100%", marginBottom:"50px", padding:'5% 2%'}}>
-                                    <Grid item style={{margin:'20px 5%', }}>
-                                        <img src={i.portrait} alt={UnknownPng} style={{height:'100%', maxHeight:'140px'}}/>
+                                    <Grid item style={{margin:'20px 3%', }}>
+                                        <img src={i.portrait} alt={UnknownPng} style={{height:'100%', maxHeight:'140px', borderRadius:'16px'}}/>
                                     </Grid>
                                     <Grid item style={{maxWidth:'75%',}}>
                                         <p className='grid-title-text' style={{...contentTextStyle, margin:'20px 5%', justifyContent:"flex-start", color:"#A5AFA8"}}>
