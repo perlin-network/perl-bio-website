@@ -13,7 +13,7 @@ function Contact() {
                 <div className='contact-form-container' style={{...contentTextStyle, background:'linear-gradient(180deg, #3C423C 0%, #333336 154.11%)',maxWidth:'970px', fontSize:'18px', marginTop:'70px', borderRadius:'16px'}}>
                     <div className='contact-form-wrapper' style={{padding:'5%'}}>
                     <div className='contact-form-title' style={{maxWidth:'640px'}}>
-                        We are here to help and answer any questions you might have. We look forward to hearing from you
+                        We are here to help and answer any questions you might have. We look forward to hearing from you.
                     </div>
                         <form name="contact" method="POST">
                             <input type='hidden' name='form-name' value='contact'/>
@@ -40,11 +40,11 @@ function Contact() {
                                 <Grid container  direction='row' justify='space-between' style={{maxWidth:'550px'}}>
                                     <Grid item justify='flex-start'>
                                         <Checkbox color='white' checked={buttonStatus} onChange={()=>setButtonStatus(!buttonStatus)} style={{color:'white'}}/>
-                                        I agree with the 
+                                        I agree to the 
                                         {" "}
                                         <Link href='/privacy' style={{...linkTextStyle}}>Privacy Policy</Link>
                                         {" "} and{" "}
-                                        <Link href='/terms' style={{...linkTextStyle}}>Terms of Service </Link>
+                                        <Link href='/terms' style={{...linkTextStyle}}>Terms. </Link>
                                     </Grid>
                                     
                                 </Grid>

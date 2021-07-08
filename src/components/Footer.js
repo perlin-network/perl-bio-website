@@ -36,14 +36,14 @@ function Footer() {
                     <Grid item justify='flex-end' style={{ marginTop:'25px', fontSize:'12px'}}>
                         <Grid container direction='row' spacing={3}>
                             <Grid item>
-                            <Link href='/privacy' style={{...linkStyle}}>
-                                Privacy Policy
-                            </Link>
                             </Grid>
+                                <Link href='/terms' style={{...linkStyle, marginLeft:'3%'}}>
+                                    Terms
+                                </Link>
                             <Grid item>
-                            <Link href='/terms' style={{...linkStyle, marginLeft:'3%'}}>
-                                Terms
-                            </Link>
+                                <Link href='/privacy' style={{...linkStyle}}>
+                                    Privacy Policy
+                                </Link>
                             </Grid>
                         </Grid>
                     </Grid>
