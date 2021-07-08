@@ -42,9 +42,9 @@ function Contact() {
                                         <Checkbox color='white' checked={buttonStatus} onChange={()=>setButtonStatus(!buttonStatus)} style={{color:'white'}}/>
                                         I agree with the 
                                         {" "}
-                                        <Link style={{...linkTextStyle}}>Privacy Policy</Link>
+                                        <Link href='/privacy' style={{...linkTextStyle}}>Privacy Policy</Link>
                                         {" "} and{" "}
-                                        <Link style={{...linkTextStyle}}>Terms of Service </Link>
+                                        <Link href='/contact' style={{...linkTextStyle}}>Terms of Service </Link>
                                     </Grid>
                                     
                                 </Grid>
