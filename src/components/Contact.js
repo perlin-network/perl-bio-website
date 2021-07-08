@@ -44,7 +44,7 @@ function Contact() {
                                         {" "}
                                         <Link href='/privacy' style={{...linkTextStyle}}>Privacy Policy</Link>
                                         {" "} and{" "}
-                                        <Link href='/contact' style={{...linkTextStyle}}>Terms of Service </Link>
+                                        <Link href='/terms' style={{...linkTextStyle}}>Terms of Service </Link>
                                     </Grid>
                                     
                                 </Grid>
