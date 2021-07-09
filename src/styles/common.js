@@ -1,4 +1,4 @@
-let titleTextstyle={
+let titleTextStyle={
     fontFamily:"Bai Jamjuree, sans serif",
     fontStyle: "normal",
     fontWeight: "bold", 
@@ -6,7 +6,7 @@ let titleTextstyle={
     color:"#91D873"
 }
 let contentTextStyle={
-    ...titleTextstyle,
+    ...titleTextStyle,
     fontWeight:"500",
     color:"white",
     fontSize:"24px"
@@ -22,4 +22,4 @@ let buttonStyle={
     background: "linear-gradient(135deg, #128D89 0%, #50D19D 100%)",
     borderRadius:"16px"
 }
-export {titleTextstyle, contentTextStyle, verticalDividerStyle, buttonStyle};
+export {titleTextStyle, contentTextStyle, verticalDividerStyle, buttonStyle};

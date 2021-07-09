@@ -4,6 +4,8 @@ import About from './components/About';
 import WhatWeDo from './components/WhatWeDo';
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Terms from './components/Terms'
+import Privacy from './components/Privacy'
 import { Fab, useScrollTrigger, Zoom } from '@material-ui/core';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import {BrowserRouter as Router,
@@ -34,6 +36,12 @@ function App() {
           </Route>
           <Route exact path='/what'>
             <WhatWeDo/>
+          </Route>
+          <Route exact path='/terms'>
+            <Terms/>
+          </Route>
+          <Route exact path='/privacy'>
+            <Privacy/>
           </Route>
           <Route exact path='/'>
             <Splash/>
