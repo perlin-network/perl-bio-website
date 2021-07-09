@@ -1,6 +1,6 @@
 import React from 'react'
 import {Grid} from '@material-ui/core'
-import {titleTextstyle, contentTextStyle} from '../styles/common.js'
+import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import PictureLeft from '../assets/CaseStudies/PictureLeft.png'
 import PictureRight from '../assets/CaseStudies/PictureRight.png'
 
@@ -30,7 +30,7 @@ The NPR+ project area contains a total of 22 protected species considered by the
     return (
         <div className='case-studies-container' style={{background:'#333336', paddingTop:'50px'}}>
             <div className='case-studies-content' style={{margin: '0 5%'}}>
-                <div className='case-studies-title' style={{...titleTextstyle, fontSize:'48px'}}>
+                <div className='case-studies-title' style={{...titleTextStyle, fontSize:'48px'}}>
                     Case Studies
                 </div>
                 <div className='case-studies-grid' style={{marginTop:'80px'}}>
@@ -42,7 +42,7 @@ The NPR+ project area contains a total of 22 protected species considered by the
                                         <div className='grid-item-icon'>
                                             <img src={i.icon} alt=''/>
                                         </div>
-                                        <div className='grid-item-title' style={{...titleTextstyle, fontSize:'36px', minHeight:'100px', marginTop:'60px'}}>
+                                        <div className='grid-item-title' style={{...titleTextStyle, fontSize:'36px', minHeight:'100px', marginTop:'60px'}}>
                                             {i.title}
                                         </div>
                                         <div className='grid-item-content' style={{...contentTextStyle, fontSize:"18px", marginTop:'40px'}}>

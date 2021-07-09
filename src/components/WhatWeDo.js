@@ -1,6 +1,6 @@
 import React from 'react'
 import {Grid} from '@material-ui/core'
-import {titleTextstyle, contentTextStyle} from '../styles/common.js'
+import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import IconLeft from '../assets/WWD/IconLeft.png'
 import IconRight from '../assets/WWD/IconRight.png'
 import CaseStudies from './CaseStudies.js'
@@ -26,7 +26,7 @@ function WhatWeDo() {
     return (
         <div className='wwd-container' style={{paddingTop:"120px", background:"#333336"}}>
             <div className='wwd-content' style={{margin:"0% 5%",}}>
-            <div className='wwd-title' style={{...titleTextstyle, fontSize:'48px'}}>
+            <div className='wwd-title' style={{...titleTextStyle, fontSize:'48px'}}>
                 What We Do
             </div>
             <div className='wwd-grid-container' style={{marginTop:"50px"}}>
@@ -38,7 +38,7 @@ function WhatWeDo() {
                                 <div className='grid-item-icon'>
                                     <img src={i.icon} alt=''/>                                    
                                 </div>
-                                <div className='grid-item-title' style={{...titleTextstyle, minHeight:'95px', fontSize:"36px"}}>
+                                <div className='grid-item-title' style={{...titleTextStyle, minHeight:'95px', fontSize:"36px"}}>
                                     {i.title}
                                 </div>
                                 <div className='grid-item-content' style={{...contentTextStyle, marginTop:"25px", fontSize:"18px"}}>

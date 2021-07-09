@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Link, Button } from '@material-ui/core';
 import TreeSvg from '../assets/Splash/tree.png'
 import Background from '../assets/Splash/background.png'
-import {titleTextstyle, contentTextStyle, buttonStyle} from '../styles/common.js'
+import {titleTextStyle, contentTextStyle, buttonStyle} from '../styles/common.js'
 import PartnerPerlEco from './PartnerPerlEco'
 function Splash() {
     return (        
@@ -16,7 +16,7 @@ function Splash() {
                 <Grid item justify='flex-start'>
                     <Grid container direction='column' >
                         <Grid item>
-                            <div className='splash-header' style={{...titleTextstyle, fontSize:'52px',  maxWidth:'600px'}}>
+                            <div className='splash-header' style={{...titleTextStyle, fontSize:'52px',  maxWidth:'600px'}}>
                                 Build a sustainable future 
                             </div>
                         </Grid>

@@ -1,6 +1,6 @@
 import { Grid } from '@material-ui/core'
 import React from 'react'
-import {titleTextstyle, contentTextStyle} from '../styles/common.js'
+import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import UnknownPng from '../assets/About/unknown.png'
 import DorjeePng from '../assets/About/dorjee.png'
 import RalphPng from '../assets/About/ralph.png'
@@ -60,7 +60,7 @@ function About() {
     
     return (
         <div className='about-container' style={{backgroundColor:"#333336", padding:"5% 5%",  }}>
-            <div className='about-header' style={{...titleTextstyle, fontSize:"48px" }}>
+            <div className='about-header' style={{...titleTextStyle, fontSize:"48px" }}>
                 Who we are
             </div>
             <div className='about-text' style={{...contentTextStyle, fontSize:"32px", marginTop:'25px'}}>
