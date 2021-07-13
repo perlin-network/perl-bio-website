@@ -16,7 +16,7 @@ function Splash() {
                 <Grid item justify='flex-start'>
                     <Grid container direction='column' >
                         <Grid item>
-                            <div className='splash-header' style={{...titleTextStyle, fontSize:'52px',  maxWidth:'600px'}}>
+                            <div className='splash-header' style={{...titleTextStyle, fontSize:'42px',  maxWidth:'600px'}}>
                                 Build a sustainable future 
                             </div>
                         </Grid>
@@ -35,7 +35,7 @@ function Splash() {
                     </Grid>                    
                 </Grid>
                 <Grid item justify='flex-end' >
-                    <img src={TreeSvg} alt='' style={{maxWidth:'100%', minWidth:'100%', maxHeight:"720px", marginTop:window.innerWidth < 768 ?'0px':'-125px' }}/>
+                    <img src={TreeSvg} alt='' style={{maxWidth:'100%', minWidth:'100%', maxHeight:"620px", marginTop:window.innerWidth < 768 ?'0px':'-125px' }}/>
                 </Grid> 
             </Grid>
             </div>

@@ -39,19 +39,15 @@ function About() {
         },
         {
             title:"Mark Harding",
-            content:`Mark has spent his career at the intersection of the environment and business, with his specialist expertise in sustainability, carbon project development and biodiversity with a special interest in primary industry.  
+            content:`Mark has always been passionate about nature and the outdoors and has spent his career at the intersection of the environment and business. Educated in marine ecology and law, Mark’s specialist expertise is in sustainability, carbon project development and biodiversity with a special interest in primary industry given his own farming background.
 
-            Educated in marine ecology and law, Mark has spent considerable time both in New Zealand and internationally working in the legal, climate and sustainability spaces.
+            Fluent in Mandarin, Mark spent about 15 years working across Asia. Mark worked in Shanghai as a Climate Change and Energy and Resources lawyer for a large multinational law firm where he was responsible for developing their Greater China climate change practice.
             
-            Fluent in Mandarin, Mark has spent about 15 years working in Asia, working in Shanghai as a Climate Change and Energy and Resources lawyer for a large multinational law firm where Mark was responsible for developing their Greater China climate change practice. 
+            Mark was a pioneer in the carbon industry being involved since 2007 when he started his own CDM project development company in China, and later joined Carbon Conservation, and oversaw their non-forest carbon project pipeline working throughout Asia and worldwide on carbon development projects. These included demand side efficiency, renewable energy, industrial fuel switching, coal mine methane, biomass, waste water and a variety of land use projects.
             
-            Mark is a veteran of the carbon industry being involved since 2006 when Mark started his own CDM project development company, and later joined Carbon Conservation, and oversaw their non-forest carbon project pipeline working throughout Asia and worldwide on carbon development projects. These included demand side efficiency, renewable energy, industrial fuel switching, coal mine methane, biomass, waste water and a variety of land use projects. 
+            In addition to carbon development, Mark has worked with a variety of large agribusiness, forestry, mining and manufacturing clients in relation to sustainability matters, assisting many large clients develop their sustainability programs and reporting frameworks.
             
-            In addition to carbon development, Mark has worked with a variety of large agribusiness, forestry and mining clients in relation to sustainability matters advising on aspects of sustainability related to their operations. Mark has helped many large clients develop their sustainability programs and reporting frameworks. 
-            
-            Mark also has experience in New Zealand working as a resource management lawyer, across a variety of infrastructure and land use projects representing both developers and local government authorities.
-            
-            Mark advises on carbon development, climate and sustainability matters with a focus on the preservation of biodiversity, both in New Zealand and throughout the world.
+            Mark also has experience in New Zealand working as a resource management lawyer, across a variety of infrastructure and land use projects representing both developers and local government authorities. Mark is currently based in Tauranga, New Zealand.
             `,
             email:"test@example.com",
             portrait:markPng
