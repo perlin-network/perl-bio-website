@@ -2,9 +2,27 @@ import React from 'react'
 import { Grid, Link, Button } from '@material-ui/core';
 import TreeSvg from '../assets/Splash/tree.png'
 import Background from '../assets/Splash/background.png'
-import {titleTextStyle, contentTextStyle, buttonStyle} from '../styles/common.js'
-import PartnerPerlEco from './PartnerPerlEco'
+import {titleTextStyle, contentTextStyle} from '../styles/common.js'
+import PartnerPerlEco from '../components/PartnerPerlEco'
+import { makeStyles } from '@material-ui/styles';
+//style={{...buttonStyle, ...contentTextStyle, background:"#91D873", color:'black', fontWeight:'bold', marginBottom:'72px'}}
+const useStyles=makeStyles({
+    button:{
+        fontFamily:"Bai Jamjuree, sans serif",
+        width: "282px",
+        height: "66px",
+        fontWeight:'bold',
+        fontSize:'20px',
+        borderRadius:'16px',
+        background: "#91D873",
+        '&:hover':{
+            color:'white',
+        }
+    }
+})
+
 function Splash() {
+    const classes=useStyles()
     return (        
             <div className='splash-container'
             style={{
@@ -27,7 +45,7 @@ function Splash() {
                         </Grid>
                         <Grid item style={{marginTop:'50px'}}>
                             <Link href='/who' style={{textDecoration:'none', zIndex:'0'}}>
-                                <Button style={{...buttonStyle, ...contentTextStyle, background:"#91D873", color:'black', fontWeight:'bold', marginBottom:'72px'}}>
+                                <Button className={classes.button} >
                                     {`Learn More`}
                                 </Button>
                             </Link>

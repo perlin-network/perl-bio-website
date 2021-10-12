@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar';
-import Splash from './components/Splash';
+import Splash from './pages/Splash';
 import About from './pages/About';
 import WhatWeDo from './pages/WhatWeDo';
 import Contact from './pages/Contact'
