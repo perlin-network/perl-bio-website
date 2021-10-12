@@ -3,7 +3,7 @@ import {Grid} from '@material-ui/core'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import IconLeft from '../assets/WWD/IconLeft.png'
 import IconRight from '../assets/WWD/IconRight.png'
-import CaseStudies from './CaseStudies.js'
+import CaseStudies from '../components/CaseStudies.js'
 function WhatWeDo() {
     let gridItems=[
         {

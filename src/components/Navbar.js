@@ -21,6 +21,10 @@ export default function Navbar() {
             text:'What we do'
         },
         {
+            route:'/media',
+            text:'Media'
+        },
+        {
             route:'/contact',
             text:'Contact'
         },

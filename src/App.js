@@ -1,11 +1,12 @@
 import Navbar from './components/Navbar';
 import Splash from './components/Splash';
-import About from './components/About';
-import WhatWeDo from './components/WhatWeDo';
-import Contact from './components/Contact'
+import About from './pages/About';
+import WhatWeDo from './pages/WhatWeDo';
+import Contact from './pages/Contact'
 import Footer from './components/Footer'
-import Terms from './components/Terms'
-import Privacy from './components/Privacy'
+import Terms from './pages/Terms'
+import Media from './pages/Media'
+import Privacy from './pages/Privacy'
 import { Fab, useScrollTrigger, Zoom } from '@material-ui/core';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import {BrowserRouter as Router,
@@ -42,6 +43,9 @@ function App() {
           </Route>
           <Route exact path='/privacy'>
             <Privacy/>
+          </Route>
+          <Route exact path='/media'>
+            <Media/>
           </Route>
           <Route exact path='/'>
             <Splash/>
