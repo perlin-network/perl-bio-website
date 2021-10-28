@@ -6,6 +6,7 @@ import Contact from './pages/Contact'
 import Footer from './components/Footer'
 import Terms from './pages/Terms'
 import Media from './pages/Media'
+import Services from './pages/Services'
 import Privacy from './pages/Privacy'
 import { Fab, useScrollTrigger, Zoom } from '@material-ui/core';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
@@ -29,6 +30,9 @@ function App() {
         <Navbar/>
         <div id='top-anchor' style={{width:'0px', height:'0px'}}/>
         <Switch>
+        <Route exact path='/services'>
+            <Services/>
+          </Route>
           <Route exact path='/contact'>
             <Contact/>
           </Route>

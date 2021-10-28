@@ -30,7 +30,7 @@ function WhatWeDo() {
                 What We Do
             </div>
             <div className='wwd-grid-container' style={{marginTop:"50px"}}>
-                <Grid container direction='row' justify='space-between'>
+                <Grid container direction='row' justify='space-around'>
                     {gridItems.map(i=>{
                         return(
                             <Grid item style={{maxWidth:"620px", borderRadius:'16px',  background:'linear-gradient(180deg, #3C423C 0%, #333336 266.93%)', marginBottom:'72px'}}>

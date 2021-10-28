@@ -25,10 +25,14 @@ const useStyles=makeStyles({
         color:'black',
         fontSize:'17px',
         padding:'15px 55px',
-        borderRadius:'16px',        
+        borderRadius:'16px',
         background:'#91D873',
+        textDecoration:'none',
+        fontWeight:'700',
         '&:hover':{
             color:'white',
+            textDecoration:'none'
+            
         }
         // background: "linear-gradient(135deg, #128D89 0%, #50D19D 100%)",
     },
@@ -63,7 +67,8 @@ const useStyles=makeStyles({
     link:{
         color:'white',
         fontFamily: "Bai Jamjuree, sans-serif",
-        textDecoration:'none'
+        textDecoration:'none',
+        
     }
 })
 

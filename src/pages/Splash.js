@@ -5,7 +5,7 @@ import Background from '../assets/Splash/background.png'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import PartnerPerlEco from '../components/PartnerPerlEco'
 import { makeStyles } from '@material-ui/styles';
-//style={{...buttonStyle, ...contentTextStyle, background:"#91D873", color:'black', fontWeight:'bold', marginBottom:'72px'}}
+
 const useStyles=makeStyles({
     button:{
         fontFamily:"Bai Jamjuree, sans serif",
