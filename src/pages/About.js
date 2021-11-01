@@ -67,49 +67,47 @@ function About() {
     ]
     
     return (
-        <div className='about-container' style={{backgroundColor:"#333336", padding:"5% 5%",  }}>
-            <div className='about-header' style={{...titleTextStyle, fontSize:"48px" }}>
-                Who we are
-            </div>
-            <div className='about-text' style={{...contentTextStyle, fontSize:"32px", marginTop:'25px'}}>
-                Bioeceonomy has expertise in advising and leading businesses on their ecological projects. With significant experience in the climate change sector, Bioeconomy is focusing on helping businesses reach their sustainability goals.
-            </div>
-            <Grid className="about-grid" style={{marginTop:"64px"}}>
-                
-                {aboutInfo.map(i=>{
-                    return(
-                            <Grid item style={{background:" linear-gradient(180deg, #3C423C 0%, rgba(51, 51, 54, 0) 100%)",  borderRadius:"16px",}}>
-                                <Grid container direction='row' justify='space-between' key={i.title}  style={{maxWidth:"100%", marginBottom:"50px", padding:'5% 2%'}}>
-                                    <Grid item style={{margin:'20px 3%', }}>
-                                        <img src={i.portrait} alt={UnknownPng} style={{height:'100%', maxHeight:'140px', borderRadius:'90px', filter:'grayscale(100%)'}}/>
+            <div className='about-container' style={{backgroundColor:"#333336", padding:"3% 5%",  }}>
+                <div className='about-header' style={{...titleTextStyle, fontSize:"48px" }}>
+                    Who we are
+                </div>
+                <div className='about-text' style={{...contentTextStyle, fontSize:"32px", marginTop:'25px'}}>
+                    Bioeceonomy has expertise in advising and leading businesses on their ecological projects. With significant experience in the climate change sector, Bioeconomy is focusing on helping businesses reach their sustainability goals.
+                </div>
+                <Grid className="about-grid" style={{marginTop:"64px"}}>
+                    
+                    {aboutInfo.map(i=>{
+                        return(
+                            
+                                <Grid item style={{background:" linear-gradient(180deg, #3C423C 0%, rgba(51, 51, 54, 0) 100%)",  borderRadius:"16px",}}>
+                                    <Grid container direction='row' justify='space-between' key={i.title}  style={{maxWidth:"100%", marginBottom:"50px", padding:'5% 2%'}}>
+                                        <Grid item style={{margin:'20px 3%', }}>
+                                            <img src={i.portrait} alt={UnknownPng} style={{height:'100%', maxHeight:'140px', borderRadius:'90px', filter:'grayscale(100%)'}}/>
+                                        </Grid>
+                                        <Grid item style={{maxWidth:'75%',}}>
+                                            <p className='grid-title-text' style={{...contentTextStyle, margin:'20px 5%', justifyContent:"flex-start", color:"#A5AFA8"}}>
+                                                {i.title}
+                                            </p>
+                                            <div className='grid-content-text' text={i.content} style={{...contentTextStyle, marginLeft:"5%", marginRight:"5%", marginTop:"50px", fontSize:"18px", }}>
+                                                {i.content.split('\n').map(str=>{
+                                                    return(
+                                                        <p>{str}</p>
+                                                    )
+                                                })}
+                                            </div>
+                                        </Grid>
+                                        {/* <Grid item justify='flex-end'>
+                                            <div className='grid-email-text' style={{...contentTextStyle, justifyContent:"flex-end", fontSize:"18px", color:"#91D873" }}>
+                                                <hr style={{marginTop:"32px", justifyContent:"flex-end", maxWidth:"96px"}}/>
+                                                {i.email}
+                                            </div>
+                                        </Grid>  */}
                                     </Grid>
-                                    <Grid item style={{maxWidth:'75%',}}>
-                                        <p className='grid-title-text' style={{...contentTextStyle, margin:'20px 5%', justifyContent:"flex-start", color:"#A5AFA8"}}>
-                                            {i.title}
-                                        </p>
-                                        <div className='grid-content-text' text={i.content} style={{...contentTextStyle, marginLeft:"5%", marginRight:"5%", marginTop:"50px", fontSize:"18px", }}>
-                                            {i.content.split('\n').map(str=>{
-                                                return(
-                                                    <p>{str}</p>
-                                                )
-                                            })}
-                                        </div>
-                                    </Grid>
-                                    {/* <Grid item justify='flex-end'>
-                                        <div className='grid-email-text' style={{...contentTextStyle, justifyContent:"flex-end", fontSize:"18px", color:"#91D873" }}>
-                                            <hr style={{marginTop:"32px", justifyContent:"flex-end", maxWidth:"96px"}}/>
-                                            {i.email}
-                                        </div>
-                                    </Grid>  */}
                                 </Grid>
-                            </Grid>
-                    )
-                })}
-            </Grid>
-
-
-            
-        </div>
+                        )
+                    })}
+                </Grid>
+            </div>
     )
 }
 export default About;

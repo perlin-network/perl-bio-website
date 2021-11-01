@@ -5,8 +5,8 @@ import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 function Contact() {
     let [buttonStatus, setButtonStatus] = useState(false);
     return (
-        <div className='contact-container' style={{background:"#333336", paddingTop:'120px'}}>
-            <div className='contact-content' style={{margin:'0% 5%'}}>
+        <div className='contact-container' style={{background:"#333336", padding:'3% 5%'}}>
+        
                 <div className='contact-title' style={{...titleTextStyle, fontSize:'36px'}}>
                     Contact
                 </div>
@@ -54,8 +54,7 @@ function Contact() {
                         </form>
                         </div>
                 </div>
-
-            </div>            
+          
         </div>
     )
 }

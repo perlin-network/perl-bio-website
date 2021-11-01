@@ -9,7 +9,7 @@ const useStyles=makeStyles({
         color:'white',
         fontFamily:"Bai Jamjuree, sans serif",        
         fontStyle: "normal",        
-        margin:'0% 5%'
+        margin:'3% 5%'
     },
     button:{
         fontFamily:"Bai Jamjuree, sans serif",

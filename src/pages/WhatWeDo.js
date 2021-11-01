@@ -24,8 +24,7 @@ function WhatWeDo() {
         }
     ]
     return (
-        <div className='wwd-container' style={{paddingTop:"120px", background:"#333336"}}>
-            <div className='wwd-content' style={{margin:"0% 5%",}}>
+        <div className='wwd-container' style={{padding:"3% 5%", background:"#333336"}}>
             <div className='wwd-title' style={{...titleTextStyle, fontSize:'48px'}}>
                 What We Do
             </div>
@@ -54,7 +53,6 @@ function WhatWeDo() {
                         )
                     })}
                 </Grid>
-            </div>
             </div>
             <CaseStudies/>
         </div>

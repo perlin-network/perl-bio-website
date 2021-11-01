@@ -23,7 +23,7 @@ const useStyles=makeStyles({
 
 function Splash() {
     const classes=useStyles()
-    return (        
+    return (
             <div className='splash-container'
             style={{
                 backgroundColor:'#333336', mixBlendMode:'pass-through',  backgroundSize: "cover", minHeight:'100vh', 
