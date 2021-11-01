@@ -16,10 +16,10 @@ export default function Navbar() {
             route:'/who',
             text:'Team'
         },
-        {
-            route:'/what',
-            text:'What we do'
-        },
+        // {
+        //     route:'/what',
+        //     text:'What we do'
+        // },
         {
             route:'/projects',
             text:'Projects'

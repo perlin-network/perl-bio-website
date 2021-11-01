@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
 import Splash from './pages/Splash';
 import About from './pages/About';
-import WhatWeDo from './pages/WhatWeDo';
+// import WhatWeDo from './pages/WhatWeDo';
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
 import Terms from './pages/Terms'
@@ -45,9 +45,9 @@ function App() {
               <Route exact path='/who'>
                 <About/>
               </Route>
-              <Route exact path='/what'>
+              {/* <Route exact path='/what'>
                 <WhatWeDo/>
-              </Route>
+              </Route> */}
               <Route exact path='/terms'>
                 <Terms/>
               </Route>

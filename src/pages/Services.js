@@ -35,7 +35,7 @@ const useStyles=makeStyles({
     },
     contentText:{
         marginTop:'10%'
-    },
+    },    
     contentBarContent:{
         marginTop:'25px'
     },
@@ -93,7 +93,7 @@ function Services() {
                 </Grid>
                 <Grid item>
                     <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row-reverse':'row'} justify='space-around' spacing={5} >
-                        <Grid item xs={12} md={6}>
+                        <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'end':'center'}}>
                             <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service1.png" alt='it-services'/>
                         </Grid>
                         <Grid item xs={12} md={6}>
@@ -114,7 +114,7 @@ function Services() {
                 </Grid>
                 <Grid item>
                     <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row':'row-reverse'} justify='space-around' spacing={5} >
-                        <Grid item xs={12} md={6}>
+                        <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'start':'center'}}>
                             <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service2.png" alt='it-services2' style={{width:'100%', maxWidth:'852px', maxHeight:'573px'}}/>
                         </Grid>
                         <Grid item xs={12} md={6}>
@@ -135,7 +135,7 @@ function Services() {
                 </Grid>
                 <Grid item>
                     <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row-reverse':'row'} justify='space-around' spacing={5} >
-                        <Grid item xs={12} md={6}>
+                        <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'end':'center'}}>
                             <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service3.png" alt='it-services3'/>
                         </Grid>
                         <Grid item xs={12} md={6}>
