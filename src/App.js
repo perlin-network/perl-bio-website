@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import Terms from './pages/Terms'
 import Media from './pages/Media'
 import Services from './pages/Services'
+import Projects from './pages/Projects'
 import Privacy from './pages/Privacy'
 import { Fab, useScrollTrigger, Zoom } from '@material-ui/core';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
@@ -50,6 +51,9 @@ function App() {
           </Route>
           <Route exact path='/media'>
             <Media/>
+          </Route>
+          <Route exact path='/projects'>
+            <Projects/>
           </Route>
           <Route exact path='/'>
             <Splash/>
