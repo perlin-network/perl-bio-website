@@ -17,7 +17,7 @@ import {BrowserRouter as Router,
   Route,
 } from 'react-router-dom'
 import CookieConsent from "react-cookie-consent";
-import { mergeClasses } from '@material-ui/styles';
+
 
 function App() {
   let trigger=useScrollTrigger()  
