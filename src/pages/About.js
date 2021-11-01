@@ -5,6 +5,7 @@ import UnknownPng from '../assets/About/unknown.png'
 import DorjeePng from '../assets/About/dorjee.png'
 import RalphPng from '../assets/About/ralph.png'
 import markPng from '../assets/About/mark.png'
+import joshuaJpg from '../assets/About/joshua.jpg'
 function About() {
     let aboutInfo=[
         {
@@ -51,6 +52,17 @@ function About() {
             `,
             email:"test@example.com",
             portrait:markPng
+        },
+        {
+            title:"Joshua Ng",
+            content:`Joshua has worked with Himpanzee since 2020, when he successfully co-developed the world’s largest REDD+ project in Indonesia. He completed the carbon project technical work, development, and assisted in the on-site validation of the project.
+
+            Joshua has always been passionate about nature and the outdoors and has spent his education at the intersection of the environment and technology. Educated in molecular biology, with a specialisation in tropical ecology, Joshua’s specialist expertise is in sustainability, carbon project development and biodiversity with a special interest in protecting genetic diversity and ecosystem conservation.
+
+            Joshua has always been an activist in social change. During his university studies, he led a team of 22 undergraduate students to Yangon, Myanmar and achieved project milestones by constructing a section of a school and rebuilding a kitchen walkway. He collaborated with 3 different project teams to create a comprehensive curriculum to Burmese students to comprehend English, Mathematics and Science knowledge.
+            `,
+            email:"test@example.com",
+            portrait:joshuaJpg
         }
     ]
     
@@ -69,7 +81,7 @@ function About() {
                             <Grid item style={{background:" linear-gradient(180deg, #3C423C 0%, rgba(51, 51, 54, 0) 100%)",  borderRadius:"16px",}}>
                                 <Grid container direction='row' justify='space-between' key={i.title}  style={{maxWidth:"100%", marginBottom:"50px", padding:'5% 2%'}}>
                                     <Grid item style={{margin:'20px 3%', }}>
-                                        <img src={i.portrait} alt={UnknownPng} style={{height:'100%', maxHeight:'140px', borderRadius:'16px'}}/>
+                                        <img src={i.portrait} alt={UnknownPng} style={{height:'100%', maxHeight:'140px', borderRadius:'90px', filter:'grayscale(100%)'}}/>
                                     </Grid>
                                     <Grid item style={{maxWidth:'75%',}}>
                                         <p className='grid-title-text' style={{...contentTextStyle, margin:'20px 5%', justifyContent:"flex-start", color:"#A5AFA8"}}>

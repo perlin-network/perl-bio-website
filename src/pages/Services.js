@@ -115,7 +115,7 @@ function Services() {
                 <Grid item>
                     <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row':'row-reverse'} justify='space-around' spacing={5} >
                         <Grid item xs={12} md={6}>
-                            <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service2.png" alt='it-services2' style={{  maxWidth:'100%'}}/>
+                            <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service2.png" alt='it-services2' style={{width:'100%', maxWidth:'852px', maxHeight:'573px'}}/>
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <Grid className={classes.contentText} container direction='column'>

@@ -14,7 +14,7 @@ export default function Navbar() {
         },
         {
             route:'/who',
-            text:'Who we are'
+            text:'Team'
         },
         {
             route:'/what',
