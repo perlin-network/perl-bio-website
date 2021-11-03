@@ -135,6 +135,9 @@ function Articles(numPerPage=6){
                     <Grid item lg={4} md={6} xs={12}>
                         <Card className={classes.card} >
                             <CardContent style={{height:'20vh'}}>
+                                {i.logo?<div className={classes.cardLogoWrapper}>
+                                    <img className={classes.cardLogo} src={i.logo} alt={i.title}/>
+                                    </div>:null}
                                 <a className={classes.link} href={i.link?i.link:null} target='_blank' rel='noopener nofollow noreferrer'>
                                     <h3>{i.title}</h3>
                                 </a>

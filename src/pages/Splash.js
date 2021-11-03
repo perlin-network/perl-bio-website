@@ -4,6 +4,7 @@ import TreeSvg from '../assets/Splash/tree.png'
 import Background from '../assets/Splash/background.png'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import PartnerPerlEco from '../components/PartnerPerlEco'
+import PartnerOthers from '../components/PartnerOthers'
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles=makeStyles({
@@ -58,14 +59,22 @@ function Splash() {
             </Grid>
             </div>
             <div className='partner-container' style={{marginTop:'75px', maxWidth:'100%',margin:'0% 5%', backgroundColor:'#333336'}}>
-                <p style={{...contentTextStyle, color:"#A5AFA8", }}>Partners</p>
+                <p style={{...contentTextStyle, color:"#A5AFA8", }}>Affilates</p>
                 <Grid container direction='column'>
                     <Grid item style={{marginTop:'35px',}}>
                         <PartnerPerlEco />
                     </Grid>
                 </Grid>
             </div>
-            </div>      
+            <div className='partner-container' style={{marginTop:'75px', maxWidth:'100%',margin:'0% 5%', backgroundColor:'#333336'}}>
+                <p style={{...contentTextStyle, color:"#A5AFA8", }}>Partners</p>
+                <Grid container direction='column'>
+                    <Grid item style={{marginTop:'35px',}}>
+                        <PartnerOthers />
+                    </Grid>
+                </Grid>
+            </div>
+        </div>
             
         
     )

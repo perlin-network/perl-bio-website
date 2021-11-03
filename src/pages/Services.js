@@ -1,7 +1,8 @@
 import React from 'react'
-import {Grid} from '@material-ui/core'
+import {Grid, Card} from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles';
 import {useTheme} from '@material-ui/core/styles'
+import LogoPng from '../assets/Services/bioeconomy.png'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const useStyles=makeStyles({
@@ -58,6 +59,18 @@ const useStyles=makeStyles({
     sdgTitle:{
         fontWeight:'bold'
     },
+    card:{
+        background:'#505056',
+        color:'white',
+        borderRadius:'16px',
+        padding:'5% 5%',
+        "&:hover":{
+            transform: "scale3d(1.05, 1.05, 5)"
+        }
+    },
+    cardImageWrapper:{
+        padding:'3%'
+    }
 })
 
 const unImages=[
@@ -78,6 +91,28 @@ const unImages=[
     }
 ]
 
+const cardContent=[
+    {
+        image:LogoPng,
+        title:'Feasibility Review',
+        content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    },
+    {
+        image:LogoPng,
+        title:'Project Design',
+        content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    },
+    {
+        image:LogoPng,
+        title:'Validation',
+        content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    },
+    {
+        image:LogoPng,
+        title:'Monitoring & Verification',
+        content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    },
+]
 
 function Services() {
     const classes=useStyles()
@@ -152,6 +187,31 @@ function Services() {
                                 </Grid>
                             </Grid>
                         </Grid>
+                    </Grid>
+                </Grid>
+                <Grid item style={{textAlign:'center'}}>                    
+                    <h2 className={classes.contentBarTitle}>Specializations</h2>                    
+                </Grid>
+                <Grid item style={{textAlign:'center'}}>
+                    <Grid container direction='row' spacing={5}>
+                        {cardContent.map(i=>{
+                            return(
+                                <Grid item xs={12} md={3}>
+                                    <Card className={classes.card}>
+                                        {i.image?<div className={classes.cardImageWrapper}>
+                                            <img classname={classes.cardImage} src={i.image} alt={i.title}/>
+                                        </div>:null}
+                                        <div className={classes.contentBarTitle} style={{fontSize:'32px', minHeight:'75px'}}>
+                                            {i.title}
+                                        </div>
+                                        <div className={classes.contentBarContent} >
+                                            {i.content}
+                                        </div>
+                                    </Card>
+                                </Grid>
+                            )
+                        })}
+
                     </Grid>
                 </Grid>
                 <Grid item style={{textAlign:'center'}}>                    
