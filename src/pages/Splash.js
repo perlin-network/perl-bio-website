@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Grid, Link, Button } from '@material-ui/core';
+import {useTheme} from '@material-ui/core/styles'
 import TreeSvg from '../assets/Splash/tree.png'
 import Background from '../assets/Splash/background.png'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
@@ -25,20 +26,26 @@ const useStyles=makeStyles({
         marginTop:'75px',
         maxWidth:'100%',
         margin:'0% 5%',
-        backgroundColor:'#333336'
+        backgroundColor:'#333336',
     },
     partnerContainerHeader:{
         ...contentTextStyle,
         color:"#A5AFA8"
     },
+    dropDownCard:{
+
+    },
     pillarDonut:{
         height:'500px',
+        maxWidth:'85%',
+        
     }
 
 })
 
 
-  const MyResponsivePie = () => {
+  function MyResponsivePie() {
+    const theme=useTheme()
     const TopMetric = ({ dataWithArc, centerX, centerY }) => {
         return (
             <text
@@ -87,6 +94,7 @@ const useStyles=makeStyles({
             </text>
         )
     }
+    // const TestCard=({})
     return (
     <ResponsivePie
         data={[
@@ -128,11 +136,22 @@ const useStyles=makeStyles({
         arcLinkLabelsTextColor="#ffffff"
         arcLinkLabelsThickness={2}
         arcLinkLabelsColor={{ from: 'color' }}
+        // arcLinkLabelComponent={(datum)=>{
+        //     return ('meow')
+        //     // return({datum})
+        // }}
+        onMouseEnter={(node, event)=>{
+            //showcard node.id
+            // console.log(node)
+            // console.log(event)
+        }}
+        onMouseLeave={(node, event)=>{
+            //close all cards
+        }}
         arcLabelsSkipAngle={10}
-        arcLabelsTextColor='white'
         arcLabel="label"
-        theme={{fontSize:'85%'}}
-        
+        arcLabelsTextColor='white'
+        theme={{fontSize:'0.95vw'}}
         tooltip="false"
         layers={['arcs', 'arcLabels', 'arcLinkLabels', TopMetric, MiddleMetric, BottomMetric]}
         //{{ from: 'color', modifiers: [ [ 'darker', 2 ] ] }}
@@ -160,6 +179,7 @@ const useStyles=makeStyles({
 
 function Splash() {
     const classes=useStyles()
+
     return (
             <div className='splash-container'
             style={{
@@ -181,9 +201,9 @@ function Splash() {
                             </div>
                         </Grid>
                         <Grid item style={{marginTop:'50px'}}>
-                            <Link href='/who' style={{textDecoration:'none', zIndex:'0'}}>
+                            <Link href='/contact' style={{textDecoration:'none', zIndex:'0'}}>
                                 <Button className={classes.button} >
-                                    {`Learn More`}
+                                    {`Book a Consultation`}
                                 </Button>
                             </Link>
                         </Grid>
@@ -210,9 +230,12 @@ function Splash() {
                     </Grid>
                 </Grid>
             </div>
-            <div className={classes.partnerContainer}>
+            <div className={classes.partnerContainer} style={{alignItems:'center'}}>
                 <p className={classes.partnerContainerHeader}>Pillars</p>
-                <div className={classes.pillarDonut}>
+                <div className={classes.pillarDonut} style={{justifyItem:'center'}}>
+                    <div style={{position:'absolute',marginLeft:'15%', marginTop:'8%'}}>
+                        hello
+                    </div>
                     <MyResponsivePie/>
                 </div>
             </div>
