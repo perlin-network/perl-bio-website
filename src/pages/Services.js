@@ -197,14 +197,14 @@ function Services() {
                         {cardContent.map(i=>{
                             return(
                                 <Grid item xs={12} md={3}>
-                                    <Card className={classes.card}>
+                                    <Card className={classes.card} style={{minHeight:'172px'}}>
                                         {i.image?<div className={classes.cardImageWrapper}>
                                             <img classname={classes.cardImage} src={i.image} alt={i.title}/>
                                         </div>:null}
                                         <div className={classes.contentBarTitle} style={{fontSize:'32px', minHeight:'75px'}}>
                                             {i.title}
                                         </div>
-                                        <div className={classes.contentBarContent} >
+                                        <div className={classes.contentBarContent} hidden={true}>
                                             {i.content}
                                         </div>
                                     </Card>

@@ -32,7 +32,7 @@ function Splash() {
             > 
             <div className='splash-background' style={{backgroundImage: `url(${Background})`, backgroundSize:'fit', backgroundRepeat:'no-repeat', backgroundPosition:'center center', padding:'5%'}}>
             <Grid container justify='space-between' style={{maxWidth:'100%', marginTop:'120px', }}>
-                <Grid item justify='flex-start'>
+                <Grid item justify='flex-start' sm={12} md={6}>
                     <Grid container direction='column' >
                         <Grid item>
                             <div className='splash-header' style={{...titleTextStyle, fontSize:'42px',  maxWidth:'600px'}}>
@@ -53,7 +53,7 @@ function Splash() {
                         </Grid>
                     </Grid>                    
                 </Grid>
-                <Grid item justify='flex-end' >
+                <Grid item justify='flex-end' sm={12} md={6}>
                     <img src={TreeSvg} alt='' style={{maxWidth:'100%', minWidth:'100%', maxHeight:"620px", marginTop:window.innerWidth < 768 ?'0px':'-125px' }}/>
                 </Grid> 
             </Grid>

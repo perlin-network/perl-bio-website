@@ -44,13 +44,22 @@ const useStyles=makeStyles({
         color:'white',
         background:'#333336',
         // height:'250px',
-        minHeight:'250px',
+        minHeight:'350px',
         height:'38vh',
-        paddingBottom:'25px'       
+        paddingBottom:'25px',
+        "&:hover":{
+            transform:"scale3d(1.05, 1.05, 5)"
+        }
         
     },
-    cardTitle:{
-        
+    cardLogoWrapper:{
+        maxHeight:'50%'
+    },
+    cardLogo:{
+        // margin:'5%',
+        maxHeight:'50%',
+        maxWidth:'62%',
+        textAlign:'center'
     },
     cardContent:{
         textAlign:'left',
@@ -59,7 +68,7 @@ const useStyles=makeStyles({
     },
     cardDate:{
         marginLeft:'2%', 
-        marginTop:'20%',
+        marginTop:'40%',
         // position:'absolute',
         bottom:0,
         textAlign:'left',        
@@ -78,53 +87,30 @@ function Articles(numPerPage=6){
     //Add newest media ontop
     const mediaContent=[
         {
-            logo:null,
-            link:'https://medium.com/perlin-network/bioeconomy-and-perl-eco-83e8a939580b',
-            title:'Bioeconomy & PERL.eco announce $2m investment for new biodiversity standard',
-            content:'SINGAPORE — Bioeconomy, a leader in climate change solutions and developing strategies for ecological projects, and PERL.eco the Planetary Ecosystem Registration Ledger',
-            date:'Oct 11 2021'
+
+            embed:"t7CD1v-AzBQ ",
+            link:'https://www.youtube.com/watch?v=t7CD1v-AzBQ',
+            title:'Burning Season',
+            content:'Watch Dorjee Sun in the Burning Season trailer (2008), narrated by Hugh Jackman',
+            // date:'Oct 11 2021'
             
         },
         {
-            logo:null,
+            logo:'https://www.himpanzee.com/static/blog-image/blog-image3.jpg',
             link:'https://medium.com/perlin-network/perl-eco-tokenized-carbon-and-carbon-registry-836839444b07',
-            title:'PERL.eco tokenized carbon and carbon registry',
-            content:'PERL.eco has tokenized carbon and built the Carbon Offset Registry. Our carbon tokens or carbon kilos (pCO2) can now be bought from 1inch.',
-            date:'Oct 1 2021'
+            title:'TIME Hero of the Environment',
+            content:'Co-founder Dorjee Sun was named 2009 TIME Hero of the Environment',
+            // date:'Oct 1 2021'
             
         },        
         {
-            logo:null,
-            link:'https://gorillafund.org/press-releases/press-release-on-world-gorilla-day-dian-fossey-gorilla-fund-announces-moon-gorillas-a-new-collaboration-for-carbon-neutral-perl-nfts/',
-            title:'Moon Gorillas, a new collaboration for carbon-neutral PERL NFTs',
-            content:'In celebration of World Gorilla Day on September 24, the Dian Fossey Gorilla Fund is announcing plans to launch an exclusive line of carbon-neutral non-fungible tokens', 
-            date:'Sep 24 2021'
+            logo:"https://www.himpanzee.com/static/blog-image/blog-image4.jpg",
+            link:'https://web.archive.org/web/20110708164950/http:/www.climos.com/news/articles/indonesianproposal.htm',
+            title:'Pay us not to chop down trees',
+            content:'Read about the Indonesian proposal in the Wall Street Journal', 
+            // date:'Sep 24 2021'
             
-        },
-        {
-            logo:null,
-            link:'https://cointelegraph.com/news/perlin-perl-price-gains-100-as-the-focus-on-green-energy-solutions-intensifies',
-            title:'Perlin (PERL) price gains 100% as the focus on green energy solutions intensifies',
-            content:'PERL price defied the marketwide downturn with a 100% rally following the release of an environmentally friendly focused platform that provides users with carbon credits.', 
-            date:'Jun 19 2021'
-            
-        },
-        {
-            logo:null,
-            link:'https://medium.com/perlin-network/introducing-oneperl-fb25acd7c4d2',
-            title:'Introducing onePERL',
-            content:'We are excited to announce our collaboration with ICHI, a protocol that created the world’s first Decentralized Monetary Authority (DMA), to launch our new governance token: onePERL.', 
-            date:'Aug 12 2021'
-            
-        },
-        {
-            logo:null,
-            link:'https://medium.com/perlin-network/perl-eco-is-now-on-shibaswap-woof-ab3650ea494b',
-            title:'PERL.eco is now on Shibaswap',
-            content:'We’re excited to have PERL.eco listed on ShibaSwap, the decentralized exchange that’s based on $SHIB on the Ethereum network.', 
-            date:'Aug 9 2021'
-            
-        },
+        }
     ]
     for(let i=0; i<mediaContent.length/numPerPage; i++){
         groupedMedia.push(
@@ -135,20 +121,38 @@ function Articles(numPerPage=6){
                     <Grid item lg={4} md={6} xs={12}>
                         <Card className={classes.card} >
                             <CardContent style={{height:'20vh'}}>
-                                {i.logo?<div className={classes.cardLogoWrapper}>
-                                    <img className={classes.cardLogo} src={i.logo} alt={i.title}/>
-                                    </div>:null}
-                                <a className={classes.link} href={i.link?i.link:null} target='_blank' rel='noopener nofollow noreferrer'>
-                                    <h3>{i.title}</h3>
-                                </a>
-                                <div className={classes.cardContent}>
-                                    {`${i.content.substring(0,190)}${i.content.length>190?'...':''}`}
-                                </div>
+                                <Grid container direction='column' spacing={2}>
+                                    <Grid item hidden={!i.embed}>
+                                        <iframe
+                                        height='100%'
+                                        maxHeight='50%'
+                                        width="100%"                    
+                                        src={`https://www.youtube.com/embed/${i.embed}`}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        title="Embedded youtube"
+                                        /> 
+                                    </Grid>
+                                    <Grid item hidden={!i.logo}  style={{maxHeight:'50%', textAlign:'center'}}>
+                                        <img className={classes.cardLogo} src={i.logo} alt={i.title}  />
+                                    </Grid>
+                                    <Grid item hidden={!i.title}>
+                                        <a className={classes.link} href={i.link?i.link:null} target='_blank' rel='noopener nofollow noreferrer'>
+                                            <h3>{i.title}</h3>
+                                        </a>
+                                    </Grid>
+                                    <Grid hidden={!i.content || !i.content.length===0}>
+                                        <div className={classes.cardContent}>
+                                            {`${i.content.substring(0,190)}${i.content.length>190?'...':''}`}
+                                        </div>
+                                    </Grid>
+                                </Grid>                                
                             </CardContent>
                             <CardContent>
-                            <div className={classes.cardDate} >
+                            {/* <div className={classes.cardDate} hidden={!i.date}>
                                 {i.date}
-                            </div>
+                            </div> */}
                             </CardContent>
                         </Card>
                     </Grid>
