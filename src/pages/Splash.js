@@ -6,6 +6,7 @@ import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import PartnerPerlEco from '../components/PartnerPerlEco'
 import PartnerOthers from '../components/PartnerOthers'
 import { makeStyles } from '@material-ui/styles';
+import { ResponsivePie } from '@nivo/pie'
 
 const useStyles=makeStyles({
     button:{
@@ -19,8 +20,143 @@ const useStyles=makeStyles({
         '&:hover':{
             color:'white',
         }
+    },
+    partnerContainer:{
+        marginTop:'75px',
+        maxWidth:'100%',
+        margin:'0% 5%',
+        backgroundColor:'#333336'
+    },
+    partnerContainerHeader:{
+        ...contentTextStyle,
+        color:"#A5AFA8"
+    },
+    pillarDonut:{
+        height:'500px',
     }
+
 })
+
+
+  const MyResponsivePie = () => {
+    const TopMetric = ({ dataWithArc, centerX, centerY }) => {
+        return (
+            <text
+                x={centerX}
+                y={centerY-25}
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fill='white'
+                style={{
+                    fontSize: '75%',
+                }}
+            >
+            Integrated Marketplace
+            </text>
+        )
+    }
+    const MiddleMetric = ({ dataWithArc, centerX, centerY }) => {
+        return (
+            <text
+                x={centerX}
+                y={centerY}
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fill='white'
+                style={{
+                    fontSize: '75%',
+                }}
+            >
+            Blockchain
+            </text>
+        )
+    }
+    const BottomMetric = ({ dataWithArc, centerX, centerY }) => {
+        return (
+            <text
+                x={centerX}
+                y={centerY+25}
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fill='white'
+                style={{
+                    fontSize: '75%',
+                }}
+            >
+            Financial Incentives
+            </text>
+        )
+    }
+    return (
+    <ResponsivePie
+        data={[
+            
+            {
+              "id": "2. Tokenized biodiversity credits",
+              "label": "Bio Credits",
+              "value": 25,
+              "color": "hsl(102, 40%, 58%)"
+            },
+            {
+              "id": "3. Collectibles",
+              "label": "Collectibles",
+              "value": 25,
+              "color": "hsl(102, 32%, 54%)"
+            },
+            {
+              "id": "4. Genomic data blockchain platform",
+              "label": "Biogenome",
+              "value": 25,
+              "color": "hsl(102, 24%, 47%)"
+            },
+            {
+            "id": "1. Carbon services",
+            "label": "Carbon Credits",
+            "value": 25,
+            "color": "hsl(102, 56%, 65%)"
+            }
+          ]}
+        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+        colors={{datum:'data.color'}}
+        innerRadius={0.45}
+        padAngle={0.7}
+        cornerRadius={3}
+        activeOuterRadiusOffset={8}
+        borderWidth={1}
+        borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
+        arcLinkLabelsSkipAngle={10}
+        arcLinkLabelsTextColor="#ffffff"
+        arcLinkLabelsThickness={2}
+        arcLinkLabelsColor={{ from: 'color' }}
+        arcLabelsSkipAngle={10}
+        arcLabelsTextColor='white'
+        arcLabel="label"
+        theme={{fontSize:'85%'}}
+        
+        tooltip="false"
+        layers={['arcs', 'arcLabels', 'arcLinkLabels', TopMetric, MiddleMetric, BottomMetric]}
+        //{{ from: 'color', modifiers: [ [ 'darker', 2 ] ] }}
+        defs={[
+            // {
+            //     id: 'dots',
+            //     type: 'patternDots',
+            //     background: 'inherit',
+            //     color: 'rgba(255, 255, 255, 0.3)',
+            //     size: 4,
+            //     padding: 1,
+            //     stagger: true
+            // }
+        ]}
+        fill={[
+            // {
+            //     match: {
+            //         id: 'ruby'
+            //     },
+            //     id: 'dots'
+            // },
+        ]}
+    />
+)}
 
 function Splash() {
     const classes=useStyles()
@@ -58,21 +194,27 @@ function Splash() {
                 </Grid> 
             </Grid>
             </div>
-            <div className='partner-container' style={{marginTop:'75px', maxWidth:'100%',margin:'0% 5%', backgroundColor:'#333336'}}>
-                <p style={{...contentTextStyle, color:"#A5AFA8", }}>Affilates</p>
+            <div className={classes.partnerContainer}>
+                <p className={classes.partnerContainerHeader}>Affilates</p>
                 <Grid container direction='column'>
                     <Grid item style={{marginTop:'35px',}}>
                         <PartnerPerlEco />
                     </Grid>
                 </Grid>
             </div>
-            <div className='partner-container' style={{marginTop:'75px', maxWidth:'100%',margin:'0% 5%', backgroundColor:'#333336'}}>
-                <p style={{...contentTextStyle, color:"#A5AFA8", }}>Partners</p>
+            <div className={classes.partnerContainer}>
+                <p className={classes.partnerContainerHeader}>Partners</p>
                 <Grid container direction='column'>
                     <Grid item style={{marginTop:'35px',}}>
                         <PartnerOthers />
                     </Grid>
                 </Grid>
+            </div>
+            <div className={classes.partnerContainer}>
+                <p className={classes.partnerContainerHeader}>Pillars</p>
+                <div className={classes.pillarDonut}>
+                    <MyResponsivePie/>
+                </div>
             </div>
         </div>
             

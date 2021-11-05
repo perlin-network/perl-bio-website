@@ -43,10 +43,10 @@ function PartnerOthers() {
     const classes=useStyles()
     return (
         <div className={classes.root}>
-            <Grid container spacing={5} justify="space-around">
+            <Grid container spacing={5} justify="space-evenly">
                 {partnerLogos.map(i=>{
                     return(
-                        <Grid item xs={12} md={4}>
+                        <Grid item xs={12} md={4} style={{textAlign:'center'}}>
                             <img className={classes.partnerImage} src={i.image} alt={i.name} style={{filter:i.grayscale?'brightness(0) invert(1)':''}}/>
                         </Grid>
 
