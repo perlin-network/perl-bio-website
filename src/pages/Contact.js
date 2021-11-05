@@ -1,9 +1,30 @@
 import React, {useState} from 'react'
-import { Button, Checkbox, Link, Grid} from '@material-ui/core';
+import { Button, Checkbox, Link, Grid} from '@material-ui/core'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
+import { makeStyles } from '@material-ui/styles'
+
+const useStyles=makeStyles({
+    button:{
+        ...titleTextStyle, 
+        marginTop:"20px",
+        minHeight:'70px',
+        minWidth:'200px',
+        fontSize:'24px', 
+        background:'#91D873',
+        borderRadius:'16px',
+        color:'black',
+        cursor:'pointer',
+        "&:hover":{
+            background:'none',
+            color:'white'
+        }
+    }
+})
+
 
 function Contact() {
     let [buttonStatus, setButtonStatus] = useState(false);
+    const classes=useStyles()
     return (
         <div className='contact-container' style={{background:"#333336", padding:'3% 5%'}}>
         
@@ -49,7 +70,7 @@ function Contact() {
                                     
                                 </Grid>
                             <p>
-                                <Button type="submit" disabled={!buttonStatus} style={{...submitButtonStyle, opacity:`${buttonStatus===true?1:0.5}`}}>{`Send >`}</Button>
+                                <Button className={classes.button} type="submit" disabled={!buttonStatus} style={{opacity:`${buttonStatus===true?1:0.5}`}}>{`Send >`}</Button>
                             </p>
                         </form>
                         </div>
@@ -71,19 +92,7 @@ let formInputStyle={
     borderBottom:'1px solid #808080',
     boxShadow:'none'
 }
-let submitButtonStyle={
-    ...titleTextStyle, 
-    marginTop:"20px",
-    minHeight:'70px',
-    minWidth:'200px',
-    fontSize:'24px', 
-    background:'#91D873',
-    borderRadius:'16px',
-    color:'black',
-    cursor:'pointer'
-    
 
-}
 let linkTextStyle={
     ...contentTextStyle,
     opacity:'0.7',
