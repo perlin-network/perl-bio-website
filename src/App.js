@@ -65,7 +65,7 @@ function App() {
               </Route>
             </Switch>
             <Zoom in={trigger}>
-              <Fab size="small" aria-label="scroll back to top" style={{position:'fixed', margin:'2% 2%', bottom:0, right:0}} onClick={handleClick}>
+              <Fab size="small" aria-label="scroll back to top" style={{position:'fixed', margin:'2% 3%', bottom:50, right:0}} onClick={handleClick}>
                 <KeyboardArrowUpIcon />
               </Fab>
             </Zoom>
@@ -87,8 +87,9 @@ function App() {
 
 export default App;
 let AppStyle={
+  width:'100%',
   fontFamily:'Bai Jamjuree, sans-serif',
-  background:"#333336",
+  background:"#FFFFFF",
   minHeight:'100vh'
 }
 

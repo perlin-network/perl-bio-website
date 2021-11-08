@@ -3,12 +3,12 @@ let titleTextStyle={
     fontStyle: "normal",
     fontWeight: "bold", 
     fontSize:"72px",
-    color:"#91D873"
+    color:"#72A15F"
 }
 let contentTextStyle={
     ...titleTextStyle,
     fontWeight:"500",
-    color:"white",
+    color:"black",
     fontSize:"24px"
 }
 let verticalDividerStyle={
