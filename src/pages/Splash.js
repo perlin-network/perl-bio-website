@@ -1,14 +1,13 @@
-import React, {useState} from 'react'
-import { Grid, Link, Button } from '@material-ui/core';
+import React, {useRef} from 'react'
+import { makeStyles } from '@material-ui/styles'
 import {useTheme} from '@material-ui/core/styles'
+import { Grid, Link, Button } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import pictureLeftPng from '../assets/CaseStudies/PictureLeft.png'
 import pictureRightPng from '../assets/CaseStudies/PictureRight.png'
 import backgroundPlaceholder from '../assets/Splash/background-placeholder.svg'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
-import PartnerPerlEco from '../components/PartnerPerlEco'
 import PartnerOthers from '../components/PartnerOthers'
-import { makeStyles } from '@material-ui/styles'
 import { ResponsivePie } from '@nivo/pie'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
@@ -36,12 +35,22 @@ const useStyles=makeStyles({
     heroGrid:{
         marginTop:'15%'
     },
+    '@keyframes bounce':{
+        'from':{
+            transform: 'translateY(0px);'
+        },
+        'to':{
+            transform: 'translateY(-15px);'
+        }
+    },
     downArrow:{
-        position:'absolute',
-        bottom:0,
-        marginLeft:'45vw',
-        marginTop:'5%',
+        animation:'$bounce 1000ms infinite alternate',
+        marginTop:'15%',
         textAlign:'center',
+    },
+    downArrowIcon:{        
+        color:'#72A15F',
+        fontSize:'300%'
     },
     button:{
         fontFamily:"Bai Jamjuree, sans serif",
@@ -82,61 +91,61 @@ const useStyles=makeStyles({
     projectTitle:{
         ...titleTextStyle,
         fontSize:'24px'
-    }
+    },
 
 })
 
 
   function MyResponsivePie() {
-    const theme=useTheme()
-    const TopMetric = ({ dataWithArc, centerX, centerY }) => {
-        return (
-            <text
-                x={centerX}
-                y={centerY-25}
-                textAnchor="middle"
-                dominantBaseline="middle"
-                fill='black'
-                style={{
-                    fontSize: '75%',
-                }}
-            >
-            Integrated Marketplace
-            </text>
-        )
-    }
-    const MiddleMetric = ({ dataWithArc, centerX, centerY }) => {
-        return (
-            <text
-                x={centerX}
-                y={centerY}
-                textAnchor="middle"
-                dominantBaseline="middle"
-                fill='black'
-                style={{
-                    fontSize: '75%',
-                }}
-            >
-            Blockchain
-            </text>
-        )
-    }
-    const BottomMetric = ({ dataWithArc, centerX, centerY }) => {
-        return (
-            <text
-                x={centerX}
-                y={centerY+25}
-                textAnchor="middle"
-                dominantBaseline="middle"
-                fill='black'
-                style={{
-                    fontSize: '75%',
-                }}
-            >
-            Financial Incentives
-            </text>
-        )
-    }
+    // const theme=useTheme()
+    // const TopMetric = ({ dataWithArc, centerX, centerY }) => {
+    //     return (
+    //         <text
+    //             x={centerX}
+    //             y={centerY-25}
+    //             textAnchor="middle"
+    //             dominantBaseline="middle"
+    //             fill='black'
+    //             style={{
+    //                 fontSize: '75%',
+    //             }}
+    //         >
+    //         Integrated Marketplace
+    //         </text>
+    //     )
+    // }
+    // const MiddleMetric = ({ dataWithArc, centerX, centerY }) => {
+    //     return (
+    //         <text
+    //             x={centerX}
+    //             y={centerY}
+    //             textAnchor="middle"
+    //             dominantBaseline="middle"
+    //             fill='black'
+    //             style={{
+    //                 fontSize: '75%',
+    //             }}
+    //         >
+    //         Blockchain
+    //         </text>
+    //     )
+    // }
+    // const BottomMetric = ({ dataWithArc, centerX, centerY }) => {
+    //     return (
+    //         <text
+    //             x={centerX}
+    //             y={centerY+25}
+    //             textAnchor="middle"
+    //             dominantBaseline="middle"
+    //             fill='black'
+    //             style={{
+    //                 fontSize: '75%',
+    //             }}
+    //         >
+    //         Financial Incentives
+    //         </text>
+    //     )
+    // }
     // const TestCard=({})
     return (
     <ResponsivePie
@@ -279,6 +288,8 @@ const textBox=[
 function Splash() {
     const classes=useStyles()
     const theme=useTheme()
+    const section1=useRef(null)
+    const executeScroll = () => section1.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
 
     return (
             <div className={classes.root}>
@@ -308,15 +319,15 @@ function Splash() {
                                 </Grid>
                             </Grid>                                       
                         </Grid>
-                        <div className={classes.downArrow} style={{margintTop:useMediaQuery(theme.breakpoints.down('md')?'5%':null)}}>
-                            <a href="#2">
-                                <KeyboardArrowDownIcon style={{color:'#72A15F', fontSize:'300%'}}/>
-                            </a>
+                        <div className={classes.downArrow} style={{marginTop:useMediaQuery(theme.breakpoints.down('md')?'5%':null)}}>
+                                <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
+                                    <KeyboardArrowDownIcon className={classes.downArrowIcon}/>
+                                </Button>
                         </div>
                     </div>
                 </div>
             <div className={classes.overrideBackground} >
-                <div className={classes.partnerContainer} style={{alignItems:'center', marginTop:'-15%'}}>
+                <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center', marginTop:'-15%'}}>
                     <Grid container xs={12} md={6} direction='column'>
                         <Grid item className={classes.partnerContainerHeader} >
                             <p>

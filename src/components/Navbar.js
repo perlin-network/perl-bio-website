@@ -34,20 +34,16 @@ export default function Navbar() {
             text:'Home'
         },
         {
+            route:'/services',
+            text:'Services'
+        },
+        {
             route:'/who',
             text:'Team'
         },
-        // {
-        //     route:'/what',
-        //     text:'What we do'
-        // },
         {
             route:'/projects',
             text:'Projects'
-        },
-        {
-            route:'/services',
-            text:'Services'
         },
         {
             route:'/media',

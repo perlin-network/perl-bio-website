@@ -1,49 +1,137 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { Grid, Link } from '@material-ui/core'
-import TelegramIcon from '@material-ui/icons/Telegram'
-import TwitterIcon from '@material-ui/icons/Twitter'
-import {contentTextStyle, verticalDividerStyle} from '../styles/common.js'
+import { makeStyles } from '@material-ui/styles'
+import { Grid, Link, Divider } from '@material-ui/core'
+import {Twitter, LinkedIn, YouTube} from '@material-ui/icons'
+import {contentTextStyle} from '../styles/common.js'
 
-import FooterIcon from '../assets/Splash/logo.svg'
+import FooterIcon from '../assets/Splash/logo-black.svg'
 
+const useStyles=makeStyles({
+    root:{
+        background:"#E4EDE8",
+        paddingTop:"5%",
+        paddingBottom:'30px',
+        color:'#333336'
+    },
+    footerWrapper:{
+        margin:'0% 5%',
+        display:'flex',
+        justifyContent:'space-between'
+    },
+    link:{
+        color:'#333336',
+        opacity:0.8
+    },
+    divider:{
+        height:'25px'
+    },
+    iconLink:{
+        color:'#333336',
+        opacity:0.8
+    },
+    footerImg:{
+        maxHeight:"40px",
+        minWidth:"175px",
+        filter:'grayscale(100%)',
+        opacity:'0.8'
+    }
+})
+
+const quickLinks=[
+    {
+        text:'Services',
+        href:'/services'
+    },
+    {
+        text:'Projects & Press',
+        href:'/projects'
+    },
+    {
+        text:'Team',
+        href:'/about'
+    },
+    {
+        text:'Contact',
+        href:'/contact'
+    },    
+]
+
+const socials=[
+    {
+        icon:<Twitter/>,
+        href:''
+    },
+    {
+        icon:<LinkedIn/>,
+        href:''
+    },
+    {
+        icon:<YouTube/>,
+        href:''
+    }
+]
 
 function Footer() {
+    const classes=useStyles()
     return (
-        <div className='footer-container' style={{background:"#333336", paddingTop:"120px", paddingBottom:'30px'}}>
-            <div className='footer-content' style={{margin:'0% 5%', display:'flex', justifyContent:'space-between'}}>
-                <Grid container direction='row' justify='space-between' style={{marginTop:"15px", ...contentTextStyle}}>
-                    {/* <Grid item>                        
-                    <div className='social-icon-wrapper' style={{display:"flex", justifyContent:"space-between",}}>
-                        <div className='social-icon' style={{marginRight:'60px'}}>
-                            <TwitterIcon fontSize="large"/>
-                        </div>
-                        <div className='social-icon' style={{marginRight:'32px'}}>
-                            <TelegramIcon fontSize="large"/>
-                        </div>
-                    </div>
-                    </Grid> */}
-                    {/* <div className='vertical-divider' style={{...verticalDividerStyle}}/>             */}
-                    <Grid item justify='flex-start'>
-                    {/* </div> */}
-                    {/* <div className='footer-icon-wrapper'> */}
-                        <img src={FooterIcon} alt='' style={{maxHeight:"40px", minWidth:"175px"}}/>
-                    {/* </div> */}
+        <div className={classes.root}>
+            <div className={classes.footerWrapper}>
+                <Grid container direction='row' justify='space-between' alignItems='flex-end' style={{ paddingBottom:'5%'}}>
+                    <Grid item>
+                        <Grid container direction='column' spacing={1}>
+                            <Grid item style={{marginBottom:'15px'}}>
+                                Quick Links
+                            </Grid>
+                            {quickLinks.map(i=>{
+                                return(
+                                    <Grid item>
+                                        <Link className={classes.link} href={i.href}>
+                                            {i.text}
+                                        </Link>
+                                    </Grid>
+                                )
+                            })}
+                            <Grid item style={{marginTop:'15px'}}>
+                                <Grid container direction='row' spacing={3}>
+                                    {socials.map(i=>{
+                                        return(
+                                            <Grid item>
+                                                <Link className={classes.iconLink} href={i.href}>
+                                                    {i.icon}
+                                                </Link>
+                                            </Grid>
+                                        )
+                                    })}
+                                </Grid>
+                            </Grid>
+                        </Grid>
+
                     </Grid>
-                    <Grid item style={{...contentTextStyle, maxHeight:"24px", marginTop:'25px',  fontSize:'12px'}} >
-                        Copyright © Bioeconomy {new Date().getFullYear()}. All rights reserved
-                    </Grid>
-                    <Grid item justify='flex-end' style={{ marginTop:'25px', fontSize:'12px'}}>
-                        <Grid container direction='row' spacing={3}>
+                    <Grid item>
+                        <Grid container direction='row' alignItems='center' spacing={2} style={{fontSize:'12px', }}>
                             <Grid item>
-                                <Link href='/terms' style={{...linkStyle, marginLeft:'3%'}}>
-                                    Terms
+                                <Link className={classes.link} href='/terms'>
+                                    Terms of Use
                                 </Link>
                             </Grid>
                             <Grid item>
-                                <Link href='/privacy' style={{...linkStyle}}>
+                                <Divider className={classes.divider} orientation='vertical'/>
+                            </Grid>
+                            <Grid item>
+                                <Link className={classes.link} href='/privacy'>
                                     Privacy Policy
                                 </Link>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item >
+                        <Grid container direction='column' alignItems='center' >
+                            <Grid item>
+                                <img className={classes.footerImg} src={FooterIcon} alt='footer'/>
+                            </Grid>
+                            <Grid item style={{marginTop:'25px', fontSize:'12px'}}>
+                                Copyright © Bioeconomy {new Date().getFullYear()}. All rights reserved
                             </Grid>
                         </Grid>
                     </Grid>
@@ -53,8 +141,3 @@ function Footer() {
     )
 }
 export default Footer;
-
-let linkStyle={
-    color:'white',
-    opacity:'0.8'
-}

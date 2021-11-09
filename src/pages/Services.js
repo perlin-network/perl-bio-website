@@ -1,16 +1,42 @@
-import React from 'react'
-import {Grid, Card} from '@material-ui/core'
+import React, {useRef} from 'react'
+import {Grid, Card, Button} from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles';
 import {useTheme} from '@material-ui/core/styles'
 import LogoPng from '../assets/Services/bioeconomy.png'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 const useStyles=makeStyles({
     root:{
-        color:'white',
+        color:'black',
+        background:'#ECF3EF',
         fontFamily:"Bai Jamjuree, sans serif",        
         fontStyle: "normal",        
-        margin:'3% 5%'
+        padding:'3% 0%'
+    },
+    rootContent:{
+        margin:'0% 5%'
+    },
+    '@keyframes bounce':{
+        'from':{
+            transform: 'translateY(0px);'
+        },
+        'to':{
+            transform: 'translateY(-15px);'
+        }
+    },
+    downArrow:{
+        animation:'$bounce 1000ms infinite alternate',
+        textAlign:'center',
+        fontSize:'50px',
+        color:'#91D873'
+    },
+    heroText:{
+        color:'#72A15F',
+        fontSize:'24px'
+    },
+    iconButton:{
+        borderRadius:'50%'
     },
     button:{
         fontFamily:"Bai Jamjuree, sans serif",
@@ -32,7 +58,7 @@ const useStyles=makeStyles({
     contentBarTitle:{
         fontSize:'32px',
         fontWeight:'bold',
-        color:'#91D873'
+        color:'#72A15F'
     },
     contentText:{
         marginTop:'10%'
@@ -60,8 +86,8 @@ const useStyles=makeStyles({
         fontWeight:'bold'
     },
     card:{
-        background:'#505056',
-        color:'white',
+        background:'lightgray',
+        color:'#72A15F',
         borderRadius:'16px',
         padding:'5% 5%',
         "&:hover":{
@@ -117,129 +143,141 @@ const cardContent=[
 function Services() {
     const classes=useStyles()
     const theme=useTheme()
+    const section1=useRef(null)
+    const executeScroll = () => section1.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     return (
         <div className={classes.root}>
-            <div className={classes.h1}>
-                Our Services
-            </div>
-            <Grid container direction='column' style={{marginTop:'15px'}} spacing={5}>
-                <Grid item className={classes.headerText}>
-                    Bioeconomy focuses on nature-based solutions with a proven business model that delivers benefits for partners, communities and the environment
+            <div className={classes.rootContent}>
+                <Grid container direction='row' justifyContent='center' alignItems='center' style={{minHeight:'75vh'}} spacing={3}>
+                    <Grid item xs={12} md={6} className={classes.heroText}>
+                        Bioeconomy conserves and restores natural habitats around the world. Our company is a carbon, biodiversity and environmental tech project developer with a proven business model that delivers benefits for partners, local communities and the environment. 
+                    </Grid>
+                    <Grid item xs={12} md={6} style={{textAlign:'center'}}>
+                        Illustration
+                    </Grid>
                 </Grid>
-                <Grid item>
-                    <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row-reverse':'row'} justify='space-around' spacing={5} >
-                        <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'end':'center'}}>
-                            <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service1.png" alt='it-services'/>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <Grid className={classes.contentText} container direction='column'>
-                                <Grid item className={classes.contentBarTitle}>
-                                    Second to none technical experience
-                                </Grid>
-                                <Grid item className={classes.contentBarContent}>
-                                    <p>Our team has more than 15 years of experience in supporting landowners and partners to identify, implement and monitor carbon and biodiversity projects that deliver results. We can help revegetate heavily degraded land and recreate forests to capture carbon, and conserve vulnerable peatlands to stop the emission of carbon and protect habitats for biodiversity.</p>
-                                    
-                                    <p>We assess carbon; obtain community support; and prepare documents for projects to be validated under rigorous standards including the Verified Carbon Standard (VCS) and obtain carbon credits. We are proud to work under the VCS, the world’s most widely used voluntary emissions reduction standard.</p>
-                                    
-                                    <p>We are proud to offer an end-to-end carbon origination service including: </p>
-                                </Grid>
+                <div className={classes.downArrow}>
+                    <Button className={classes.iconButton} onClick={executeScroll}>
+                        <KeyboardArrowDownIcon className={classes.downArrow}/>
+                    </Button>
+                </div>
+
+                <Grid ref={section1} container direction='column' style={{marginTop:'15px'}} spacing={5}>                    
+                    <Grid item>
+                        <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row-reverse':'row'} justify='space-around' spacing={5} >
+                            <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'end':'center'}}>
+                                <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service1.png" alt='it-services'/>
                             </Grid>
-                        </Grid>
-                    </Grid>
-                </Grid>
-                <Grid item>
-                    <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row':'row-reverse'} justify='space-around' spacing={5} >
-                        <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'start':'center'}}>
-                            <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service2.png" alt='it-services2' style={{width:'100%', maxWidth:'852px', maxHeight:'573px'}}/>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <Grid className={classes.contentText} container direction='column'>
-                                <Grid item className={classes.contentBarTitle}>
-                                    Innovative technologies
-                                </Grid>
-                                <Grid item className={classes.contentBarContent}>
-                                <p>We scale our projects by investing in technology and partnering with key industry players to make protection more effective and monitoring more efficient.</p>
-
-                                <p>With the urgency of climate change, we bring new and innovative technologies from around the world to your site to accelerate meaningful change. We recognise that the challenge is meaningfully tracking what’s happening on site including measuring biodiversity - and we are doing something about it.</p>
-
-                                <p>We are revolutionising projects through the use of remote sensing technology, drones, artificial intelligence, and environmental DNA. </p>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Grid>
-                <Grid item>
-                    <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row-reverse':'row'} justify='space-around' spacing={5} >
-                        <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'end':'center'}}>
-                            <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service3.png" alt='it-services3'/>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <Grid className={classes.contentText} container direction='column'>
-                                <Grid item className={classes.contentBarTitle}>
-                                Creating opportunities for local communities
-                                </Grid>
-                                <Grid item className={classes.contentBarContent}>
-                                <p>Our projects strengthen economies through creation of jobs for local communities. Himpanzee's core focus is on creating alternative revenue streams that do not destroy nature.</p>
-
-                                <p>We also ensure there is consultation with local communities and Indigenous populations in forest management plans that impact them. Our team performs a comprehensive needs assessment to take a data-led approach to development interventions.</p>
-
-                                <p>Across the world, there are companies which have caused widespread destruction of the remaining peatlands and tropical forests around the world. Often local communities are ignored as their forests are cut around them. At the heart of our success is our work with community leaders, consulting with government officials and forming partnerships with civil society to implement our projects.</p>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Grid>
-                <Grid item style={{textAlign:'center'}}>                    
-                    <h2 className={classes.contentBarTitle}>Specializations</h2>                    
-                </Grid>
-                <Grid item style={{textAlign:'center'}}>
-                    <Grid container direction='row' spacing={5}>
-                        {cardContent.map(i=>{
-                            return(
-                                <Grid item xs={12} md={3}>
-                                    <Card className={classes.card} style={{minHeight:'172px'}}>
-                                        {i.image?<div className={classes.cardImageWrapper}>
-                                            <img classname={classes.cardImage} src={i.image} alt={i.title}/>
-                                        </div>:null}
-                                        <div className={classes.contentBarTitle} style={{fontSize:'32px', minHeight:'75px'}}>
-                                            {i.title}
-                                        </div>
-                                        <div className={classes.contentBarContent} hidden={true}>
-                                            {i.content}
-                                        </div>
-                                    </Card>
-                                </Grid>
-                            )
-                        })}
-
-                    </Grid>
-                </Grid>
-                <Grid item style={{textAlign:'center'}}>                    
-                    <h2 className={classes.contentBarTitle}>Taking action on the Global Goals</h2>
-                    <p className={classes.contentBarContent}>We support in your implementation of the United Nations Sustainable Development Goals, in particular:</p>
-                </Grid>
-                <Grid item style={{textAlign:'center'}}>
-                    <Grid container direciton='row' spacing={3}>
-                        {unImages.map(i=>{
-                            return(
-                                <Grid item  xs={12} md={4}>
-                                    <Grid container direction='column' className={classes.sdgContainer}>
-                                        <Grid item >
-                                            <img src={i.image} alt='sdg'/>
-                                        </Grid>
-                                        <Grid item className={classes.sdgTitle} style={{marginTop:'25px'}}>
-                                            {i.titleText}
-                                        </Grid>
-                                        <Grid item style={{marginTop:'25px'}}>
-                                            {i.content}
-                                        </Grid>
+                            <Grid item xs={12} md={6}>
+                                <Grid className={classes.contentText} container direction='column'>
+                                    <Grid item className={classes.contentBarTitle}>
+                                        Second to none technical experience
+                                    </Grid>
+                                    <Grid item className={classes.contentBarContent}>
+                                        <p>Our team has more than 15 years of experience in supporting landowners and partners to identify, implement and monitor carbon and biodiversity projects that deliver results. We can help revegetate heavily degraded land and recreate forests to capture carbon, and conserve vulnerable peatlands to stop the emission of carbon and protect habitats for biodiversity.</p>
+                                        
+                                        <p>We assess carbon; obtain community support; and prepare documents for projects to be validated under rigorous standards including the Verified Carbon Standard (VCS) and obtain carbon credits. We are proud to work under the VCS, the world’s most widely used voluntary emissions reduction standard.</p>
+                                        
+                                        <p>We are proud to offer an end-to-end carbon origination service including: </p>
                                     </Grid>
                                 </Grid>
-                            )
-                        })}
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item>
+                        <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row':'row-reverse'} justify='space-around' spacing={5} >
+                            <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'start':'center'}}>
+                                <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service2.png" alt='it-services2' style={{width:'100%', maxWidth:'852px', maxHeight:'573px'}}/>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <Grid className={classes.contentText} container direction='column'>
+                                    <Grid item className={classes.contentBarTitle}>
+                                        Innovative technologies
+                                    </Grid>
+                                    <Grid item className={classes.contentBarContent}>
+                                    <p>We scale our projects by investing in technology and partnering with key industry players to make protection more effective and monitoring more efficient.</p>
+
+                                    <p>With the urgency of climate change, we bring new and innovative technologies from around the world to your site to accelerate meaningful change. We recognise that the challenge is meaningfully tracking what’s happening on site including measuring biodiversity - and we are doing something about it.</p>
+
+                                    <p>We are revolutionising projects through the use of remote sensing technology, drones, artificial intelligence, and environmental DNA. </p>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item>
+                        <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row-reverse':'row'} justify='space-around' spacing={5} >
+                            <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'end':'center'}}>
+                                <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service3.png" alt='it-services3'/>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <Grid className={classes.contentText} container direction='column'>
+                                    <Grid item className={classes.contentBarTitle}>
+                                    Creating opportunities for local communities
+                                    </Grid>
+                                    <Grid item className={classes.contentBarContent}>
+                                    <p>Our projects strengthen economies through creation of jobs for local communities. Himpanzee's core focus is on creating alternative revenue streams that do not destroy nature.</p>
+
+                                    <p>We also ensure there is consultation with local communities and Indigenous populations in forest management plans that impact them. Our team performs a comprehensive needs assessment to take a data-led approach to development interventions.</p>
+
+                                    <p>Across the world, there are companies which have caused widespread destruction of the remaining peatlands and tropical forests around the world. Often local communities are ignored as their forests are cut around them. At the heart of our success is our work with community leaders, consulting with government officials and forming partnerships with civil society to implement our projects.</p>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item style={{textAlign:'center'}}>                    
+                        <h2 className={classes.contentBarTitle}>Specializations</h2>                    
+                    </Grid>
+                    <Grid item style={{textAlign:'center'}}>
+                        <Grid container direction='row' spacing={5}>
+                            {cardContent.map(i=>{
+                                return(
+                                    <Grid item xs={12} md={3}>
+                                        <Card className={classes.card} style={{minHeight:'172px'}}>
+                                            {i.image?<div className={classes.cardImageWrapper}>
+                                                <img classname={classes.cardImage} src={i.image} alt={i.title}/>
+                                            </div>:null}
+                                            <div className={classes.contentBarTitle} style={{fontSize:'24px', fontWeight:500, minHeight:'75px'}}>
+                                                {i.title}
+                                            </div>
+                                            <div className={classes.contentBarContent} hidden={true}>
+                                                {i.content}
+                                            </div>
+                                        </Card>
+                                    </Grid>
+                                )
+                            })}
+
+                        </Grid>
+                    </Grid>
+                    <Grid item style={{textAlign:'center'}}>                    
+                        <h2 className={classes.contentBarTitle}>Taking action on the Global Goals</h2>
+                        <p className={classes.contentBarContent}>We support in your implementation of the United Nations Sustainable Development Goals, in particular:</p>
+                    </Grid>
+                    <Grid item style={{textAlign:'center'}}>
+                        <Grid container direciton='row' spacing={3}>
+                            {unImages.map(i=>{
+                                return(
+                                    <Grid item  xs={12} md={4}>
+                                        <Grid container direction='column' className={classes.sdgContainer}>
+                                            <Grid item >
+                                                <img src={i.image} alt='sdg'/>
+                                            </Grid>
+                                            <Grid item className={classes.sdgTitle} style={{marginTop:'25px'}}>
+                                                {i.titleText}
+                                            </Grid>
+                                            <Grid item style={{marginTop:'25px'}}>
+                                                {i.content}
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                )
+                            })}
+                        </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
+            </div>
         </div>
     )
 }
