@@ -1,11 +1,9 @@
 import Navbar from './components/Navbar';
 import Splash from './pages/Splash';
 import About from './pages/About';
-// import WhatWeDo from './pages/WhatWeDo';
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
 import Terms from './pages/Terms'
-import Media from './pages/Media'
 import Services from './pages/Services'
 import Projects from './pages/Projects'
 import Privacy from './pages/Privacy'
