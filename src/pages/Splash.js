@@ -5,7 +5,8 @@ import { Grid, Link, Button } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import pictureLeftPng from '../assets/CaseStudies/PictureLeft.png'
 import pictureRightPng from '../assets/CaseStudies/PictureRight.png'
-import backgroundPlaceholder from '../assets/Splash/background-placeholder.svg'
+
+import treeSvg from '../assets/Splash/tree-only.svg'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import PartnerOthers from '../components/PartnerOthers'
 import { ResponsivePie } from '@nivo/pie'
@@ -21,16 +22,20 @@ const useStyles=makeStyles({
     },
     hero:{
         margin:'0% 5%',
-        paddingBottom:'-5%'
     },
     backgroundImage:{                
         backgroundSize:'cover',
         // margin:'0% -6%',
-        // minWidth:'100vw',
-        minHeight:'120vh',
-        backgroundPositionY:'-5vw',
-        backgroundPositionX:'-25vw',
+        minWidth:'50vw',
+        // height:'100vh',
+        minHeight:'600px',
+        // paddingBottom:'5%',
+        // backgroundPositionY:'-5vh',
+        // backgroundPositionX:'-20vw',
         backgroundRepeat:'no-repeat',        
+    },
+    heroContainer:{
+        minHeight:'75vh'
     },
     heroGrid:{
         marginTop:'15%'
@@ -44,11 +49,14 @@ const useStyles=makeStyles({
         }
     },
     downArrow:{
+        position:'absolute',
+        bottom:90,
+        marginLeft:'40vw',
+        // bottom:'1vh',
         animation:'$bounce 1000ms infinite alternate',
-        marginTop:'15%',
         textAlign:'center',
     },
-    downArrowIcon:{        
+    downArrowIcon:{
         color:'#72A15F',
         fontSize:'300%'
     },
@@ -65,8 +73,7 @@ const useStyles=makeStyles({
             color:'#72A15F',
         }
     },
-    overrideBackground:{
-        // padding:'0% 0%',        
+    overrideBackground:{        
         backgroundColor:"#ECF3EF"
     },
     partnerContainer:{
@@ -79,7 +86,7 @@ const useStyles=makeStyles({
         ...titleTextStyle,
         fontSize:'42px',
         color:'#72A15F',
-        paddingTop:'5%',
+        paddingTop:'5%',       
         
     },
     partnerContainerText:{
@@ -293,41 +300,44 @@ function Splash() {
 
     return (
             <div className={classes.root}>
-                <div className='hero-container'>
-                    <div className={classes.backgroundImage} style={{backgroundImage:useMediaQuery(theme.breakpoints.down('md'))?null:`url(${backgroundPlaceholder})`}}>
+                <div className={classes.heroContainer}>
                         <div className={classes.hero}>
-                        <Grid container justify='space-between' style={{maxWidth:'100%'}}>
-                            <Grid className={classes.heroGrid} item sm={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
-                                <Grid container direction='column' >
-                                    <Grid item>
-                                        <div className='splash-header' style={{...titleTextStyle, fontSize:'42px',  maxWidth:'600px'}}>
-                                            Welcome to the regenerative economy: The Bioeconomy
-                                        </div>
-                                    </Grid>
-                                    <Grid item>
-                                        <div className='splash-content' style={{...contentTextStyle, fontSize:'24px', marginTop:"100px", maxWidth:'550px'}}>
-                                        Valuing the protection of natural assets through carbon and biodiversity projects
-                                        </div>
-                                    </Grid>
-                                    <Grid item style={{marginTop:'50px'}}>
-                                        <Link className={classes.link} href='/contact' style={{textDecoration:'none', zIndex:0}}>
-                                            <Button className={classes.button} >
-                                                Book a Consultation
-                                            </Button>
-                                        </Link>
-                                    </Grid>
+                            <Grid container direction='row'>
+                                <Grid item xs={12} md={6}>
+                                        <Grid className={classes.heroGrid} item sm={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
+                                            <Grid container direction='column' >
+                                                <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'600px'}} xs={12} md={6}>
+                                                        Welcome to the regenerative economy: The Bioeconomy
+                                                    {/* </div> */}
+                                                </Grid>
+                                                <Grid item  style={{...contentTextStyle, fontSize:'24px', marginTop:"100px", maxWidth:'550px'}} xs={12} md={6}>
+                                                        Valuing the protection of natural assets through carbon and biodiversity projects
+                                                </Grid>
+                                                <Grid item style={{marginTop:'50px'}}>
+                                                    <Link className={classes.link} href='/contact' style={{textDecoration:'none', zIndex:0}}>
+                                                        <Button className={classes.button} >
+                                                            Book a Consultation
+                                                        </Button>
+                                                    </Link>
+                                                </Grid>
+                                                <Grid item>
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>                                       
                                 </Grid>
-                            </Grid>                                       
-                        </Grid>
-                        <div className={classes.downArrow} style={{marginTop:useMediaQuery(theme.breakpoints.down('md')?'5%':null)}}>
-                                <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
-                                    <KeyboardArrowDownIcon className={classes.downArrowIcon}/>
-                                </Button>
+                                <Grid item xs={12} md={6} hidden={useMediaQuery(theme.breakpoints.down('md'))}>
+                                    <img className={classes.backgroundImage} src={treeSvg} alt='tree'/>
+                                </Grid>
+                            </Grid>
+                            <div className={classes.downArrow} hidden={useMediaQuery(theme.breakpoints.down('md'))}>
+                                    <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
+                                        <KeyboardArrowDownIcon className={classes.downArrowIcon}/>
+                                    </Button>
+                            </div>
                         </div>
                     </div>
-                </div>
             <div className={classes.overrideBackground} >
-                <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center', marginTop:'-15%'}}>
+                <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center', }}>
                     <Grid container xs={12} md={6} direction='column'>
                         <Grid item className={classes.partnerContainerHeader} >
                             <p>
@@ -360,8 +370,7 @@ function Splash() {
                             })}
                         </Grid>
                     </Grid>
-                </Grid>
-                </div>
+                </Grid>                
             </div>
             <div className={classes.overrideBackground}>
                 <div className={classes.partnerContainer} >

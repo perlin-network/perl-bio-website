@@ -1,15 +1,14 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import {Button, Link, Grid, Card, CardContent} from "@material-ui/core"
-import TreeSvg from '../assets/Splash/tree.png'
+import {Grid, Card, CardContent} from "@material-ui/core"
+// import TreeSvg from '../assets/Splash/tree.png'
 import Carousel from 'react-material-ui-carousel'
 
 
 const useStyles=makeStyles({
     root:{
         backgroundRepeat:'no-repeat',
-        background:'radial-gradient(#3A4F4D,#333336)',
-        minHeight:'75vh'        
+        // minHeight:'75vh'        
     },
     mainGrid:{
         paddingTop:'75px'
@@ -41,9 +40,8 @@ const useStyles=makeStyles({
         maxWidth:'85vw'
     },
     card:{
-        color:'white',
-        background:'#333336',
-        // height:'250px',
+        color:'black',
+        borderRadius:'16px',
         minHeight:'350px',
         height:'38vh',
         paddingBottom:'25px',
@@ -59,12 +57,11 @@ const useStyles=makeStyles({
         // margin:'5%',
         maxHeight:'50%',
         maxWidth:'62%',
-        textAlign:'center'
+        textAlign:'center',        
     },
     cardContent:{
         textAlign:'left',
-        margin:'0% 5%',
-                
+        margin:'0% 5%',                
     },
     cardDate:{
         marginLeft:'2%', 
@@ -171,7 +168,7 @@ function Media() {
     const mediaContent=Articles(3)   
     return (
         <div className={classes.root}>
-            <div>
+            {/* <div>
                 <Grid className={classes.mainGrid} container direction='row' justify='space-around'>
                     <Grid item style={{marginTop:'20vh'}}>
                         <Grid container direction='column' alignItems='flex-start'>
@@ -194,7 +191,7 @@ function Media() {
                         <img className={classes.tree} alt="tree" src={TreeSvg}/>
                     </Grid>
                 </Grid>
-            </div>
+            </div> */}
             <div style={{padding:'3% 5%'}}>
                 <Carousel interval={30000} animation='slide'>
                     {mediaContent}
