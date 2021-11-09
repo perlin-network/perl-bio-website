@@ -54,9 +54,9 @@ function App() {
               <Route exact path='/privacy'>
                 <Privacy/>
               </Route>
-              <Route exact path='/media'>
+              {/* <Route exact path='/media'>
                 <Media/>
-              </Route>
+              </Route> */}
               <Route exact path='/projects'>
                 <Projects/>
               </Route>

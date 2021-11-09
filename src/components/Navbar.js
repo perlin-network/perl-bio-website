@@ -45,10 +45,10 @@ export default function Navbar() {
             route:'/team',
             text:'Team'
         },
-        {
-            route:'/media',
-            text:'Media'
-        },
+        // {
+        //     route:'/media',
+        //     text:'Media'
+        // },
         {
             route:'/contact',
             text:'Contact'
