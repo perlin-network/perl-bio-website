@@ -101,7 +101,7 @@ export default Contact;
 let formInputStyle={
     background:'inherit', 
     fontSize:'18px',
-    color:'white', 
+    color:'black', 
     minWidth:'350px',
     minHeight:'40px', 
     outline:'none', 
