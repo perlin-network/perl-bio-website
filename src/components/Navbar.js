@@ -38,12 +38,12 @@ export default function Navbar() {
             text:'Services'
         },
         {
-            route:'/who',
-            text:'Team'
+            route:'/projects',
+            text:'Projects and Press'
         },
         {
-            route:'/projects',
-            text:'Projects'
+            route:'/team',
+            text:'Team'
         },
         {
             route:'/media',

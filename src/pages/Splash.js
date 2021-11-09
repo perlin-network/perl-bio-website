@@ -9,7 +9,7 @@ import backgroundPlaceholder from '../assets/Splash/background-placeholder.svg'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import PartnerOthers from '../components/PartnerOthers'
 import { ResponsivePie } from '@nivo/pie'
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 
 const useStyles=makeStyles({
     root:{

@@ -4,6 +4,23 @@ import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import { makeStyles } from '@material-ui/styles'
 
 const useStyles=makeStyles({
+    root:{
+        background:'#ECF3EF',
+        fontFamily:"Bai Jamjuree, sans serif",
+    },
+    rootWrapper:{
+        margin:'0% 5%',
+        padding:'3% 0%'
+    },
+    contactFormContainer:{
+        ...contentTextStyle,
+        background:'white',
+        color:'#72A15F',
+        maxWidth:'970px',
+        fontSize:'18px',
+        marginTop:'70px',
+        borderRadius:'16px'
+    },
     button:{
         ...titleTextStyle, 
         marginTop:"20px",
@@ -16,7 +33,7 @@ const useStyles=makeStyles({
         cursor:'pointer',
         "&:hover":{
             background:'none',
-            color:'white'
+            color:'#72A15F'
         }
     }
 })
@@ -26,12 +43,12 @@ function Contact() {
     let [buttonStatus, setButtonStatus] = useState(false);
     const classes=useStyles()
     return (
-        <div className='contact-container' style={{background:"#333336", padding:'3% 5%'}}>
-        
+        <div className={classes.root}>
+            <div className={classes.rootWrapper}>                   
                 <div className='contact-title' style={{...titleTextStyle, fontSize:'36px'}}>
                     Contact
                 </div>
-                <div className='contact-form-container' style={{...contentTextStyle, background:'linear-gradient(180deg, #3C423C 0%, #333336 154.11%)',maxWidth:'970px', fontSize:'18px', marginTop:'70px', borderRadius:'16px'}}>
+                <div className={classes.contactFormContainer}>
                     <div className='contact-form-wrapper' style={{padding:'5%'}}>
                     <div className='contact-form-title' style={{maxWidth:'640px'}}>
                         We are here to help and answer any questions you might have. We look forward to hearing from you.
@@ -60,7 +77,7 @@ function Contact() {
                             </p>                            
                                 <Grid container  direction='row' justify='space-between' style={{maxWidth:'550px'}}>
                                     <Grid item justify='flex-start'>
-                                        <Checkbox color='white' checked={buttonStatus} onChange={()=>setButtonStatus(!buttonStatus)} style={{color:'white'}}/>
+                                        <Checkbox checked={buttonStatus} onChange={()=>setButtonStatus(!buttonStatus)} style={{color:'#72A15F'}}/>
                                         I agree to the 
                                         {" "}
                                         <Link href='/privacy' style={{...linkTextStyle}}>Privacy Policy</Link>
@@ -75,7 +92,7 @@ function Contact() {
                         </form>
                         </div>
                 </div>
-          
+            </div>
         </div>
     )
 }

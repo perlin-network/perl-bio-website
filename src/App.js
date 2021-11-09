@@ -42,7 +42,7 @@ function App() {
               <Route exact path='/contact'>
                 <Contact/>
               </Route>
-              <Route exact path='/who'>
+              <Route exact path='/team'>
                 <About/>
               </Route>
               {/* <Route exact path='/what'>
