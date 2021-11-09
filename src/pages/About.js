@@ -210,7 +210,7 @@ function About() {
                                                 <Card className={classes.card}>
                                                     <CardContent className={classes.cardContent}>
                                                         <div className={classes.cardImage}>
-                                                            <img className={classes.cardImage} src={i.portrait}/>
+                                                            <img className={classes.cardImage} src={i.portrait} alt='portrait'/>
                                                         </div>
                                                         <div className={classes.cardName}>
                                                             {i.name}
@@ -242,7 +242,7 @@ function About() {
                                                 <Card className={classes.card}>
                                                     <CardContent className={classes.cardContent}>
                                                         <div className={classes.cardImage}>
-                                                            <img className={classes.cardImage} src={i.portrait}/>
+                                                            <img className={classes.cardImage} src={i.portrait} alt='portrait'/>
                                                         </div>
                                                         <div className={classes.cardName}>
                                                             {i.name}
