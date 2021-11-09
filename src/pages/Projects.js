@@ -7,7 +7,7 @@ import {useTheme} from '@material-ui/core/styles'
 
 const useStyles=makeStyles({
     root:{
-        color:'white',
+        color:'black',
         fontFamily:"Bai Jamjuree, sans serif",        
         fontStyle: "normal",        
         margin:'3% 5%'
