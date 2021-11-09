@@ -371,7 +371,7 @@ function Splash() {
                     <div className={classes.partnerContainerText} style={{marginTop:'5%', maxWidth:'65%'}}>
                         Our team has led, funded and completed the carbon project development in projects around the world, including:
                     </div>
-                    <Grid container direction='row' style={{marginTop:'25px'}}>
+                    <Grid container direction='row' style={{marginTop:'25px'}} spacing={3}>
                             {projects.map(i=>{
                                 return(
                                     <Grid item xs={12} md={6}>
@@ -396,11 +396,13 @@ function Splash() {
                                 )
                             })}
                     </Grid>
-                    <Link className={classes.link} href='/projects' style={{textDecoration:'none', zIndex:0}}>
-                        <Button className={classes.button}>
-                            Find Out More
-                        </Button>
-                    </Link>
+                    <div style={{marginTop:'35px'}}>
+                        <Link className={classes.link} href='/projects' style={{textDecoration:'none', zIndex:0}}>
+                            <Button className={classes.button}>
+                                Find Out More
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
             </div>
             <div className={classes.overrideBackground}>
