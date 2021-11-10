@@ -24,22 +24,22 @@ const useStyles=makeStyles({
         margin:'0% 5%'
     },
     hero:{
-        minHeight:'65vh'
+        minHeight:'75vh'
         // margin:'0% 5%',
     },
     backgroundImage:{                
         backgroundSize:'cover',
         // margin:'0% -6%',
-        minWidth:'50vw',
+        minWidth:'60vw',
         // height:'100vh',
-        minHeight:'600px',
+        minHeight:'70vh',
         // paddingBottom:'5%',
         // backgroundPositionY:'-5vh',
         // backgroundPositionX:'-20vw',
         backgroundRepeat:'no-repeat',        
     },
     heroContainer:{
-        minHeight:'75vh',
+        minHeight:'85vh',
         // marginBottom:'-5%'
     },
     heroGrid:{
@@ -58,7 +58,7 @@ const useStyles=makeStyles({
         textAlign:'center',
         fontSize:'50px',
         position:'absolute',
-        top:'70vh',
+        top:'90vh',
         left:'45%'
         
     },
