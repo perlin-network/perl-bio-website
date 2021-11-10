@@ -18,7 +18,7 @@ const useStyles=makeStyles({
         // mixBlendMode:'pass-through',
         // backgroundSize: "cover", 
         minHeight:'100vh',
-        padding:'3% 0%'
+        // padding:'3% 0%'
     },
     hero:{
         margin:'0% 5%',
@@ -35,7 +35,8 @@ const useStyles=makeStyles({
         backgroundRepeat:'no-repeat',        
     },
     heroContainer:{
-        minHeight:'75vh'
+        minHeight:'75vh',
+        marginBottom:'-5%'
     },
     heroGrid:{
         marginTop:'15%'
@@ -48,11 +49,20 @@ const useStyles=makeStyles({
             transform: 'translateY(-15px);'
         }
     },
-    downArrow:{
+    downArrowWrapper:{
         animation:'$bounce 1000ms infinite alternate',
         textAlign:'center',
         fontSize:'50px',
-        color:'#72A15F'
+        position:'absolute',
+        top:'70vh',
+        left:'45%'
+        
+    },
+    downArrow:{
+        animation:'$bounce 1000ms infinite alternate',
+        fontSize:'50px',
+        color:'#72A15F',
+        
     },
     // downArrow:{
     //     position:'absolute',
@@ -307,131 +317,131 @@ function Splash() {
     return (
             <div className={classes.root}>
                 <div className={classes.heroContainer}>
-                        <div className={classes.hero}>
-                            <Grid container direction='row'>
-                                <Grid item xs={12} md={6}>
-                                        <Grid className={classes.heroGrid} item sm={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
-                                            <Grid container direction='column' >
-                                                <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'600px'}} xs={12} md={6}>
-                                                        Welcome to the regenerative economy: The Bioeconomy
-                                                    {/* </div> */}
-                                                </Grid>
-                                                <Grid item  style={{...contentTextStyle, fontSize:'24px', marginTop:"100px", maxWidth:'550px'}} xs={12} md={6}>
-                                                        Valuing the protection of natural assets through carbon and biodiversity projects
-                                                </Grid>
-                                                <Grid item style={{marginTop:'50px'}}>
-                                                    <Link className={classes.link} href='/contact' style={{textDecoration:'none', zIndex:0}}>
-                                                        <Button className={classes.button} >
-                                                            Book a Consultation
-                                                        </Button>
-                                                    </Link>
-                                                </Grid>
-                                                <Grid item>
-                                                </Grid>
+                    <div className={classes.hero}>
+                        <Grid container direction='row'>
+                            <Grid item xs={12} md={6}>
+                                    <Grid className={classes.heroGrid} item sm={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
+                                        <Grid container direction='column' >
+                                            <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'600px'}} xs={12} md={6}>
+                                                    Welcome to the regenerative economy: The Bioeconomy
+                                                {/* </div> */}
                                             </Grid>
-                                        </Grid>                                       
-                                </Grid>
-                                <Grid item xs={12} md={6} hidden={useMediaQuery(theme.breakpoints.down('md'))}>
-                                    <img className={classes.backgroundImage} src={treeSvg} alt='tree'/>
-                                </Grid>
+                                            <Grid item  style={{...contentTextStyle, fontSize:'24px', marginTop:"100px", maxWidth:'550px'}} xs={12} md={6}>
+                                                    Valuing the protection of natural assets through carbon and biodiversity projects
+                                            </Grid>
+                                            <Grid item style={{marginTop:'50px'}}>
+                                                <Link className={classes.link} href='/contact' style={{textDecoration:'none', zIndex:0}}>
+                                                    <Button className={classes.button} >
+                                                        Book a Consultation
+                                                    </Button>
+                                                </Link>
+                                            </Grid>
+                                            <Grid item>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>                                       
                             </Grid>
-                            <div className={classes.downArrow} style={{marginTop:useMediaQuery(theme.breakpoints.down('md'))?'25px':'0px'}}>
-                                    <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
-                                        <KeyboardArrowDownIcon className={classes.downArrow}/>
-                                    </Button>
-                            </div>
+                            <Grid item xs={12} md={6} hidden={useMediaQuery(theme.breakpoints.down('md'))}>
+                                <img className={classes.backgroundImage} src={treeSvg} alt='tree'/>
+                            </Grid>
+                        </Grid>
+                        <div className={classes.downArrowWrapper} style={{marginTop:useMediaQuery(theme.breakpoints.down('md'))?'25px':'0px'}}>
+                            <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
+                                <KeyboardArrowDownIcon className={classes.downArrow}/>
+                            </Button>
                         </div>
                     </div>
-            <div className={classes.overrideBackground} >
-                <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center', }}>
-                    <Grid container xs={12} md={6} direction='column'>
-                        <Grid item className={classes.partnerContainerHeader} >
-                            <p>
-                                The path to sustained ecosystem protection
-                            </p>
+                </div>
+                <div className={classes.overrideBackground} >
+                    <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center', }}>
+                        <Grid container xs={12} md={6} direction='column'>
+                            <Grid item className={classes.partnerContainerHeader} >
+                                <p>
+                                    The path to sustained ecosystem protection
+                                </p>
+                            </Grid>
+                            <Grid item className={classes.partnerContainerText} >
+                                <p classname={classes.partnerContainerText}>
+                                    We create strategies for businesses and organisations to embrace the bioeconomy by helping them gain revenue from natural assets and achieve their sustainability goals. Our proven business model delivers benefits for partners, local communities and the environment.
+                                </p>
+                            </Grid>
                         </Grid>
-                        <Grid item className={classes.partnerContainerText} >
-                            <p classname={classes.partnerContainerText}>
-                                We create strategies for businesses and organisations to embrace the bioeconomy by helping them gain revenue from natural assets and achieve their sustainability goals. Our proven business model delivers benefits for partners, local communities and the environment.
-                            </p>
+                    <Grid container direction='row' justify='space-evenly'>
+                        <Grid item style={{ maxWidth:'35vw', height:'500px'}} xs={12} md={6}>
+                            <MyResponsivePie/>
                         </Grid>
-                    </Grid>
-                <Grid container direction='row' justify='space-evenly'>
-                    <Grid item style={{ maxWidth:'35vw', height:'500px'}} xs={12} md={6}>
-                        <MyResponsivePie/>
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                        <Grid container direction='column' spacing={5} style={{alignItems:'center'}}>
-                            {textBox.map((i)=>{
-                                return(
-                                    <Grid item style={{maxWidth:'85%', borderRadius:'16px', background:i.color, marginBottom:'3%'}}>
-                                        <h3>{i.title}</h3>
-                                        {i.bulletPoints.map(t=>{
-                                            return(
-                                                <p>{t}</p>
-                                            )
-                                        })}
-                                    </Grid>
-                                )
-                            })}
-                        </Grid>
-                    </Grid>
-                </Grid>                
-            </div>
-            <div className={classes.overrideBackground}>
-                <div className={classes.partnerContainer} >
-                    <div className={classes.partnerContainerHeader}>
-                        Highlighted Projects
-                    </div>
-                    <div className={classes.partnerContainerText} style={{marginTop:'5%', maxWidth:'65%'}}>
-                        Our team has led, funded and completed the carbon project development in projects around the world, including:
-                    </div>
-                    <Grid container direction='row' style={{marginTop:'25px'}} spacing={3}>
-                            {projects.map(i=>{
-                                return(
-                                    <Grid item xs={12} md={6}>
-                                            <Grid item>
-                                                <img src={i.image} alt={i.title}/>
-                                            </Grid>
-                                        <Grid container direction='column' style={{maxWidth:'85%'}} spacing={1}>
-                                            <Grid item className={classes.projectTitle}>
-                                                {i.title}
-                                            </Grid>
-                                            <Grid item>
-                                                <b>Location: </b>{i.location}
-                                            </Grid>
-                                            <Grid item>
-                                                <b>Size: </b>{i.size}
-                                            </Grid>
-                                            <Grid item>
-                                                <b>Biodiversity: </b>{i.biodiversity}
-                                            </Grid>                                        
+                        <Grid item xs={12} md={6}>
+                            <Grid container direction='column' spacing={5} style={{alignItems:'center'}}>
+                                {textBox.map((i)=>{
+                                    return(
+                                        <Grid item style={{maxWidth:'85%', borderRadius:'16px', background:i.color, marginBottom:'3%'}}>
+                                            <h3>{i.title}</h3>
+                                            {i.bulletPoints.map(t=>{
+                                                return(
+                                                    <p>{t}</p>
+                                                )
+                                            })}
                                         </Grid>
-                                    </Grid>
-                                )
-                            })}
-                    </Grid>
-                    <div style={{marginTop:'35px'}}>
-                        <Link className={classes.link} href='/projects' style={{textDecoration:'none', zIndex:0}}>
-                            <Button className={classes.button}>
-                                Find Out More
-                            </Button>
-                        </Link>
+                                    )
+                                })}
+                            </Grid>
+                        </Grid>
+                    </Grid>                
+                </div>
+                <div className={classes.overrideBackground}>
+                    <div className={classes.partnerContainer} >
+                        <div className={classes.partnerContainerHeader}>
+                            Highlighted Projects
+                        </div>
+                        <div className={classes.partnerContainerText} style={{marginTop:'5%', maxWidth:'65%'}}>
+                            Our team has led, funded and completed the carbon project development in projects around the world, including:
+                        </div>
+                        <Grid container direction='row' style={{marginTop:'25px'}} spacing={3}>
+                                {projects.map(i=>{
+                                    return(
+                                        <Grid item xs={12} md={6}>
+                                                <Grid item>
+                                                    <img src={i.image} alt={i.title}/>
+                                                </Grid>
+                                            <Grid container direction='column' style={{maxWidth:'85%'}} spacing={1}>
+                                                <Grid item className={classes.projectTitle}>
+                                                    {i.title}
+                                                </Grid>
+                                                <Grid item>
+                                                    <b>Location: </b>{i.location}
+                                                </Grid>
+                                                <Grid item>
+                                                    <b>Size: </b>{i.size}
+                                                </Grid>
+                                                <Grid item>
+                                                    <b>Biodiversity: </b>{i.biodiversity}
+                                                </Grid>                                        
+                                            </Grid>
+                                        </Grid>
+                                    )
+                                })}
+                        </Grid>
+                        <div style={{marginTop:'35px'}}>
+                            <Link className={classes.link} href='/projects' style={{textDecoration:'none', zIndex:0}}>
+                                <Button className={classes.button}>
+                                    Find Out More
+                                </Button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className={classes.overrideBackground}>
-                <div className={classes.partnerContainer} style={{paddingBottom:'10%'}}>
-                    <p className={classes.partnerContainerHeader}>
-                        Partners and Collaborators
-                    </p>
-                    <Grid container direction='column'>
-                        <Grid item style={{marginTop:'35px',}}>
-                            <PartnerOthers />
+                <div className={classes.overrideBackground}>
+                    <div className={classes.partnerContainer} style={{paddingBottom:'10%'}}>
+                        <p className={classes.partnerContainerHeader}>
+                            Partners and Collaborators
+                        </p>
+                        <Grid container direction='column'>
+                            <Grid item style={{marginTop:'35px',}}>
+                                <PartnerOthers />
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
             
