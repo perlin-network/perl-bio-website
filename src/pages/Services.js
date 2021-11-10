@@ -14,7 +14,7 @@ const useStyles=makeStyles({
         fontStyle: "normal",        
         padding:'3% 0%'
     },
-    rootContent:{
+    rootWrapper:{
         margin:'0% 5%'
     },
     '@keyframes bounce':{
@@ -29,7 +29,7 @@ const useStyles=makeStyles({
         animation:'$bounce 1000ms infinite alternate',
         textAlign:'center',
         fontSize:'50px',
-        color:'#91D873'
+        color:'#72A15F'
     },
     heroText:{
         color:'#72A15F',
@@ -147,7 +147,7 @@ function Services() {
     const executeScroll = () => section1.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     return (
         <div className={classes.root}>
-            <div className={classes.rootContent}>
+            <div className={classes.rootWrapper}>
                 <Grid container direction='row' justifyContent='center' alignItems='center' style={{minHeight:'75vh'}} spacing={3}>
                     <Grid item xs={12} md={6} className={classes.heroText}>
                         Bioeconomy conserves and restores natural habitats around the world. Our company is a carbon, biodiversity and environmental tech project developer with a proven business model that delivers benefits for partners, local communities and the environment. 

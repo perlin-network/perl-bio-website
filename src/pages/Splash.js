@@ -18,7 +18,7 @@ const useStyles=makeStyles({
         // mixBlendMode:'pass-through',
         // backgroundSize: "cover", 
         minHeight:'100vh',
-        margin:'0% 0%'
+        padding:'3% 0%'
     },
     hero:{
         margin:'0% 5%',
@@ -49,13 +49,19 @@ const useStyles=makeStyles({
         }
     },
     downArrow:{
-        position:'absolute',
-        bottom:90,
-        marginLeft:'40vw',
-        // bottom:'1vh',
         animation:'$bounce 1000ms infinite alternate',
         textAlign:'center',
+        fontSize:'50px',
+        color:'#72A15F'
     },
+    // downArrow:{
+    //     position:'absolute',
+    //     bottom:90,
+    //     marginLeft:'40vw',
+    //     // bottom:'1vh',
+    //     animation:'$bounce 1000ms infinite alternate',
+    //     textAlign:'center',
+    // },
     downArrowIcon:{
         color:'#72A15F',
         fontSize:'300%'
@@ -329,9 +335,9 @@ function Splash() {
                                     <img className={classes.backgroundImage} src={treeSvg} alt='tree'/>
                                 </Grid>
                             </Grid>
-                            <div className={classes.downArrow} hidden={useMediaQuery(theme.breakpoints.down('md'))}>
+                            <div className={classes.downArrow} style={{marginTop:useMediaQuery(theme.breakpoints.down('md'))?'25px':'0px'}}>
                                     <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
-                                        <KeyboardArrowDownIcon className={classes.downArrowIcon}/>
+                                        <KeyboardArrowDownIcon className={classes.downArrow}/>
                                     </Button>
                             </div>
                         </div>

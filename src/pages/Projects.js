@@ -11,15 +11,15 @@ const useStyles=makeStyles({
     root:{
         color:'black',
         fontFamily:"Bai Jamjuree, sans serif",        
-        background:'#ECF3EF'
+        background:'#ECF3EF',
+        padding:'3% 0%'
     },
     rootWrapper:{
         fontStyle: "normal",        
         margin:'0% 5%',
-        padding:'3% 0%'
     },
     hero:{
-        minHeight:'75vh'
+        minHeight:'65vh'
     },
     heroText:{
         color:'#72A15F',    
@@ -37,16 +37,10 @@ const useStyles=makeStyles({
         }
     },
     downArrow:{
-        position:'absolute',
-        bottom:'10',
-        marginLeft:'40vw',
-        // bottom:'1vh',
         animation:'$bounce 1000ms infinite alternate',
         textAlign:'center',
-    },
-    downArrowIcon:{
-        color:'#72A15F',
-        fontSize:'300%'
+        fontSize:'50px',
+        color:'#72A15F'
     },
     h1:{
         color:"#72A15F",
@@ -111,9 +105,9 @@ function Projects() {
                         Illustration
                     </Grid>
                 </Grid>
-                <div className={classes.downArrow} hidden={useMediaQuery(theme.breakpoints.down('md'))}>
+                <div className={classes.downArrow} >
                     <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
-                        <KeyboardArrowDownIcon className={classes.downArrowIcon}/>
+                        <KeyboardArrowDownIcon className={classes.downArrow}/>
                     </Button>
                 </div>
                 <div className={classes.h1} style={{marginTop:'5%'}}>

@@ -9,20 +9,21 @@ import markPng from '../assets/About/mark.png'
 import annieJpg from '../assets/About/annie.jpg'
 import elkanJpg from '../assets/About/elkan.jpg'
 import garyPng from '../assets/About/gary.png'
+import byronJpg from '../assets/About/byron.jpg'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 
 const useStyles=makeStyles({
     root:{
         background:'#ECF3EF',
         fontFamily:"Bai Jamjuree, sans serif",
+        padding:'3% 0%'
     },
     rootWrapper:{
         margin:'0% 5%',
-        padding:'3% 0%'
     },
 
     hero:{
-        minHeight:'75vh'
+        minHeight:'65vh'
     },
     heroText:{
         color:'#72A15F',
@@ -40,12 +41,10 @@ const useStyles=makeStyles({
         }
     },
     downArrow:{
-        textAlign:'center',        
         animation:'$bounce 1000ms infinite alternate',
-    },
-    downArrowIcon:{        
-        color:'#72A15F',
-        fontSize:'300%'
+        textAlign:'center',
+        fontSize:'50px',
+        color:'#72A15F'
     },
     heroIllustration:{
         textAlign:'center',
@@ -169,7 +168,7 @@ function About() {
                 '• PHD in Conservation Biology & US FAA Commercial Pilot',            ]
         },
         {
-            portrait:DorjeePng,
+            portrait:byronJpg,
             name:'Byron Grigoratos',
             title:"Chief Commercial Officer, Bioeconomy",
             bullets:[
@@ -198,7 +197,7 @@ function About() {
                     </Grid>
                     <div className={classes.downArrow}>
                         <Button className={classes.button} onClick={executeScroll}>
-                            <KeyboardArrowDownIcon className={classes.downArrowIcon}/>
+                            <KeyboardArrowDownIcon className={classes.downArrow}/>
                         </Button>
                     </div>
                     <Grid ref={section1} container direction='row' >
