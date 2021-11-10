@@ -17,11 +17,15 @@ const useStyles=makeStyles({
         backgroundColor:'#FFFFFF',
         // mixBlendMode:'pass-through',
         // backgroundSize: "cover", 
-        minHeight:'100vh',
+        // minHeight:'100vh',
         // padding:'3% 0%'
     },
+    rootWrapper:{
+        margin:'0% 5%'
+    },
     hero:{
-        margin:'0% 5%',
+        minHeight:'65vh'
+        // margin:'0% 5%',
     },
     backgroundImage:{                
         backgroundSize:'cover',
@@ -36,7 +40,7 @@ const useStyles=makeStyles({
     },
     heroContainer:{
         minHeight:'75vh',
-        marginBottom:'-5%'
+        // marginBottom:'-5%'
     },
     heroGrid:{
         marginTop:'15%'
@@ -316,10 +320,11 @@ function Splash() {
 
     return (
             <div className={classes.root}>
-                <div className={classes.heroContainer}>
-                    <div className={classes.hero}>
-                        <Grid container direction='row'>
-                            <Grid item xs={12} md={6}>
+                <div className={classes.rootWrapper}>
+                    <div className={classes.heroContainer}>
+                        <div className={classes.hero}>
+                            <Grid container direction='row'>
+                                <Grid item xs={12} md={6}>
                                     <Grid className={classes.heroGrid} item sm={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
                                         <Grid container direction='column' >
                                             <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'600px'}} xs={12} md={6}>
@@ -340,20 +345,21 @@ function Splash() {
                                             </Grid>
                                         </Grid>
                                     </Grid>                                       
+                                </Grid>
+                                <Grid item xs={12} md={6} hidden={useMediaQuery(theme.breakpoints.down('md'))}>
+                                    <img className={classes.backgroundImage} src={treeSvg} alt='tree'/>
+                                </Grid>
                             </Grid>
-                            <Grid item xs={12} md={6} hidden={useMediaQuery(theme.breakpoints.down('md'))}>
-                                <img className={classes.backgroundImage} src={treeSvg} alt='tree'/>
-                            </Grid>
-                        </Grid>
-                        <div className={classes.downArrowWrapper} style={{marginTop:useMediaQuery(theme.breakpoints.down('md'))?'25px':'0px'}}>
-                            <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
-                                <KeyboardArrowDownIcon className={classes.downArrow}/>
-                            </Button>
+                            <div className={classes.downArrowWrapper} style={{marginTop:useMediaQuery(theme.breakpoints.down('md'))?'25px':'0px'}}>
+                                <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
+                                    <KeyboardArrowDownIcon className={classes.downArrow}/>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className={classes.overrideBackground} >
-                    <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center', }}>
+                    <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center'}}>
                         <Grid container xs={12} md={6} direction='column'>
                             <Grid item className={classes.partnerContainerHeader} >
                                 <p>
