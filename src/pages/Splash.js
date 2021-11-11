@@ -14,33 +14,25 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 
 const useStyles=makeStyles({
     root:{
-        backgroundColor:'#FFFFFF',
-        // mixBlendMode:'pass-through',
-        // backgroundSize: "cover", 
-        // minHeight:'100vh',
-        // padding:'3% 0%'
+        backgroundColor:'#FFFFFF'
     },
     rootWrapper:{
         margin:'0% 5%'
     },
     hero:{
-        minHeight:'75vh'
-        // margin:'0% 5%',
+        minHeight:'85vh',
+        marginBottom:'-0.5%'
+    },
+    heroText:{
+        paddingLeft:'5%',
     },
     backgroundImage:{                
         backgroundSize:'cover',
-        // margin:'0% -6%',
-        minWidth:'60vw',
-        // height:'100vh',
-        minHeight:'70vh',
-        // paddingBottom:'5%',
-        // backgroundPositionY:'-5vh',
-        // backgroundPositionX:'-20vw',
+        minHeight:'65vh',
         backgroundRepeat:'no-repeat',        
     },
     heroContainer:{
-        minHeight:'85vh',
-        // marginBottom:'-5%'
+        minHeight:'75vh',
     },
     heroGrid:{
         marginTop:'15%'
@@ -53,15 +45,15 @@ const useStyles=makeStyles({
             transform: 'translateY(-15px);'
         }
     },
-    downArrowWrapper:{
-        animation:'$bounce 1000ms infinite alternate',
-        textAlign:'center',
-        fontSize:'50px',
-        position:'absolute',
-        top:'90vh',
-        left:'45%'
+    // downArrowWrapper:{
+    //     animation:'$bounce 1000ms infinite alternate',
+    //     textAlign:'center',
+    //     fontSize:'50px',
+    //     position:'relative',
+    //     // top:'75vh',
+    //     // left:'45%'
         
-    },
+    // },
     downArrow:{
         animation:'$bounce 1000ms infinite alternate',
         fontSize:'50px',
@@ -124,56 +116,6 @@ const useStyles=makeStyles({
 
 
   function MyResponsivePie() {
-    // const theme=useTheme()
-    // const TopMetric = ({ dataWithArc, centerX, centerY }) => {
-    //     return (
-    //         <text
-    //             x={centerX}
-    //             y={centerY-25}
-    //             textAnchor="middle"
-    //             dominantBaseline="middle"
-    //             fill='black'
-    //             style={{
-    //                 fontSize: '75%',
-    //             }}
-    //         >
-    //         Integrated Marketplace
-    //         </text>
-    //     )
-    // }
-    // const MiddleMetric = ({ dataWithArc, centerX, centerY }) => {
-    //     return (
-    //         <text
-    //             x={centerX}
-    //             y={centerY}
-    //             textAnchor="middle"
-    //             dominantBaseline="middle"
-    //             fill='black'
-    //             style={{
-    //                 fontSize: '75%',
-    //             }}
-    //         >
-    //         Blockchain
-    //         </text>
-    //     )
-    // }
-    // const BottomMetric = ({ dataWithArc, centerX, centerY }) => {
-    //     return (
-    //         <text
-    //             x={centerX}
-    //             y={centerY+25}
-    //             textAnchor="middle"
-    //             dominantBaseline="middle"
-    //             fill='black'
-    //             style={{
-    //                 fontSize: '75%',
-    //             }}
-    //         >
-    //         Financial Incentives
-    //         </text>
-    //     )
-    // }
-    // const TestCard=({})
     return (
     <ResponsivePie
         data={[
@@ -320,43 +262,38 @@ function Splash() {
 
     return (
             <div className={classes.root}>
-                <div className={classes.rootWrapper}>
-                    <div className={classes.heroContainer}>
-                        <div className={classes.hero}>
-                            <Grid container direction='row'>
-                                <Grid item xs={12} md={6}>
-                                    <Grid className={classes.heroGrid} item sm={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
-                                        <Grid container direction='column' >
-                                            <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'600px'}} xs={12} md={6}>
-                                                    Welcome to the regenerative economy: The Bioeconomy
-                                                {/* </div> */}
-                                            </Grid>
-                                            <Grid item  style={{...contentTextStyle, fontSize:'24px', marginTop:"100px", maxWidth:'550px'}} xs={12} md={6}>
-                                                    Valuing the protection of natural assets through carbon and biodiversity projects
-                                            </Grid>
-                                            <Grid item style={{marginTop:'50px'}}>
-                                                <Link className={classes.link} href='/contact' style={{textDecoration:'none', zIndex:0}}>
-                                                    <Button className={classes.button} >
-                                                        Book a Consultation
-                                                    </Button>
-                                                </Link>
-                                            </Grid>
-                                            <Grid item>
-                                            </Grid>
-                                        </Grid>
-                                    </Grid>                                       
-                                </Grid>
-                                <Grid item xs={12} md={6} hidden={useMediaQuery(theme.breakpoints.down('md'))}>
-                                    <img className={classes.backgroundImage} src={treeSvg} alt='tree'/>
-                                </Grid>
+                {/* <div className={classes.hero}> */}
+                    <Grid container className={classes.hero} direction='row' alignItems='flex-end' justifyContent='space-around'>
+                        <Grid container direction='column' justifyContent='flex-start' className={classes.heroText} item xs={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
+                            <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'100%'}} xs={12} md={6}>
+                                    Welcome to the regenerative economy: The Bioeconomy
+                                {/* </div> */}
                             </Grid>
-                            <div className={classes.downArrowWrapper} style={{marginTop:useMediaQuery(theme.breakpoints.down('md'))?'25px':'0px'}}>
+                            <Grid item  style={{...contentTextStyle, fontSize:'24px', marginTop:"100px", maxWidth:'80%'}} xs={12} md={6}>
+                                    Valuing the protection of natural assets through carbon and biodiversity projects
+                            </Grid>
+                            <Grid item style={{marginTop:'50px', marginBottom:'35%'}}>
+                                <Link className={classes.link} href='/contact' style={{textDecoration:'none', zIndex:0}}>
+                                    <Button className={classes.button} >
+                                        Book a Consultation
+                                    </Button>
+                                </Link>
+                            </Grid>
+                            <Grid item style={{marginLeft:useMediaQuery(theme.breakpoints.down('md'))?'0%':'98%', marginBottom:'25px'}}>
                                 <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
                                     <KeyboardArrowDownIcon className={classes.downArrow}/>
                                 </Button>
-                            </div>
-                        </div>
-                    </div>
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={12} md={6} hidden={useMediaQuery(theme.breakpoints.down('md'))} >
+                            <Grid container direction='column' justifyContent='flex-end' alignItems='flex-end'>
+                                <Grid item>
+                                    <img className={classes.backgroundImage} src={treeSvg} alt='tree'/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                <div className={classes.rootWrapper}>
                 </div>
                 <div className={classes.overrideBackground} >
                     <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center'}}>

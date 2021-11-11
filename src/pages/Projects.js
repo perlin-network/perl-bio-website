@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import {useTheme} from '@material-ui/core/styles'
 import Media from './Media.js'
+import illustrationSvg from '../assets/Projects/illustration.svg'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 
 
@@ -102,7 +103,7 @@ function Projects() {
                         Our team has led, funded and completed the carbon project development in projects around the world.
                     </Grid>
                     <Grid item className={classes.heroImage} xs={12} md={6}>
-                        Illustration
+                        <img src={illustrationSvg} alt='illustration'/>
                     </Grid>
                 </Grid>
                 <div className={classes.downArrow} >

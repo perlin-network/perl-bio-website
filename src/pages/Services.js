@@ -3,6 +3,7 @@ import {Grid, Card, Button} from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles';
 import {useTheme} from '@material-ui/core/styles'
 import LogoPng from '../assets/Services/bioeconomy.png'
+import illustrationSvg from '../assets/Services/illustration.svg'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
@@ -34,6 +35,9 @@ const useStyles=makeStyles({
     heroText:{
         color:'#72A15F',
         fontSize:'24px'
+    },
+    heroIllustration:{
+        // maxWidth:'100%'
     },
     iconButton:{
         borderRadius:'50%'
@@ -75,6 +79,10 @@ const useStyles=makeStyles({
         fontWeight:'500',
         fontStyle:'normal',
         fontSize:'24px',        
+    },
+    bulletPoints:{
+        textAlign:'left',
+        marginTop:'15px'
     },
     sdgContainer:{
         // border:'25px solid white'
@@ -148,12 +156,12 @@ function Services() {
     return (
         <div className={classes.root}>
             <div className={classes.rootWrapper}>
-                <Grid container direction='row' justifyContent='center' alignItems='center' style={{minHeight:'75vh'}} spacing={3}>
+                <Grid container direction='row' alignItems='center' style={{minHeight:'75vh'}} spacing={3}>
                     <Grid item xs={12} md={6} className={classes.heroText}>
                         Bioeconomy conserves and restores natural habitats around the world. Our company is a carbon, biodiversity and environmental tech project developer with a proven business model that delivers benefits for partners, local communities and the environment. 
                     </Grid>
-                    <Grid item xs={12} md={6} style={{textAlign:'center'}}>
-                        Illustration
+                    <Grid item className={classes.heroIllustration} xs={12} md={6} style={{textAlign:'center'}}>
+                        <img src={illustrationSvg} alt='illustration' style={{maxWidth:'100%'}}/>
                     </Grid>
                 </Grid>
                 <div className={classes.downArrow}>
@@ -179,6 +187,18 @@ function Services() {
                                         <p>We assess carbon; obtain community support; and prepare documents for projects to be validated under rigorous standards including the Verified Carbon Standard (VCS) and obtain carbon credits. We are proud to work under the VCS, the world’s most widely used voluntary emissions reduction standard.</p>
                                         
                                         <p>We are proud to offer an end-to-end carbon origination service including: </p>
+                                    </Grid>
+                                    <Grid item>
+                                        <Grid container className={classes.bulletPoints} direction='row' alignItems='center' justify='flex-start'>
+                                            {cardContent.map(i=>{
+                                                return(
+                                                    <Grid item className={classes.bulletPoints} xs={6}>
+                                                        {"• "}{i.title}
+                                                    </Grid>
+                                                )
+                                            })}
+                                            
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             </Grid>
