@@ -1,10 +1,14 @@
 import React, {useRef} from 'react'
-import {Grid, Button} from '@material-ui/core'
+import {Grid, Button, Link} from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import {useTheme} from '@material-ui/core/styles'
 import Media from './Media.js'
 import illustrationSvg from '../assets/Projects/illustration.svg'
+import biodiversityUnitsSvg from '../assets/Projects/biodiversity-units.svg'
+import africaSvg from '../assets/Projects/africa-icon.svg'
+import seaSvg from '../assets/Projects/sea-icon.svg'
+import permafrostSvg from '../assets/Projects/permafrost-icon.svg'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 
 
@@ -18,6 +22,19 @@ const useStyles=makeStyles({
     rootWrapper:{
         fontStyle: "normal",        
         margin:'0% 5%',
+    },
+    button:{
+        fontFamily:"Bai Jamjuree, sans serif",
+        width: "282px",
+        height: "66px",
+        fontWeight:'bold',
+        fontSize:'20px',
+        borderRadius:'16px',
+        background: "#91D873",
+        textDecoration:'none',
+        '&:hover':{
+            color:'#72A15F',
+        }
     },
     hero:{
         minHeight:'65vh'
@@ -52,6 +69,21 @@ const useStyles=makeStyles({
         color:'black',
         fontSize:'20px'
     },
+    biodiversityUnits:{
+
+    },
+    projectOverview:{
+        marginTop:'5%',
+    },
+    overviewTitle:{
+        fontSize:'25px',
+        color:'#72A15F',
+        fontWeight:'bold'
+    },
+    overviewText:{
+        marginTop:'15px',
+        fontSize:'20px',
+    },
     mainCointainer:{
         marginTop:'15px'
     },
@@ -72,7 +104,8 @@ const useStyles=makeStyles({
         color:'#72A15F'
     },
     contentBarContent:{
-        marginTop:'25px'
+        marginTop:'25px',
+        fontSize:'22px'
     },
     contentBarImage:{        
         borderRadius:'16px',
@@ -87,6 +120,25 @@ const useStyles=makeStyles({
         marginTop:'3%'
     }
 })
+
+const overviews=[
+    {
+        image:africaSvg,
+        title:'Africa',
+        text:'One of the reasons we are called Bioeconomy is our strong belief in the blue and green economies, where the health of the natural ecosystem is a critical economic asset and a source of public benefits. We invest in, lead and develop projects in African countries which focus on sustainable development and sustainable value chains that go beyond extracting for export.'
+    },
+    {
+        image:seaSvg,
+        title:'Southeast Asia',
+        text:'As Bioeconomy is based in Singapore, we also invest in, lead and develop projects that continue ASEAN’s active role in addressing climate change in the global community. These projects involve restoration and reforestation so that previously degraded areas including peatlands are able to flourish again and regenerate biodiversity.'
+    },
+    {
+        image:permafrostSvg,
+        title:'Permafrost',
+        text:'Northern permafrost soils represent the largest terrestrial organic carbon pool of 1700 gigatonnes on Earth. The estimated damage from permafrost melting is $66.9 trillion. We are running pilots in permafrost areas to reduce or slow high risk methane emissions from permafrost thaw.'
+    },
+]
+
 function Projects() {
     const classes=useStyles()
     const theme=useTheme()
@@ -111,8 +163,49 @@ function Projects() {
                         <KeyboardArrowDownIcon className={classes.downArrow}/>
                     </Button>
                 </div>
-                <div className={classes.h1} style={{marginTop:'5%'}}>
-                    Spotlight
+                <div className={classes.biodiversityUnits}>
+                    <Grid container direction='column' justifyContent='space-around'>
+                        <Grid item>
+                            <img src={biodiversityUnitsSvg} alt='biodiversity-units'/>
+                        </Grid>
+                        <Grid item className={classes.contentBarContent}>
+                            <p>We recognise that one of the biggest challenges is meaningfully tracking what’s happening on site including measuring biodiversity and gaining revenue from protecting biodiversity  - which is why we are developing Biodiversity Units. </p>
+                            
+                            <p>This is a market tool that will value the protection and restoration of biodiversity. Biodiversity Units will rely on a combination of existing databases, remote sensing technology, drones, artificial intelligence, and environmental DNA. We are running pilots in the next 6-12 months. </p>
+                        </Grid>
+                        <Grid item style={{marginTop:'2%'}}>
+                            <Link href='/contact'>
+                                <Button className={classes.button}>
+                                    Contact
+                                </Button>
+                            </Link>
+                        </Grid>
+                        <Grid item style={{marginTop:'1%'}}>
+                            Contact us if you want to be involved
+                        </Grid>
+                    </Grid>
+                </div>
+                <Grid container className={classes.projectOverview} direction='column'>
+                    {overviews.map(i=>{
+                        return(
+                            <Grid item xs={12}>
+                                <Grid container direction='row' justifyContent='flex-start' alignItems='center' spacing={5} style={{marginTop:'25px'}}>
+                                    <Grid item>
+                                        <img src={i.image} alt='overview'/>                                        
+                                    </Grid>
+                                    <Grid item className={classes.overviewTitle}>
+                                        {i.title}
+                                    </Grid>
+                                </Grid>
+                                <div className={classes.overviewText}>
+                                    {i.text}
+                                </div>
+                            </Grid>
+                        )
+                    })}
+                </Grid>
+                <div className={classes.contentBarTitle} style={{fontSize:'35px', fontWeight:600}}>
+                    Spotlighted previous projects include:
                 </div>
                 <Grid className={classes.mainCointainer} ref={section1} container direction='column' spacing={5}>
                     <Grid item>
@@ -139,25 +232,6 @@ function Projects() {
                     <Grid item>
                         <Grid className={classes.contentContainer} container direction={useMediaQuery(theme.breakpoints.up('md'))?'row':'row-reverse'} justify='space-around' spacing={3}>
                             <Grid item xs={12} md={6} style={{textAlign:'center'}}>
-                                <img className={classes.contentBarImage} src='https://www.himpanzee.com/static/Gorilla-graphic-Himpanzee.svg#svgView(viewBox(200,200,800,800))' alt='project1'/>
-                            </Grid>
-                            <Grid item className={classes.contentItem} xs={12} md={6}>
-                                <Grid container className={classes.contentWrapper} direction='column'>
-                                    <Grid item className={classes.contentBarTitle}>
-                                        North Pikounda REDD+ Project
-                                    </Grid>
-                                    <Grid item className={classes.contentBarContent}>
-                                        <p>The North Pikounda REDD+ project was Africa’s first Sustainable Forest Management Carbon (REDD+) project, setting aside 92,530 hectares of virgin rainforest, which has become a habitat for 6000 lowland gorillas.</p>
-
-                                        <p>The main activity is the cancellation of the planned degradation and deforestation activities and the decision to instead protect the forest area. The project implements carbon stock monitoring, remote sensed monitoring, field monitoring and social activities.</p>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid item>
-                        <Grid className={classes.contentContainer} container direction={useMediaQuery(theme.breakpoints.up('md'))?'row-reverse':'row'} justify='space-around' spacing={3}>
-                            <Grid item xs={12} md={6} style={{textAlign:'center'}}>
                                 <img className={classes.contentBarImage} src='https://www.himpanzee.com/static/Elephant-graphic-Himpanzee.svg#svgView(viewBox(200,200,800,800))' alt='project1'/>
                             </Grid>
                             <Grid item className={classes.contentItem} xs={12} md={6}>
@@ -169,6 +243,25 @@ function Projects() {
                                         <p>Himpanzee’s Dorjee Sun was the secretariat for the Fire-Free Alliance, which was founded by Indonesia’s largest agricultural companies and NGOs to support fire prevention and adaptation in the community.</p>
 
                                         <p>As of 2020, FFA initiatives are being implemented in more than 200 villages in Indonesia, covering more than 1.5 million hectares of land. </p>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item>
+                        <Grid className={classes.contentContainer} container direction={useMediaQuery(theme.breakpoints.up('md'))?'row-reverse':'row'} justify='space-around' spacing={3}>
+                            <Grid item xs={12} md={6} style={{textAlign:'center'}}>
+                                <img className={classes.contentBarImage} src='https://www.himpanzee.com/static/Gorilla-graphic-Himpanzee.svg#svgView(viewBox(200,200,800,800))' alt='project1'/>
+                            </Grid>
+                            <Grid item className={classes.contentItem} xs={12} md={6}>
+                                <Grid container className={classes.contentWrapper} direction='column'>
+                                    <Grid item className={classes.contentBarTitle}>
+                                        North Pikounda REDD+ Project
+                                    </Grid>
+                                    <Grid item className={classes.contentBarContent}>
+                                        <p>The North Pikounda REDD+ project was Africa’s first Sustainable Forest Management Carbon (REDD+) project, setting aside 92,530 hectares of virgin rainforest, which has become a habitat for 6000 lowland gorillas.</p>
+
+                                        <p>The main activity is the cancellation of the planned degradation and deforestation activities and the decision to instead protect the forest area. The project implements carbon stock monitoring, remote sensed monitoring, field monitoring and social activities.</p>
                                     </Grid>
                                 </Grid>
                             </Grid>

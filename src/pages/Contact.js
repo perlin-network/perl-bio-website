@@ -7,6 +7,8 @@ const useStyles=makeStyles({
     root:{
         background:'#ECF3EF',
         fontFamily:"Bai Jamjuree, sans serif",
+        minHeight:'100vh',
+        color:'#72A15F'
     },
     rootWrapper:{
         margin:'0% 5%',
@@ -35,6 +37,12 @@ const useStyles=makeStyles({
             background:'none',
             color:'#72A15F'
         }
+    },
+    bottomText:{
+        marginTop:'5%',
+        fontSize:'20px',
+        maxWidth:'45vw'
+        
     }
 })
 
@@ -90,7 +98,10 @@ function Contact() {
                                 <Button className={classes.button} type="submit" disabled={!buttonStatus} style={{opacity:`${buttonStatus===true?1:0.5}`}}>{`Send >`}</Button>
                             </p>
                         </form>
-                        </div>
+                    </div>
+                </div>
+                <div className={classes.bottomText}>
+                    If you are interested in joining our team or becoming a Bioeconomy agent, please send your CV to admin@bioeconomy.co   
                 </div>
             </div>
         </div>

@@ -5,7 +5,6 @@ import { Grid, Link, Button } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import pictureLeftPng from '../assets/CaseStudies/PictureLeft.png'
 import pictureRightPng from '../assets/CaseStudies/PictureRight.png'
-
 import treeSvg from '../assets/Splash/tree-only.svg'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import PartnerOthers from '../components/PartnerOthers'
@@ -29,6 +28,7 @@ const useStyles=makeStyles({
     backgroundImage:{                
         backgroundSize:'cover',
         minHeight:'65vh',
+        maxWidth:'100%',
         backgroundRepeat:'no-repeat',        
     },
     heroContainer:{
@@ -45,29 +45,12 @@ const useStyles=makeStyles({
             transform: 'translateY(-15px);'
         }
     },
-    // downArrowWrapper:{
-    //     animation:'$bounce 1000ms infinite alternate',
-    //     textAlign:'center',
-    //     fontSize:'50px',
-    //     position:'relative',
-    //     // top:'75vh',
-    //     // left:'45%'
-        
-    // },
     downArrow:{
         animation:'$bounce 1000ms infinite alternate',
         fontSize:'50px',
         color:'#72A15F',
         
     },
-    // downArrow:{
-    //     position:'absolute',
-    //     bottom:90,
-    //     marginLeft:'40vw',
-    //     // bottom:'1vh',
-    //     animation:'$bounce 1000ms infinite alternate',
-    //     textAlign:'center',
-    // },
     downArrowIcon:{
         color:'#72A15F',
         fontSize:'300%'
@@ -264,12 +247,12 @@ function Splash() {
             <div className={classes.root}>
                 {/* <div className={classes.hero}> */}
                     <Grid container className={classes.hero} direction='row' alignItems='flex-end' justifyContent='space-around'>
-                        <Grid container direction='column' justifyContent='flex-start' className={classes.heroText} item xs={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
+                        <Grid container direction='column' justifyContent='flex-start' alignItems={useMediaQuery(theme.breakpoints.down('md'))?'center':'left'} className={classes.heroText} item xs={12} md={6} style={{maxWidth:'100%'}}>
                             <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'100%'}} xs={12} md={6}>
                                     Welcome to the regenerative economy: The Bioeconomy
                                 {/* </div> */}
                             </Grid>
-                            <Grid item  style={{...contentTextStyle, fontSize:'24px', marginTop:"100px", maxWidth:'80%'}} xs={12} md={6}>
+                            <Grid item style={{...contentTextStyle, fontSize:'24px', marginTop:"100px", maxWidth:'80%'}} xs={12} md={6}>
                                     Valuing the protection of natural assets through carbon and biodiversity projects
                             </Grid>
                             <Grid item style={{marginTop:'50px', marginBottom:'35%'}}>
