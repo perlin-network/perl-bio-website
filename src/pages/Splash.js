@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import { makeStyles } from '@material-ui/styles'
 import {useTheme} from '@material-ui/core/styles'
 import { Grid, Link, Button } from '@material-ui/core';
@@ -98,31 +98,32 @@ const useStyles=makeStyles({
 })
 
 
-  function MyResponsivePie() {
+  function MyResponsivePie(props) {
+    const {setPieColumn} = props
     return (
     <ResponsivePie
         data={[
             
             {
-              "id": "2. Tokenized biodiversity credits",
+              "id": "biodiversity",
               "label": "Biodiversity",
               "value": 25,
               "color": "hsl(102, 40%, 58%)"
             },
             {
-              "id": "3. Collectibles",
+              "id": "technology",
               "label": "Technology",
               "value": 25,
               "color": "hsl(102, 32%, 54%)"
             },
             {
-              "id": "4. Genomic data blockchain platform",
+              "id": "knowledge",
               "label": "Knowledge",
               "value": 25,
               "color": "hsl(102, 24%, 47%)"
             },
             {
-            "id": "1. Carbon services",
+            "id": "carbon",
             "label": "Carbon",
             "value": 25,
             "color": "hsl(102, 56%, 65%)"
@@ -151,9 +152,12 @@ const useStyles=makeStyles({
         onMouseEnter={(node, event)=>{
             //showcard node.id
             // console.log(node)
+            // console.log(node.id)
             // console.log(event)
+            setPieColumn(node.id)
         }}
         onMouseLeave={(node, event)=>{
+            setPieColumn(null)
             //close all cards
         }}
         arcLabelsSkipAngle={10}
@@ -204,7 +208,8 @@ const projects=[
 
 const textBox=[
     {
-        title:'Carbon',
+        id:'carbon',
+        title:'Carbon',        
         bulletPoints:[
             '• Lead and develop carbon projects that avoid planned deforestation, protect peatlands, and replant native species',
             '• Help organisations deploy their carbon credits in the market'            
@@ -212,6 +217,7 @@ const textBox=[
         color:'#CDEAC4'
     },
     {
+        id:'biodiversity',
         title:'Biodiversity',
         bulletPoints:[
             '• Lead and develop carbon projects that avoid planned deforestation, protect peatlands, and replant native species',
@@ -220,6 +226,7 @@ const textBox=[
         color:'#BDE2AF'
     },
     {
+        id:'technology',
         title:'Technology',
         bulletPoints:[
             '• Lead and develop carbon projects that avoid planned deforestation, protect peatlands, and replant native species',
@@ -228,6 +235,7 @@ const textBox=[
         color:'#AEDE9A'
     },
     {
+        id:'knowledge',
         title:'Knowledge',
         bulletPoints:[
             '• Lead and develop carbon projects that avoid planned deforestation, protect peatlands, and replant native species',
@@ -240,6 +248,9 @@ const textBox=[
 function Splash() {
     const classes=useStyles()
     const theme=useTheme()
+
+    const [pieColumn, setPieColumn]=useState(null)
+
     const section1=useRef(null)
     const executeScroll = () => section1.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
 
@@ -294,13 +305,13 @@ function Splash() {
                         </Grid>
                     <Grid container direction='row' justify='space-evenly'>
                         <Grid item style={{ maxWidth:'35vw', height:'500px'}} xs={12} md={6}>
-                            <MyResponsivePie/>
+                            <MyResponsivePie setPieColumn={setPieColumn}/>
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <Grid container direction='column' spacing={5} style={{alignItems:'center'}}>
                                 {textBox.map((i)=>{
                                     return(
-                                        <Grid item style={{maxWidth:'85%', borderRadius:'16px', background:i.color, marginBottom:'3%'}}>
+                                        <Grid item style={{maxWidth:'85%', borderRadius:'16px', background:i.color, marginBottom:'3%', opacity:pieColumn!==i.id && pieColumn!==null?0.5:1}}>
                                             <h3>{i.title}</h3>
                                             {i.bulletPoints.map(t=>{
                                                 return(
