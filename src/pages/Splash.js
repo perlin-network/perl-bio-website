@@ -258,7 +258,7 @@ function Splash() {
             <div className={classes.root}>
                 {/* <div className={classes.hero}> */}
                     <Grid container className={classes.hero} direction='row' alignItems='flex-end' justifyContent='space-around'>
-                        <Grid container direction='column' justifyContent='flex-start' alignItems={useMediaQuery(theme.breakpoints.down('md'))?'center':'left'} className={classes.heroText} item xs={12} md={6} style={{maxWidth:'100%'}}>
+                        <Grid container direction='column' justifyContent='flex-start' alignItems={useMediaQuery(theme.breakpoints.down('md'))?'center':'left'} className={classes.heroText} item xs={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
                             <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'100%'}} xs={12} md={6}>
                                     Welcome to the regenerative economy: The Bioeconomy
                                 {/* </div> */}
@@ -290,7 +290,7 @@ function Splash() {
                 <div className={classes.rootWrapper}>
                 </div>
                 <div className={classes.overrideBackground} >
-                    <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center'}}>
+                    <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
                         <Grid container xs={12} md={6} direction='column'>
                             <Grid item className={classes.partnerContainerHeader} >
                                 <p>
@@ -304,7 +304,7 @@ function Splash() {
                             </Grid>
                         </Grid>
                     <Grid container direction='row' justify='space-evenly'>
-                        <Grid item style={{ maxWidth:'35vw', height:'800px'}} xs={12} md={6}>
+                        <Grid item style={{ height:'700px'}} xs={12} md={6}>
                             <MyResponsivePie setPieColumn={setPieColumn}/>
                         </Grid>
                         <Grid item xs={12} md={6}>
@@ -326,21 +326,21 @@ function Splash() {
                     </Grid>                
                 </div>
                 <div className={classes.overrideBackground}>
-                    <div className={classes.partnerContainer} >
+                    <div className={classes.partnerContainer} style={{textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
                         <div className={classes.partnerContainerHeader}>
                             Highlighted Projects
                         </div>
-                        <div className={classes.partnerContainerText} style={{marginTop:'5%', maxWidth:'65%'}}>
+                        <div className={classes.partnerContainerText} style={{marginTop:'5%', }}>
                             Our team has led, funded and completed the carbon project development in projects around the world, including:
                         </div>
-                        <Grid container direction='row' style={{marginTop:'25px'}} spacing={3}>
+                        <Grid container direction='row' justifyContent='space-between' style={{marginTop:'25px'}} spacing={3}>
                                 {projects.map(i=>{
                                     return(
-                                        <Grid item xs={12} md={6}>
+                                        <Grid item xs={12} md={6} style={{padding:'0% 6%'}}>
                                                 <Grid item>
                                                     <img src={i.image} alt={i.title}/>
                                                 </Grid>
-                                            <Grid container direction='column' style={{maxWidth:'85%'}} spacing={1}>
+                                            <Grid container direction='column' style={{}} spacing={1}>
                                                 <Grid item className={classes.projectTitle}>
                                                     {i.title}
                                                 </Grid>
@@ -368,7 +368,7 @@ function Splash() {
                     </div>
                 </div>
                 <div className={classes.overrideBackground}>
-                    <div className={classes.partnerContainer} style={{paddingBottom:'10%'}}>
+                    <div className={classes.partnerContainer} style={{paddingBottom:'10%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
                         <p className={classes.partnerContainerHeader}>
                             Partners and Collaborators
                         </p>
