@@ -108,25 +108,25 @@ const useStyles=makeStyles({
               "id": "biodiversity",
               "label": "Biodiversity",
               "value": 25,
-              "color": "hsl(102, 40%, 58%)"
+              "color": "#BDE2AF"
             },
             {
               "id": "technology",
               "label": "Technology",
               "value": 25,
-              "color": "hsl(102, 32%, 54%)"
+              "color": "#AEDE9A"
             },
             {
               "id": "knowledge",
               "label": "Knowledge",
               "value": 25,
-              "color": "hsl(102, 24%, 47%)"
+              "color": "#A2DD8A"
             },
             {
             "id": "carbon",
             "label": "Carbon",
             "value": 25,
-            "color": "hsl(102, 56%, 65%)"
+            "color": "#CDEAC4"
             }
           ]}
         margin={{ top: 40, right: 0, bottom: 80, left: 0 }}
