@@ -36,9 +36,6 @@ const useStyles=makeStyles({
         color:'#72A15F',
         fontSize:'24px'
     },
-    heroIllustration:{
-        // maxWidth:'100%'
-    },
     iconButton:{
         borderRadius:'50%'
     },

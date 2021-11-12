@@ -304,7 +304,7 @@ function Splash() {
                             </Grid>
                         </Grid>
                     <Grid container direction='row' justify='space-evenly'>
-                        <Grid item style={{ maxWidth:'35vw', height:'500px'}} xs={12} md={6}>
+                        <Grid item style={{ maxWidth:'35vw', height:'800px'}} xs={12} md={6}>
                             <MyResponsivePie setPieColumn={setPieColumn}/>
                         </Grid>
                         <Grid item xs={12} md={6}>

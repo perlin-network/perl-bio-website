@@ -44,7 +44,7 @@ const useStyles=makeStyles({
         fontSize:'32px'
     },
     heroImage:{
-        textAlign:'center'
+        textAlign:'center',
     },
     '@keyframes bounce':{
         'from':{
@@ -155,7 +155,7 @@ function Projects() {
                         Our team has led, funded and completed the carbon project development in projects around the world.
                     </Grid>
                     <Grid item className={classes.heroImage} xs={12} md={6}>
-                        <img src={illustrationSvg} alt='illustration'/>
+                        <img src={illustrationSvg} alt='illustration' style={{maxWidth:'100%'}}/>
                     </Grid>
                 </Grid>
                 <div className={classes.downArrow} >

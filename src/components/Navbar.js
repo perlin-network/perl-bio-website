@@ -58,14 +58,14 @@ export default function Navbar() {
         <Slide appear={trigger} direction="down" in={!trigger}>
         <div className={classes.root}>
             <Grid container direction='row' justify='space-between'>
-                <Grid item justify='flex-start' style={{marginLeft:'4%'}}>
+                <Grid item style={{marginLeft:'4%'}}>
                     <Button className={classes.logoButton}>
                         <Link href='/' rel='noopener noreferrer' >
-                            <img src={LogoSvg} style={{height:"83.22px",}} alt=''/>
+                            <img src={LogoSvg} style={{height:"50px",}} alt=''/>
                         </Link>
                     </Button>                
                 </Grid>
-                <Grid item justify='flex-end' style={{marginTop:'50px', marginRight:'5%', marginLeft:"5%"}}>
+                <Grid item style={{marginTop:'25px', marginRight:'5%', marginLeft:"5%"}}>
                     <Grid container className={classes.navButton} justify='space-evenly' spacing={5}>
                         {navLinks.map(i=>{
                             return(
