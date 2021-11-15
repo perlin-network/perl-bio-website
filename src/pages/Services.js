@@ -1,5 +1,5 @@
 import React, {useRef} from 'react'
-import {Grid, Card, Button} from '@material-ui/core'
+import {Grid, Button} from '@material-ui/core' //Card
 import { makeStyles } from '@material-ui/styles';
 import {useTheme} from '@material-ui/core/styles'
 import LogoPng from '../assets/Services/bioeconomy.png'
@@ -243,7 +243,7 @@ function Services() {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item style={{textAlign:'center'}}>                    
+                    {/* <Grid item style={{textAlign:'center'}}>                    
                         <h2 className={classes.contentBarTitle}>Specializations</h2>                    
                     </Grid>
                     <Grid item style={{textAlign:'center'}}>
@@ -267,7 +267,7 @@ function Services() {
                             })}
 
                         </Grid>
-                    </Grid>
+                    </Grid> */}
                     <Grid item style={{textAlign:'center'}}>                    
                         <h2 className={classes.contentBarTitle}>Taking action on the Global Goals</h2>
                         <p className={classes.contentBarContent}>We support in your implementation of the United Nations Sustainable Development Goals, in particular:</p>
