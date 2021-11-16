@@ -60,15 +60,15 @@ const quickLinks=[
 const socials=[
     {
         icon:<Twitter/>,
-        href:''
+        href:'https://twitter.com/Bioeconomy_co'
     },
     {
         icon:<LinkedIn/>,
-        href:''
+        href:'https://www.linkedin.com/company/bioeconomy-co/about/'
     },
     {
         icon:<YouTube/>,
-        href:''
+        href:'https://www.youtube.com/channel/UC5V248elOeMQ5eCNtJzHrrw'
     }
 ]
 

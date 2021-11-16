@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Button, Checkbox, Link, Grid} from '@material-ui/core'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import { makeStyles } from '@material-ui/styles'
+import illustrationSvg from '../assets/Contact/illustration.svg'
 
 const useStyles=makeStyles({
     root:{
@@ -52,10 +53,15 @@ function Contact() {
     const classes=useStyles()
     return (
         <div className={classes.root}>
-            <div className={classes.rootWrapper}>                   
-                <div className='contact-title' style={{...titleTextStyle, fontSize:'36px'}}>
-                    Contact
-                </div>
+            <div className={classes.rootWrapper}>
+                <Grid container direction='row' justify='space-around'>
+                <Grid item xs={12} md={6} style={{...titleTextStyle, fontSize:'36px'}}>                    
+                    Contact                    
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <img src={illustrationSvg} alt='illustration' style={{maxWidth:'100%'}}/>
+                </Grid>
+                </Grid>
                 <div className={classes.contactFormContainer}>
                     <div className='contact-form-wrapper' style={{padding:'5%'}}>
                     <div className='contact-form-title' style={{maxWidth:'640px'}}>

@@ -10,6 +10,7 @@ import annieJpg from '../assets/About/annie.jpg'
 import elkanJpg from '../assets/About/elkan.jpg'
 import garyPng from '../assets/About/gary.png'
 import byronJpg from '../assets/About/byron.jpg'
+import illustrationSvg from '../assets/About/illustration.svg'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 
 const useStyles=makeStyles({
@@ -58,7 +59,7 @@ const useStyles=makeStyles({
     },
     card:{
         margin:'0% 5%',
-        minHeight:'500px',
+        minHeight:'600px',
         borderRadius:'16px'
     },
     cardContent:{
@@ -191,7 +192,7 @@ function About() {
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <div className={classes.heroIllustration}>
-                                Illustration
+                                <img src={illustrationSvg} alt='' style={{maxWidth:'100%'}}/>
                             </div>
                         </Grid>
                     </Grid>
@@ -234,7 +235,7 @@ function About() {
                             </Grid>
                         </Grid>
                         <Grid item xs={12} md={6}>
-                            <Grid container className={classes.leadershipCardsRight} justify='space-evenly' direction='column' spacing={3} style={{marginTop:useMediaQuery(theme.breakpoints.down('md'))?'15px':'275px'}}>
+                            <Grid container className={classes.leadershipCardsRight} justify='space-evenly' direction='column' spacing={3} style={{marginTop:useMediaQuery(theme.breakpoints.down('md'))?'15px':'25px'}}>
                                     {aboutInfoRight.map(i=>{
                                         return(
                                             <Grid item>

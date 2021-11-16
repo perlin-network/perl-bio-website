@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/styles'
 import {useTheme} from '@material-ui/core/styles'
 import { Grid, Link, Button } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import pictureLeftPng from '../assets/CaseStudies/PictureLeft.png'
-import pictureRightPng from '../assets/CaseStudies/PictureRight.png'
+import pictureLeftSvg from '../assets/Splash/tiger.svg'
+import pictureRightSvg from '../assets/Splash/monkey.svg'
 import treeSvg from '../assets/Splash/tree-only.svg'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import PartnerOthers from '../components/PartnerOthers'
@@ -57,12 +57,12 @@ const useStyles=makeStyles({
     },
     button:{
         fontFamily:"Bai Jamjuree, sans serif",
-        width: "282px",
+        width: "300px",
         height: "66px",
         fontWeight:'bold',
         fontSize:'20px',
-        borderRadius:'16px',
-        background: "#91D873",
+        borderRadius:'10px',
+        background: "#BDE2AF",
         textDecoration:'none',
         '&:hover':{
             color:'#72A15F',
@@ -190,14 +190,14 @@ const useStyles=makeStyles({
 
 const projects=[
     {
-        image:pictureLeftPng,
+        image:pictureLeftSvg,
         title:'Riau Ecosystem Restoration Project',
         location:'Kampar Peninsula, Indonesia',
         size:'130,000 hectares, twice the size of Singapore',
         biodiversity:'Sumatran Tiger, Storm’s Stork, Rhinoceros Hornbill, Malayan Sun Bear, Flat-headed Cat '
     },
     {
-        image:pictureRightPng,
+        image:pictureRightSvg,
         title:'Riau Ecosystem Restoration Project',
         location:'Location: North-western portion of Congo River Basin, Republic of Congo',
         size:'94,000 hectares',
@@ -358,7 +358,7 @@ function Splash() {
                                     )
                                 })}
                         </Grid>
-                        <div style={{marginTop:'35px'}}>
+                        <div style={{marginTop:'10%', textAlign:'center'}}>
                             <Link className={classes.link} href='/projects' style={{textDecoration:'none', zIndex:0}}>
                                 <Button className={classes.button}>
                                     Find Out More

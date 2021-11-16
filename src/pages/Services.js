@@ -5,7 +5,7 @@ import {useTheme} from '@material-ui/core/styles'
 import LogoPng from '../assets/Services/bioeconomy.png'
 import illustrationSvg from '../assets/Services/illustration.svg'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import {CheckCircle, KeyboardArrowDown} from '@material-ui/icons';
 
 const useStyles=makeStyles({
     root:{
@@ -64,10 +64,13 @@ const useStyles=makeStyles({
     contentText:{
         marginTop:'10%'
     },    
-    contentBarContent:{
+    contentBarContent:{        
         marginTop:'25px'
     },
-    contentBarImage:{
+    contentImage:{
+        display:'none',        
+    },
+    contentBarImage:{        
         borderRadius:'16px',
         maxWidth:'100%',
         background:'white'
@@ -77,18 +80,36 @@ const useStyles=makeStyles({
         fontStyle:'normal',
         fontSize:'24px',        
     },
-    bulletPoints:{
-        textAlign:'left',
-        marginTop:'15px'
+    '@keyframes slide':{
+        'from':{
+            transform:'translateX(0px)'
+        },
+        'to':{
+            transform:'translateX(100px)'
+        }
+    },
+    bulletPoint:{
+        padding:'10px',
+        display:'inline-flex',
+        verticalAlign:'middle',
+        '&:hover':{
+            background:'#72A15F',
+            color:'white',            
+            transitionDuration:'1s',
+        }
     },
     sdgContainer:{
-        // border:'25px solid white'
-        border: '2px solid white',
+        background:'white',
+        borderRadius:'10px',
         minHeight:'100%',
-        padding:'5%'
+        padding:'5%',
+        '&:hover':{
+            transform: "scale3d(1.05, 1.05, 5)"
+        }
     },
     sdgTitle:{
-        fontWeight:'bold'
+        fontWeight:'bold',
+        color:"#72A15F"
     },
     card:{
         background:'lightgray',
@@ -163,7 +184,7 @@ function Services() {
                 </Grid>
                 <div className={classes.downArrow}>
                     <Button className={classes.iconButton} onClick={executeScroll}>
-                        <KeyboardArrowDownIcon className={classes.downArrow}/>
+                        <KeyboardArrowDown className={classes.downArrow}/>
                     </Button>
                 </div>
 
@@ -173,7 +194,7 @@ function Services() {
                             <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'end':'center'}}>
                                 <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service1.png" alt='it-services'/>
                             </Grid>
-                            <Grid item xs={12} md={6}>
+                            <Grid item xs={12} md={12}>
                                 <Grid className={classes.contentText} container direction='column'>
                                     <Grid item className={classes.contentBarTitle}>
                                         Second to none technical experience
@@ -189,8 +210,10 @@ function Services() {
                                         <Grid container className={classes.bulletPoints} direction='row' alignItems='center' justify='flex-start'>
                                             {cardContent.map(i=>{
                                                 return(
-                                                    <Grid item className={classes.bulletPoints} xs={6}>
-                                                        {"• "}{i.title}
+                                                    <Grid item xs={6} style={{padding:'1%'}}>                                                           */}
+                                                        <span className={classes.bulletPoint}>
+                                                            <CheckCircle fontSize='small'/><span style={{ marginLeft:'5px'}}>{i.title}</span>                                                            
+                                                        </span>
                                                     </Grid>
                                                 )
                                             })}
@@ -206,7 +229,7 @@ function Services() {
                             <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'start':'center'}}>
                                 <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service2.png" alt='it-services2' style={{width:'100%', maxWidth:'852px', maxHeight:'573px'}}/>
                             </Grid>
-                            <Grid item xs={12} md={6}>
+                            <Grid item xs={12} md={12}>
                                 <Grid className={classes.contentText} container direction='column'>
                                     <Grid item className={classes.contentBarTitle}>
                                         Innovative technologies
@@ -227,7 +250,7 @@ function Services() {
                             <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'end':'center'}}>
                                 <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service3.png" alt='it-services3'/>
                             </Grid>
-                            <Grid item xs={12} md={6}>
+                            <Grid item xs={12} md={12}>
                                 <Grid className={classes.contentText} container direction='column'>
                                     <Grid item className={classes.contentBarTitle}>
                                     Creating opportunities for local communities
@@ -268,7 +291,7 @@ function Services() {
 
                         </Grid>
                     </Grid> */}
-                    <Grid item style={{textAlign:'center'}}>                    
+                    <Grid item style={{textAlign:'left'}}>                    
                         <h2 className={classes.contentBarTitle}>Taking action on the Global Goals</h2>
                         <p className={classes.contentBarContent}>We support in your implementation of the United Nations Sustainable Development Goals, in particular:</p>
                     </Grid>
@@ -279,7 +302,7 @@ function Services() {
                                     <Grid item  xs={12} md={4}>
                                         <Grid container direction='column' className={classes.sdgContainer}>
                                             <Grid item >
-                                                <img src={i.image} alt='sdg'/>
+                                                <img src={i.image} alt='sdg' style={{borderRadius:'16px', maxWidth:'100%'}}/>
                                             </Grid>
                                             <Grid item className={classes.sdgTitle} style={{marginTop:'25px'}}>
                                                 {i.titleText}
