@@ -210,7 +210,7 @@ function Services() {
                                         <Grid container className={classes.bulletPoints} direction='row' alignItems='center' justify='flex-start'>
                                             {cardContent.map(i=>{
                                                 return(
-                                                    <Grid item xs={6} style={{padding:'1%'}}>                                                           */}
+                                                    <Grid item xs={6} style={{padding:'1%'}}>
                                                         <span className={classes.bulletPoint}>
                                                             <CheckCircle fontSize='small'/><span style={{ marginLeft:'5px'}}>{i.title}</span>                                                            
                                                         </span>
