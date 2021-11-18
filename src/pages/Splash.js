@@ -5,7 +5,7 @@ import { Grid, Link, Button } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import pictureLeftSvg from '../assets/Splash/tiger.svg'
 import pictureRightSvg from '../assets/Splash/monkey.svg'
-import treeSvg from '../assets/Splash/tree-only.svg'
+import treeSvg from '../assets/Splash/tree-new.svg'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import PartnerOthers from '../components/PartnerOthers'
 import { ResponsivePie } from '@nivo/pie'
@@ -13,21 +13,26 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 
 const useStyles=makeStyles({
     root:{
-        backgroundColor:'#FFFFFF'
+        backgroundColor:'#FFFFFF',
     },
     rootWrapper:{
         margin:'0% 5%'
     },
     hero:{
         minHeight:'85vh',
-        marginBottom:'-0.5%'
+        marginBottom:'-0.5%',
+        backgroundImage:`url(${treeSvg})`,
+        backgroundRepeat:'no-repeat',
+        backgroundPosition:'bottom right',
+        backgroundSize:'75vw'
+        
     },
     heroText:{
         paddingLeft:'5%',
     },
     backgroundImage:{                
-        backgroundSize:'cover',
-        minHeight:'65vh',
+        backgroundSize:'fit',
+        // minHeight:'75vh'        
         maxWidth:'100%',
         backgroundRepeat:'no-repeat',        
     },
@@ -191,7 +196,7 @@ const useStyles=makeStyles({
 const projects=[
     {
         image:pictureLeftSvg,
-        title:'Riau Ecosystem Restoration Project',
+        title:'Tiger Project',
         location:'Kampar Peninsula, Indonesia',
         size:'130,000 hectares, twice the size of Singapore',
         biodiversity:'Sumatran Tiger, Storm’s Stork, Rhinoceros Hornbill, Malayan Sun Bear, Flat-headed Cat '
@@ -256,37 +261,35 @@ function Splash() {
 
     return (
             <div className={classes.root}>
-                {/* <div className={classes.hero}> */}
-                    <Grid container className={classes.hero} direction='row' alignItems='flex-end' justifyContent='space-around'>
-                        <Grid container direction='column' justifyContent='flex-start' alignItems={useMediaQuery(theme.breakpoints.down('md'))?'center':'left'} className={classes.heroText} item xs={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
-                            <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'100%'}} xs={12} md={6}>
-                                    Welcome to the regenerative economy: The Bioeconomy
-                                {/* </div> */}
-                            </Grid>
-                            <Grid item style={{...contentTextStyle, fontSize:'24px', marginTop:"100px", maxWidth:'80%'}} xs={12} md={6}>
-                                    Valuing the protection of natural assets through carbon and biodiversity projects
-                            </Grid>
-                            <Grid item style={{marginTop:'50px', marginBottom:'35%'}}>
-                                <Link className={classes.link} href='/contact' style={{textDecoration:'none', zIndex:0}}>
-                                    <Button className={classes.button} >
-                                        Book a Consultation
-                                    </Button>
-                                </Link>
-                            </Grid>
-                            <Grid item style={{marginLeft:useMediaQuery(theme.breakpoints.down('md'))?'0%':'98%', marginBottom:'25px'}}>
-                                <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
-                                    <KeyboardArrowDownIcon className={classes.downArrow}/>
-                                </Button>
-                            </Grid>
+                <Grid container className={classes.hero} direction='row' alignItems='flex-end' justifyContent='space-around'>
+                    <Grid container direction='column' justifyContent='flex-start' alignItems={useMediaQuery(theme.breakpoints.down('md'))?'center':'left'} className={classes.heroText} item xs={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
+                        <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'100%'}} xs={12} md={6}>
+                                Welcome to the regenerative economy: Bioeconomy                            
                         </Grid>
-                        <Grid item xs={12} md={6} hidden={useMediaQuery(theme.breakpoints.down('md'))} >
-                            <Grid container direction='column' justifyContent='flex-end' alignItems='flex-end'>
-                                <Grid item>
-                                    <img className={classes.backgroundImage} src={treeSvg} alt='tree'/>
-                                </Grid>
-                            </Grid>
+                        <Grid item style={{...contentTextStyle, fontSize:'24px', marginTop:"100px", maxWidth:'80%'}} xs={12} md={6}>
+                                Valuing the protection of natural assets through carbon and biodiversity projects
+                        </Grid>
+                        <Grid item style={{marginTop:'50px', marginBottom:'35%'}}>
+                            <Link className={classes.link} href='/contact' style={{textDecoration:'none', zIndex:0}}>
+                                <Button className={classes.button} >
+                                    Book a Consultation
+                                </Button>
+                            </Link>
+                        </Grid>
+                        <Grid item style={{marginLeft:useMediaQuery(theme.breakpoints.down('md'))?'0%':'98%', marginBottom:'25px'}}>
+                            <Button onClick={executeScroll} style={{borderRadius:'50%'}}>
+                                <KeyboardArrowDownIcon className={classes.downArrow}/>
+                            </Button>
                         </Grid>
                     </Grid>
+                    {/* <Grid item xs={12} md={6} hidden={useMediaQuery(theme.breakpoints.down('md'))} >
+                        <Grid container direction='column' justifyContent='flex-end' alignItems='flex-end'>
+                            <Grid item>
+                                <img className={classes.backgroundImage} src={treeSvg} alt='tree'/>
+                            </Grid>
+                        </Grid>
+                    </Grid> */}
+                </Grid>
                 <div className={classes.rootWrapper}>
                 </div>
                 <div className={classes.overrideBackground} >
