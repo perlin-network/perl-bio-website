@@ -203,7 +203,7 @@ const projects=[
     },
     {
         image:pictureRightSvg,
-        title:'Riau Ecosystem Restoration Project',
+        title:'Gorilla Project',
         location:'Location: North-western portion of Congo River Basin, Republic of Congo',
         size:'94,000 hectares',
         biodiversity:'Lowland Gorilla, African Forest Elephant, Hippopotamus, Leopard'
