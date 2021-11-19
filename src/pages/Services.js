@@ -34,7 +34,7 @@ const useStyles=makeStyles({
     },
     heroText:{
         color:'#72A15F',
-        fontSize:'24px'
+        fontSize:'20px'
     },
     iconButton:{
         borderRadius:'50%'
