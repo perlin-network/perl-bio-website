@@ -7,6 +7,18 @@ import illustrationSvg from '../assets/Services/illustration.svg'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import {CheckCircle, KeyboardArrowDown} from '@material-ui/icons';
 
+//Grid images
+import communitySvg from '../assets/Services/community.svg'
+import comprehensiveSvg from '../assets/Services/comprehensive.svg'
+import creatingSvg from '../assets/Services/creating.svg'
+import deliverSvg from '../assets/Services/deliver.svg'
+import implementSvg from '../assets/Services/implement.svg'
+import inclusiveSvg from '../assets/Services/inclusive.svg'
+import supportSvg from '../assets/Services/support.svg'
+import yearsSvg from '../assets/Services/years.svg'
+import illustration2Svg from '../assets/Services/illustration2.svg'
+
+
 const useStyles=makeStyles({
     root:{
         color:'black',
@@ -41,14 +53,15 @@ const useStyles=makeStyles({
     },
     button:{
         fontFamily:"Bai Jamjuree, sans serif",
-        width: "282px",
+        width: "300px",
         height: "66px",
         fontWeight:'bold',
         fontSize:'20px',
-        borderRadius:'16px',
-        background: "#91D873",
+        borderRadius:'10px',
+        background: "#BDE2AF",
+        textDecoration:'none',
         '&:hover':{
-            color:'white',
+            color:'#72A15F',
         }
     },
     h1:{
@@ -62,7 +75,7 @@ const useStyles=makeStyles({
         color:'#72A15F'
     },
     contentText:{
-        marginTop:'10%'
+        marginTop:'5%'
     },    
     contentBarContent:{        
         marginTop:'25px'
@@ -122,8 +135,50 @@ const useStyles=makeStyles({
     },
     cardImageWrapper:{
         padding:'3%'
+    },
+    bioeconomyAgentWrapper:{
+        // marginTop:'5%'
     }
 })
+
+const topImageGrid=[
+    {
+        image:yearsSvg,
+        text:'Years Experience'
+    },
+    {
+        image:supportSvg,
+        text:'Supporting Landowners'
+    },
+    {
+        image:implementSvg,
+        text:'Implement & Monitor Projects'
+    },
+    {
+        image:deliverSvg,
+        text:'Deliver Results'
+    },
+    
+]
+
+const bottomImageGrid=[
+    {
+        image:communitySvg,
+        text:'Community Engagement & Consultation'
+    },
+    {
+        image:inclusiveSvg,
+        text:'Inclusive Forestry Management Planning'
+    },
+    {
+        image:comprehensiveSvg,
+        text:'Comprehensive Needs Assessments'
+    },
+    {
+        image:creatingSvg,
+        text:'Creating new Sustainable Livelihoods'
+    },
+]
 
 const unImages=[
     {
@@ -187,13 +242,28 @@ function Services() {
                         <KeyboardArrowDown className={classes.downArrow}/>
                     </Button>
                 </div>
-
+                <Grid container direction='row' alignItems='center'>
+                    {topImageGrid.map(i=>{
+                        return(
+                            <Grid item xs={12} md={6}>
+                                <Grid container direction='row' justify='center' alignItems='center' >
+                                    <Grid item>
+                                        <img src={i.image} alt='grid-img'/>
+                                    </Grid>
+                                    <Grid item style={{maxWidth:'125px'}}>
+                                        {i.text}
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        )
+                    })}
+                </Grid>
                 <Grid ref={section1} container direction='column' style={{marginTop:'15px'}} spacing={5}>                    
                     <Grid item>
-                        <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row-reverse':'row'} justify='space-around' spacing={5} >
+                        <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row-reverse':'row'} justify='space-around' spacing={3} >
                             <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'end':'center'}}>
                                 <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service1.png" alt='it-services'/>
-                            </Grid>
+                            </Grid>                            
                             <Grid item xs={12} md={12}>
                                 <Grid className={classes.contentText} container direction='column'>
                                     <Grid item className={classes.contentBarTitle}>
@@ -253,16 +323,55 @@ function Services() {
                             <Grid item xs={12} md={12}>
                                 <Grid className={classes.contentText} container direction='column'>
                                     <Grid item className={classes.contentBarTitle}>
-                                    Creating opportunities for local communities
+                                        Creating opportunities for local communities
                                     </Grid>
                                     <Grid item className={classes.contentBarContent}>
-                                    <p>Our projects strengthen economies through creation of jobs for local communities. Himpanzee's core focus is on creating alternative revenue streams that do not destroy nature.</p>
+                                        <p>Our projects strengthen economies through creation of jobs for local communities. Himpanzee's core focus is on creating alternative revenue streams that do not destroy nature.</p>
 
-                                    <p>We also ensure there is consultation with local communities and Indigenous populations in forest management plans that impact them. Our team performs a comprehensive needs assessment to take a data-led approach to development interventions.</p>
+                                        <p>We also ensure there is consultation with local communities and Indigenous populations in forest management plans that impact them. Our team performs a comprehensive needs assessment to take a data-led approach to development interventions.</p>
 
-                                    <p>Across the world, there are companies which have caused widespread destruction of the remaining peatlands and tropical forests around the world. Often local communities are ignored as their forests are cut around them. At the heart of our success is our work with community leaders, consulting with government officials and forming partnerships with civil society to implement our projects.</p>
+                                        <p>Across the world, there are companies which have caused widespread destruction of the remaining peatlands and tropical forests around the world. Often local communities are ignored as their forests are cut around them. At the heart of our success is our work with community leaders, consulting with government officials and forming partnerships with civil society to implement our projects.</p>
                                     </Grid>
                                 </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid container direction='row'>
+                            {bottomImageGrid.map(i=>{
+                            return(
+                                <Grid item xs={12} md={6}>
+                                    <Grid container direction='row' justify='center' alignItems='center' >
+                                        <Grid item>
+                                            <img src={i.image} alt='grid-img'/>
+                                        </Grid>
+                                        <Grid item style={{maxWidth:'125px'}}>
+                                            {i.text}
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                                )
+                            })}
+                        </Grid>
+                        <div className={classes.contentBarTitle} style={{marginTop:'5%'}}>
+                            Become a Bioeconomy Agent
+                        </div>
+                        <Grid className={classes.bioeconomyAgentWrapper} container direction='row' alignItems='center' justify='space-between'>
+                            <Grid item className={classes.contentText} md={6}>
+                                <Grid container direction='column'>
+                                    <Grid item>
+                                        We are building a team of Bioeconomy Agents who are advisors to our projects, pioneering the environmental tech space and exploring the most effective ways to combat climate change. 
+                                    </Grid>
+                                    <Grid item>
+                                        <Button className={classes.button} style={{marginTop:'5%'}}>
+                                            Join Bioeconomy
+                                        </Button>
+                                    </Grid>
+                                    <Grid item style={{marginTop:'5%'}}>
+                                        Join the Bioeconomy movement by getting in touch with us
+                                    </Grid>
+                                </Grid>                            
+                            </Grid>
+                            <Grid item md={6} style={{textAlign:'right'}}>
+                                <img src={illustration2Svg} alt='illustration2'/>
                             </Grid>
                         </Grid>
                     </Grid>
