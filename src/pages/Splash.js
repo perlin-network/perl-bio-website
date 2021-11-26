@@ -11,6 +11,13 @@ import PartnerOthers from '../components/PartnerOthers'
 import { ResponsivePie } from '@nivo/pie'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 
+//svg icons
+import biodiversitySvg from '../assets/Splash/biodiversity.svg'
+import technologySvg from '../assets/Splash/technology.svg'
+import knowledgeSvg from '../assets/Splash/knowledge.svg'
+import carbonSvg from '../assets/Splash/carbon.svg'
+
+
 const useStyles=makeStyles({
     root:{
         backgroundColor:'#FFFFFF',
@@ -105,33 +112,70 @@ const useStyles=makeStyles({
 
   function MyResponsivePie(props) {
     const {setPieColumn} = props
+    const BioIcon = ({ centerX, centerY }) => {
+        return (
+            <image
+                xlinkHref={biodiversitySvg}
+                x={centerX-10}
+                y={centerY-230}
+            />             
+        )
+    }
+    const CarbonIcon = ({ centerX, centerY }) => {
+        return (
+            <image
+                xlinkHref={carbonSvg}
+                x={centerX-195}
+                y={centerY-40}
+            />             
+        )
+    }
+    const TechIcon = ({ centerX, centerY }) => {
+        return (
+            <image
+                xlinkHref={technologySvg}
+                x={centerX+170}
+                y={centerY-50}
+            />             
+        )
+    }
+    const KnowledgeIcon = ({ centerX, centerY }) => {
+        return (
+            <image
+                xlinkHref={knowledgeSvg}
+                x={centerX-10}
+                y={centerY+210}
+                
+            />             
+        )
+    }
     return (
     <ResponsivePie
         data={[
             
             {
-              "id": "biodiversity",
-              "label": "Biodiversity",
-              "value": 25,
-              "color": "#BDE2AF"
+                id: "biodiversity",
+                label: "Biodiversity",
+                value: 25,
+                color: "#BDE2AF"
             },
             {
-              "id": "technology",
-              "label": "Technology",
-              "value": 25,
-              "color": "#AEDE9A"
+                id: "technology",
+                label: "Technology",
+                value: 25,
+                color: "#AEDE9A"
             },
             {
-              "id": "knowledge",
-              "label": "Knowledge",
-              "value": 25,
-              "color": "#A2DD8A"
+                id: "knowledge",
+                label: "Knowledge",
+                value: 25,
+                color: "#A2DD8A"
             },
             {
-            "id": "carbon",
-            "label": "Carbon",
-            "value": 25,
-            "color": "#CDEAC4"
+                id: "carbon",
+                label: "Carbon",
+                value: 25,
+                color: "#CDEAC4"
             }
           ]}
         margin={{ top: 40, right: 0, bottom: 80, left: 0 }}
@@ -166,11 +210,11 @@ const useStyles=makeStyles({
             //close all cards
         }}
         arcLabelsSkipAngle={10}
-        arcLabel="label"
+        arcLabel='label'
         arcLabelsTextColor='black'
         theme={{fontSize:'20px', fontFamily:'Bai Jamjuree, sans serif'}}
         tooltip="false"
-        layers={['arcs', 'arcLabels', 'arcLinkLabels']}//TopMetric, MiddleMetric, BottomMetric
+        layers={['arcs', 'arcLabels', 'arcLinkLabels', BioIcon, CarbonIcon, TechIcon, KnowledgeIcon]}//TopMetric, MiddleMetric, BottomMetric
         defs={[
             // {
             //     id: 'dots',
