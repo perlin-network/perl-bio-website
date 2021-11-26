@@ -294,7 +294,7 @@ function Splash() {
                 </div>
                 <div className={classes.overrideBackground} >
                     <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
-                        <Grid container xs={12} md={6} direction='column'>
+                        <Grid container direction='column'>
                             <Grid item className={classes.partnerContainerHeader} >
                                 <p>
                                     The path to sustained ecosystem protection
@@ -304,13 +304,11 @@ function Splash() {
                                 <p classname={classes.partnerContainerText}>
                                     We create strategies for businesses and organisations to embrace the bioeconomy by helping them gain revenue from natural assets and achieve their sustainability goals. Our proven business model delivers benefits for partners, local communities and the environment.
                                 </p>
-                            </Grid>
-                        </Grid>
-                    <Grid container direction='row' justify='space-evenly'>
-                        <Grid item style={{ height:'700px'}} xs={12} md={6}>
+                            </Grid>                    
+                        <Grid item style={{ height:'700px'}}>
                             <MyResponsivePie setPieColumn={setPieColumn}/>
                         </Grid>
-                        <Grid item xs={12} md={6}>
+                        <Grid item>
                             <Grid container direction='column' spacing={5} style={{alignItems:'center'}}>
                                 {textBox.map((i)=>{
                                     return(
