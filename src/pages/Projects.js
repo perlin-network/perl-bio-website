@@ -152,7 +152,7 @@ function Projects() {
                 </div>
                 <Grid container className={classes.hero} alignItems='center' justify='space-evenly' direction='row'>
                     <Grid item className={classes.heroText} xs={12} md={6}>
-                        Our team has led, funded and completed the carbon project development in projects around the world.
+                        Spotlighted projects in our pipeline include:
                     </Grid>
                     <Grid item className={classes.heroImage} xs={12} md={6}>
                         <img src={illustrationSvg} alt='illustration' style={{maxWidth:'100%'}}/>

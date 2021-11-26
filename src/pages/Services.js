@@ -71,7 +71,7 @@ const useStyles=makeStyles({
     },
     contentBarTitle:{
         fontSize:'32px',
-        fontWeight:'bold',
+        fontWeight:600,
         color:'#72A15F'
     },
     contentText:{
@@ -184,17 +184,17 @@ const unImages=[
     {
         image:'https://www.himpanzee.com/static/sdg-13.png',
         titleText:'SDG 13',
-        content:'Take urgent action to combat climate change and its impacts.'
+        content:'Take urgent action to combat climate change and its impacts'
     },
     {
         image:'https://www.himpanzee.com/static/sdg-15.png',
         titleText:'SDG 15',
-        content:'Protect, restore and promote sustainable use of terrestrial ecosystems.'
+        content:'Protect, restore and promote sustainable use of terrestrial ecosystems'
     },
     {
         image:'https://www.himpanzee.com/static/sdg-17.png',
         titleText:'SDG 17',
-        content:'Strengthen the means of implementation and revitalize the global.'
+        content:'Strengthen the means of implementation and revitalize the global economy'
     }
 ]
 
@@ -263,18 +263,15 @@ function Services() {
                         <Grid container direction={useMediaQuery(theme.breakpoints.up('md'))?'row-reverse':'row'} justify='space-around' spacing={3} >
                             <Grid className={classes.contentImage} item xs={12} md={6} style={{textAlign:useMediaQuery(theme.breakpoints.up('md'))?'end':'center'}}>
                                 <img className={classes.contentBarImage} src="https://www.himpanzee.com/static/services/it-service1.png" alt='it-services'/>
-                            </Grid>                            
-                            <Grid item xs={12} md={12}>
-                                <Grid className={classes.contentText} container direction='column'>
-                                    <Grid item className={classes.contentBarTitle}>
-                                        Second to none technical experience
-                                    </Grid>
-                                    <Grid item className={classes.contentBarContent}>
-                                        <p>Our team has more than 15 years of experience in supporting landowners and partners to identify, implement and monitor carbon and biodiversity projects that deliver results. We can help revegetate heavily degraded land and recreate forests to capture carbon, and conserve vulnerable peatlands to stop the emission of carbon and protect habitats for biodiversity.</p>
-                                        
+                            </Grid>
+                            <Grid item className={classes.contentText}>
+                                <Grid container direction='column'>
+                                    <Grid item>
+                                        <p>We can help revegetate heavily degraded land and recreate forests to capture carbon, and conserve vulnerable peatlands to stop the emission of carbon and protect habitats for biodiversity.</p>
+
                                         <p>We assess carbon; obtain community support; and prepare documents for projects to be validated under rigorous standards including the Verified Carbon Standard (VCS) and obtain carbon credits. We are proud to work under the VCS, the world’s most widely used voluntary emissions reduction standard.</p>
-                                        
-                                        <p>We are proud to offer an end-to-end carbon origination service including: </p>
+
+                                        <p>Our end-to-end carbon origination and biodiversity project service includes:</p>
                                     </Grid>
                                     <Grid item>
                                         <Grid container className={classes.bulletPoints} direction='row' alignItems='center' justify='flex-start'>
@@ -328,9 +325,7 @@ function Services() {
                                     <Grid item className={classes.contentBarContent}>
                                         <p>Our projects strengthen economies through creation of jobs for local communities. Himpanzee's core focus is on creating alternative revenue streams that do not destroy nature.</p>
 
-                                        <p>We also ensure there is consultation with local communities and Indigenous populations in forest management plans that impact them. Our team performs a comprehensive needs assessment to take a data-led approach to development interventions.</p>
-
-                                        <p>Across the world, there are companies which have caused widespread destruction of the remaining peatlands and tropical forests around the world. Often local communities are ignored as their forests are cut around them. At the heart of our success is our work with community leaders, consulting with government officials and forming partnerships with civil society to implement our projects.</p>
+                                        <p>We also ensure there is consultation with local communities and Indigenous populations in forest management plans that impact them. Our team performs a comprehensive needs assessment to take a data-led approach to development interventions.</p>                                        
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -357,7 +352,7 @@ function Services() {
                         <Grid className={classes.bioeconomyAgentWrapper} container direction='row' alignItems='center' justify='space-between'>
                             <Grid item className={classes.contentText} md={6}>
                                 <Grid container direction='column'>
-                                    <Grid item>
+                                    <Grid item style={{padding:'8%', background:'white', borderRadius:'16px'}}>
                                         We are building a team of Bioeconomy Agents who are advisors to our projects, pioneering the environmental tech space and exploring the most effective ways to combat climate change. 
                                     </Grid>
                                     <Grid item>
@@ -365,7 +360,7 @@ function Services() {
                                             Join Bioeconomy
                                         </Button>
                                     </Grid>
-                                    <Grid item style={{marginTop:'5%'}}>
+                                    <Grid item style={{marginTop:'5%', fontSize:'13px'}}>
                                         Join the Bioeconomy movement by getting in touch with us
                                     </Grid>
                                 </Grid>                            
@@ -402,7 +397,7 @@ function Services() {
                     </Grid> */}
                     <Grid item style={{textAlign:'left'}}>                    
                         <h2 className={classes.contentBarTitle}>Taking action on the Global Goals</h2>
-                        <p className={classes.contentBarContent}>We support in your implementation of the United Nations Sustainable Development Goals, in particular:</p>
+                        <p className={classes.contentBarContent}>We support your implementation of the United Nations Sustainable Development Goals, in particular:</p>
                     </Grid>
                     <Grid item style={{textAlign:'center'}}>
                         <Grid container direciton='row' spacing={3}>

@@ -94,7 +94,7 @@ function About() {
         {
             portrait:DorjeePng,
             name:'Dorjee Sun',
-            title:"CEO and Founder, Bioeconomy",
+            title:"CEO and Founder",
             bullets:[
                 '• TIME magazine Hero of the Environment',
                 '• Winner of the Earth Day Species Award',
@@ -107,7 +107,7 @@ function About() {
         {
             portrait:markPng,
             name:'Mark Harding',
-            title:"Co-founder and Project Lead, Bioeconomy",
+            title:"Co-founder and Project Lead",
             bullets:[
                 '• Head of CDM & Sustainability at Carbon Conservation',
                 '• Pioneer in the carbon industry since 2007',
@@ -119,13 +119,13 @@ function About() {
         },
         {
             portrait:garyPng,
-            name:'Gary Walsh',
+            name:'Garry Walsh',
             title:"Chief Communications Officer",
             bullets:[
                 '• 20 years in communication & public relations',
                 '• Led the economic communications for Republic of Philippines',
-                '• Lead consultant for clients including eBay, PayPal and Uber in Southeast Asia',
-                '• Previously APAC Regional Chairman for Apco Worldwide',
+                '• Lead consultant for clients including Microsoft, eBay and TEPCO',
+                '• Previously APAC Regional Chair for a global communications consultancy',
                 '• Former member of the Westminster City Council',
                 '• Winner of several PR & communications awards',
             ]
@@ -148,7 +148,7 @@ function About() {
         {
             portrait:RalphPng,
             name:'Ralph J Strebel',
-            title:"Co-founder, Head of Carbon & Legal Counsel, Bioeconomy",
+            title:"Co-founder, Head of Carbon & Legal Counsel",
             bullets:[
                 '• Lead advisor to Carbon Conservation',
                 '• Chairman of Greenhouse Gas Management Institute (GHGMI) ',
@@ -163,15 +163,17 @@ function About() {
             name:'Dr Paul Elkan',
             title:"Chief Conservation Officer",
             bullets:[
+                '• Former lead director for Wildlife',
                 '• 30 years of conservation and wildlife protection of Central and East Africa and the Sudano-Sahel region ',
                 '• Led c. $200 million conservation funding from well known bilateral, multilateral, and private donors in Africa',
                 '• Lead director for Wildlife Conservation Society and responsible for several aerial survey efforts as part of the Great Elephant Census + analysis of conservation security for multiple regions',
-                '• PHD in Conservation Biology & US FAA Commercial Pilot',            ]
+                '• PHD in Conservation Biology & US FAA Commercial Pilot',
+            ]
         },
         {
             portrait:byronJpg,
             name:'Byron Grigoratos',
-            title:"Chief Commercial Officer, Bioeconomy",
+            title:"Chief Commercial Officer",
             bullets:[
                 '• Former Country Manager & Senior Trader at Glencore International focusing on commodity trading & business development',
                 '• Former Investment Banker at Investec Private Bank',

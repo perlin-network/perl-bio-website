@@ -15,33 +15,42 @@ const useStyles=makeStyles({
     },
     partnerImage:{
         maxHeight:'500px',
+        '&:hover':{
+            opacity:0.7
+        }
     }
 })
 const partnerLogos=[
     {
         name:'dianFossey',
-        image:dianFosseySvg
+        image:dianFosseySvg,
+        link:'https://gorillafund.org/'        
     },
     {
         name:'sparkAr',
-        image:sparkSvg
+        image:sparkSvg,
+        link:'https://sparkar.facebook.com/ar-studio/'
     },
     {
         name:'spaceIntelligence',
-        image:spaceIntelligenceSvg
+        image:spaceIntelligenceSvg,
+        link:'https://www.space-intelligence.com/'
     },
     {
         name:'ataMarie',
-        image:ataMarieSvg,        
+        image:ataMarieSvg,
+        link:'https://www.ata-marie.com/'
     },
     {
         name:'airCarbon',
-        image:airCarbonSvg        
+        image:airCarbonSvg,
+        link:'https://www.aircarbon.co/'
     },
     {
         name:'perlrEco',
-        image:perlEcoSvg
-    },
+        image:perlEcoSvg,
+        link:'https://www.perl.eco/'
+    }
 ]
 function PartnerOthers() {
     const classes=useStyles()
@@ -51,7 +60,9 @@ function PartnerOthers() {
                 {partnerLogos.map(i=>{
                     return(
                         <Grid item xs={12} md={4} style={{textAlign:'center'}}>
-                            <img className={classes.partnerImage} src={i.image} alt={i.name} style={{filter:i.grayscale?'brightness(0) invert(1)':''}}/>
+                            <a href={i.link} target='_blank' rel='noreferrer noopener'>
+                                <img className={classes.partnerImage} src={i.image} alt={i.name} style={{filter:i.grayscale?'brightness(0) invert(1)':''}}/>
+                            </a>
                         </Grid>
 
                     )
