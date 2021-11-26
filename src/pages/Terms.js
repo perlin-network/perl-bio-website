@@ -57,10 +57,10 @@ The Terms are governed by the laws of Singapore. Any dispute, controversy, proce
 function Terms() {
     return (
         <div className="terms-contaienr">
-            <div className='terms-title' style={{...titleTextStyle, fontSize:'32px', color:'white', textAlign:'center',margin:'2% 0%'}}>
+            <div className='terms-title' style={{...titleTextStyle, fontSize:'32px', textAlign:'center',margin:'2% 0%'}}>
                 Terms of Use
             </div>
-            <div className='terms-content-wrapper' style={{...contentTextStyle, fontSize:'20px', color:'white', margin:'2% 8%'}}>
+            <div className='terms-content-wrapper' style={{...contentTextStyle, fontSize:'20px', margin:'2% 8%'}}>
                 <div className='terms-content-box' style={{maxHeight:'70vh', overflowY:'auto', padding:'0% 3%'}}>
                     <b><u>Last updated: 8 July 2021</u></b>
                     {termsText.split('\n').map(str=>{
