@@ -3,10 +3,8 @@ import Splash from './pages/Splash';
 import About from './pages/About';
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
-import Terms from './pages/Terms'
 import Services from './pages/Services'
 import Projects from './pages/Projects'
-import Privacy from './pages/Privacy'
 import Fade from '@material-ui/core/Fade';
 import { Fab, useScrollTrigger, Zoom } from '@material-ui/core';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
@@ -15,6 +13,7 @@ import {BrowserRouter as Router,
   Route,
 } from 'react-router-dom'
 import CookieConsent from "react-cookie-consent";
+import Policies from './pages/Policies';
 
 
 function App() {
@@ -46,11 +45,8 @@ function App() {
               {/* <Route exact path='/what'>
                 <WhatWeDo/>
               </Route> */}
-              <Route exact path='/terms'>
-                <Terms/>
-              </Route>
-              <Route exact path='/privacy'>
-                <Privacy/>
+              <Route exact path='/policies'>
+                <Policies/>
               </Route>
               {/* <Route exact path='/media'>
                 <Media/>

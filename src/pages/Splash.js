@@ -337,7 +337,7 @@ const textBox=[
         title:'Technology',
         bulletPoints:[
             '• Work with partners to connect the real universe to the metaverse and develop digital collectibles to raise value for real animals ',
-            '• Develop genomic data platform to encourage scientific discoveries'
+            '• Deploy blockchain solutions to ensure there is provenance and no double counting'
         ],
         color:'#AEDE9A'
     },
@@ -345,8 +345,8 @@ const textBox=[
         id:'knowledge',
         title:'Knowledge',
         bulletPoints:[
-            '• Provide strategic advice and education to businesses on carbon, biodiversity and environmental solutions ',
-            '• Help organisations deploy their carbon credits in the market'
+            '• Provide strategic advice and education to businesses on carbon, biodiversity and environmental solutions',
+            '• Develop genomic data platform to encourage scientific discoveries'
         ],
         color:'#A2DD8A'
     }
