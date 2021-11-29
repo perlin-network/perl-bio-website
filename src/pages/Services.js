@@ -269,7 +269,7 @@ function Services() {
                                     <Grid item>
                                         <p>We can help revegetate heavily degraded land and recreate forests to capture carbon, and conserve vulnerable peatlands to stop the emission of carbon and protect habitats for biodiversity.</p>
 
-                                        <p>We assess carbon; obtain community support; and prepare documents for projects to be validated under rigorous standards including the Verified Carbon Standard (VCS) and obtain carbon credits. We are proud to work under the VCS, the world’s most widely used voluntary emissions reduction standard.</p>
+                                        <p>We assess carbon; obtain community support; and prepare documents for projects to be validated under rigorous standards including the Verified Carbon Standard (VCS) and obtain carbon credits.</p>
 
                                         <p>Our end-to-end carbon origination and biodiversity project service includes:</p>
                                     </Grid>

@@ -132,7 +132,7 @@ const useStyles=makeStyles({
 
 
   function MyResponsivePie(props) {
-    const {setPieColumn} = props
+    const {setPieColumn, theme} = props
     const BioIcon = ({ centerX, centerY }) => {
         return (
             <image
@@ -166,6 +166,43 @@ const useStyles=makeStyles({
                 xlinkHref={knowledgeSvg}
                 x={centerX-10}
                 y={centerY+210}
+                
+            />             
+        )
+    }
+    const SmallBioIcon = ({ centerX, centerY }) => {
+        return (
+            <image
+                xlinkHref={biodiversitySvg}
+                x={centerX-10}
+                y='15%'
+            />             
+        )
+    }
+    const SmallCarbonIcon = ({ centerX, centerY }) => {
+        return (
+            <image
+                xlinkHref={carbonSvg}
+                x='15%'
+                y={centerY-40}
+            />             
+        )
+    }
+    const SmallTechIcon = ({ centerX, centerY }) => {
+        return (
+            <image
+                xlinkHref={technologySvg}
+                x='79%'
+                y={centerY-50}
+            />             
+        )
+    }
+    const SmallKnowledgeIcon = ({ centerX, centerY }) => {
+        return (
+            <image
+                xlinkHref={knowledgeSvg}
+                x={centerX-10}
+                y='65%'
                 
             />             
         )
@@ -235,7 +272,7 @@ const useStyles=makeStyles({
         arcLabelsTextColor='black'
         theme={{fontSize:'20px', fontFamily:'Bai Jamjuree, sans serif'}}
         tooltip="false"
-        layers={['arcs', 'arcLabels', 'arcLinkLabels', BioIcon, CarbonIcon, TechIcon, KnowledgeIcon]}//TopMetric, MiddleMetric, BottomMetric
+        layers={useMediaQuery(theme.breakpoints.down('sm'))?['arcs', 'arcLabels', 'arcLinkLabels', SmallBioIcon, SmallCarbonIcon, SmallTechIcon, SmallKnowledgeIcon]:['arcs', 'arcLabels', 'arcLinkLabels', BioIcon, CarbonIcon, TechIcon, KnowledgeIcon]}//TopMetric, MiddleMetric, BottomMetric
         defs={[
             // {
             //     id: 'dots',
@@ -282,7 +319,7 @@ const textBox=[
         title:'Carbon',        
         bulletPoints:[
             '• Lead and develop carbon projects that avoid planned deforestation, protect peatlands, and replant native species',
-            '• Help organisations deploy their carbon credits in the market'            
+            '• Help organisations deploy their carbon credits in the market'
         ],
         color:'#CDEAC4'
     },
@@ -290,8 +327,8 @@ const textBox=[
         id:'biodiversity',
         title:'Biodiversity',
         bulletPoints:[
-            '• Lead and develop carbon projects that avoid planned deforestation, protect peatlands, and replant native species',
-            '• Help organisations deploy their carbon credits in the market'            
+            '• Create global market tool that allows direct payment for biodiversity protection and regeneration ',
+            '• Use innovative technology to protect and monitor biodiversity'
         ],
         color:'#BDE2AF'
     },
@@ -299,8 +336,8 @@ const textBox=[
         id:'technology',
         title:'Technology',
         bulletPoints:[
-            '• Lead and develop carbon projects that avoid planned deforestation, protect peatlands, and replant native species',
-            '• Help organisations deploy their carbon credits in the market'            
+            '• Work with partners to connect the real universe to the metaverse and develop digital collectibles to raise value for real animals ',
+            '• Develop genomic data platform to encourage scientific discoveries'
         ],
         color:'#AEDE9A'
     },
@@ -308,8 +345,8 @@ const textBox=[
         id:'knowledge',
         title:'Knowledge',
         bulletPoints:[
-            '• Lead and develop carbon projects that avoid planned deforestation, protect peatlands, and replant native species',
-            '• Help organisations deploy their carbon credits in the market'            
+            '• Provide strategic advice and education to businesses on carbon, biodiversity and environmental solutions ',
+            '• Help organisations deploy their carbon credits in the market'
         ],
         color:'#A2DD8A'
     }
@@ -367,13 +404,13 @@ function Splash() {
                                 </p>
                             </Grid>                    
                         <Grid item style={{ height:'700px'}}>
-                            <MyResponsivePie setPieColumn={setPieColumn}/>
+                            <MyResponsivePie setPieColumn={setPieColumn} theme={theme}/>
                         </Grid>
                         <Grid item>
                             <Grid container direction='column' spacing={5} style={{alignItems:'center'}}>
                                 {textBox.map((i)=>{
                                     return(
-                                        <Grid item style={{maxWidth:'85%', borderRadius:'16px', background:i.color, marginBottom:'3%', opacity:pieColumn!==i.id && pieColumn!==null?0.5:1}}>
+                                        <Grid item style={{maxWidth:'85%', borderRadius:'16px', minWidth:'80%', background:i.color, marginBottom:'3%', opacity:pieColumn!==i.id && pieColumn!==null?0.5:1}}>
                                             <h3>{i.title}</h3>
                                             {i.bulletPoints.map(t=>{
                                                 return(
