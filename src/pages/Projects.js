@@ -25,12 +25,12 @@ const useStyles=makeStyles({
     },
     button:{
         fontFamily:"Bai Jamjuree, sans serif",
-        width: "282px",
+        width: "300px",
         height: "66px",
         fontWeight:'bold',
         fontSize:'20px',
-        borderRadius:'16px',
-        background: "#91D873",
+        borderRadius:'10px',
+        background: "#BDE2AF",
         textDecoration:'none',
         '&:hover':{
             color:'#72A15F',
@@ -174,8 +174,8 @@ function Projects() {
                             <p>The Biodiversity Unit will quantify protection impacts and benefits for a specific area and allow projects which protect and restore biodiversity to earn biodiversity units.</p>
                         </Grid>
                         <Grid item style={{marginTop:'2%'}}>
-                            <Link href='/contact'>
-                                <Button className={classes.button}>
+                            <Link href='/contact' style={{textDecoration:'none', zIndex:0}}>
+                                <Button className={classes.button} >
                                     Contact
                                 </Button>
                             </Link>
