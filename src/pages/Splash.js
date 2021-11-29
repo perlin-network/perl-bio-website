@@ -16,6 +16,8 @@ import biodiversitySvg from '../assets/Splash/biodiversity.svg'
 import technologySvg from '../assets/Splash/technology.svg'
 import knowledgeSvg from '../assets/Splash/knowledge.svg'
 import carbonSvg from '../assets/Splash/carbon.svg'
+// eslint-disable-next-line
+import cloud1 from '../assets/Splash/cloud1.png'
 
 
 const useStyles=makeStyles({
@@ -37,6 +39,25 @@ const useStyles=makeStyles({
     heroText:{
         paddingLeft:'5%',
     },
+    '@keyframes cloud':{
+        '0%':{
+            transform:'translateY(-2%);'
+        },
+        // '50%':{
+        //     transform:'translateX(120%);'
+        // },
+        '100%':{
+            transform:'translateY(2%);'
+        }
+    },
+    cloud:{
+        // position:'absolute',
+        // bottom:'80%',
+        maxWidth:'100%',
+        marginBottom:'20vh',
+        animation:'$bounce 3s alternate infinite'
+        
+    },    
     backgroundImage:{                
         backgroundSize:'fit',
         // minHeight:'75vh'        
@@ -248,7 +269,7 @@ const projects=[
     {
         image:pictureRightSvg,
         title:'Gorilla Project',
-        location:'Location: North-western portion of Congo River Basin, Republic of Congo',
+        location:'North-western portion of Congo River Basin, Republic of Congo',
         size:'94,000 hectares',
         biodiversity:'Lowland Gorilla, African Forest Elephant, Hippopotamus, Leopard'
     }
@@ -306,7 +327,7 @@ function Splash() {
     return (
             <div className={classes.root}>
                 <Grid container className={classes.hero} direction='row' alignItems='flex-end' justifyContent='space-around'>
-                    <Grid container direction='column' justifyContent='flex-start' alignItems={useMediaQuery(theme.breakpoints.down('md'))?'center':'left'} className={classes.heroText} item xs={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
+                    <Grid container direction='column' justify='flex-start' alignItems={useMediaQuery(theme.breakpoints.down('md'))?'center':'left'} className={classes.heroText} item xs={12} md={6} style={{maxWidth:'100%', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
                         <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'100%'}} xs={12} md={6}>
                                 Welcome to the regenerative economy: Bioeconomy                            
                         </Grid>
@@ -326,12 +347,8 @@ function Splash() {
                             </Button>
                         </Grid>
                     </Grid>
-                    {/* <Grid item xs={12} md={6} hidden={useMediaQuery(theme.breakpoints.down('md'))} >
-                        <Grid container direction='column' justifyContent='flex-end' alignItems='flex-end'>
-                            <Grid item>
-                                <img className={classes.backgroundImage} src={treeSvg} alt='tree'/>
-                            </Grid>
-                        </Grid>
+                    {/* <Grid item className={classes.cloud} justify='flex-end'>
+                        <img className={classes.cloud} src={cloud1}/>
                     </Grid> */}
                 </Grid>
                 <div className={classes.rootWrapper}>

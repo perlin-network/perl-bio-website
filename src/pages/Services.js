@@ -304,9 +304,9 @@ function Services() {
                                     <Grid item className={classes.contentBarContent}>
                                     <p>We scale our projects by investing in technology and partnering with key industry players to make protection more effective and monitoring more efficient.</p>
 
-                                    <p>With the urgency of climate change, we bring new and innovative technologies from around the world to your site to accelerate meaningful change. We recognise that the challenge is meaningfully tracking what’s happening on site including measuring biodiversity - and we are doing something about it.</p>
+                                    <p> With the urgency of climate change, we bring new and innovative technologies from around the world to your site or company to accelerate meaningful change.</p>
 
-                                    <p>We are revolutionising projects through the use of remote sensing technology, drones, artificial intelligence, and environmental DNA. </p>
+                                    <p>We are also working with partners to develop digital collectibles to raise conservation funds for biodiversity and to connect the real universe to the metaverse.</p>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -323,7 +323,7 @@ function Services() {
                                         Creating opportunities for local communities
                                     </Grid>
                                     <Grid item className={classes.contentBarContent}>
-                                        <p>Our projects strengthen economies through creation of jobs for local communities. Himpanzee's core focus is on creating alternative revenue streams that do not destroy nature.</p>
+                                        <p>Our projects strengthen economies through creation of jobs for local communities. Bioeconomy's core focus is on creating alternative revenue streams that do not destroy nature.</p>
 
                                         <p>We also ensure there is consultation with local communities and Indigenous populations in forest management plans that impact them. Our team performs a comprehensive needs assessment to take a data-led approach to development interventions.</p>                                        
                                     </Grid>

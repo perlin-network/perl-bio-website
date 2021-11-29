@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import {Grid, Card, CardContent} from "@material-ui/core"
 // import TreeSvg from '../assets/Splash/tree.png'
 import Carousel from 'react-material-ui-carousel'
+import mediaDefaultPng from '../assets/Media/mediaDefault.png'
 
 
 const useStyles=makeStyles({
@@ -29,7 +30,7 @@ const useStyles=makeStyles({
         textDecoration:'none',
         fontWeight:'700',
         '&:hover':{
-            color:'white',
+            color:'lightgray',
             textDecoration:'none'
             
         }
@@ -43,7 +44,7 @@ const useStyles=makeStyles({
         color:'black',
         borderRadius:'16px',
         minHeight:'350px',
-        height:'38vh',
+        height:'15vh',
         paddingBottom:'25px',
         "&:hover":{
             transform:"scale3d(1.05, 1.05, 5)"
@@ -55,9 +56,10 @@ const useStyles=makeStyles({
     },
     cardLogo:{
         // margin:'5%',
-        maxHeight:'50%',
+        // maxHeight:'50%',
         maxWidth:'62%',
-        textAlign:'center',        
+        textAlign:'center',
+        borderRadius:'16px'
     },
     cardContent:{
         textAlign:'left',
@@ -71,9 +73,12 @@ const useStyles=makeStyles({
         textAlign:'left',        
     },
     link:{
-        color:'white',
+        color:'black',
         fontFamily: "Bai Jamjuree, sans-serif",
-        textDecoration:'none',
+        textDecoration:'none',        
+        '&:hover':{
+            color:'gray'
+        }
         
     }
 })
@@ -87,27 +92,47 @@ function Articles(numPerPage=6){
 
             embed:"t7CD1v-AzBQ ",
             link:'https://www.youtube.com/watch?v=t7CD1v-AzBQ',
-            title:'Burning Season',
-            content:'Watch Dorjee Sun in the Burning Season trailer (2008), narrated by Hugh Jackman',
+            title:'Watch Dorjee Sun in the Burning Season trailer (2008), narrated by Hugh Jackman',
+            // content:'Watch Dorjee Sun in the Burning Season trailer (2008), narrated by Hugh Jackman',
             // date:'Oct 11 2021'
             
         },
         {
             logo:'https://www.himpanzee.com/static/blog-image/blog-image3.jpg',
             link:'https://medium.com/perlin-network/perl-eco-tokenized-carbon-and-carbon-registry-836839444b07',
-            title:'TIME Hero of the Environment',
-            content:'Co-founder Dorjee Sun was named 2009 TIME Hero of the Environment',
+            title:'Dorjee Sun named 2009 TIME Hero of the Environment',
+            // content:'Co-founder Dorjee Sun was named 2009 TIME Hero of the Environment',
             // date:'Oct 1 2021'
             
         },        
         {
             logo:"https://www.himpanzee.com/static/blog-image/blog-image4.jpg",
             link:'https://web.archive.org/web/20110708164950/http:/www.climos.com/news/articles/indonesianproposal.htm',
-            title:'Pay us not to chop down trees',
-            content:'Read about the Indonesian proposal in the Wall Street Journal', 
-            // date:'Sep 24 2021'
-            
-        }
+            title:'Wall Street Journal: Pay us not to chop down trees (2007)',
+            // content:' '
+            // date:'Sep 24 2021'            
+        },
+        {
+            logo:"https://iccwbo.org/content/uploads/sites/3/2020/02/greenup-signing-2.png",
+            link:'https://iccwbo.org/media-wall/news-speeches/icc-launches-greenup-australia-to-improve-fire-resilience-and-replant-trees-on-a-national-scale/',
+            title:'ICC launches GreenUp Australia to improve fire resilience and replant trees on a national scale',
+            // content:' '
+            // date:'Sep 24 2021'            
+        },
+        {
+            logo:'https://images.cointelegraph.com/images/717_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy8zOGQwNzE1NzhlYWY3NjhlNWVkYjY3NzI5MzUzZjEwZS5qcGc=.jpg',
+            link:'https://cointelegraph.com/news/iccs-new-carbon-council-will-implement-blockchain-for-carbon-market',
+            title:'ICC’s New Carbon Council Will Implement Blockchain for Carbon Market',
+            // content:''
+        },
+        {
+            logo:mediaDefaultPng,
+            link:'https://iccwbo.org/media-wall/news-speeches/icc-launches-carbon-council-to-drive-greater-liquidity-in-carbon-markets/',
+            title:'ICC launches Carbon Council to drive greater liquidity in carbon markets',
+            // content:''
+        },
+
+
     ]
     for(let i=0; i<mediaContent.length/numPerPage; i++){
         groupedMedia.push(
@@ -119,7 +144,7 @@ function Articles(numPerPage=6){
                         <Card className={classes.card} >
                             <CardContent style={{height:'20vh'}}>
                                 <Grid container direction='column' spacing={2}>
-                                    <Grid item hidden={!i.embed}>
+                                    <Grid item hidden={!i.embed} style={{marginBottom:'5%'}}>
                                         <iframe
                                         height='100%'
                                         maxHeight='50%'
@@ -131,19 +156,19 @@ function Articles(numPerPage=6){
                                         title="Embedded youtube"
                                         /> 
                                     </Grid>
-                                    <Grid item hidden={!i.logo}  style={{maxHeight:'50%', textAlign:'center'}}>
+                                    <Grid item hidden={!i.logo}  style={{height:'100%', minHeight:'150px', textAlign:'center'}}>
                                         <img className={classes.cardLogo} src={i.logo} alt={i.title}  />
                                     </Grid>
-                                    <Grid item hidden={!i.title}>
+                                    <Grid item hidden={!i.title} style={{margin:'0% 3%'}}>
                                         <a className={classes.link} href={i.link?i.link:null} target='_blank' rel='noopener nofollow noreferrer'>
                                             <h3>{i.title}</h3>
                                         </a>
                                     </Grid>
-                                    <Grid hidden={!i.content || !i.content.length===0}>
+                                    {/* <Grid hidden={!i.content || !i.content.length===0}>
                                         <div className={classes.cardContent}>
                                             {`${i.content.substring(0,190)}${i.content.length>190?'...':''}`}
                                         </div>
-                                    </Grid>
+                                    </Grid> */}
                                 </Grid>                                
                             </CardContent>
                             <CardContent>

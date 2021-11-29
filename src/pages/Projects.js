@@ -125,7 +125,7 @@ const overviews=[
     {
         image:africaSvg,
         title:'Africa',
-        text:'One of the reasons we are called Bioeconomy is our strong belief in the blue and green economies, where the health of the natural ecosystem is a critical economic asset and a source of public benefits. We invest in, lead and develop projects in African countries which focus on sustainable development and sustainable value chains that go beyond extracting for export.'
+        text:'Bioeconomy strongly believes in the blue and green economies, where the health of the natural ecosystem is a critical economic asset and a source of public benefits. We invest in, lead and develop projects in African countries which focus on sustainable development and sustainable value chains that go beyond extracting for export.'
     },
     {
         image:seaSvg,
@@ -152,7 +152,7 @@ function Projects() {
                 </div>
                 <Grid container className={classes.hero} alignItems='center' justify='space-evenly' direction='row'>
                     <Grid item className={classes.heroText} xs={12} md={6}>
-                        Spotlighted projects in our pipeline include:
+                        Read more about some of the highlights from Bioeconomy’s project portfolio.
                     </Grid>
                     <Grid item className={classes.heroImage} xs={12} md={6}>
                         <img src={illustrationSvg} alt='illustration' style={{maxWidth:'100%'}}/>
@@ -169,9 +169,9 @@ function Projects() {
                             <img src={biodiversityUnitsSvg} alt='biodiversity-units'/>
                         </Grid>
                         <Grid item className={classes.contentBarContent}>
-                            <p>We recognise that one of the biggest challenges is meaningfully tracking what’s happening on site including measuring biodiversity and gaining revenue from protecting biodiversity  - which is why we are developing Biodiversity Units. </p>
+                            <p>Bioeconomy and partners are developing a global Biodiversity Unit, a tool to drive investment directly into the protection and restoration of biodiversity.</p>
                             
-                            <p>This is a market tool that will value the protection and restoration of biodiversity. Biodiversity Units will rely on a combination of existing databases, remote sensing technology, drones, artificial intelligence, and environmental DNA. We are running pilots in the next 6-12 months. </p>
+                            <p>The Biodiversity Unit will quantify protection impacts and benefits for a specific area and allow projects which protect and restore biodiversity to earn biodiversity units.</p>
                         </Grid>
                         <Grid item style={{marginTop:'2%'}}>
                             <Link href='/contact'>
@@ -273,7 +273,7 @@ function Projects() {
                         Media / Press
                     </div>
                     <div className={classes.h2} style={{marginTop:'3%'}}>
-                        See Bioeconomy's team in the press
+                        See Bioeconomy's team in the press:
                     </div>
                     <div className={classes.mediaWrapper}>
                         <Media/>
