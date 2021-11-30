@@ -111,7 +111,7 @@ function Footer() {
                     <Grid item>
                         <Grid container direction='row' alignItems='center' spacing={2} style={{fontSize:'12px', }}>
                             <Grid item>
-                                <Link className={classes.link} href='/terms'>
+                                <Link className={classes.link} href='/policies'>
                                     Terms of Use
                                 </Link>
                             </Grid>
@@ -119,7 +119,7 @@ function Footer() {
                                 <Divider className={classes.divider} orientation='vertical'/>
                             </Grid>
                             <Grid item>
-                                <Link className={classes.link} href='/privacy'>
+                                <Link className={classes.link} href='/policies?p=privacy'>
                                     Privacy Policy
                                 </Link>
                             </Grid>

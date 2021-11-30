@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { makeStyles } from '@material-ui/styles'
 import { Tab, Tabs } from '@material-ui/core'
 import Terms from '../components/Terms.js'
@@ -23,7 +23,7 @@ function a11yProps(index) {
   }
 
 function TabPanel(props) {
-    const { children, value, index, ...other } = props;
+    const { children, value, index, ...other } = props;   
   
     return (
       <div
@@ -50,6 +50,15 @@ function Policies() {
     const handleChange = (event, newValue) => {
         setValue(newValue);
       };
+
+    useEffect(()=>{
+        const search = window.location.search
+        const params = new URLSearchParams(search)
+        const policy = params.get('p')
+        if(policy==='privacy')  {
+          setValue(1)
+        }
+      },[])
       
     return (
         <div className={classes.root}>
