@@ -78,7 +78,7 @@ function Privacy() {
             </div>
             <div className='privacy-content-wrapper' style={{...contentTextStyle, fontSize:'20px', margin:'2% 8%'}}>
                 <div className='privacy-content-box' style={{maxHeight:'70vh', overflowY:'auto', padding:'0% 3%'}}>
-                    <b><u>Last updated: 8 July 2021</u></b>
+                    <b><u>Last updated: 28 October 2021</u></b>
                     {privacyText.split('\n').map(str=>{
                         if(str.startsWith("**")){
                             return(<p><br/><b>{str.slice('2')}</b></p>)
