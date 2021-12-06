@@ -216,14 +216,14 @@ function Projects() {
                             <Grid item className={classes.contentItem} xs={12} md={6}>
                                 <Grid container className={classes.contentWrapper} direction='column'>
                                     <Grid item className={classes.contentBarTitle}>
-                                        Riau Ecosystem Restoration Project
+                                        Tiger Project
                                     </Grid>
                                     <Grid item className={classes.contentBarContent}>
-                                    <p>The Riau Ecosystem Restoration Carbon Project is a commitment to protect and restore 130,000 hectares of peatland ecosystem located in the Kampar Peninsula, Indonesia, while at the same time preserving biodiversity and enhancing the livelihoods of local communities</p>
+                                        <p>The Tiger Project is a commitment to protect and restore 130,090 hectares of peatland ecosystem located in the Kampar Peninsula, Indonesia, while at the same time preserving biodiversity and enhancing the livelihoods of local communities</p>
 
-                                    <p>Twice the size of Singapore, the Riau ecosystem is made up of five former logging concessions spread across two landscapes in eastern Sumatra.</p>
+                                        <p>Twice the size of Singapore, the Tiger Project is made up of five former logging concessions spread across two landscapes in eastern Sumatra.</p>
 
-                                    <p>Through the REDD+ process of avoiding planned deforestation and wetlands conservation and restoration, the Project will preserve the remaining peat swamp forests by preventing their conversion to forestry plantations, containing 823 species of animals and plants. </p>
+                                        <p>Through the REDD+ process of avoiding planned deforestation and wetlands conservation and restoration, the Project will preserve the remaining peat swamp forests by preventing their conversion to forestry plantations, containing 797 species of animals and plants.</p>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -237,10 +237,10 @@ function Projects() {
                             <Grid item className={classes.contentItem} xs={12} md={6}>
                                 <Grid container className={classes.contentWrapper} direction='column'>
                                     <Grid item className={classes.contentBarTitle}>
-                                        Fire-Free Alliance
+                                    Bioeconomy
                                     </Grid>
                                     <Grid item className={classes.contentBarContent}>
-                                        <p>Himpanzee’s Dorjee Sun was the secretariat for the Fire-Free Alliance, which was founded by Indonesia’s largest agricultural companies and NGOs to support fire prevention and adaptation in the community.</p>
+                                        <p>Himpanzee’s Dorjee Sun was the secretariat for the Bioeconomy, which was founded by Indonesia’s largest agricultural companies and NGOs to support fire prevention and adaptation in the community.</p>
 
                                         <p>As of 2020, FFA initiatives are being implemented in more than 200 villages in Indonesia, covering more than 1.5 million hectares of land. </p>
                                     </Grid>
@@ -256,10 +256,10 @@ function Projects() {
                             <Grid item className={classes.contentItem} xs={12} md={6}>
                                 <Grid container className={classes.contentWrapper} direction='column'>
                                     <Grid item className={classes.contentBarTitle}>
-                                        North Pikounda REDD+ Project
+                                        Gorilla Project
                                     </Grid>
                                     <Grid item className={classes.contentBarContent}>
-                                        <p>The North Pikounda REDD+ project was Africa’s first Sustainable Forest Management Carbon (REDD+) project, setting aside 92,530 hectares of virgin rainforest, which has become a habitat for 6000 lowland gorillas.</p>
+                                        <p>The Gorilla Project was Africa’s first Sustainable Forest Management Carbon (REDD+) project, setting aside 92,530 hectares of virgin rainforest, which has become a habitat for 6000 lowland gorillas.</p>
 
                                         <p>The main activity is the cancellation of the planned degradation and deforestation activities and the decision to instead protect the forest area. The project implements carbon stock monitoring, remote sensed monitoring, field monitoring and social activities.</p>
                                     </Grid>

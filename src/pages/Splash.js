@@ -300,14 +300,14 @@ const projects=[
         image:pictureLeftSvg,
         title:'Tiger Project',
         location:'Kampar Peninsula, Indonesia',
-        size:'130,000 hectares, twice the size of Singapore',
+        size:'130,090 hectares, twice the size of Singapore',
         biodiversity:'Sumatran Tiger, Storm’s Stork, Rhinoceros Hornbill, Malayan Sun Bear, Flat-headed Cat '
     },
     {
         image:pictureRightSvg,
         title:'Gorilla Project',
         location:'North-western portion of Congo River Basin, Republic of Congo',
-        size:'94,000 hectares',
+        size:'92,530 hectares',
         biodiversity:'Lowland Gorilla, African Forest Elephant, Hippopotamus, Leopard'
     }
 ]
@@ -400,7 +400,13 @@ function Splash() {
                             </Grid>
                             <Grid item className={classes.partnerContainerText} >
                                 <p classname={classes.partnerContainerText}>
-                                    We create strategies for businesses and organisations to embrace the bioeconomy by helping them gain revenue from natural assets and achieve their sustainability goals. Our proven business model delivers benefits for partners, local communities and the environment.
+                                    We are passionate about the environment.
+                                </p>
+                                <p classname={classes.partnerContainerText}>
+                                    For the past 15 years, we have invested our own time and money to protect ecosystems, lobby private and public sectors to avoid deforestation, and are pioneering biodiversity units.
+                                </p>
+                                <p classname={classes.partnerContainerText}>
+                                    Nature has a value. It is up to all of us to pay for it
                                 </p>
                             </Grid>                    
                         <Grid item style={{ height:'700px'}}>
