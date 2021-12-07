@@ -404,7 +404,7 @@ function Splash() {
                                     For the past 15 years, we have invested our own time and money to protect ecosystems, lobby private and public sectors to avoid deforestation, and are pioneering biodiversity units.
                                 </p>
                                 <p classname={classes.partnerContainerText}>
-                                    Nature has a value. It is up to all of us to pay for it
+                                    Nature has a value. It is up to all of us to pay for it.
                                 </p>
                             </Grid>                    
                         <Grid item style={{ height:'700px'}}>
