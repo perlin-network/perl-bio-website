@@ -33,7 +33,7 @@ const useStyles=makeStyles({
         backgroundImage:`url(${treeSvg})`,
         backgroundRepeat:'no-repeat',
         backgroundPosition:'bottom right',
-        backgroundSize:'75vw'
+        backgroundSize:'70vw'
         
     },
     heroText:{
@@ -368,7 +368,7 @@ function Splash() {
                         <Grid item  style={{...titleTextStyle, fontSize:'42px',  maxWidth:'100%'}} xs={12} md={6}>
                                 Welcome to the regenerative economy: Bioeconomy                            
                         </Grid>
-                        <Grid item style={{...contentTextStyle, fontSize:'24px', marginTop:"100px", maxWidth:'80%'}} xs={12} md={6}>
+                        <Grid item style={{...contentTextStyle, fontSize:'24px', marginTop:"50px", maxWidth:'80%'}} xs={12} md={6}>
                                 Valuing the protection of natural assets through carbon and biodiversity projects
                         </Grid>
                         <Grid item style={{marginTop:'50px', marginBottom:'35%'}}>
@@ -394,9 +394,7 @@ function Splash() {
                     <div ref={section1} className={classes.partnerContainer} style={{alignItems:'center', textAlign:useMediaQuery(theme.breakpoints.down('md'))?'center':'left'}}>
                         <Grid container direction='column'>
                             <Grid item className={classes.partnerContainerHeader} >
-                                <p>
                                     The path to sustained ecosystem protection
-                                </p>
                             </Grid>
                             <Grid item className={classes.partnerContainerText} >
                                 <p classname={classes.partnerContainerText}>
@@ -416,11 +414,11 @@ function Splash() {
                             <Grid container direction='column' spacing={5} style={{alignItems:'center'}}>
                                 {textBox.map((i)=>{
                                     return(
-                                        <Grid item style={{maxWidth:'85%', borderRadius:'16px', minWidth:'80%', background:i.color, marginBottom:'3%', opacity:pieColumn!==i.id && pieColumn!==null?0.5:1}}>
+                                        <Grid item style={{width:'80%', borderRadius:'16px', background:i.color, marginBottom:'3%', opacity:pieColumn!==i.id && pieColumn!==null?0.5:1}}>
                                             <h3>{i.title}</h3>
                                             {i.bulletPoints.map(t=>{
                                                 return(
-                                                    <p>{t}</p>
+                                                    <p style={{textAlign:'left'}}>{t}</p>
                                                 )
                                             })}
                                         </Grid>

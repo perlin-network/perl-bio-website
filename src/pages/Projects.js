@@ -240,7 +240,7 @@ function Projects() {
                                     Bioeconomy
                                     </Grid>
                                     <Grid item className={classes.contentBarContent}>
-                                        <p>Himpanzee’s Dorjee Sun was the secretariat for the Bioeconomy, which was founded by Indonesia’s largest agricultural companies and NGOs to support fire prevention and adaptation in the community.</p>
+                                        <p>Bioeconomy’s Dorjee Sun was the secretariat for the Fire-Free Alliance, which was founded by Indonesia’s largest agricultural companies and NGOs to support fire prevention and adaptation in the community.</p>
 
                                         <p>As of 2020, FFA initiatives are being implemented in more than 200 villages in Indonesia, covering more than 1.5 million hectares of land. </p>
                                     </Grid>
