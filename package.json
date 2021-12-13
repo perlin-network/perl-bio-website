@@ -5,12 +5,15 @@
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "@nivo/core": "^0.74.0",
+    "@nivo/pie": "^0.74.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-cookie-consent": "^6.2.4",
     "react-dom": "^17.0.2",
+    "react-material-ui-carousel": "^2.3.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
