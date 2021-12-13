@@ -46,7 +46,7 @@ const useStyles=makeStyles({
     },
     heroText:{
         color:'#72A15F',
-        fontSize:'20px'
+        fontSize:'25px'
     },
     iconButton:{
         borderRadius:'50%'
@@ -132,6 +132,11 @@ const useStyles=makeStyles({
         "&:hover":{
             transform: "scale3d(1.05, 1.05, 5)"
         }
+    },
+    shadedBox:{
+        padding:'5%',
+        backgroundColor:'#CBE1C6'
+        
     },
     cardImageWrapper:{
         padding:'3%'
@@ -242,17 +247,17 @@ function Services() {
                         <KeyboardArrowDown className={classes.downArrow}/>
                     </Button>
                 </div>
-                <Grid container direction='row' alignItems='center'>
+                <Grid container direction='row' alignItems='center' spacing={3}>
                     {topImageGrid.map(i=>{
                         return(
-                            <Grid item xs={12} md={6}>
-                                <Grid container direction='row' justify='center' alignItems='center' >
+                            <Grid item xs={12} md={6} >
+                                <Grid container justify='left' alignItems='center' >
                                     <Grid item>
-                                        <img src={i.image} alt='grid-img'/>
+                                        <img src={i.image} alt='grid-img' style={{maxWidth:'95%'}}/>
                                     </Grid>
-                                    <Grid item style={{maxWidth:'125px'}}>
+                                    {/* <Grid item style={{maxWidth:'70%', maxHeight:'180px', fontSize:'25px' }}>
                                         {i.text}
-                                    </Grid>
+                                    </Grid> */}
                                 </Grid>
                             </Grid>
                         )
@@ -330,17 +335,17 @@ function Services() {
                                 </Grid>
                             </Grid>
                         </Grid>
-                        <Grid container direction='row'>
+                        <Grid container direction='row'  spacing={3}>
                             {bottomImageGrid.map(i=>{
                             return(
                                 <Grid item xs={12} md={6}>
-                                    <Grid container direction='row' justify='center' alignItems='center' >
-                                        <Grid item>
-                                            <img src={i.image} alt='grid-img'/>
+                                    <Grid container direction='row' alignItems='center'>
+                                        <Grid item >
+                                            <img src={i.image} alt='grid-img' style={{maxWidth:'95%'}}/>
                                         </Grid>
-                                        <Grid item style={{maxWidth:'125px'}}>
+                                        {/* <Grid item style={{maxWidth:'125px'}}>
                                             {i.text}
-                                        </Grid>
+                                        </Grid> */}
                                     </Grid>
                                 </Grid>
                                 )
