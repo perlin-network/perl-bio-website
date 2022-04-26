@@ -142,8 +142,14 @@ export default function ContactCard() {
         <img src={LogoSvg} style={{ height: 54 }} alt="Bioeconomy" />
       </Link>
       <Box className={classes.box}>
-        <img className={classes.image} src={data.image} alt={data.name} />
-        <Typography className={classes.name} variant="h1">
+        {data.image && (
+          <img className={classes.image} src={data.image} alt={data.name} />
+        )}
+        <Typography
+          className={classes.name}
+          variant="h1"
+          style={{ paddingTop: data.image ? 0 : 30 }}
+        >
           {data.name}
         </Typography>
         <Typography className={classes.title} variant="h2">
