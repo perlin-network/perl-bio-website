@@ -36,7 +36,7 @@ const cards = {
   byron: {
     id: 'byron',
     name: 'Byron Grigoratos',
-    title: 'Chief Commercial Lead',
+    title: 'Chief Commercial Officer',
     email: 'byron@bioeconomy.co',
     phone: '+6584976218',
     image: null,
