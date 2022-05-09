@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
-import { Typography, Box, Link } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { Typography, Box, Link } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 
 import LogoSvg from '../assets/Splash/logo.svg';
 import DorjeePng from '../assets/About/dorjee.png';
