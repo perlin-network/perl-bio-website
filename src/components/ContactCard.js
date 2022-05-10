@@ -106,7 +106,6 @@ const useStyles = makeStyles({
     backgroundColor: 'hsl(240deg 3% 25%)', // hsl(240deg 3% 21%)
     borderRadius: 10,
     boxShadow: '0 0 20px rgba(0, 0, 0, 0.15)',
-    fontFamily: '"Bai Jamjuree", sans-serif',
   },
   image: {
     marginTop: -60,

@@ -16,8 +16,34 @@ import {
   StyledEngineProvider,
   createTheme,
 } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#55AB1D',
+    },
+    text: {
+      primary: '#202020',
+    },
+  },
+  typography: {
+    fontFamily: `"Ubuntu", "Roboto", "Arial", sans-serif`,
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          color: '#202020',
+        },
+        svg: {
+          maxWidth: '100%',
+          maxHeight: '100%',
+        },
+      },
+    },
+  },
+});
 
 function App() {
   const trigger = useScrollTrigger();
@@ -32,8 +58,9 @@ function App() {
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Router>
-          <div className="App" style={AppStyle}>
+          <div className="App">
             <Switch>
               <Route path="/cards/:cardId">
                 <ContactCard />
@@ -42,6 +69,10 @@ function App() {
               <>
                 <Navbar />
                 <div id="top-anchor" style={{ width: '0px', height: '0px' }} />
+
+                <Route exact path="/">
+                  <Splash />
+                </Route>
                 <Route exact path="/contact">
                   <Contact />
                 </Route>
@@ -57,9 +88,7 @@ function App() {
                 <Route exact path="/privacy">
                   <Privacy />
                 </Route>
-                <Route exact path="/">
-                  <Splash />
-                </Route>
+
                 <Zoom in={trigger}>
                   <Fab
                     size="small"
@@ -75,6 +104,7 @@ function App() {
                     <KeyboardArrowUpIcon />
                   </Fab>
                 </Zoom>
+
                 <Footer />
               </>
             </Switch>
@@ -82,10 +112,8 @@ function App() {
             <CookieConsent
               location="bottom"
               buttonText="Acknowledge"
-              style={{ fontFamily: 'Bai Jamjuree, sans-serif' }}
               buttonStyle={{
                 fontWeight: '500',
-                fontFamily: 'Bai Jamjuree, sans-serif',
                 borderRadius: '16px',
                 background: '#91D873',
                 minHeight: '35px',
@@ -110,9 +138,3 @@ function App() {
 }
 
 export default App;
-
-const AppStyle = {
-  fontFamily: 'Bai Jamjuree, sans-serif',
-  background: '#333336',
-  minHeight: '100vh',
-};
