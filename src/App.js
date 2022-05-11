@@ -53,6 +53,7 @@ const theme = createTheme({
           ...(ownerState.variant === 'contained' &&
             ownerState.color === 'primary' && {
               color: '#fff',
+              boxShadow: 'none',
               '&:hover': {
                 backgroundColor: '#69b538',
                 boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.12)',
