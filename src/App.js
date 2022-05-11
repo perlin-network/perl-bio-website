@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar';
-import Splash from './components/Splash';
+import Home from './pages/Home';
 import About from './components/About';
 import WhatWeDo from './components/WhatWeDo';
 import Contact from './components/Contact';
@@ -22,9 +22,13 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#55AB1D',
+      light: '#91D873',
     },
     text: {
       primary: '#202020',
+    },
+    background: {
+      neutral: '#F3F3F3',
     },
   },
   typography: {
@@ -39,6 +43,27 @@ const theme = createTheme({
         svg: {
           maxWidth: '100%',
           maxHeight: '100%',
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          fontWeight: 700,
+          ...(ownerState.variant === 'contained' &&
+            ownerState.color === 'primary' && {
+              color: '#fff',
+              '&:hover': {
+                backgroundColor: '#69b538',
+                boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.12)',
+              },
+              // '&:active': {
+              //   boxShadow: 'inset 0px 4px 4px rgba(0, 0, 0, 0.25)',
+              // },
+            }),
+        }),
+        sizeLarge: {
+          fontSize: 18,
         },
       },
     },
@@ -71,7 +96,7 @@ function App() {
                 <div id="top-anchor" style={{ width: '0px', height: '0px' }} />
 
                 <Route exact path="/">
-                  <Splash />
+                  <Home />
                 </Route>
                 <Route exact path="/contact">
                   <Contact />

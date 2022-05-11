@@ -6,7 +6,6 @@ import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Link from '@mui/material/Link';
-
 import { styled } from '@mui/material/styles';
 
 const iconButtonMixin = (theme) => ({
@@ -89,7 +88,7 @@ function MobileDrawer(props) {
               <DrawerLink
                 key={link.text}
                 href={link.path}
-                color={location.pathname === link.path ? 'primary' : '#000'}
+                color={location.pathname === link.path ? 'primary' : 'inherit'}
                 underline="none"
               >
                 {link.text}

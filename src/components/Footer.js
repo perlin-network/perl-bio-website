@@ -32,7 +32,8 @@ const navRoutes = [
   },
 ];
 
-const FooterWrapper = styled('div')(({ theme }) => ({
+const Root = styled('div')(({ theme }) => ({
+  padding: `${theme.spacing(3)} 0`,
   backgroundColor: theme.palette.background.neutral,
   fontSize: 14,
 }));
@@ -46,7 +47,7 @@ const NavLink = styled(Link)(({ theme }) => ({
 
 function Footer() {
   return (
-    <FooterWrapper>
+    <Root className="Footer">
       <Container>
         <Grid
           container
@@ -58,7 +59,7 @@ function Footer() {
           <Grid item xs={6} md={4} justifyContent="flex-start">
             <Grid container rowSpacing={2} spacing={4}>
               {navRoutes.map((r) => (
-                <Grid item xs={6}>
+                <Grid item xs={6} key={r.text}>
                   <NavLink href={r.path}>{r.text}</NavLink>
                 </Grid>
               ))}
@@ -111,7 +112,7 @@ function Footer() {
           </Grid>
         </Grid>
       </Container>
-    </FooterWrapper>
+    </Root>
   );
 }
 export default Footer;

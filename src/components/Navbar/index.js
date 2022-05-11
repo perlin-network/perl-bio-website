@@ -38,7 +38,7 @@ const NavbarWrapper = styled('div')({
   backgroundColor: '#fff',
   position: 'sticky',
   top: 0,
-  zIndex: 1,
+  zIndex: 100,
 });
 
 const NavbarInner = styled((props) => (
@@ -53,15 +53,39 @@ const NavbarInner = styled((props) => (
   // height: 152,
   padding: '52px 0',
   [theme.breakpoints.down('md')]: {
-    padding: '52px 0 25px',
+    padding: '35px 0 25px',
   },
 }));
 
-const NavbarLink = styled((props) => (
-  <Grid item key={props.key}>
+const Logo = styled((props) => (
+  <Link
+    href="/"
+    rel="noopener noreferrer"
+    sx={{
+      display: 'block',
+      width: {
+        sm: 232,
+        xs: 190,
+      },
+      height: {
+        sm: 48,
+        xs: 40,
+      },
+    }}
+  >
+    <img
+      src={LogoSvg}
+      style={{ height: '100%', width: '100%' }}
+      alt="Bioeconomy"
+    />
+  </Link>
+))({});
+
+const NavbarLink = styled(({ path, isActive, ...props }) => (
+  <Grid item>
     <Link
-      href={props.path}
-      color={props.isActive ? 'primary' : '#000'}
+      href={path}
+      color={isActive ? 'primary' : '#000'}
       underline="none"
       {...props}
     >
@@ -82,9 +106,7 @@ export default function Navbar() {
         <Container>
           <NavbarInner>
             <Grid item justifyContent="flex-start">
-              <Link href="/" rel="noopener noreferrer">
-                <img src={LogoSvg} style={{ height: 48 }} alt="Bioeconomy" />
-              </Link>
+              <Logo />
             </Grid>
             <Grid item justifyContent="flex-end">
               <Grid
