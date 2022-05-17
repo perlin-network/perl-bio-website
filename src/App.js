@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Services from './pages/Services';
 import About from './components/About';
 import WhatWeDo from './components/WhatWeDo';
 import Contact from './components/Contact';
@@ -29,6 +30,7 @@ const theme = createTheme({
     },
     background: {
       neutral: '#F3F3F3',
+      accent: '#2C4A47',
     },
   },
   typography: {
@@ -98,6 +100,9 @@ function App() {
 
                 <Route exact path="/">
                   <Home />
+                </Route>
+                <Route exact path="/services">
+                  <Services />
                 </Route>
                 <Route exact path="/contact">
                   <Contact />

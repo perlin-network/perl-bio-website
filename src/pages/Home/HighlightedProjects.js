@@ -7,6 +7,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 
+import SectionTitle from '../../components/SectionTitle';
+
 import TigerProject from '../../assets/home/tiger-project.png';
 import TigerProject2x from '../../assets/home/tiger-project@2x.png';
 import GorillaProject from '../../assets/home/gorilla-project.png';
@@ -43,43 +45,19 @@ const Banner = styled((props) => <Paper {...props} />)(({ theme }) => ({
     'radial-gradient(45.25% 111.94% at 50% 50%, #2A4E49 0%, #343537 100%)',
   boxShadow: '0px 24px 34px -9px rgba(6, 69, 43, 0.25)',
   borderRadius: 16,
+  [theme.breakpoints.down('md')]: {
+    padding: '40px',
+  },
 }));
 
-const Title = styled((props) => <Typography variant="h2" {...props} />)(
-  ({ theme }) => ({
-    position: 'relative',
-    padding: '28px 0 24px',
-    color: '#fff',
-    fontSize: 30,
-    fontWeight: 700,
-    textAlign: 'center',
-    [theme.breakpoints.down('md')]: {
-      padding: '20px 0 16px',
-      fontSize: 24,
-    },
-    '&:after': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      margin: '0 auto',
-      width: 72,
-      height: 4,
-      backgroundColor: theme.palette.primary.light,
-      borderRadius: 4,
-    },
-  })
-);
-
 const Subtitle = styled(Typography)(({ theme }) => ({
-  margin: '0 auto 64px',
+  margin: '24px auto 64px',
   maxWidth: 576,
   color: '#fff',
   fontSize: 20,
   textAlign: 'center',
   [theme.breakpoints.down('md')]: {
-    margin: '0 auto 40px',
+    margin: '16px auto 40px',
   },
 }));
 
@@ -116,7 +94,9 @@ function HighlightedProjects() {
     <Root className="HighlightedProjects">
       <Container>
         <Banner>
-          <Title>HIGHLIGHTED PROJECTS</Title>
+          <SectionTitle color="white" centered="true">
+            HIGHLIGHTED PROJECTS
+          </SectionTitle>
           <Subtitle>
             Our team has led, founded and completed the carbon project
             development in projects around the world, including:
@@ -128,8 +108,15 @@ function HighlightedProjects() {
             justifyContent="space-between"
           >
             {projects.map((p) => (
-              <Grid item xs={12} md={6} display="flex" justifyContent="center">
-                <Box sx={{ maxWidth: 380 }}>
+              <Grid
+                item
+                key={p.title}
+                xs={12}
+                md={6}
+                display="flex"
+                justifyContent="center"
+              >
+                <Box sx={{ maxWidth: { sm: 380, xs: '100%' } }}>
                   <img
                     srcSet={`${p.previewHiRes} 2x`}
                     src={p.preview}
@@ -151,12 +138,13 @@ function HighlightedProjects() {
           <Box
             display="flex"
             justifyContent="center"
-            sx={{ margin: '0 auto', maxWidth: 380 }}
+            sx={{ margin: '0 auto', maxWidth: { sm: 380, xs: '100%' } }}
           >
             <Button
+              href="/projects"
               variant="contained"
               size="large"
-              fullWidth={{ md: false, xs: true }}
+              fullWidth={true}
             >
               DISCOVER MORE
             </Button>

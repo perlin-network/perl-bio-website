@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Typography, Box, Link } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 
-import LogoSvg from '../assets/Splash/logo.svg';
+import LogoSvg from '../assets/logo.svg';
 import DorjeePng from '../assets/About/dorjee.png';
 import DorjeeQr from '../assets/CardQR/dorjee.png';
 import ByronQr from '../assets/CardQR/byron.png';
@@ -85,25 +85,30 @@ const cards = {
   },
 };
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: '360px',
     margin: '0 auto',
     padding: '30px',
     '& .MuiLink-root': {
-      color: '#91D873',
+      color: theme.palette.primary.light,
     },
   },
   logo: {
     display: 'block',
     padding: '0 0 30px',
+    '& > img': {
+      display: 'block',
+      margin: '0 auto',
+    },
   },
   box: {
     position: 'relative',
     margin: '60px 0',
     padding: '0 30px 30px',
     color: '#fff',
-    backgroundColor: 'hsl(240deg 3% 25%)', // hsl(240deg 3% 21%)
+    // backgroundColor: 'hsl(240deg 3% 25%)',
+    backgroundColor: theme.palette.background.accent,
     borderRadius: 10,
     boxShadow: '0 0 20px rgba(0, 0, 0, 0.15)',
   },
@@ -114,7 +119,7 @@ const useStyles = makeStyles({
   },
   name: {
     margin: '16px 0 0',
-    color: '#91D873',
+    color: theme.palette.primary.light,
     fontSize: '2rem',
     fontWeight: 700,
   },
@@ -129,7 +134,7 @@ const useStyles = makeStyles({
     maxWidth: '100%',
     borderRadius: 10,
   },
-});
+}));
 
 export default function ContactCard() {
   const classes = useStyles();
