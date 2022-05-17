@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 
-import SectionTitle from '../../components/SectionTitle';
+import { SectionTitle } from '../../components/styled';
 
 import DianFosseyLogo from '../../assets/home/dian-fossey.svg';
 import AtaMarieLogo from '../../assets/home/ata-marie.svg';

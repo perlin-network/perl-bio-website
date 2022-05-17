@@ -102,7 +102,7 @@ export default function Navbar() {
   const trigger = useScrollTrigger();
   return (
     <Slide appear={trigger} direction="down" in={!trigger}>
-      <NavbarWrapper>
+      <NavbarWrapper className="Navbar">
         <Container>
           <NavbarInner>
             <Grid item justifyContent="flex-start">

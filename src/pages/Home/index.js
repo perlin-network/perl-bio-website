@@ -1,5 +1,4 @@
 import React from 'react';
-
 import HeroBanner from './HeroBanner';
 import EcosystemProtection from './EcosystemProtection';
 import HighlightedProjects from './HighlightedProjects';

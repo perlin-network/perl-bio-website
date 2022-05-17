@@ -83,7 +83,7 @@ function GoalGrid() {
   return (
     <Grid container justifyContent="space-around">
       {list.map((item, index) => (
-        <Grid item key={item.text} lg={4} sm={6} xs={12}>
+        <Grid item key={index} lg={4} sm={6} xs={12}>
           <Box
             display="flex"
             flexDirection="column"

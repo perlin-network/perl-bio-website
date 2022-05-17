@@ -5,35 +5,17 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 
-import SectionTitle from '../../components/SectionTitle';
+import {
+  PageTitle,
+  PageTitleParagraph,
+  SectionTitle,
+} from '../../components/styled';
 import OpportunityList from './OpportunityList';
 import GoalGrid from './GoalGrid';
 
 import Illustration1 from '../../assets/services/illustration-01.png';
 import Illustration2 from '../../assets/services/illustration-02.png';
 import Illustration2Mobile from '../../assets/services/illustration-02-mobile.png';
-
-const PageTitle = styled((props) => <Typography variant="h1" {...props} />)(
-  ({ theme }) => ({
-    fontSize: 40,
-    fontWeight: 700,
-    textTransform: 'uppercase',
-    [theme.breakpoints.down('md')]: {
-      fontSize: 30,
-    },
-  })
-);
-
-const TitleParagraph = styled(Typography)(({ theme }) => ({
-  marginTop: 24,
-  marginBottom: 16,
-  fontSize: 28,
-  lineHeight: 1.4,
-  [theme.breakpoints.down('md')]: {
-    marginTop: 16,
-    fontSize: 18,
-  },
-}));
 
 const BackgroundSection = styled('section')(({ theme }) => ({
   padding: '60px 0',
@@ -70,13 +52,13 @@ function Services() {
           <Grid container>
             <Grid item sm={6} xs={12}>
               <PageTitle>Services</PageTitle>
-              <TitleParagraph>
+              <PageTitleParagraph>
                 Bioeconomy conserves and restores natural habitats around the
                 world. Our company is a carbon, biodiversity and environmental
                 tech project developer with a proven business model that
                 delivers benefits for partners, local communities and the
                 environment
-              </TitleParagraph>
+              </PageTitleParagraph>
             </Grid>
             <Grid
               item

@@ -7,33 +7,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 
-import SectionTitle from '../../components/SectionTitle';
+import { SectionTitle } from '../../components/styled';
 
-import TigerProject from '../../assets/home/tiger-project.png';
-import TigerProject2x from '../../assets/home/tiger-project@2x.png';
-import GorillaProject from '../../assets/home/gorilla-project.png';
-import GorillaProject2x from '../../assets/home/gorilla-project@2x.png';
-
-const projects = [
-  {
-    title: 'Under development: Tiger project',
-    preview: TigerProject,
-    previewHiRes: TigerProject2x,
-    location: 'Kampar Peninsula, Indonesia',
-    size: '130,090 hectares, twice the size of Singapore',
-    biodiversity:
-      "Sumatran Tiger, Storm's Stork, Rhinoceros Hornbill, Malayan Sun Bear, Flat-headed Cat",
-  },
-  {
-    title: 'Under development: Gorilla project',
-    preview: GorillaProject,
-    previewHiRes: GorillaProject2x,
-    location: 'North-western portion of Congo River Basin, Republic of Congo',
-    size: '92,530 hectares',
-    biodiversity:
-      'Lowland Gorilla, African Forest Elephant, Hippopotamus, Leopard',
-  },
-];
+import projects from '../../data/projects';
 
 const Root = styled('section')(({ theme }) => ({
   margin: '0 0 40px',
@@ -80,14 +56,14 @@ const ProjectDetails = styled('ul')({
   },
 });
 
-const ProjectInfo = styled((props) => (
+const ProjectInfo = (props) => (
   <li>
     <div>
       <strong>{props.name}</strong>
     </div>
     <div>{props.children}</div>
   </li>
-))({});
+);
 
 function HighlightedProjects() {
   return (
@@ -107,33 +83,36 @@ function HighlightedProjects() {
             display="flex"
             justifyContent="space-between"
           >
-            {projects.map((p) => (
-              <Grid
-                item
-                key={p.title}
-                xs={12}
-                md={6}
-                display="flex"
-                justifyContent="center"
-              >
-                <Box sx={{ maxWidth: { sm: 380, xs: '100%' } }}>
-                  <img
-                    srcSet={`${p.previewHiRes} 2x`}
-                    src={p.preview}
-                    alt={p.title}
-                    style={{ width: '100%', maxWidth: '100%' }}
-                  />
-                  <ProjectTitle>{p.title}</ProjectTitle>
-                  <ProjectDetails>
-                    <ProjectInfo name="Location:">{p.location}</ProjectInfo>
-                    <ProjectInfo name="Size:">{p.size}</ProjectInfo>
-                    <ProjectInfo name="Biodiversity:">
-                      {p.biodiversity}
-                    </ProjectInfo>
-                  </ProjectDetails>
-                </Box>
-              </Grid>
-            ))}
+            {[...projects]
+              .reverse()
+              .filter((p) => p.id === 'gorilla' || p.id === 'tiger')
+              .map((p) => (
+                <Grid
+                  item
+                  key={p.title}
+                  xs={12}
+                  md={6}
+                  display="flex"
+                  justifyContent="center"
+                >
+                  <Box sx={{ maxWidth: { sm: 380, xs: '100%' } }}>
+                    <img
+                      srcSet={`${p.imageHiRes} 2x`}
+                      src={p.image}
+                      alt={p.title}
+                      style={{ width: '100%', maxWidth: '100%' }}
+                    />
+                    <ProjectTitle>{p.title}</ProjectTitle>
+                    <ProjectDetails>
+                      <ProjectInfo name="Location:">{p.location}</ProjectInfo>
+                      <ProjectInfo name="Size:">{p.size}</ProjectInfo>
+                      <ProjectInfo name="Biodiversity:">
+                        {p.biodiversity}
+                      </ProjectInfo>
+                    </ProjectDetails>
+                  </Box>
+                </Grid>
+              ))}
           </Grid>
           <Box
             display="flex"
