@@ -120,7 +120,7 @@ function HighlightedProjects() {
             sx={{ margin: '0 auto', maxWidth: { sm: 380, xs: '100%' } }}
           >
             <Button
-              href="/projects"
+              href="/projects-and-press"
               variant="contained"
               size="large"
               fullWidth={true}

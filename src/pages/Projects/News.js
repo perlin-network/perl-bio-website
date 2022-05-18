@@ -130,7 +130,7 @@ function News() {
 
   const renderSlides = useCallback(
     () => news.map((n) => <NewsItem key={n.title} {...n} />),
-    [news]
+    []
   );
 
   return (

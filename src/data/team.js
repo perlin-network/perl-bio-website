@@ -57,6 +57,19 @@ const team = [
     ],
   },
   {
+    id: 'byron',
+    name: 'Byron Grigoratos',
+    title: 'Chief Commercial Officer',
+    image: ByronPng,
+    qrCode: ByronQr,
+    experience: [
+      'Former Country Manager & Senior Trader at Glencore International focusing on commodity trading & business development',
+      'Former Investment Banker at Investec Private Bank',
+      'Strong capital markets, M&A, structured finance & corporate structuring experience',
+      'Chartered Accountant and CFA Charterholder',
+    ],
+  },
+  {
     id: 'paul',
     name: 'Dr Paul Elkan',
     title: 'Chief Conservation Officer',
@@ -83,19 +96,6 @@ const team = [
       'Previously APAC Regional Chair for a global communications consultancy',
       'Former member of the Westminster City Council',
       'Winner of several PR & communications awards',
-    ],
-  },
-  {
-    id: 'byron',
-    name: 'Byron Grigoratos',
-    title: 'Chief Commercial Officer',
-    image: ByronPng,
-    qrCode: ByronQr,
-    experience: [
-      'Former Country Manager & Senior Trader at Glencore International focusing on commodity trading & business development',
-      'Former Investment Banker at Investec Private Bank',
-      'Strong capital markets, M&A, structured finance & corporate structuring experience',
-      'Chartered Accountant and CFA Charterholder',
     ],
   },
   {

@@ -1,10 +1,11 @@
+import ReactMarkdown from 'react-markdown';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
 import data from '../../data/projects';
 
-const Image = ({ ...project }) => (
+const Image = ({ theme, ...project }) => (
   <Box
     component="figure"
     m={0}
@@ -13,14 +14,37 @@ const Image = ({ ...project }) => (
       mr: { lg: '75px', sm: '32px' },
     }}
   >
-    <img
-      srcSet={`${project.imageHiRes} 2x`}
-      src={project.image}
-      alt={project.title}
-      style={{ width: '100%', maxWidth: '100%' }}
-    />
+    {project.image ? (
+      <img
+        srcSet={`${project.imageHiRes} 2x`}
+        src={project.image}
+        alt={project.title}
+        style={{ width: '100%', maxWidth: '100%', borderRadius: 16 }}
+      />
+    ) : (
+      <Placeholder />
+    )}
   </Box>
 );
+
+const Placeholder = styled(Box)(({ theme }) => ({
+  position: 'relative',
+  maxHeight: 240,
+  '&:before': {
+    content: '""',
+    display: 'block',
+    width: '100%',
+    paddingTop: `${(5 / 3) * 100}%`,
+  },
+  '&:after': {
+    content: '""',
+    display: 'block',
+    position: 'absolute',
+    inset: 0,
+    backgroundColor: 'hsl(0deg 0% 90%)',
+    borderRadius: '16px',
+  },
+}));
 
 const Title = styled((props) => <Typography variant="h3" {...props} />)(
   ({ theme }) => ({
@@ -36,7 +60,7 @@ const Title = styled((props) => <Typography variant="h3" {...props} />)(
   })
 );
 
-const Description = styled(Typography)({
+const Description = styled('div')({
   marginTop: '1rem',
   fontSize: 20,
 });
@@ -75,7 +99,11 @@ function ProjectList() {
           <Image {...p} />
           <Box flex="1">
             <Title>{p.title}</Title>
-            {p.description && <Description>{p.description}</Description>}
+            {p.description && (
+              <Description>
+                <ReactMarkdown>{p.description}</ReactMarkdown>
+              </Description>
+            )}
             <Details>
               {p.location && <InfoRow name="Location:">{p.location}</InfoRow>}
               {p.size && <InfoRow name="Size:">{p.size}</InfoRow>}

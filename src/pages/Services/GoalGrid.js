@@ -5,66 +5,66 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 
 import Goal01 from '../../assets/services/goal-01.png';
-import Goal02 from '../../assets/services/goal-02.png';
 import Goal03 from '../../assets/services/goal-03.png';
-import Goal04 from '../../assets/services/goal-04.png';
 import Goal05 from '../../assets/services/goal-05.png';
-import Goal06 from '../../assets/services/goal-06.png';
-import Goal07 from '../../assets/services/goal-07.png';
 import Goal08 from '../../assets/services/goal-08.png';
-import Goal09 from '../../assets/services/goal-09.png';
 import Goal10 from '../../assets/services/goal-10.png';
+import Goal11 from '../../assets/services/goal-11.png';
+import Goal13 from '../../assets/services/goal-13.png';
+import Goal14 from '../../assets/services/goal-14.png';
+import Goal15 from '../../assets/services/goal-15.png';
+import Goal17 from '../../assets/services/goal-17.png';
 
 const list = [
   {
-    title: 'Climate action',
-    text: 'Take urgent action to combat climate change and its impacts',
-    image: Goal01,
-  },
-  {
-    title: 'Life on land',
-    text: 'Protect, restore and promote sustainable use of terrestrial ecosystems',
-    image: Goal02,
-  },
-  {
-    title: 'Partnership for the goals',
-    text: 'Protect, restore and promote sustainable use of terrestrial ecosystems',
-    image: Goal03,
-  },
-  {
-    title: 'Decent work and economic growth',
-    text: 'Promote sustained and sustainable economic growth, full and productive employment and decent work for all',
-    image: Goal04,
-  },
-  {
-    title: 'Reduced inequalities',
-    text: 'Requcing inequalities and ensuring no one is left behind are integral to achieving the Sustainable Development Goals',
-    image: Goal05,
-  },
-  {
-    title: 'Sustainable cities and communities',
-    text: 'Make cities and human settlements inclusive, safe, resilient and sustainable',
-    image: Goal06,
-  },
-  {
     title: 'No poverty',
     text: 'By 2030, reduce at least by half the proportion of men, women and children of all ages living in poverty on all its dimensions according to national definitions',
-    image: Goal07,
+    image: Goal01,
   },
   {
     title: 'Good health and well-being',
     text: 'Ensure healthy lives and promote well-being for all at all ages',
-    image: Goal08,
+    image: Goal03,
   },
   {
     title: 'Gender equality',
     text: 'Achieve gender quality and empower all women and girls',
-    image: Goal09,
+    image: Goal05,
+  },
+  {
+    title: 'Decent work and economic growth',
+    text: 'Promote sustained and sustainable economic growth, full and productive employment and decent work for all',
+    image: Goal08,
+  },
+  {
+    title: 'Reduced inequalities',
+    text: 'Requcing inequalities and ensuring no one is left behind are integral to achieving the Sustainable Development Goals',
+    image: Goal10,
+  },
+  {
+    title: 'Sustainable cities and communities',
+    text: 'Make cities and human settlements inclusive, safe, resilient and sustainable',
+    image: Goal11,
+  },
+  {
+    title: 'Climate action',
+    text: 'Take urgent action to combat climate change and its impacts',
+    image: Goal13,
   },
   {
     title: 'Life below water',
     text: 'Conserve and sustainably use the oceans, seas and marine resources for sustainable development',
-    image: Goal10,
+    image: Goal14,
+  },
+  {
+    title: 'Life on land',
+    text: 'Protect, restore and promote sustainable use of terrestrial ecosystems',
+    image: Goal15,
+  },
+  {
+    title: 'Partnership for the goals',
+    text: 'Protect, restore and promote sustainable use of terrestrial ecosystems',
+    image: Goal17,
   },
 ];
 

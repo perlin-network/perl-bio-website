@@ -85,7 +85,7 @@ function Projects() {
         </Container>
       </Box>
 
-      <Box
+      {/* <Box
         component="section"
         sx={{
           mb: '164px',
@@ -111,7 +111,7 @@ function Projects() {
           </Typography>
           <News />
         </Container>
-      </Box>
+      </Box> */}
     </div>
   );
 }
