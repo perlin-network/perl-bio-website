@@ -9,6 +9,7 @@ import {
   SectionTitle,
 } from '../../components/styled';
 import ProjectList from './ProjectList';
+import News from './News';
 
 import Illustration from '../../assets/projects/illustration.png';
 import Illustration2x from '../../assets/projects/illustration@2x.png';
@@ -103,10 +104,12 @@ function Projects() {
             color="white"
             textAlign="center"
             mt={{ md: 3, xs: 2 }}
+            mb={{ lg: 4, xs: 3 }}
             fontSize={20}
           >
             See Bioeconomy's team in the press:
           </Typography>
+          <News />
         </Container>
       </Box>
     </div>
