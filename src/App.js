@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
+import Team from './pages/Team';
 import About from './components/About';
 import WhatWeDo from './components/WhatWeDo';
 import Contact from './components/Contact';
@@ -107,6 +108,9 @@ function App() {
                 </Route>
                 <Route exact path="/projects-and-press">
                   <Projects />
+                </Route>
+                <Route exact path="/team">
+                  <Team />
                 </Route>
                 <Route exact path="/contact">
                   <Contact />

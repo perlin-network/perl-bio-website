@@ -3,15 +3,16 @@ import { Typography, Box, Link } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 
 import LogoSvg from '../assets/logo.svg';
-import DorjeePng from '../assets/About/dorjee.png';
-import DorjeeQr from '../assets/CardQR/dorjee.png';
-import ByronQr from '../assets/CardQR/byron.png';
-import AmandaQr from '../assets/CardQR/amanda.png';
-import DarrenQr from '../assets/CardQR/darren.png';
-import MarkPng from '../assets/About/mark.png';
-import MarkQr from '../assets/CardQR/mark.png';
-import RalphPng from '../assets/About/ralph.png';
-import RalphQr from '../assets/CardQR/ralph.png';
+import DorjeePng from '../assets/team/dorjee-sun.png';
+import DorjeeQr from '../assets/team/dorjee-sun-qr.png';
+import ByronPng from '../assets/team/byron-grigoratos.png';
+import ByronQr from '../assets/team/byron-grigoratos-qr.png';
+import AmandaQr from '../assets/team/amanda-qr.png';
+import DarrenQr from '../assets/team/darren-qr.png';
+import MarkPng from '../assets/team/mark-harding.png';
+import MarkQr from '../assets/team/mark-harding-qr.png';
+import RalphPng from '../assets/team/ralph-j-strebel.png';
+import RalphQr from '../assets/team/ralph-j-strebel-qr.png';
 
 const companyData = {
   company: 'Bioeconomy Pte. Ltd.',
@@ -39,7 +40,7 @@ const cards = {
     title: 'Chief Commercial Officer',
     email: 'byron@bioeconomy.co',
     phone: '+6584976218',
-    image: null,
+    image: ByronPng,
     qrCode: ByronQr,
     ...companyData,
   },
