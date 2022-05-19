@@ -1,5 +1,5 @@
 import React from 'react'
-import {Grid} from '@material-ui/core'
+import {Grid} from '@mui/material'
 import {titleTextStyle, contentTextStyle} from '../styles/common.js'
 import PictureLeft from '../assets/CaseStudies/PictureLeft.png'
 import PictureRight from '../assets/CaseStudies/PictureRight.png'
@@ -34,7 +34,7 @@ The NPR+ project area contains a total of 22 protected species considered by the
                     Case Studies
                 </div>
                 <div className='case-studies-grid' style={{marginTop:'80px'}}>
-                    <Grid container direction='column' justify='space-between'>
+                    <Grid container direction='column' justifyContent='space-between'>
                         {gridItems.map(i=>{
                             return(
                                 <Grid item style={{background:'linear-gradient(180deg, #3C423C 0%, #333336 154.11%)', borderRadius:'16px', marginBottom:'72px'}}>
@@ -63,6 +63,6 @@ The NPR+ project area contains a total of 22 protected species considered by the
             </div>
             
         </div>
-    )
+    );
 }
 export default CaseStudies;
