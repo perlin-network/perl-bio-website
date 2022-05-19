@@ -1,15 +1,16 @@
 import React from 'react';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 
 import {
   PageTitle,
   PageTitleParagraph,
-  SectionTitle,
+  // SectionTitle,
+  SectionIllustration,
 } from '../../components/styled';
 import ProjectList from './ProjectList';
-import News from './News';
+// import News from './News';
 
 import Illustration from '../../assets/projects/illustration.png';
 import Illustration2x from '../../assets/projects/illustration@2x.png';
@@ -31,13 +32,7 @@ function Projects() {
         <Container>
           <Box display="flex" flexDirection={{ sm: 'row', xs: 'column' }}>
             <Box flex="1">
-              <Box
-                sx={{
-                  maxWidth: {
-                    lg: 420,
-                  },
-                }}
-              >
+              <Box sx={{ maxWidth: { lg: 420 } }}>
                 <PageTitle>Projects and press</PageTitle>
                 <PageTitleParagraph>
                   Read more about some of the highlights from Bioeconomy’s
@@ -45,26 +40,11 @@ function Projects() {
                 </PageTitleParagraph>
               </Box>
             </Box>
-            <Box
-              component="figure"
-              m={0}
+            <SectionIllustration
+              srcSet={`${Illustration2x} 2x`}
+              src={Illustration}
               mx={{ sm: 2, xs: 'auto' }}
-              sx={{
-                width: {
-                  xl: 454,
-                  md: 354,
-                  sm: 234,
-                  xs: 184,
-                },
-              }}
-            >
-              <img
-                srcSet={`${Illustration2x} 2x`}
-                src={Illustration}
-                alt="Illustration"
-                style={{ width: '100%', maxWidth: '100%' }}
-              />
-            </Box>
+            />
           </Box>
         </Container>
       </Box>

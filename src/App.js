@@ -1,18 +1,6 @@
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import Projects from './pages/Projects';
-import Team from './pages/Team';
-import About from './components/About';
-import WhatWeDo from './components/WhatWeDo';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Terms from './components/Terms';
-import Privacy from './components/Privacy';
-import ContactCard from './components/ContactCard';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Fab, useScrollTrigger, Zoom } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import CookieConsent from 'react-cookie-consent';
 import {
   ThemeProvider,
@@ -20,6 +8,20 @@ import {
   createTheme,
 } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import About from './components/About';
+import WhatWeDo from './components/WhatWeDo';
+import Terms from './components/Terms';
+import Privacy from './components/Privacy';
+import ContactCard from './components/ContactCard';
+
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Projects from './pages/Projects';
+import Team from './pages/Team';
+import Contact from './pages/Contact';
 
 const theme = createTheme({
   palette: {

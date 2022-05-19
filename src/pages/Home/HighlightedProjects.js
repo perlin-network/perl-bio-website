@@ -123,7 +123,7 @@ function HighlightedProjects() {
               href="/projects-and-press"
               variant="contained"
               size="large"
-              fullWidth={true}
+              fullWidth
             >
               DISCOVER MORE
             </Button>

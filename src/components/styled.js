@@ -1,4 +1,5 @@
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 
 export const PageTitle = styled((props) => (
@@ -50,3 +51,29 @@ export const SectionTitle = styled(
     borderRadius: 4,
   },
 }));
+
+export const SectionIllustration = styled(
+  ({ src, srcSet, alt = 'Illustration', sx, ...props }) => (
+    <Box
+      component="figure"
+      m={0}
+      sx={{
+        width: {
+          lg: 454,
+          md: 354,
+          sm: 234,
+          xs: 184,
+        },
+        ...sx,
+      }}
+      {...props}
+    >
+      <img
+        srcSet={srcSet}
+        src={src}
+        alt={alt}
+        style={{ width: '100%', maxWidth: '100%' }}
+      />
+    </Box>
+  )
+)({});

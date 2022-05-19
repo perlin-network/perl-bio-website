@@ -9,6 +9,7 @@ import {
   PageTitle,
   PageTitleParagraph,
   SectionTitle,
+  SectionIllustration,
 } from '../../components/styled';
 import OpportunityList from './OpportunityList';
 import GoalGrid from './GoalGrid';
@@ -67,24 +68,7 @@ function Services() {
               display="flex"
               justifyContent={{ sm: 'flex-end', xs: 'center' }}
             >
-              <Box
-                component="figure"
-                m={0}
-                sx={{
-                  width: {
-                    xl: 454,
-                    md: 354,
-                    sm: 234,
-                    xs: 184,
-                  },
-                }}
-              >
-                <img
-                  src={Illustration1}
-                  alt="Illustration 1"
-                  style={{ width: '100%', maxWidth: '100%' }}
-                />
-              </Box>
+              <SectionIllustration src={Illustration1} />
             </Grid>
           </Grid>
         </Container>
