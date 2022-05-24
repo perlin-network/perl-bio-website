@@ -6,6 +6,8 @@ import IndonesianAgricultureProject from '../assets/projects/project-indonesian-
 import IndonesianAgricultureProject2x from '../assets/projects/project-indonesian-agriculture@2x.png';
 import SumatraProject from '../assets/projects/project-sumatra.png';
 import SumatraProject2x from '../assets/projects/project-sumatra@2x.png';
+import HawksbillProject from '../assets/projects/project-hawksbill.jpeg';
+import HornbillProject from '../assets/projects/project-hornbill.jpeg';
 
 const projects = [
   {
@@ -35,8 +37,8 @@ const projects = [
     size: '30,000 hectares',
     biodiversity:
       'Hawksbill Turtle, Swift Parrot, Koala, Grey Snake, Northern Quoll',
-    // image: TigerProject,
-    // imageHiRes: TigerProject2x,
+    image: HawksbillProject,
+    imageHiRes: null,
   },
   {
     id: 'hornbill',
@@ -45,8 +47,8 @@ const projects = [
     size: '53,000 hectares',
     biodiversity:
       'Helmeted Hornbill, Proboscis Monkey, Bornean White-bearded Gibbon; Hairy-nosed Otter',
-    // image: TigerProject,
-    // imageHiRes: TigerProject2x,
+    image: HornbillProject,
+    imageHiRes: null,
   },
   {
     id: 'indonesian-agriculture',

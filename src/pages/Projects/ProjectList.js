@@ -5,27 +5,34 @@ import { styled } from '@mui/material/styles';
 
 import data from '../../data/projects';
 
-const Image = ({ theme, ...project }) => (
-  <Box
-    component="figure"
-    m={0}
-    sx={{
-      width: { lg: 400, md: 352, sm: 232, xs: '100%' },
-      mr: { lg: '75px', sm: '32px' },
-    }}
-  >
-    {project.image ? (
-      <img
-        srcSet={`${project.imageHiRes} 2x`}
-        src={project.image}
-        alt={project.title}
-        style={{ width: '100%', maxWidth: '100%', borderRadius: 16 }}
-      />
-    ) : (
-      <Placeholder />
-    )}
-  </Box>
-);
+const Image = ({ theme, ...project }) => {
+  const srcProps = {
+    src: project.image,
+    ...(project.imageHiRes && {
+      srcSet: `${project.imageHiRes} 2x`,
+    }),
+  };
+  return (
+    <Box
+      component="figure"
+      m={0}
+      sx={{
+        width: { lg: 400, md: 352, sm: 232, xs: '100%' },
+        mr: { lg: '75px', sm: '32px' },
+      }}
+    >
+      {project.image ? (
+        <img
+          {...srcProps}
+          alt={project.title}
+          style={{ width: '100%', maxWidth: '100%', borderRadius: 16 }}
+        />
+      ) : (
+        <Placeholder />
+      )}
+    </Box>
+  );
+};
 
 const Placeholder = styled(Box)(({ theme }) => ({
   position: 'relative',
