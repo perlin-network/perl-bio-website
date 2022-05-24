@@ -1,17 +1,18 @@
 import { useParams } from 'react-router-dom';
-import { Typography, Box, Link } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { Typography, Box, Link } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 
-import LogoSvg from '../assets/Splash/logo.svg';
-import DorjeePng from '../assets/About/dorjee.png';
-import DorjeeQr from '../assets/CardQR/dorjee.png';
-import ByronQr from '../assets/CardQR/byron.png';
-import AmandaQr from '../assets/CardQR/amanda.png';
-import DarrenQr from '../assets/CardQR/darren.png';
-import MarkPng from '../assets/About/mark.png';
-import MarkQr from '../assets/CardQR/mark.png';
-import RalphPng from '../assets/About/ralph.png';
-import RalphQr from '../assets/CardQR/ralph.png';
+import LogoSvg from '../assets/logo.svg';
+import DorjeePng from '../assets/team/dorjee-sun.png';
+import DorjeeQr from '../assets/team/dorjee-sun-qr.png';
+import ByronPng from '../assets/team/byron-grigoratos.png';
+import ByronQr from '../assets/team/byron-grigoratos-qr.png';
+import AmandaQr from '../assets/team/amanda-qr.png';
+import DarrenQr from '../assets/team/darren-qr.png';
+import MarkPng from '../assets/team/mark-harding.png';
+import MarkQr from '../assets/team/mark-harding-qr.png';
+import RalphPng from '../assets/team/ralph-j-strebel.png';
+import RalphQr from '../assets/team/ralph-j-strebel-qr.png';
 
 const companyData = {
   company: 'Bioeconomy Pte. Ltd.',
@@ -39,7 +40,7 @@ const cards = {
     title: 'Chief Commercial Officer',
     email: 'byron@bioeconomy.co',
     phone: '+6584976218',
-    image: null,
+    image: ByronPng,
     qrCode: ByronQr,
     ...companyData,
   },
@@ -85,28 +86,32 @@ const cards = {
   },
 };
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: '360px',
     margin: '0 auto',
     padding: '30px',
     '& .MuiLink-root': {
-      color: '#91D873',
+      color: theme.palette.primary.light,
     },
   },
   logo: {
     display: 'block',
     padding: '0 0 30px',
+    '& > img': {
+      display: 'block',
+      margin: '0 auto',
+    },
   },
   box: {
     position: 'relative',
     margin: '60px 0',
     padding: '0 30px 30px',
     color: '#fff',
-    backgroundColor: 'hsl(240deg 3% 25%)', // hsl(240deg 3% 21%)
+    // backgroundColor: 'hsl(240deg 3% 25%)',
+    backgroundColor: theme.palette.background.accent,
     borderRadius: 10,
     boxShadow: '0 0 20px rgba(0, 0, 0, 0.15)',
-    fontFamily: '"Bai Jamjuree", sans-serif',
   },
   image: {
     marginTop: -60,
@@ -115,7 +120,7 @@ const useStyles = makeStyles({
   },
   name: {
     margin: '16px 0 0',
-    color: '#91D873',
+    color: theme.palette.primary.light,
     fontSize: '2rem',
     fontWeight: 700,
   },
@@ -130,7 +135,7 @@ const useStyles = makeStyles({
     maxWidth: '100%',
     borderRadius: 10,
   },
-});
+}));
 
 export default function ContactCard() {
   const classes = useStyles();
