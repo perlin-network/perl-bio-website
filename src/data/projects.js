@@ -11,26 +11,6 @@ import HornbillProject from '../assets/projects/project-hornbill.jpeg';
 
 const projects = [
   {
-    id: 'gorilla',
-    title: 'Gorilla project',
-    location: 'North-western portion of Congo River Basin, Republic of Congo',
-    size: '92,530 hectares',
-    biodiversity:
-      'Lowland Gorilla, African Forest Elephant, Hippopotamus, Leopard',
-    image: GorillaProject,
-    imageHiRes: GorillaProject2x,
-  },
-  {
-    id: 'tiger',
-    title: 'Tiger project',
-    location: 'Kampar Peninsula, Indonesia',
-    size: '130,090 hectares, twice the size of Singapore',
-    biodiversity:
-      "Sumatran Tiger, Storm's Stork, Rhinoceros Hornbill, Malayan Sun Bear, Flat-headed Cat",
-    image: TigerProject,
-    imageHiRes: TigerProject2x,
-  },
-  {
     id: 'hawksbill',
     title: 'Hawksbill project',
     location: 'Queensland, Australia',
@@ -66,6 +46,16 @@ const projects = [
     image: SumatraProject,
     imageHiRes: SumatraProject2x,
   },
+  {
+    id: 'gorilla',
+    title: 'Live: Gorilla project',
+    location: 'North-western portion of Congo River Basin, Republic of Congo',
+    size: '92,530 hectares',
+    biodiversity:
+      'Lowland Gorilla, African Forest Elephant, Hippopotamus, Leopard',
+    image: GorillaProject,
+    imageHiRes: GorillaProject2x,
+  }  
 ];
 
 export default projects;
