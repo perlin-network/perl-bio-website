@@ -37,6 +37,14 @@ const Subtitle = styled(Typography)(({ theme }) => ({
   },
 }));
 
+const ProjectImage = styled('img')(({ theme }) => ({
+  objectFit: 'cover',
+  height: '220px',
+  width: '100%',
+  maxWidth: '100%',
+  borderRadius: '16px',
+}));
+
 const ProjectTitle = styled((props) => <Typography variant="h3" {...props} />)(
   ({ theme }) => ({
     margin: `${theme.spacing(2)} 0`,
@@ -96,11 +104,10 @@ function HighlightedProjects() {
                   justifyContent="center"
                 >
                   <Box sx={{ maxWidth: { sm: 380, xs: '100%' } }}>
-                    <img
+                    <ProjectImage
                       srcSet={`${p.imageHiRes} 2x`}
                       src={p.image}
                       alt={p.title}
-                      style={{ width: '100%', maxWidth: '100%' }}
                     />
                     <ProjectTitle>{p.title}</ProjectTitle>
                     <ProjectDetails>
