@@ -4,8 +4,8 @@ import TigerProject from '../assets/projects/project-tigernew.png';
 import TigerProject2x from '../assets/projects/project-tigernew@2x.png';
 import IndonesianAgricultureProject from '../assets/projects/project-indonesian-agriculture.png';
 import IndonesianAgricultureProject2x from '../assets/projects/project-indonesian-agriculture@2x.png';
-import SumatraProject from '../assets/projects/project-sumatra.png';
-import SumatraProject2x from '../assets/projects/project-sumatra@2x.png';
+// import SumatraProject from '../assets/projects/project-sumatra.png';
+// import SumatraProject2x from '../assets/projects/project-sumatra@2x.png';
 import HawksbillProject from '../assets/projects/project-hawksbill.jpeg';
 import HornbillProject from '../assets/projects/project-hornbill-cropped.jpeg';
 
