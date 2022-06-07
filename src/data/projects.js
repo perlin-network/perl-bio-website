@@ -1,5 +1,5 @@
-import GorillaProject from '../assets/projects/project-gorillanew.png';
-import GorillaProject2x from '../assets/projects/project-gorillanew@2x.png';
+import GorillaProject from '../assets/projects/project-gorilla-new.png';
+import GorillaProject2x from '../assets/projects/project-gorilla-new@2x.png';
 import TigerProject from '../assets/projects/project-tigernew.png';
 import TigerProject2x from '../assets/projects/project-tigernew@2x.png';
 import IndonesianAgricultureProject from '../assets/projects/project-indonesian-agriculture.png';
