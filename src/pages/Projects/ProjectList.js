@@ -94,7 +94,7 @@ const InfoRow = (props) => (
 function ProjectList() {
   return (
     <Box>
-      {[...data].reverse().map((p, index) => (
+      {[...data].reverse().filter((p) => p.id !== 'tiger').map((p, index) => (
         <Box
           key={index}
           display="flex"
