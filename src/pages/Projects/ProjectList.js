@@ -5,6 +5,18 @@ import { styled } from '@mui/material/styles';
 
 import data from '../../data/projects';
 
+const ImageColumn = styled((props) => (
+  <Box
+    sx={{
+      display: 'flex',
+      flex: 1,
+      mr: { lg: '75px', sm: '32px' },
+      width: { lg: 400, md: 352, sm: 232, xs: '100%' },
+    }}
+    {...props}
+  />
+))();
+
 const Image = ({ theme, ...project }) => {
   const srcProps = {
     src: project.image,
@@ -17,15 +29,21 @@ const Image = ({ theme, ...project }) => {
       component="figure"
       m={0}
       sx={{
-        width: { lg: 400, md: 352, sm: 232, xs: '100%' },
-        mr: { lg: '75px', sm: '32px' },
+        flex: 1,
+        width: '100%',
       }}
     >
       {project.image ? (
         <img
           {...srcProps}
           alt={project.title}
-          style={{ width: '100%', maxWidth: '100%', borderRadius: 16 }}
+          style={{
+            objectFit: 'cover',
+            height: '100%',
+            width: '100%',
+            maxWidth: '100%',
+            borderRadius: 16,
+          }}
         />
       ) : (
         <Placeholder />
@@ -94,33 +112,40 @@ const InfoRow = (props) => (
 function ProjectList() {
   return (
     <Box>
-      {[...data].reverse().filter((p) => p.id !== 'tiger').map((p, index) => (
-        <Box
-          key={index}
-          display="flex"
-          flexDirection={{ sm: 'row', xs: 'column' }}
-          sx={{
-            mb: index === data.length - 1 ? 0 : { sm: '48px', xs: '32px' },
-          }}
-        >
-          <Image {...p} />
-          <Box flex="1">
-            <Title>{p.title}</Title>
-            {p.description && (
-              <Description>
-                <ReactMarkdown>{p.description}</ReactMarkdown>
-              </Description>
-            )}
-            <Details>
-              {p.location && <InfoRow name="Location:">{p.location}</InfoRow>}
-              {p.size && <InfoRow name="Size:">{p.size}</InfoRow>}
-              {p.biodiversity && (
-                <InfoRow name="Biodiversity:">{p.biodiversity}</InfoRow>
+      {[...data]
+        .reverse()
+        .filter((p) => p.id !== 'tiger')
+        .map((p, index) => (
+          <Box
+            key={index}
+            display="flex"
+            flexDirection={{ sm: 'row', xs: 'column' }}
+            sx={{
+              mb: index === data.length - 1 ? 0 : { sm: '48px', xs: '32px' },
+            }}
+          >
+            <Box display="flex">
+              <ImageColumn>
+                <Image {...p} />
+              </ImageColumn>
+            </Box>
+            <Box display="flex" flexDirection="column" flex="1">
+              <Title>{p.title}</Title>
+              {p.description && (
+                <Description>
+                  <ReactMarkdown>{p.description}</ReactMarkdown>
+                </Description>
               )}
-            </Details>
+              <Details>
+                {p.location && <InfoRow name="Location:">{p.location}</InfoRow>}
+                {p.size && <InfoRow name="Size:">{p.size}</InfoRow>}
+                {p.biodiversity && (
+                  <InfoRow name="Biodiversity:">{p.biodiversity}</InfoRow>
+                )}
+              </Details>
+            </Box>
           </Box>
-        </Box>
-      ))}
+        ))}
     </Box>
   );
 }

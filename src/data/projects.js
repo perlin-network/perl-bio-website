@@ -45,7 +45,7 @@ const projects = [
       'Helmeted Hornbill, Proboscis Monkey, Bornean White-bearded Gibbon; Hairy-nosed Otter',
     image: HornbillProject,
     imageHiRes: null,
-  },  
+  },
   {
     id: 'gorilla',
     title: 'Gorilla project',
@@ -65,7 +65,7 @@ const projects = [
       "Sumatran Tiger, Storm's Stork, Rhinoceros Hornbill, Malayan Sun Bear, Flat-headed Cat",
     image: TigerProject,
     imageHiRes: TigerProject2x,
-  }    
+  },
 ];
 
 export default projects;
