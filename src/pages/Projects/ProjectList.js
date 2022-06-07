@@ -12,6 +12,7 @@ const ImageColumn = styled((props) => (
       flex: 1,
       mr: { lg: '75px', sm: '32px' },
       width: { lg: 400, md: 352, sm: 232, xs: '100%' },
+      maxHeight: { xs: 'auto', sm: '100%' },
     }}
     {...props}
   />
@@ -34,15 +35,16 @@ const Image = ({ theme, ...project }) => {
       }}
     >
       {project.image ? (
-        <img
+        <Box
+          component="img"
           {...srcProps}
           alt={project.title}
-          style={{
+          sx={{
             objectFit: 'cover',
             height: '100%',
-            // width: '100%',
+            width: { xs: '100%', sm: 'auto' },
             maxWidth: '100%',
-            borderRadius: 16,
+            borderRadius: '16px',
           }}
         />
       ) : (
