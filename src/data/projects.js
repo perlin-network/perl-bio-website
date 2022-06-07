@@ -7,7 +7,7 @@ import IndonesianAgricultureProject2x from '../assets/projects/project-indonesia
 import SumatraProject from '../assets/projects/project-sumatra.png';
 import SumatraProject2x from '../assets/projects/project-sumatra@2x.png';
 import HawksbillProject from '../assets/projects/project-hawksbill.jpeg';
-import HornbillProject from '../assets/projects/project-hornbill.jpeg';
+import HornbillProject from '../assets/projects/project-hornbill-cropped.jpeg';
 
 const projects = [
   {
