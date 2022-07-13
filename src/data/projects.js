@@ -17,7 +17,7 @@ const projects = [
     id: 'indonesian-agriculture1',
     title: 'Climate and Environmental Governance: Why the bioeconomy could be bigger than the internet',
     description:
-      'At last months annual meeting of the World Economic Forum in Davos, the chief executive of Coca-Cola floated the idea of putting a global price on water. James Quincey, whose company uses over 300 billion litres of water each year, called for water to be attached to the discussion on climate change. “If we could value water in the same way we could value carbon, then the market will be the mechanism to drive the results,” he said in a panel discussion. />',
+      'At last months annual meeting of the World Economic Forum in Davos, the chief executive of Coca-Cola floated the idea of putting a global price on water. James Quincey, whose company uses over 300 billion litres of water each year, called for water to be attached to the discussion on climate change. “If we could value water in the same way we could value carbon, then the market will be the mechanism to drive the results,” he said in a panel discussion.',
     image: ForumProject,
     imageHiRes: ForumProject,
     link: "https://www.theedgemarkets.com/article/climate-and-environmental-governance-why-bioeconomy-could-be-bigger-internet"
