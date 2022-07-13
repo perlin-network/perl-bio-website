@@ -138,6 +138,11 @@ function ProjectList() {
                   <ReactMarkdown>{p.description}</ReactMarkdown>
                 </Description>
               )}
+              {p.link && (
+                <Description>
+                  <a href={p.link}>{p.link}</a>
+                </Description>
+              )}
               <Details>
                 {p.location && <InfoRow name="Location:">{p.location}</InfoRow>}
                 {p.size && <InfoRow name="Size:">{p.size}</InfoRow>}
