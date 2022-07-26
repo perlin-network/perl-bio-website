@@ -13,6 +13,10 @@ import MarkPng from '../assets/team/mark-harding.png';
 import MarkQr from '../assets/team/mark-harding-qr.png';
 import RalphPng from '../assets/team/ralph-j-strebel.png';
 import RalphQr from '../assets/team/ralph-j-strebel-qr.png';
+import JoPng from '../assets/team/jo.png';
+import JoQr from '../assets/team/jo-qr.png';
+//import LynnPng from '../assets/team/lynn.png';
+import LynnQr from '../assets/team/lynn-qr.png';
 
 const companyData = {
   company: 'Bioeconomy Pte. Ltd.',
@@ -84,6 +88,25 @@ const cards = {
     qrCode: RalphQr,
     ...companyData,
   },
+  jo: {
+    id: 'jo',
+    name: 'Jo Huynh',
+    title: 'Chief Corporate Strategy Officer',
+    email: 'jo@bioeconomy.co',
+    phone: '+6594888156',
+    image: JoPng,
+    qrCode: JoQr,
+    ...companyData,
+  },  
+  lynn: {
+    id: 'lynn',
+    name: 'Lynn Lieu',
+    title: 'Finance and Admin',
+    email: 'admin@bioeconomy.co',
+    phone: '+6596743689',
+    qrCode: LynnQr,
+    ...companyData,
+  },    
 };
 
 const useStyles = makeStyles((theme) => ({
