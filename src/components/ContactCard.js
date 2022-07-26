@@ -91,7 +91,7 @@ const cards = {
   jo: {
     id: 'jo',
     name: 'Jo Huynh',
-    title: 'Chief Corporate Strategy Officer',
+    title: 'Corporate Affairs Director',
     email: 'jo@bioeconomy.co',
     phone: '+6594888156',
     image: JoPng,
