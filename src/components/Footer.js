@@ -7,7 +7,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { styled } from '@mui/material/styles';
 
-import Logo from '../assets/logo-grayscale.svg';
+import Logo from '../assets/logo.svg';
 
 const navRoutes = [
   {
