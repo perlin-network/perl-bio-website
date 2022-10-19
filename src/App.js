@@ -2,10 +2,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Fab, useScrollTrigger, Zoom } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import CookieConsent from 'react-cookie-consent';
-import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
+import {
+  ThemeProvider,
+  StyledEngineProvider,
+  createTheme,
+} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-
-import theme from './theme';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -20,6 +22,60 @@ import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#55AB1D',
+      light: '#91D873',
+    },
+    text: {
+      primary: '#202020',
+    },
+    background: {
+      neutral: '#F3F3F3',
+      accent: '#2C4A47',
+    },
+  },
+  typography: {
+    fontFamily: `"Ubuntu", "Roboto", "Arial", sans-serif`,
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          color: '#202020',
+        },
+        svg: {
+          maxWidth: '100%',
+          maxHeight: '100%',
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          fontWeight: 700,
+          ...(ownerState.variant === 'contained' &&
+            ownerState.color === 'primary' && {
+              color: '#fff',
+              boxShadow: 'none',
+              '&:hover': {
+                backgroundColor: '#69b538',
+                boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.12)',
+              },
+              // '&:active': {
+              //   boxShadow: 'inset 0px 4px 4px rgba(0, 0, 0, 0.25)',
+              // },
+            }),
+        }),
+        sizeLarge: {
+          fontSize: 18,
+        },
+      },
+    },
+  },
+});
 
 function App() {
   const trigger = useScrollTrigger();
