@@ -7,9 +7,11 @@ import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import { useLocation, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import LogoSvg from '../../assets/logo.svg';
+import LangList from './LangList';
+import ThemeToggle from './ThemeToggle';
 import MobileDrawer from './MobileDrawer';
 
 const navLinks = [
@@ -31,23 +33,8 @@ const navLinks = [
   },
 ];
 
-const langs = [
-  {
-    text: 'en',
-    path: '/en',
-  },
-  {
-    text: 'fr',
-    path: '/fr',
-  },
-  {
-    text: 'id',
-    path: '/id',
-  },
-];
-
 export default function Navbar() {
-  const location = useLocation();
+  // const location = useLocation();
   const trigger = useScrollTrigger();
   return (
     <Slide appear={trigger} direction="down" in={!trigger}>
@@ -62,9 +49,9 @@ export default function Navbar() {
               href="/"
               rel="noopener noreferrer"
               sx={{
-                display: 'block',
+                display: 'flex',
                 width: {
-                  sm: 198,
+                  md: 198,
                   xs: 133,
                 },
               }}
@@ -75,24 +62,27 @@ export default function Navbar() {
                 alt="Bioeconomy"
               />
             </Link>
-            <Stack direction="row" spacing={6}>
+            <Stack
+              direction="row"
+              spacing={6}
+              sx={{
+                display: {
+                  xs: 'none',
+                  md: 'flex',
+                },
+              }}
+            >
               <Stack direction="row" spacing={3}>
                 {navLinks.map((link) => (
-                  <MenuLink
-                    key={link.text}
-                    text={link.text}
-                    path={link.path}
-                    isActive={location.pathname === link.path}
-                  />
+                  <MenuLink key={link.text} text={link.text} path={link.path} />
                 ))}
               </Stack>
-              <Stack direction="row" spacing={3}>
-                {langs.map((lang) => (
-                  <LangLink key={lang.text} text={lang.text} path={lang.path} />
-                ))}
-              </Stack>
-              <MobileDrawer routes={navLinks} />
+              <LangList />
+              <Box display="flex" alignItems="center" my="auto">
+                <ThemeToggle />
+              </Box>
             </Stack>
+            <MobileDrawer routes={navLinks} />
           </Box>
         </Container>
       </Root>
@@ -100,7 +90,7 @@ export default function Navbar() {
   );
 }
 
-const Root = styled(Box)({
+const Root = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   position: 'sticky',
@@ -109,9 +99,13 @@ const Root = styled(Box)({
   background: alpha('#333336', 0.8),
   borderBottom: '4px solid rgba(255, 255, 255, 0.5)',
   zIndex: 100,
-});
+  [theme.breakpoints.down('md')]: {
+    height: 60,
+    borderBottom: 0,
+  },
+}));
 
-const MenuLink = styled(({ path, isActive, ...props }) => (
+const MenuLink = styled(({ path, ...props }) => (
   <NavLink
     to={path}
     className={(navData) => (navData.isActive ? 'active' : '')}
@@ -129,10 +123,7 @@ const MenuLink = styled(({ path, isActive, ...props }) => (
   fontFamily: "'Bai Jamjuree', sans-serif",
   fontSize: 20,
   fontWeight: 600,
-  '&:hover': {
-    color: '#FFF',
-  },
-  '&.active': {
+  '&:hover, &.active': {
     color: '#FFF',
   },
   '&:after': {
@@ -150,18 +141,4 @@ const MenuLink = styled(({ path, isActive, ...props }) => (
   '&.active::after, &:hover::after': {
     transform: 'scaleX(1)',
   },
-});
-
-const LangLink = styled(({ path, isActive, ...props }) => (
-  <NavLink to={path} {...props}>
-    {props.text}
-  </NavLink>
-))({
-  display: 'flex',
-  alignItems: 'center',
-  color: 'rgba(255, 255, 255, 0.6)',
-  textDecoration: 'none',
-  fontFamily: "'Bai Jamjuree', sans-serif",
-  fontSize: 20,
-  fontWeight: 600,
 });

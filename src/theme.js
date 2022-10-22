@@ -1,8 +1,14 @@
-import { createTheme, lighten, darken } from '@mui/material/styles';
+// import { createTheme, lighten, darken } from '@mui/material/styles';
 
 const baseFontFamily = "'Poppins', sans-serif";
 
-const theme = createTheme({
+const lightTheme = {
+  typography: {
+    fontFamily: baseFontFamily,
+  },
+};
+
+const darkTheme = {
   palette: {
     mode: 'dark',
     primary: {
@@ -13,7 +19,8 @@ const theme = createTheme({
       primary: '#202020',
     },
     background: {
-      neutral: '#F3F3F3',
+      default: '#111112',
+      paper: '#111112',
     },
   },
   typography: {
@@ -51,6 +58,6 @@ const theme = createTheme({
       },
     },
   },
-});
+};
 
-export default theme;
+export { lightTheme, darkTheme };

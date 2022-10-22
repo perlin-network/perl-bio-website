@@ -1,12 +1,57 @@
 import React, { useState, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import styled from '@emotion/styled';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import Link from '@mui/material/Link';
-import { styled } from '@mui/material/styles';
+
+import LangList from './LangList';
+import ThemeToggle from './ThemeToggle';
+
+function MobileDrawer(props) {
+  const [open, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = useCallback((open) => {
+    setDrawerOpen(open);
+  }, []);
+
+  return (
+    <>
+      <DrawerOpener open={open} onClick={() => toggleDrawer(!open)} />
+      <Drawer
+        open={open}
+        onClose={() => toggleDrawer(false)}
+        anchor="right"
+        hideBackdrop={true}
+        PaperProps={{ sx: { backgroundImage: 'none' } }}
+        sx={{ top: 60, [`& .MuiDrawer-paper`]: { top: 60 } }}
+      >
+        <DrawerContent spacing={6}>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              textAlign: 'center',
+            }}
+          >
+            {props.routes.map((link) => (
+              <DrawerLink key={link.text} path={link.path} text={link.text} />
+            ))}
+          </Box>
+          <Box display="flex" justifyContent="center">
+            <LangList />
+          </Box>
+          <Box display="flex" justifyContent="center">
+            <ThemeToggle />
+          </Box>
+        </DrawerContent>
+      </Drawer>
+    </>
+  );
+}
 
 const iconButtonMixin = (theme) => ({
   color: theme.palette.text.primary,
@@ -20,85 +65,44 @@ const iconButtonMixin = (theme) => ({
 });
 
 const DrawerOpener = styled((props) => (
-  <Button
+  <IconButton
     aria-label="open drawer"
     sx={{
       display: {
         md: 'none',
       },
     }}
-    endIcon={<MenuIcon />}
     {...props}
   >
-    Menu
-  </Button>
+    {props.open ? <CloseIcon /> : <MenuIcon />}
+  </IconButton>
 ))(({ theme }) => ({
   ...iconButtonMixin(theme),
+  color: '#FFF',
 }));
 
-const DrawerContent = styled('div')({
-  width: 300,
+const DrawerContent = styled(Stack)({
+  width: 360,
   padding: '54px 16px',
 });
 
-const CloseMenuButton = styled((props) => (
-  <Button aria-label="close drawer" endIcon={<CloseIcon />} {...props}>
-    Close
-  </Button>
-))(({ theme }) => ({
-  ...iconButtonMixin(theme),
-}));
-
-const DrawerLink = styled(Link)({
+const DrawerLink = styled(({ path, ...props }) => (
+  <NavLink
+    to={path}
+    className={(navData) => (navData.isActive ? 'active' : '')}
+    {...props}
+  >
+    {props.text}
+  </NavLink>
+))({
   margin: '20px 0',
+  color: 'rgba(255, 255, 255, 0.6)',
   fontSize: 18,
   fontWeight: 500,
+  textDecoration: 'none',
+  '&:hover, &.active': {
+    color: '#FFF',
+  },
 });
-
-function MobileDrawer(props) {
-  const location = useLocation();
-  const [open, setDrawerOpen] = useState(false);
-
-  const toggleDrawer = useCallback((open) => {
-    setDrawerOpen(open);
-  }, []);
-
-  return (
-    <>
-      <DrawerOpener onClick={() => toggleDrawer(true)} />
-      <Drawer anchor="right" open={open} onClose={() => toggleDrawer(false)}>
-        <DrawerContent>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'flex-end',
-              paddingBottom: '45px',
-            }}
-          >
-            <CloseMenuButton onClick={() => toggleDrawer(false)} />
-          </Box>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              textAlign: 'center',
-            }}
-          >
-            {props.routes.map((link) => (
-              <DrawerLink
-                key={link.text}
-                href={link.path}
-                color={location.pathname === link.path ? 'primary' : 'inherit'}
-                underline="none"
-              >
-                {link.text}
-              </DrawerLink>
-            ))}
-          </Box>
-        </DrawerContent>
-      </Drawer>
-    </>
-  );
-}
 
 export default MobileDrawer;
