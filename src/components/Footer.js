@@ -25,15 +25,7 @@ export default function Footer() {
 
   const [scrollTrigger, setScrollTrigger] = useState(false);
 
-  const handleClick = (event) => {
-    // const anchor = (event.target.ownerDocument || document).querySelector(
-    //   '#top-anchor'
-    // );
-    // if (anchor) {
-    //   anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    // }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const handleClick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   useEffect(() => {
     const offset = 250;
@@ -158,7 +150,7 @@ const SocialIcons = () => (
   </Stack>
 );
 
-const Root = styled(Box)(({ theme }) => ({
+const Root = styled('footer')(({ theme }) => ({
   padding: `112px 66px`,
   backgroundColor: theme.palette.background.neutral,
   overflow: 'hidden',

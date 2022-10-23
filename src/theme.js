@@ -1,14 +1,16 @@
 // import { createTheme, lighten, darken } from '@mui/material/styles';
 
-const baseFontFamily = "'Poppins', sans-serif";
+export const navbarHeight = 116;
+export const navbarHeightSmall = 60;
+export const baseFontFamily = "'Poppins', sans-serif";
 
-const lightTheme = {
+export const lightTheme = {
   typography: {
     fontFamily: baseFontFamily,
   },
 };
 
-const darkTheme = {
+export const darkTheme = {
   palette: {
     mode: 'dark',
     primary: {
@@ -30,7 +32,7 @@ const darkTheme = {
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          color: '#202020',
+          color: '#111112',
         },
         svg: {
           maxWidth: '100%',
@@ -59,5 +61,3 @@ const darkTheme = {
     },
   },
 };
-
-export { lightTheme, darkTheme };

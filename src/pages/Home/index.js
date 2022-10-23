@@ -1,20 +1,23 @@
 import React from 'react';
+import styled from '@emotion/styled';
 import Box from '@mui/material/Box';
 
-import HeroBanner from './HeroBanner';
-import EcosystemProtection from './EcosystemProtection';
-import HighlightedProjects from './HighlightedProjects';
-import Partners from './Partners';
+import HeroVideo from './HeroVideo';
+import VideoGrid from './VideoGrid';
+// import EcosystemProtection from './EcosystemProtection';
+// import HighlightedProjects from './HighlightedProjects';
+// import Partners from './Partners';
 
-function Home() {
+export default function Home() {
   return (
-    <Box component="main">
-      <HeroBanner />
-      <EcosystemProtection />
+    <Root component="main">
+      <HeroVideo />
+      <VideoGrid />
+      {/* <EcosystemProtection />
       <HighlightedProjects />
-      <Partners />
-    </Box>
+      <Partners /> */}
+    </Root>
   );
 }
 
-export default Home;
+const Root = styled(Box)(({ theme }) => ({}));

@@ -3,6 +3,7 @@ import Zoom from '@mui/material/Zoom';
 import Slide from '@mui/material/Slide';
 
 const timeout = 350;
+const delay = 350;
 
 const ScrollAnchor = (props) => (
   <Box
@@ -26,6 +27,7 @@ const ScrollAnchor = (props) => (
       }}
       style={{
         transformOrigin: 'center bottom',
+        transitionDelay: props.in ? `${delay}ms` : '0ms',
       }}
     >
       <svg
@@ -77,7 +79,7 @@ const ScrollAnchor = (props) => (
         in={props.in}
         timeout={timeout}
         style={{
-          transitionDelay: props.in ? `${timeout - 100}ms` : '0ms',
+          transitionDelay: props.in ? `${delay + timeout - 100}ms` : '0ms',
         }}
       >
         <svg

@@ -9,6 +9,7 @@ import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { NavLink } from 'react-router-dom';
 
+import { navbarHeight, navbarHeightSmall } from '../theme';
 import LogoSvg from '../assets/logo.svg';
 import LangList from './LangList';
 import ThemeToggle from './ThemeToggle';
@@ -92,17 +93,19 @@ export default function Navbar() {
   );
 }
 
-const Root = styled(Box)(({ theme }) => ({
+const Root = styled('header')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  position: 'sticky',
+  position: 'absolute',
   top: 0,
-  height: 116,
+  left: 0,
+  right: 0,
+  height: navbarHeight,
   background: alpha('#333336', 0.8),
   borderBottom: '4px solid rgba(255, 255, 255, 0.5)',
   zIndex: 100,
   [theme.breakpoints.down('md')]: {
-    height: 60,
+    height: navbarHeightSmall,
     borderBottom: 0,
   },
 }));
