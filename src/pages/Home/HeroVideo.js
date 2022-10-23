@@ -43,6 +43,14 @@ const Root = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     paddingTop: navbarHeightSmall,
   },
+  '&::after': {
+    content: '""',
+    position: 'absolute',
+    inset: 0,
+    background: `linear-gradient(205.29deg, rgba(17, 17, 18, 0.3) 45.93%, ${theme.palette.background.default} 82.56%)`,
+    pointerEvents: 'none',
+    zIndex: 1,
+  },
   '& .react-player__preview': {
     alignItems: 'flex-start !important',
     padding: navbarHeight,
@@ -77,6 +85,7 @@ const Content = styled(Container)(({ theme }) => ({
   padding: contentPadding,
   pointerEvents: 'none',
   animation: `${fadeIn} 0.65s ease-out`,
+  zIndex: 2,
 }));
 
 const Headline = styled(Typography)(({ theme }) => ({

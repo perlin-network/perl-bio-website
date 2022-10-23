@@ -9,7 +9,7 @@ import { ReactComponent as PlayIcon } from '../assets/icons/play.svg';
 export default function VideoTile({ url, preview, inverted, children }) {
   return (
     <Root>
-      <VideoColumn order={{ xs: 1, md: inverted ? 2 : 1 }}>
+      <VideoColumn order={{ xs: 1, md: inverted ? 2 : 1 }} inverted={inverted}>
         <ReactPlayer
           url={url}
           light={preview}
@@ -36,24 +36,26 @@ const Root = styled((props) => <Grid container {...props} />)(({ theme }) => ({
   height: 720,
 }));
 
-const VideoColumn = styled((props) => <Grid item xs={12} md={6} {...props} />)(
-  ({ theme }) => ({
-    position: 'relative',
-    '&::after': {
-      content: '""',
-      position: 'absolute',
-      inset: 0,
-      background: `linear-gradient(90deg, rgba(17, 17, 18, 0.1) 59.4%, ${theme.palette.background.default} 100%)`,
-      pointerEvents: 'none',
-      [theme.breakpoints.down('md')]: {
-        background: `linear-gradient(180deg, rgba(17, 17, 18, 0.1) 59.4%, ${theme.palette.background.default} 100%)`,
-      },
+const VideoColumn = styled((props) => <Grid item xs={12} md={6} {...props} />, {
+  shouldForwardProp: (prop) => prop !== 'inverted',
+})(({ theme, inverted }) => ({
+  position: 'relative',
+  '&::after': {
+    content: '""',
+    position: 'absolute',
+    inset: 0,
+    background: inverted
+      ? `linear-gradient(270deg, rgba(17, 17, 18, 0.1) 60%, ${theme.palette.background.default} 100%)`
+      : `linear-gradient(90deg, rgba(17, 17, 18, 0.1) 60%, ${theme.palette.background.default} 100%)`,
+    pointerEvents: 'none',
+    [theme.breakpoints.down('md')]: {
+      background: `linear-gradient(180deg, rgba(17, 17, 18, 0.1) 60%, ${theme.palette.background.default} 100%)`,
     },
-    '& video': {
-      objectFit: 'cover',
-    },
-  })
-);
+  },
+  '& video': {
+    objectFit: 'cover',
+  },
+}));
 
 const DetailsColumn = styled((props) => (
   <Grid item xs={12} md={6} {...props} />
