@@ -9,12 +9,12 @@ import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { NavLink } from 'react-router-dom';
 
-import LogoSvg from '../../assets/logo.svg';
+import LogoSvg from '../assets/logo.svg';
 import LangList from './LangList';
 import ThemeToggle from './ThemeToggle';
 import MobileDrawer from './MobileDrawer';
 
-const navLinks = [
+export const routes = [
   {
     path: '/',
     text: 'home',
@@ -73,16 +73,18 @@ export default function Navbar() {
               }}
             >
               <Stack direction="row" spacing={3}>
-                {navLinks.map((link) => (
+                {routes.map((link) => (
                   <MenuLink key={link.text} text={link.text} path={link.path} />
                 ))}
               </Stack>
-              <LangList />
+              <Box display="flex" alignItems="center" my="auto">
+                <LangList />
+              </Box>
               <Box display="flex" alignItems="center" my="auto">
                 <ThemeToggle />
               </Box>
             </Stack>
-            <MobileDrawer routes={navLinks} />
+            <MobileDrawer routes={routes} />
           </Box>
         </Container>
       </Root>
@@ -113,12 +115,12 @@ const MenuLink = styled(({ path, ...props }) => (
   >
     {props.text}
   </NavLink>
-))({
+))(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   position: 'relative',
   height: 116,
-  color: 'rgba(255, 255, 255, 0.6)',
+  color: theme.palette.text.secondary,
   textDecoration: 'none',
   fontFamily: "'Bai Jamjuree', sans-serif",
   fontSize: 20,
@@ -141,4 +143,4 @@ const MenuLink = styled(({ path, ...props }) => (
   '&.active::after, &:hover::after': {
     transform: 'scaleX(1)',
   },
-});
+}));

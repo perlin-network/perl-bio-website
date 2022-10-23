@@ -12,11 +12,11 @@ const darkTheme = {
   palette: {
     mode: 'dark',
     primary: {
-      main: '#55AB1D',
-      light: '#91D873',
+      main: '#FFF',
     },
     text: {
-      primary: '#202020',
+      primary: '#FFF',
+      secondary: 'rgba(255, 255, 255, 0.6)',
     },
     background: {
       default: '#111112',

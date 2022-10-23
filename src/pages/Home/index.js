@@ -1,4 +1,6 @@
 import React from 'react';
+import Box from '@mui/material/Box';
+
 import HeroBanner from './HeroBanner';
 import EcosystemProtection from './EcosystemProtection';
 import HighlightedProjects from './HighlightedProjects';
@@ -6,12 +8,12 @@ import Partners from './Partners';
 
 function Home() {
   return (
-    <div className="Home">
+    <Box component="main">
       <HeroBanner />
       <EcosystemProtection />
       <HighlightedProjects />
       <Partners />
-    </div>
+    </Box>
   );
 }
 

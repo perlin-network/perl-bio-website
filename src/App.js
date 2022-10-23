@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Fab, useScrollTrigger, Zoom } from '@mui/material';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import CookieConsent from 'react-cookie-consent';
 import { StyledEngineProvider } from '@mui/material/styles';
 
@@ -23,15 +21,6 @@ import Team from './pages/Team';
 import Contact from './pages/Contact';
 
 function App() {
-  const trigger = useScrollTrigger();
-  const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector(
-      '#top-anchor'
-    );
-    if (anchor) {
-      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  };
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider>
@@ -45,10 +34,6 @@ function App() {
 
                 <>
                   <Navbar />
-                  <div
-                    id="top-anchor"
-                    style={{ width: '0px', height: '0px' }}
-                  />
 
                   <Route exact path="/">
                     <Home />
@@ -77,22 +62,6 @@ function App() {
                   <Route exact path="/privacy">
                     <Privacy />
                   </Route>
-
-                  <Zoom in={trigger}>
-                    <Fab
-                      size="small"
-                      aria-label="scroll back to top"
-                      style={{
-                        position: 'fixed',
-                        margin: '2% 2%',
-                        bottom: 0,
-                        right: 0,
-                      }}
-                      onClick={handleClick}
-                    >
-                      <KeyboardArrowUpIcon />
-                    </Fab>
-                  </Zoom>
 
                   <Footer />
                 </>

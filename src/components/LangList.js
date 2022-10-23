@@ -3,14 +3,14 @@ import styled from '@emotion/styled';
 import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 
-import { useAppConfig } from '../../hooks/useAppConfig';
+import { useAppConfig } from '../hooks/useAppConfig';
 
 export default function LangList() {
   const { language, getSupportedLanguages, setCurrentLanguage } =
     useAppConfig();
   const [langList] = useState(getSupportedLanguages());
   return (
-    <Stack direction="row" spacing={3} my="auto">
+    <Stack direction="row" alignItems="flex-start" spacing={3}>
       {langList.map((lang) => (
         <LangLink
           key={lang}
