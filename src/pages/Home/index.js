@@ -4,8 +4,8 @@ import Box from '@mui/material/Box';
 
 import HeroVideo from './HeroVideo';
 import VideoGrid from './VideoGrid';
+import HighlightedProjects from './HighlightedProjects';
 // import EcosystemProtection from './EcosystemProtection';
-// import HighlightedProjects from './HighlightedProjects';
 // import Partners from './Partners';
 
 export default function Home() {
@@ -13,6 +13,7 @@ export default function Home() {
     <Root component="main">
       <HeroVideo />
       <VideoGrid />
+      <HighlightedProjects />
       {/* <EcosystemProtection />
       <HighlightedProjects />
       <Partners /> */}

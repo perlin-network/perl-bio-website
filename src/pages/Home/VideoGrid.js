@@ -13,8 +13,7 @@ const url = 'https://www.w3schools.com/html/mov_bbb.mp4';
 
 export default function VideoGrid() {
   return (
-    <Root>
-      {/* <HeroVideo /> */}
+    <Root component="section">
       <VideoTile url={url} preview={PreviewImage02}>
         <Headline>prevent the destruction of our natural environment</Headline>
       </VideoTile>
@@ -40,6 +39,8 @@ const Headline = styled(Typography)(({ theme }) => ({
   lineHeight: 1.33,
   fontWeight: 600,
   [theme.breakpoints.down('md')]: {
+    padding: '80px 30px',
+    maxWidth: '100%',
     fontSize: 36,
   },
 }));

@@ -32,7 +32,7 @@ export const darkTheme = {
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          color: '#111112',
+          color: '#FFF',
         },
         svg: {
           maxWidth: '100%',

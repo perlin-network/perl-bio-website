@@ -1,144 +1,111 @@
 import React from 'react';
+import styled from '@emotion/styled';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
 
-import { SectionTitle } from '../../components/styled';
+import VideoTile from '../../components/VideoTile';
+import TigerImage from '../../assets/video/project-tiger.jpg';
+import GorillaImage from '../../assets/video/project-gorilla.jpg';
 
-import projects from '../../data/projects';
+const url = 'https://www.w3schools.com/html/mov_bbb.mp4';
 
-const Root = styled('section')(({ theme }) => ({
-  margin: '0 0 40px',
-}));
-
-const Banner = styled((props) => <Paper {...props} />)(({ theme }) => ({
-  padding: '40px 120px',
-  backgroundImage:
-    'radial-gradient(45.25% 111.94% at 50% 50%, #2A4E49 0%, #343537 100%)',
-  boxShadow: '0px 24px 34px -9px rgba(6, 69, 43, 0.25)',
-  borderRadius: 16,
-  [theme.breakpoints.down('md')]: {
-    padding: '40px',
-  },
-}));
-
-const Subtitle = styled(Typography)(({ theme }) => ({
-  margin: '24px auto 64px',
-  maxWidth: 576,
-  color: '#fff',
-  fontSize: 20,
-  textAlign: 'center',
-  [theme.breakpoints.down('md')]: {
-    margin: '16px auto 40px',
-  },
-}));
-
-const ProjectImage = styled('img')(({ theme }) => ({
-  objectFit: 'cover',
-  height: '220px',
-  width: '100%',
-  maxWidth: '100%',
-  borderRadius: '16px',
-}));
-
-const ProjectTitle = styled((props) => <Typography variant="h3" {...props} />)(
-  ({ theme }) => ({
-    margin: `${theme.spacing(2)} 0`,
-    color: theme.palette.primary.light,
-    fontSize: 24,
-    fontWeight: 700,
-  })
-);
-
-const ProjectDetails = styled('ul')({
-  margin: 0,
-  padding: '0 0 32px',
-  listStyle: 'none',
-  color: '#fff',
-  '& li + li': {
-    marginTop: '1rem',
-  },
-});
-
-const ProjectInfo = (props) => (
-  <li>
-    <div>
-      <strong>{props.name}</strong>
-    </div>
-    <div>{props.children}</div>
-  </li>
-);
-
-function HighlightedProjects() {
+export default function HighlightedProjects() {
   return (
-    <Root className="HighlightedProjects">
+    <Root component="section">
       <Container>
-        <Banner>
-          <SectionTitle color="white" centered="true">
-            HIGHLIGHTED PROJECTS
-          </SectionTitle>
-          <Subtitle>
-            Our team has led, founded and completed the carbon project
-            development in projects around the world, including:
-          </Subtitle>
-          <Grid
-            container
-            spacing={{ md: 4, xs: 0 }}
-            display="flex"
-            justifyContent="space-between"
-          >
-            {[...projects]
-              .reverse()
-              .filter((p) => p.id === 'gorilla' || p.id === 'tiger')
-              .map((p) => (
-                <Grid
-                  item
-                  key={p.title}
-                  xs={12}
-                  md={6}
-                  display="flex"
-                  justifyContent="center"
-                >
-                  <Box sx={{ maxWidth: { sm: 380, xs: '100%' } }}>
-                    <ProjectImage
-                      srcSet={`${p.imageHiRes} 2x`}
-                      src={p.image}
-                      alt={p.title}
-                    />
-                    <ProjectTitle>{p.title}</ProjectTitle>
-                    <ProjectDetails>
-                      <ProjectInfo name="Location:">{p.location}</ProjectInfo>
-                      <ProjectInfo name="Size:">{p.size}</ProjectInfo>
-                      <ProjectInfo name="Biodiversity:">
-                        {p.biodiversity}
-                      </ProjectInfo>
-                    </ProjectDetails>
-                  </Box>
-                </Grid>
-              ))}
-          </Grid>
-          <Box
-            display="flex"
-            justifyContent="center"
-            sx={{ margin: '0 auto', maxWidth: { sm: 380, xs: '100%' } }}
-          >
-            <Button
-              href="/projects-and-press"
-              variant="contained"
-              size="large"
-              fullWidth
-            >
-              DISCOVER MORE
-            </Button>
-          </Box>
-        </Banner>
+        <Box my={{ xs: 8, md: 16 }} textAlign="center">
+          <Title variant="h2" mb={8}>
+            This is why we deliver the highest quality carbon reduction
+            solutions
+          </Title>
+          <Text mb={{ xs: 8, md: 0 }}>
+            With projects that reduce carbon in the atmosphere while protecting
+            biodiverse ecosystems on land and in water
+          </Text>
+        </Box>
       </Container>
+      <VideoTile url={url} preview={TigerImage}>
+        <Project>
+          <ProjectName>Tiger carbon ensures</ProjectName>
+          <ProjectDesc>
+            tiger carbon ensures 130,090ha are protected and restored, achieving
+            6.4+ million tonnes in emissions reductions each year and over 370
+            million tonnes over the next fifty years, protecting 797 species,
+            planting 70 different native tree varieties, contributing to
+            sustainable livelihoods for 17,000 people in the local community
+          </ProjectDesc>
+          <LearnMore href="#">learn more</LearnMore>
+        </Project>
+      </VideoTile>
+      <VideoTile url={url} preview={GorillaImage} inverted>
+        <Project>
+          <ProjectName>Gorilla carbon</ProjectName>
+          <ProjectDesc>
+            gorilla carbon was the first of Africa's sustainable forest
+            management REDD+ projects, protecting 92,530ha of the Congo Basin,
+            avoiding 4.9 million tonnes of CO2 over the next thirty years while
+            protecting 6,000+ lowland gorillas, one of 60 mammal species within
+            the conservation area
+          </ProjectDesc>
+          <LearnMore href="#">learn more</LearnMore>
+        </Project>
+      </VideoTile>
     </Root>
   );
 }
 
-export default HighlightedProjects;
+const Root = styled(Box)(({ theme }) => ({}));
+
+const Title = styled(Typography)(({ theme }) => ({
+  color: theme.palette.text.primary,
+  fontSize: 48,
+  fontWeight: 600,
+  lineHeight: 77 / 48,
+  [theme.breakpoints.down('md')]: {
+    lineHeight: 58 / 48,
+  },
+}));
+
+const Text = styled(Typography)(({ theme }) => ({
+  color: theme.palette.text.primary,
+  fontSize: 36,
+  fontWeight: 600,
+  lineHeight: 77 / 36,
+  [theme.breakpoints.down('md')]: {
+    lineHeight: 48 / 36,
+  },
+}));
+
+const Project = styled((props) => (
+  <Box px={{ xs: 4, md: 8 }} py={{ xs: 8, md: 6 }} {...props} />
+))();
+
+const ProjectName = styled(Typography)(({ theme }) => ({
+  color: theme.palette.text.primary,
+  fontSize: 36,
+  fontWeight: 600,
+}));
+
+const ProjectDesc = styled(Typography)(({ theme }) => ({
+  margin: '42px 0',
+  color: theme.palette.text.primary,
+  fontSize: 24,
+  fontWeight: 600,
+  lineHeight: 42 / 24,
+}));
+
+const LearnMore = styled((props) => (
+  <Button variant="contained" size="large" {...props} />
+))({
+  paddingTop: '18px',
+  paddingBottom: '18px',
+  width: 250,
+  background: '#CFCFD0',
+  color: '#000',
+  borderRadius: 0,
+  textTransform: 'none',
+  fontSize: 20,
+});

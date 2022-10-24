@@ -33,13 +33,16 @@ export default function VideoTile({ url, preview, inverted, children }) {
 
 const Root = styled((props) => <Grid container {...props} />)(({ theme }) => ({
   display: 'flex',
-  height: 720,
 }));
 
 const VideoColumn = styled((props) => <Grid item xs={12} md={6} {...props} />, {
   shouldForwardProp: (prop) => prop !== 'inverted',
 })(({ theme, inverted }) => ({
   position: 'relative',
+  minHeight: 720,
+  [theme.breakpoints.down('md')]: {
+    minHeight: 375,
+  },
   '&::after': {
     content: '""',
     position: 'absolute',

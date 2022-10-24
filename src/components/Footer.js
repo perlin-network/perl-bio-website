@@ -16,7 +16,6 @@ import { routes } from './Navbar';
 import ThemeToggle from './ThemeToggle';
 import LangList from './LangList';
 import ScrollAnchor from './ScrollAnchor';
-// import ScrollAnchor from './ScrollAnchor';
 
 export default function Footer() {
   const footerRoutes = routes.slice(1).map((route) => ({
