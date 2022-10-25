@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
