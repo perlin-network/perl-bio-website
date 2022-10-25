@@ -5,8 +5,8 @@ import Box from '@mui/material/Box';
 import HeroVideo from './HeroVideo';
 import VideoGrid from './VideoGrid';
 import HighlightedProjects from './HighlightedProjects';
-// import EcosystemProtection from './EcosystemProtection';
-// import Partners from './Partners';
+import Team from './Team';
+import Contact from './Contact';
 
 export default function Home() {
   return (
@@ -14,9 +14,8 @@ export default function Home() {
       <HeroVideo />
       <VideoGrid />
       <HighlightedProjects />
-      {/* <EcosystemProtection />
-      <HighlightedProjects />
-      <Partners /> */}
+      <Team />
+      <Contact />
     </Root>
   );
 }
