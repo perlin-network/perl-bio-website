@@ -10,6 +10,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 
 import { useFormControls } from '../../hooks/useFormControls';
 import { ReactComponent as LogoCompact } from '../../assets/logo-compact.svg';
@@ -51,17 +52,23 @@ export default function Contact() {
     <Root component="section">
       <Container>
         <Grid container>
-          <Grid item xs={12} md={6} pt={8} pr={8}>
-            <Typography
-              mb={10}
-              color="text.primary"
-              fontSize={{ xs: 24, md: 36 }}
-              fontWeight="600"
+          <Grid item xs={12} md={6}>
+            <Box
+              pt={{ xs: 0, md: 8 }}
+              pr={{ xs: 0, md: 8 }}
+              textAlign={{ xs: 'center', md: 'left' }}
             >
-              Our solutions deliver results for our partners, investors and
-              customers and deliver support for the biosphere
-            </Typography>
-            <LogoCompact />
+              <Typography
+                mb={10}
+                color="text.primary"
+                fontSize={{ xs: 24, md: 36 }}
+                fontWeight="600"
+              >
+                Our solutions deliver results for our partners, investors and
+                customers and deliver support for the biosphere
+              </Typography>
+              <LogoCompact />
+            </Box>
           </Grid>
           <Grid item xs={12} md={6}>
             <Form
@@ -70,7 +77,7 @@ export default function Contact() {
               noValidate
               onSubmit={handleFormSubmit}
             >
-              <Typography pb={8} fontSize={24} fontWeight="700">
+              <Typography pb={{ xs: 2, md: 8 }} fontSize={24} fontWeight="700">
                 be part of the solution,
                 <br />
                 talk to us to learn more
@@ -126,14 +133,27 @@ export default function Contact() {
                   sx={{ paddingTop: 4 }}
                 />
               </FormGroup>
-              <FormButton
-                type="submit"
-                variant="contained"
-                size="large"
-                // disabled={!checked || !formIsValid()}
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  position: 'absolute',
+                  left: 0,
+                  right: { xs: 0, md: 'auto' },
+                  bottom: { xs: -60, md: 0 },
+                  zIndex: 1,
+                }}
               >
-                Contact us
-              </FormButton>
+                <FormButton
+                  type="submit"
+                  variant="contained"
+                  size="large"
+                  endIcon={<PlayArrowRoundedIcon />}
+                  disabled={!checked || !formIsValid()}
+                >
+                  Contact us
+                </FormButton>
+              </Box>
             </Form>
           </Grid>
         </Grid>
@@ -144,18 +164,23 @@ export default function Contact() {
 
 const Root = styled(Box)(({ theme }) => ({
   padding: '150px 0',
+  [theme.breakpoints.down('md')]: {
+    padding: '64px 0',
+  },
   '.MuiContainer-root': {
     position: 'relative',
-    '&::after': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      right: 'calc(-1* (100vw - 100%) / 2)',
-      bottom: 0,
-      width: '50vw',
-      border: '1px solid #FFF',
-      borderRight: 'none',
-      pointerEvents: 'none',
+    [theme.breakpoints.up('md')]: {
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        right: 'calc(-1* (100vw - 100%) / 2)',
+        bottom: 0,
+        width: '50vw',
+        border: '1px solid #FFF',
+        borderRight: 'none',
+        pointerEvents: 'none',
+      },
     },
   },
 }));
@@ -165,6 +190,22 @@ const Form = styled(Box)(({ theme }) => ({
   padding: theme.spacing(8),
   paddingRight: 0,
   borderRight: 'none',
+  [theme.breakpoints.down('md')]: {
+    marginTop: 64,
+    marginBottom: 100,
+    padding: theme.spacing(4),
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      right: 'calc(-1* (100vw - 100%) / 2)',
+      bottom: 0,
+      width: 'calc(100% + (100vw - 100%) / 2)',
+      border: '1px solid #FFF',
+      borderRight: 'none',
+      pointerEvents: 'none',
+    },
+  },
 }));
 
 const FormInput = styled(TextField)(({ theme }) => ({
@@ -175,10 +216,20 @@ const FormInput = styled(TextField)(({ theme }) => ({
 }));
 
 const FormButton = styled(Button)(({ theme }) => ({
-  position: 'absolute',
-  left: 0,
-  bottom: 0,
-  transform: 'translate(-50%, 50%)',
-  zIndex: 1,
+  padding: '14px 44px',
   color: '#000',
+  background: '#FFF',
+  fontSize: 24,
+  textTransform: 'none',
+  transform: 'translate(-50%, 50%)',
+  [theme.breakpoints.down('md')]: {
+    transform: 'translate(0%, 100%)',
+  },
+  '&.Mui-disabled': {
+    color: '#000',
+    background: 'rgb(207, 207, 208)',
+  },
+  '& .MuiButton-endIcon > svg': {
+    fontSize: 32,
+  },
 }));

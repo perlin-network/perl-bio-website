@@ -10,7 +10,6 @@ import { ReactComponent as PlayIcon } from '../../assets/icons/play.svg';
 import { navbarHeight, navbarHeightSmall } from '../../theme';
 import PreviewImage from '../../assets/video/preview-01.jpg';
 
-const url = 'https://www.w3schools.com/html/mov_bbb.mp4';
 const contentPadding = 60;
 
 export default function HeroVideo() {
@@ -18,7 +17,7 @@ export default function HeroVideo() {
   return (
     <Root>
       <ReactPlayer
-        url={url}
+        url="https://s3.amazonaws.com/static.memoriverse/mountain_forest3.mp4"
         light={PreviewImage}
         playIcon={<PlayIcon style={{ opacity: 0.6 }} />}
         playing
