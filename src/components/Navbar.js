@@ -113,7 +113,8 @@ const Root = styled('header')(({ theme }) => ({
 const MenuLink = styled(({ path, ...props }) => (
   <NavLink
     to={path}
-    className={(navData) => (navData.isActive ? 'active' : '')}
+    className={(navData) => (navData.isActive ? 'active' : ' ')}
+    exact
     {...props}
   >
     {props.text}
