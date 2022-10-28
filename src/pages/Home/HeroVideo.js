@@ -4,29 +4,46 @@ import { keyframes } from '@emotion/react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+
+import { Waypoint } from 'react-waypoint';
 import ReactPlayer from 'react-player/lazy';
 
-import { ReactComponent as PlayIcon } from '../../assets/icons/play.svg';
 import { navbarHeight, navbarHeightSmall } from '../../theme';
-import PreviewImage from '../../assets/video/preview-01.jpg';
 
 const contentPadding = 60;
 
 export default function HeroVideo() {
-  const [contentVisible, setContentVisible] = useState(true);
+  const [contentVisible, setContentVisible] = useState(false);
+  const [shouldPlay, updatePlayState] = useState(true);
+
+  const handleEnterViewport = function () {
+    updatePlayState(true);
+  };
+  const handleExitViewport = function () {
+    updatePlayState(false);
+  };
+
   return (
     <Root>
-      <ReactPlayer
-        url="https://s3.amazonaws.com/static.memoriverse/mountain_forest3.mp4"
-        light={PreviewImage}
-        playIcon={<PlayIcon style={{ opacity: 0.6 }} />}
-        playing
-        muted
-        loop
-        width="100%"
-        height="100%"
-        onClickPreview={() => setContentVisible(false)}
-      />
+      <Waypoint
+        onEnter={handleEnterViewport}
+        onLeave={handleExitViewport}
+        topOffset={100}
+      >
+        <Box width="100%" height="100%">
+          <ReactPlayer
+            url="https://s3.amazonaws.com/static.memoriverse/mountain_forest3.mp4"
+            playing={shouldPlay}
+            muted
+            loop
+            width="100%"
+            height="100%"
+            onStart={() => {
+              setContentVisible(true);
+            }}
+          />
+        </Box>
+      </Waypoint>
       {contentVisible && (
         <Content>
           <Headline variant="h1">Be part of the regenerative economy</Headline>

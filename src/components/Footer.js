@@ -14,7 +14,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Logo from '../assets/logo.svg';
 import { routes } from './Navbar';
 import ThemeToggle from './ThemeToggle';
-import LangList from './LangList';
+// import LangList from './LangList';
 import ScrollAnchor from './ScrollAnchor';
 
 export default function Footer() {
@@ -47,7 +47,7 @@ export default function Footer() {
   }, [scrollTrigger]);
 
   return (
-    <Root className="Footer">
+    <Root>
       <Container sx={{ position: 'relative' }}>
         <Grid container>
           <Grid item xs={12} md={4} textAlign={{ xs: 'center', md: 'left' }}>
@@ -118,7 +118,7 @@ export default function Footer() {
                   textAlign="right"
                 >
                   <Box display="flex" flex="1" my={{ xs: 4, md: 0 }}>
-                    <LangList />
+                    {/* <LangList /> */}
                   </Box>
                   <img src={Logo} alt="Bioeconomy" style={{ width: 138 }} />
                   <Typography color="textSecondary" fontSize="12px" mt={2}>

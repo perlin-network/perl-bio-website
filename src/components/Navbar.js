@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom';
 
 import { navbarHeight, navbarHeightSmall } from '../theme';
 import LogoSvg from '../assets/logo.svg';
-import LangList from './LangList';
+// import LangList from './LangList';
 import ThemeToggle from './ThemeToggle';
 import MobileDrawer from './MobileDrawer';
 
@@ -78,9 +78,9 @@ export default function Navbar() {
                   <MenuLink key={link.text} text={link.text} path={link.path} />
                 ))}
               </Stack>
-              <Box display="flex" alignItems="center" my="auto">
+              {/* <Box display="flex" alignItems="center" my="auto">
                 <LangList />
-              </Box>
+              </Box> */}
               <Box display="flex" alignItems="center" my="auto">
                 <ThemeToggle />
               </Box>

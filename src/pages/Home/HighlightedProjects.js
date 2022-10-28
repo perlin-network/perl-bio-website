@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
-import VideoTile from '../../components/VideoTile';
+import VideoTile from './VideoTile';
 import TigerImage from '../../assets/video/project-tiger.jpg';
 import GorillaImage from '../../assets/video/project-gorilla.jpg';
 
