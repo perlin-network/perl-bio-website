@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
-import VideoTile from './VideoTile';
+import ProjectVideo from './ProjectVideo';
 import TigerImage from '../../assets/video/project-tiger.jpg';
 import GorillaImage from '../../assets/video/project-gorilla.jpg';
 
@@ -26,7 +26,7 @@ export default function HighlightedProjects() {
           </Text>
         </Box>
       </Container>
-      <VideoTile url={url} preview={TigerImage}>
+      <ProjectVideo url={url} preview={TigerImage}>
         <Project>
           <ProjectName>Tiger carbon ensures</ProjectName>
           <ProjectDesc>
@@ -38,8 +38,8 @@ export default function HighlightedProjects() {
           </ProjectDesc>
           <LearnMore href="#">learn more</LearnMore>
         </Project>
-      </VideoTile>
-      <VideoTile url={url} preview={GorillaImage} inverted>
+      </ProjectVideo>
+      <ProjectVideo url={url} preview={GorillaImage} inverted>
         <Project>
           <ProjectName>Gorilla carbon</ProjectName>
           <ProjectDesc>
@@ -51,7 +51,7 @@ export default function HighlightedProjects() {
           </ProjectDesc>
           <LearnMore href="#">learn more</LearnMore>
         </Project>
-      </VideoTile>
+      </ProjectVideo>
     </Root>
   );
 }
