@@ -23,6 +23,7 @@ function MobileDrawer(props) {
       <DrawerOpener open={open} onClick={() => toggleDrawer(!open)} />
       <Drawer
         open={open}
+        onClick={() => toggleDrawer(false)}
         onClose={() => toggleDrawer(false)}
         anchor="right"
         hideBackdrop={true}

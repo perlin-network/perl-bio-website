@@ -151,11 +151,13 @@ const SocialIcons = () => (
 );
 
 const Root = styled('footer')(({ theme }) => ({
+  marginTop: 48,
   padding: `112px 66px`,
   backgroundColor: theme.palette.background.neutral,
   overflow: 'hidden',
   fontSize: 14,
   [theme.breakpoints.down('md')]: {
+    marginTop: 80,
     padding: `48px 66px`,
   },
 }));

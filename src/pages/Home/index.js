@@ -6,7 +6,7 @@ import HeroVideo from './HeroVideo';
 import VideoGrid from './VideoGrid';
 import HighlightedProjects from './HighlightedProjects';
 import Team from './Team';
-import Contact from './Contact';
+import ContactForm from '../../components/ContactForm';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <VideoGrid />
       <HighlightedProjects />
       <Team />
-      <Contact />
+      <ContactForm />
     </Root>
   );
 }

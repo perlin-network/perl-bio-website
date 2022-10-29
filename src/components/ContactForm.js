@@ -12,8 +12,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 
-import { useFormControls } from '../../hooks/useFormControls';
-import { ReactComponent as LogoCompact } from '../../assets/logo-compact.svg';
+import { useFormControls } from '../hooks/useFormControls';
+import { ReactComponent as LogoCompact } from '../assets/logo-compact.svg';
 
 const formControls = [
   {
@@ -163,10 +163,6 @@ export default function Contact() {
 }
 
 const Root = styled(Box)(({ theme }) => ({
-  padding: '150px 0',
-  [theme.breakpoints.down('md')]: {
-    padding: '64px 0',
-  },
   '.MuiContainer-root': {
     position: 'relative',
     [theme.breakpoints.up('md')]: {

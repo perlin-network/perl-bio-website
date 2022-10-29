@@ -37,7 +37,11 @@ export default function Team() {
 }
 
 const Root = styled(Box)(({ theme }) => ({
+  paddingBottom: 150,
   textAlign: 'center',
+  [theme.breakpoints.down('md')]: {
+    paddingBottom: 64,
+  },
 }));
 
 const Headline = styled(Typography)(({ theme }) => ({
