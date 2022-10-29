@@ -27,6 +27,9 @@ export const darkTheme = {
   },
   typography: {
     fontFamily: baseFontFamily,
+    h1: {
+      fontWeight: 700,
+    },
   },
   components: {
     MuiCssBaseline: {

@@ -107,7 +107,6 @@ const Content = styled(Container)(({ theme }) => ({
 const Headline = styled(Typography)(({ theme }) => ({
   color: theme.palette.text.primary,
   fontSize: 96,
-  fontWeight: 700,
   textAlign: 'center',
   [theme.breakpoints.down('md')]: {
     fontSize: 36,

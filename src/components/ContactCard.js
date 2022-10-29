@@ -3,7 +3,7 @@ import { Typography, Box, Link } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 
 import LogoSvg from '../assets/logo.svg';
-import DorjeePng from '../assets/team/dorjee-sun.png';
+import DorjeePng from '../assets/team/dorjee-sun-card.png';
 import DorjeeQr from '../assets/team/dorjee-sun-qr.png';
 import ByronPng from '../assets/team/byron-grigoratos.png';
 import ByronQr from '../assets/team/byron-grigoratos-qr.png';
@@ -97,7 +97,7 @@ const cards = {
     image: JoPng,
     qrCode: JoQr,
     ...companyData,
-  },  
+  },
   lynn: {
     id: 'lynn',
     name: 'Lynn Lieu',
@@ -106,7 +106,7 @@ const cards = {
     phone: '+6596743689',
     qrCode: LynnQr,
     ...companyData,
-  },    
+  },
 };
 
 const useStyles = makeStyles((theme) => ({
