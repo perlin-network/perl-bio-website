@@ -9,8 +9,6 @@ import ProjectVideo from './ProjectVideo';
 import TigerImage from '../../assets/video/project-tiger.jpg';
 import GorillaImage from '../../assets/video/project-gorilla.jpg';
 
-const url = 'https://www.w3schools.com/html/mov_bbb.mp4';
-
 export default function HighlightedProjects() {
   return (
     <Root component="section">
@@ -26,7 +24,10 @@ export default function HighlightedProjects() {
           </Text>
         </Box>
       </Container>
-      <ProjectVideo url={url} preview={TigerImage}>
+      <ProjectVideo
+        url="https://s3.amazonaws.com/static.memoriverse/_DSC6775.mp4"
+        preview={TigerImage}
+      >
         <Project>
           <ProjectName>Tiger carbon ensures</ProjectName>
           <ProjectDesc>
@@ -39,7 +40,11 @@ export default function HighlightedProjects() {
           <LearnMore href="#">learn more</LearnMore>
         </Project>
       </ProjectVideo>
-      <ProjectVideo url={url} preview={GorillaImage} inverted>
+      <ProjectVideo
+        url="https://s3.amazonaws.com/static.memoriverse/_DSC6775.mp4"
+        preview={GorillaImage}
+        inverted
+      >
         <Project>
           <ProjectName>Gorilla carbon</ProjectName>
           <ProjectDesc>

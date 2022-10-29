@@ -7,8 +7,7 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 
-import { navbarHeight, navbarHeightSmall } from '../../theme';
-
+import PageRoot from '../../components/PageRoot';
 import HeroImage from '../../assets/hero-image.jpg';
 import DorjeePortrait from '../../assets/team/dorjee-portrait.png';
 import TheEdgeLogo from '../../assets/team/the-edge-logo.png';
@@ -92,11 +91,9 @@ export default function HeroBanner() {
   );
 }
 
-const Root = styled(Box)(({ theme }) => ({
+const Root = styled(PageRoot)(({ theme }) => ({
   position: 'relative',
-  paddingTop: navbarHeight,
   [theme.breakpoints.down('md')]: {
-    paddingTop: navbarHeightSmall,
     textAlign: 'center',
   },
   '&::after': {

@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Box from '@mui/material/Box';
-
-import { navbarHeight, navbarHeightSmall } from '../theme';
 
 import HeroImage from '../assets/hero-image.jpg';
 import ContactForm from '../components/ContactForm';
+import PageRoot from '../components/PageRoot';
 
 export default function Contact() {
   return (
@@ -15,11 +13,7 @@ export default function Contact() {
   );
 }
 
-const Root = styled(Box)(({ theme }) => ({
-  paddingTop: navbarHeight,
-  [theme.breakpoints.down('md')]: {
-    paddingTop: navbarHeightSmall + 60,
-  },
+const Root = styled(PageRoot)(({ theme }) => ({
   '&::after': {
     content: '""',
     position: 'absolute',

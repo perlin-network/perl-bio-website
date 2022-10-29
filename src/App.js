@@ -8,17 +8,13 @@ import { AppConfigProvider } from './hooks/useAppConfig';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import About from './components/About';
-import WhatWeDo from './components/WhatWeDo';
-import Terms from './components/Terms';
-import Privacy from './components/Privacy';
 import ContactCard from './components/ContactCard';
-
 import Home from './pages/Home';
-import Services from './pages/Services';
-import Projects from './pages/Projects';
 import Team from './pages/Team';
+import Work from './pages/Work';
 import Contact from './pages/Contact';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
 
 function App() {
   return (
@@ -38,23 +34,14 @@ function App() {
                   <Route exact path="/">
                     <Home />
                   </Route>
-                  <Route exact path="/services">
-                    <Services />
-                  </Route>
-                  <Route exact path="/projects-and-press">
-                    <Projects />
-                  </Route>
                   <Route exact path="/team">
                     <Team />
                   </Route>
+                  <Route exact path="/work">
+                    <Work />
+                  </Route>
                   <Route exact path="/contact">
                     <Contact />
-                  </Route>
-                  <Route exact path="/who">
-                    <About />
-                  </Route>
-                  <Route exact path="/what">
-                    <WhatWeDo />
                   </Route>
                   <Route exact path="/terms">
                     <Terms />
