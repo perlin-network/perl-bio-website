@@ -42,9 +42,9 @@ function MobileDrawer(props) {
               <DrawerLink key={link.text} path={link.path} text={link.text} />
             ))}
           </Box>
-          <Box display="flex" justifyContent="center">
+          {/* <Box display="flex" justifyContent="center">
             <LangList />
-          </Box>
+          </Box> */}
           <Box display="flex" justifyContent="center">
             <ThemeToggle />
           </Box>

@@ -13,7 +13,6 @@ import { navbarHeight, navbarHeightSmall } from '../../theme';
 const contentPadding = 60;
 
 export default function HeroVideo() {
-  const [contentVisible, setContentVisible] = useState(false);
   const [shouldPlay, updatePlayState] = useState(true);
 
   const handleEnterViewport = function () {
@@ -38,17 +37,12 @@ export default function HeroVideo() {
             loop
             width="100%"
             height="100%"
-            onStart={() => {
-              setContentVisible(true);
-            }}
           />
         </Box>
       </Waypoint>
-      {contentVisible && (
-        <Content>
-          <Headline variant="h1">Be part of the regenerative economy</Headline>
-        </Content>
-      )}
+      <Content>
+        <Headline variant="h1">Be part of the regenerative economy</Headline>
+      </Content>
     </Root>
   );
 }
