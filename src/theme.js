@@ -4,10 +4,15 @@ export const navbarHeight = 116;
 export const navbarHeightSmall = 60;
 export const baseFontFamily = "'Poppins', sans-serif";
 
-export const lightTheme = {
-  typography: {
-    fontFamily: baseFontFamily,
+const typography = {
+  fontFamily: baseFontFamily,
+  h1: {
+    fontWeight: 700,
   },
+};
+
+export const lightTheme = {
+  typography,
 };
 
 export const darkTheme = {
@@ -25,12 +30,7 @@ export const darkTheme = {
       paper: '#111112',
     },
   },
-  typography: {
-    fontFamily: baseFontFamily,
-    h1: {
-      fontWeight: 700,
-    },
-  },
+  typography,
   components: {
     MuiCssBaseline: {
       styleOverrides: {
