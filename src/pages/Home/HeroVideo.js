@@ -40,7 +40,7 @@ export default function HeroVideo() {
           />
         </Box>
       </Waypoint>
-      <Content>
+      <Content maxWidth="md">
         <Headline variant="h1">Be part of the regenerative economy</Headline>
       </Content>
     </Root>
@@ -94,7 +94,7 @@ const Content = styled(Container)(({ theme }) => ({
   top: navbarHeight,
   padding: contentPadding,
   pointerEvents: 'none',
-  animation: `${fadeIn} 0.65s ease-out`,
+  animation: `${fadeIn} 0.65s ease-out both`,
   zIndex: 2,
 }));
 

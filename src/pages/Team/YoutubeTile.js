@@ -8,10 +8,7 @@ import ReactPlayer from 'react-player/lazy';
 export default function YoutubeTile({ url, inverted, children }) {
   return (
     <Root>
-      <VideoColumn
-        order={{ xs: 1, md: inverted ? 2 : 1 }}
-        inverted={inverted ? 1 : 0}
-      >
+      <VideoColumn inverted={inverted}>
         <AspectRatioWrapper>
           <ReactPlayer url={url} muted loop width="100%" height="100%" />
         </AspectRatioWrapper>

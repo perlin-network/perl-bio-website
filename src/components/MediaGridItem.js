@@ -7,9 +7,11 @@ const MediaGridItem = styled(
     shouldForwardProp: (prop) => prop !== 'inverted',
   }
 )(({ theme, inverted }) => ({
+  order: inverted ? 2 : 1,
   position: 'relative',
   minHeight: 720,
   [theme.breakpoints.down('md')]: {
+    order: 1,
     minHeight: 375,
   },
   '&::after': {
@@ -25,6 +27,11 @@ const MediaGridItem = styled(
     },
   },
   '& video': {
+    objectFit: 'cover',
+  },
+  '& img': {
+    maxWidth: '100%',
+    height: '100%',
     objectFit: 'cover',
   },
 }));

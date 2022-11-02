@@ -12,7 +12,7 @@ import { NavLink } from 'react-router-dom';
 import { navbarHeight, navbarHeightSmall } from '../theme';
 import LogoSvg from '../assets/logo.svg';
 // import LangList from './LangList';
-import ThemeToggle from './ThemeToggle';
+// import ThemeToggle from './ThemeToggle';
 import MobileDrawer from './MobileDrawer';
 
 export const routes = [
@@ -73,7 +73,7 @@ export default function Navbar() {
                 },
               }}
             >
-              <Stack direction="row" spacing={3}>
+              <Stack direction="row" spacing={5}>
                 {routes.map((link) => (
                   <MenuLink key={link.text} text={link.text} path={link.path} />
                 ))}
@@ -81,9 +81,9 @@ export default function Navbar() {
               {/* <Box display="flex" alignItems="center" my="auto">
                 <LangList />
               </Box> */}
-              <Box display="flex" alignItems="center" my="auto">
+              {/* <Box display="flex" alignItems="center" my="auto">
                 <ThemeToggle />
-              </Box>
+              </Box> */}
             </Stack>
             <MobileDrawer routes={routes} />
           </Box>
@@ -135,8 +135,8 @@ const MenuLink = styled(({ path, ...props }) => (
   '&:after': {
     content: '""',
     position: 'absolute',
-    left: -16,
-    right: -16,
+    left: `-${theme.spacing(3)}`,
+    right: `-${theme.spacing(3)}`,
     bottom: -2,
     height: 4,
     background: '#FFF',

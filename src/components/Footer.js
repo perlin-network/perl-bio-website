@@ -13,7 +13,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import Logo from '../assets/logo.svg';
 import { routes } from './Navbar';
-import ThemeToggle from './ThemeToggle';
+// import ThemeToggle from './ThemeToggle';
 // import LangList from './LangList';
 import ScrollAnchor from './ScrollAnchor';
 
@@ -61,16 +61,17 @@ export default function Footer() {
                 </NavLink>
               ))}
             </Stack>
-            <Box
+            {/* <Box
               display="flex"
               justifyContent={{ xs: 'center', md: 'flex-start' }}
-              sx={{ my: 4, ml: { xs: 0, md: -1 } }}
+              sx={{ mt: 4, ml: { xs: 0, md: -1 } }}
             >
               <ThemeToggle />
-            </Box>
+            </Box> */}
             <Box
               display="flex"
               justifyContent={{ xs: 'center', md: 'flex-start' }}
+              mt={4}
             >
               <SocialIcons />
             </Box>

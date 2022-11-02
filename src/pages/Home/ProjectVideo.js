@@ -4,16 +4,14 @@ import styled from '@emotion/styled';
 import Grid from '@mui/material/Grid';
 import ReactPlayer from 'react-player/lazy';
 
-import MediaGridItem from '../../components/MediaGridItem';
 import { ReactComponent as PlayIcon } from '../../assets/icons/play.svg';
+import MediaGridItem from '../../components/MediaGridItem';
+import DetailsGridItem from '../../components/DetailsGridItem';
 
 export default function ProjectVideo({ url, preview, inverted, children }) {
   return (
     <Root>
-      <MediaGridItem
-        order={{ xs: 1, md: inverted ? 2 : 1 }}
-        inverted={inverted}
-      >
+      <MediaGridItem inverted={inverted}>
         <ReactPlayer
           url={url}
           light={preview}
@@ -25,22 +23,9 @@ export default function ProjectVideo({ url, preview, inverted, children }) {
           height="100%"
         />
       </MediaGridItem>
-      <DetailsColumn
-        order={{ xs: 2, md: inverted ? 1 : 2 }}
-        textAlign={{ xs: 'center', md: inverted ? 'right' : 'left' }}
-      >
-        {children}
-      </DetailsColumn>
+      <DetailsGridItem inverted={inverted}>{children}</DetailsGridItem>
     </Root>
   );
 }
 
 const Root = styled((props) => <Grid container {...props} />)();
-
-const DetailsColumn = styled((props) => (
-  <Grid item xs={12} md={6} {...props} />
-))(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));

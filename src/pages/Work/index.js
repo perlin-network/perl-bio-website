@@ -16,6 +16,7 @@ import GorillaTile2 from '../../assets/projects/gorilla/tile-02.jpg';
 import GorillaTile3 from '../../assets/projects/gorilla/tile-03.jpg';
 
 import MediaGridItem from '../../components/MediaGridItem';
+import DetailsGridItem from '../../components/DetailsGridItem';
 
 export default function Work() {
   return (
@@ -92,31 +93,16 @@ const HeroTitle = styled(({ children, ...rest }) => (
 
 const ImageTile = ({ image, inverted, children }) => (
   <Grid container>
-    <MediaGridItem order={{ xs: 1, md: inverted ? 2 : 1 }} inverted={inverted}>
+    <MediaGridItem inverted={inverted}>
       <Image src={image} />
     </MediaGridItem>
-    <DetailsGridItem
-      order={{ xs: 2, md: inverted ? 1 : 2 }}
-      textAlign={{ xs: 'center', md: inverted ? 'right' : 'left' }}
-    >
+    <DetailsGridItem inverted={inverted}>
       <Headline>{children}</Headline>
     </DetailsGridItem>
   </Grid>
 );
 
-const Image = styled('img')({
-  maxWidth: '100%',
-  height: '100%',
-  objectFit: 'cover',
-});
-
-const DetailsGridItem = styled((props) => (
-  <Grid item xs={12} md={6} {...props} />
-))(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
+const Image = styled('img')({});
 
 const Headline = styled(Typography)(({ theme }) => ({
   padding: '30px 80px',

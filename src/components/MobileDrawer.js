@@ -8,8 +8,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-import LangList from './LangList';
-import ThemeToggle from './ThemeToggle';
+// import LangList from './LangList';
+// import ThemeToggle from './ThemeToggle';
 
 function MobileDrawer(props) {
   const [open, setDrawerOpen] = useState(false);
@@ -45,9 +45,9 @@ function MobileDrawer(props) {
           {/* <Box display="flex" justifyContent="center">
             <LangList />
           </Box> */}
-          <Box display="flex" justifyContent="center">
+          {/* <Box display="flex" justifyContent="center">
             <ThemeToggle />
-          </Box>
+          </Box> */}
         </DrawerContent>
       </Drawer>
     </>

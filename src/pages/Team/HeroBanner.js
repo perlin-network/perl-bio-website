@@ -17,21 +17,23 @@ export default function HeroBanner() {
   return (
     <Root>
       <Container>
-        <Typography
-          variant="h1"
-          my={6}
-          fontSize={{ xs: 36, md: 48 }}
-          position="relative"
-          zIndex={2}
-        >
-          Meet the team
-        </Typography>
-        <Grid container spacing={{ xs: 0, md: 12 }}>
+        <Grid container spacing={{ xs: 0, md: 12 }} pt={10}>
           <Grid item xs={12} md={6} order={{ xs: 1, md: 0 }}>
-            <Portrait src={DorjeePortrait} alt="Dorjee Sun" />
+            <Box pt={8}>
+              <Portrait src={DorjeePortrait} alt="Dorjee Sun" />
+            </Box>
           </Grid>
           <Grid item xs={12} md={6}>
             <Box position="relative" zIndex={2}>
+              <Typography
+                variant="h1"
+                mb={10}
+                fontSize={{ xs: 36, md: 48 }}
+                position="relative"
+                zIndex={2}
+              >
+                Meet the team
+              </Typography>
               <Typography
                 variant="h2"
                 mb={6}
