@@ -10,7 +10,7 @@ import DetailsGridItem from '../../components/DetailsGridItem';
 
 export default function ProjectVideo({ url, preview, inverted, children }) {
   return (
-    <Root>
+    <Grid container>
       <MediaGridItem inverted={inverted}>
         <ReactPlayer
           url={url}
@@ -24,8 +24,6 @@ export default function ProjectVideo({ url, preview, inverted, children }) {
         />
       </MediaGridItem>
       <DetailsGridItem inverted={inverted}>{children}</DetailsGridItem>
-    </Root>
+    </Grid>
   );
 }
-
-const Root = styled((props) => <Grid container {...props} />)();

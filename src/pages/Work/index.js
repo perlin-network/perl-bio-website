@@ -4,6 +4,10 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
+import ReactPlayer from 'react-player/lazy';
 
 import { ReactComponent as LogoSvg } from '../../assets/logo.svg';
 import HeroImage from '../../assets/hero-image.jpg';
@@ -14,6 +18,9 @@ import TigerTile4 from '../../assets/projects/tiger/tile-04.jpg';
 import GorillaTile1 from '../../assets/projects/gorilla/tile-01.jpg';
 import GorillaTile2 from '../../assets/projects/gorilla/tile-02.jpg';
 import GorillaTile3 from '../../assets/projects/gorilla/tile-03.jpg';
+import FrontierSumatra from '../../assets/video/frontier-sumatra.jpg';
+import SumatraMap from '../../assets/projects/tiger/sumatra-map.jpg';
+import RestorasiEkosistemRiau from '../../assets/projects/tiger/rer-logo.png';
 
 import MediaGridItem from '../../components/MediaGridItem';
 import DetailsGridItem from '../../components/DetailsGridItem';
@@ -43,6 +50,68 @@ export default function Work() {
           forest stewardship
         </ImageTile>
       </Box>
+      <Box pt={10} textAlign="center">
+        <Container maxWidth="md" sx={{ position: 'relative', zIndex: 2 }}>
+          <Typography
+            fontSize={{ xs: 18, md: 48 }}
+            sx={{
+              transform: { xs: 'translateY(-100%)', md: 'translateY(50%)' },
+            }}
+          >
+            Stories of hope in the powerful Discovery+ film{' '}
+            <strong>Frontier Sumatra</strong>
+          </Typography>
+        </Container>
+        <FeaturedVideo>
+          <ReactPlayer
+            url="https://www.w3schools.com/html/mov_bbb.mp4"
+            light={FrontierSumatra}
+            playIcon={
+              <PlayArrowRoundedIcon sx={{ fontSize: { xs: 60, md: 180 } }} />
+            }
+            playing
+            muted
+            loop
+            width="100%"
+            height="100%"
+          />
+        </FeaturedVideo>
+      </Box>
+      <Grid container>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ display: { xs: 'none', md: 'flex' } }}
+        ></Grid>
+        <Grid item xs={12} md={6}>
+          <Box py={8} display="flex" justifyContent="center">
+            <LogoSvg />
+          </Box>
+        </Grid>
+      </Grid>
+      <Grid container mb={8}>
+        <Grid item xs={12} md={6}>
+          <FullImage src={SumatraMap} />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Box py={{ xs: 4, md: 0 }} px={8}>
+            <Typography
+              textAlign={{ xs: 'center', md: 'left' }}
+              fontSize={{ xs: 20, md: 24 }}
+              fontWeight={600}
+            >
+              Tiger carbon is from the Bioeconomy developed Restorasi Ekosistem
+              Riau (RER) project, reducing carbon in the atmosphere by more than
+              300 million tonnes, learn more about the project or see the VERRA
+              registry here:
+            </Typography>
+            <Link sx={{ display: 'block', maxWidth: 450, margin: '24px auto' }}>
+              <FullImage src={RestorasiEkosistemRiau} sx={{}} />
+            </Link>
+          </Box>
+        </Grid>
+      </Grid>
       <HeroTitle>Gorilla Carbon</HeroTitle>
       <Box>
         <ImageTile image={GorillaTile1}>
@@ -94,7 +163,7 @@ const HeroTitle = styled(({ children, ...rest }) => (
 const ImageTile = ({ image, inverted, children }) => (
   <Grid container>
     <MediaGridItem inverted={inverted}>
-      <Image src={image} />
+      <FullImage src={image} />
     </MediaGridItem>
     <DetailsGridItem inverted={inverted}>
       <Headline>{children}</Headline>
@@ -102,7 +171,10 @@ const ImageTile = ({ image, inverted, children }) => (
   </Grid>
 );
 
-const Image = styled('img')({});
+const FullImage = styled('img')({
+  maxWidth: '100%',
+  height: '100%',
+});
 
 const Headline = styled(Typography)(({ theme }) => ({
   padding: '30px 80px',
@@ -113,5 +185,26 @@ const Headline = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     padding: '80px 60px',
     fontSize: 20,
+  },
+}));
+
+const FeaturedVideo = styled(Box)(({ theme }) => ({
+  position: 'relative',
+  height: 420,
+  fontSize: 28,
+  [theme.breakpoints.down('md')]: {
+    height: 120,
+  },
+  '&::after': {
+    content: '""',
+    position: 'absolute',
+    inset: 0,
+    background:
+      'linear-gradient(0deg, rgba(17, 17, 18, 0.1) 50%, #111112 100%)',
+    pointerEvents: 'none',
+    zIndex: 1,
+  },
+  '& video': {
+    objectFit: 'cover',
   },
 }));
