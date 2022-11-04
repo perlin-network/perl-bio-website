@@ -15,15 +15,22 @@ import TigerTile1 from '../../assets/projects/tiger/tile-01.jpg';
 import TigerTile2 from '../../assets/projects/tiger/tile-02.jpg';
 import TigerTile3 from '../../assets/projects/tiger/tile-03.jpg';
 import TigerTile4 from '../../assets/projects/tiger/tile-04.jpg';
+import TigerTile5 from '../../assets/projects/tiger/tile-05.jpg';
+import TigerTile6 from '../../assets/projects/tiger/tile-06.jpg';
+import FrontierSumatra from '../../assets/video/frontier-sumatra.jpg';
+import RestorasiEkosistemRiau from '../../assets/projects/tiger/rer-logo.png';
+import TigerPartners from '../../assets/projects/tiger/partners-logo.png';
 import GorillaTile1 from '../../assets/projects/gorilla/tile-01.jpg';
 import GorillaTile2 from '../../assets/projects/gorilla/tile-02.jpg';
 import GorillaTile3 from '../../assets/projects/gorilla/tile-03.jpg';
-import FrontierSumatra from '../../assets/video/frontier-sumatra.jpg';
-import SumatraMap from '../../assets/projects/tiger/sumatra-map.jpg';
-import RestorasiEkosistemRiau from '../../assets/projects/tiger/rer-logo.png';
+import GorillaTile4 from '../../assets/projects/gorilla/tile-04.jpg';
+import GorillaTile5 from '../../assets/projects/gorilla/tile-05.jpg';
+import VerifiedCarbonLogo from '../../assets/projects/gorilla/verified-carbon-logo.png';
+import GorillaPartners from '../../assets/projects/gorilla/partners-logo.png';
 
 import MediaGridItem from '../../components/MediaGridItem';
 import DetailsGridItem from '../../components/DetailsGridItem';
+import ShadowBox from '../../components/ShadowBox';
 
 export default function Work() {
   return (
@@ -92,7 +99,9 @@ export default function Work() {
       </Grid>
       <Grid container mb={8}>
         <Grid item xs={12} md={6}>
-          <FullImage src={SumatraMap} />
+          <ShadowBox>
+            <FullImage src={TigerTile5} />
+          </ShadowBox>
         </Grid>
         <Grid item xs={12} md={6}>
           <Box py={{ xs: 4, md: 0 }} px={8}>
@@ -106,10 +115,42 @@ export default function Work() {
               300 million tonnes, learn more about the project or see the VERRA
               registry here:
             </Typography>
-            <Link sx={{ display: 'block', maxWidth: 450, margin: '24px auto' }}>
-              <FullImage src={RestorasiEkosistemRiau} sx={{}} />
+            <Link
+              href="https://www.rekoforest.org/climate/a-landscape-approach-on-the-kampar-peninsula/"
+              target="_blank"
+              sx={{ display: 'block', maxWidth: 450, margin: '24px auto' }}
+            >
+              <FullImage src={RestorasiEkosistemRiau} />
             </Link>
           </Box>
+        </Grid>
+      </Grid>
+      <Grid container>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          display="flex"
+          justifyContent="center"
+          order={{ xs: 2, md: 1 }}
+        >
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            maxWidth={500}
+            py={{ xs: 8, md: 0 }}
+          >
+            <FullImage
+              src={TigerPartners}
+              style={{ height: 'auto', maxHeight: 356 }}
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
+          <ShadowBox side="left">
+            <FullImage src={TigerTile6} />
+          </ShadowBox>
         </Grid>
       </Grid>
       <HeroTitle>Gorilla Carbon</HeroTitle>
@@ -129,6 +170,70 @@ export default function Work() {
           carbon credit revenue sharing as well as community investment
         </ImageTile>
       </Box>
+      <Grid container>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ display: { xs: 'none', md: 'flex' } }}
+        ></Grid>
+        <Grid item xs={12} md={6}>
+          <Box py={8} display="flex" justifyContent="center">
+            <LogoSvg />
+          </Box>
+        </Grid>
+      </Grid>
+      <Grid container mb={8}>
+        <Grid item xs={12} md={6}>
+          <ShadowBox>
+            <FullImage src={GorillaTile4} />
+          </ShadowBox>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Box py={{ xs: 4, md: 0 }} px={8}>
+            <Typography
+              textAlign={{ xs: 'center', md: 'left' }}
+              fontSize={{ xs: 20, md: 24 }}
+              fontWeight={600}
+            >
+              Gorilla carbon is from the Bioeconomy developed North Pikounda
+              project, reducing carbon in the atmosphere by more than 4 million
+              tonnes, learn more about the project via the VERRA registry here:
+            </Typography>
+            <Link sx={{ display: 'block', maxWidth: 230, margin: '24px auto' }}>
+              <FullImage src={VerifiedCarbonLogo} />
+            </Link>
+          </Box>
+        </Grid>
+      </Grid>
+      <Grid container>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          display="flex"
+          justifyContent="center"
+          order={{ xs: 2, md: 1 }}
+        >
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            maxWidth={500}
+            py={{ xs: 8, md: 0 }}
+          >
+            <FullImage
+              src={GorillaPartners}
+              style={{ height: 'auto', maxHeight: 356 }}
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
+          <ShadowBox side="left">
+            <FullImage src={GorillaTile5} />
+          </ShadowBox>
+        </Grid>
+      </Grid>
     </Root>
   );
 }
@@ -172,6 +277,8 @@ const ImageTile = ({ image, inverted, children }) => (
 );
 
 const FullImage = styled('img')({
+  display: 'block',
+  width: '100%',
   maxWidth: '100%',
   height: '100%',
 });
