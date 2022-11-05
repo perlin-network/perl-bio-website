@@ -24,12 +24,9 @@ export default function HighlightedProjects() {
           </Text>
         </Box>
       </Container>
-      <ProjectVideo
-        url="https://s3.amazonaws.com/static.memoriverse/_DSC6775.mp4"
-        preview={TigerImage}
-      >
+      <ProjectVideo url="" preview={TigerImage} alt="tiger carbon">
         <Project>
-          <ProjectName>Tiger carbon ensures</ProjectName>
+          {/* <ProjectName>Tiger carbon ensures</ProjectName> */}
           <ProjectDesc>
             tiger carbon ensures 130,090ha are protected and restored, achieving
             6.4+ million tonnes in emissions reductions each year and over 370
@@ -40,13 +37,9 @@ export default function HighlightedProjects() {
           <LearnMore href="#">learn more</LearnMore>
         </Project>
       </ProjectVideo>
-      <ProjectVideo
-        url="https://s3.amazonaws.com/static.memoriverse/_DSC6775.mp4"
-        preview={GorillaImage}
-        inverted
-      >
+      <ProjectVideo url="" preview={GorillaImage} alt="gorilla carbon" inverted>
         <Project>
-          <ProjectName>Gorilla carbon</ProjectName>
+          {/* <ProjectName>Gorilla carbon</ProjectName> */}
           <ProjectDesc>
             gorilla carbon was the first of Africa's sustainable forest
             management REDD+ projects, protecting 92,530ha of the Congo Basin,
@@ -84,17 +77,17 @@ const Text = styled(Typography)(({ theme }) => ({
 }));
 
 const Project = styled((props) => (
-  <Box px={{ xs: 4, md: 8 }} py={{ xs: 8, md: 6 }} {...props} />
+  <Box px={{ xs: 4, md: 10 }} py={{ xs: 8, md: 6 }} {...props} />
 ))();
 
-const ProjectName = styled(Typography)(({ theme }) => ({
-  color: theme.palette.text.primary,
-  fontSize: 36,
-  fontWeight: 600,
-}));
+// const ProjectName = styled(Typography)(({ theme }) => ({
+//   color: theme.palette.text.primary,
+//   fontSize: 36,
+//   fontWeight: 600,
+// }));
 
 const ProjectDesc = styled(Typography)(({ theme }) => ({
-  margin: '42px 0',
+  margin: '0 0 80px',
   color: theme.palette.text.primary,
   fontSize: 24,
   fontWeight: 600,
