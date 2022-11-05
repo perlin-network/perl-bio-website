@@ -102,7 +102,5 @@ const LearnMore = styled((props) => (
   width: 250,
   background: '#CFCFD0',
   color: '#000',
-  borderRadius: 0,
-  textTransform: 'none',
   fontSize: 20,
 });

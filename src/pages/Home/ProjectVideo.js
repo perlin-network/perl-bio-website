@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import ReactPlayer from 'react-player/lazy';
+// import ReactPlayer from 'react-player/lazy';
 
 // import { ReactComponent as PlayIcon } from '../../assets/icons/play.svg';
 import MediaGridItem from '../../components/MediaGridItem';

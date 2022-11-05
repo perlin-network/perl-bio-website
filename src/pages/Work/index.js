@@ -31,6 +31,9 @@ import GorillaPartners from '../../assets/projects/gorilla/partners-logo.png';
 import MediaGridItem from '../../components/MediaGridItem';
 import DetailsGridItem from '../../components/DetailsGridItem';
 import ShadowBox from '../../components/ShadowBox';
+import TalkToUs from './TalkToUs';
+import SummaryList from './SummaryList';
+import { tigerSummaryList, gorillaSummaryList } from './data';
 
 export default function Work() {
   return (
@@ -71,7 +74,7 @@ export default function Work() {
         </Container>
         <FeaturedVideo>
           <ReactPlayer
-            url="https://www.w3schools.com/html/mov_bbb.mp4"
+            url="https://s3.amazonaws.com/static.memoriverse/_DSC6775.mp4"
             light={FrontierSumatra}
             playIcon={
               <PlayArrowRoundedIcon sx={{ fontSize: { xs: 60, md: 180 } }} />
@@ -153,6 +156,15 @@ export default function Work() {
           </ShadowBox>
         </Grid>
       </Grid>
+      <Summary mb={{ xs: 8, md: 27 }}>
+        <SummaryTitle>Tiger Carbon at a glance:</SummaryTitle>
+        <SummaryInner>
+          <Box display="flex" flex="1">
+            <SummaryList data={tigerSummaryList} />
+          </Box>
+          <TalkToUs top={contactTop} width={contactWidth} />
+        </SummaryInner>
+      </Summary>
       <HeroTitle>Gorilla Carbon</HeroTitle>
       <Box>
         <ImageTile image={GorillaTile1}>
@@ -234,6 +246,15 @@ export default function Work() {
           </ShadowBox>
         </Grid>
       </Grid>
+      <Summary>
+        <SummaryTitle>Tiger Carbon at a glance:</SummaryTitle>
+        <SummaryInner>
+          <Box display="flex" flex="1">
+            <SummaryList data={gorillaSummaryList} />
+          </Box>
+          <TalkToUs top={contactTop} width={contactWidth} />
+        </SummaryInner>
+      </Summary>
     </Root>
   );
 }
@@ -315,3 +336,35 @@ const FeaturedVideo = styled(Box)(({ theme }) => ({
     objectFit: 'cover',
   },
 }));
+
+const contactTop = 240;
+const contactWidth = 580;
+
+const Summary = ({ mb, children }) => (
+  <Box position="relative" overflow="hidden" mb={mb}>
+    {children}
+  </Box>
+);
+
+const SummaryInner = ({ children }) => (
+  <Container>
+    <Stack
+      direction={{ xs: 'column', md: 'row' }}
+      sx={{
+        maxWidth: { xs: '100%', md: `calc(100% - ${contactWidth}px)` },
+      }}
+    >
+      {children}
+    </Stack>
+  </Container>
+);
+
+const SummaryTitle = ({ children }) => (
+  <Container
+    sx={{ display: 'flex', alignItems: 'center', height: { md: contactTop } }}
+  >
+    <Typography variant="h3" fontSize={{ xs: 18, md: 40 }} fontWeight={700}>
+      {children}
+    </Typography>
+  </Container>
+);

@@ -170,7 +170,7 @@ const Root = styled(Box)(({ theme }) => ({
         content: '""',
         position: 'absolute',
         top: 0,
-        right: 'calc(-1* (100vw - 100%) / 2)',
+        right: 'calc(-1 * (100vw - 100%) / 2)',
         bottom: 0,
         width: '50vw',
         border: '1px solid #FFF',

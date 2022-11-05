@@ -46,7 +46,9 @@ export const darkTheme = {
     MuiButton: {
       styleOverrides: {
         root: ({ ownerState }) => ({
-          fontWeight: 700,
+          borderRadius: 0,
+          textTransform: 'none',
+          fontWeight: 600,
           ...(ownerState.variant === 'contained' &&
             ownerState.color === 'primary' && {
               color: '#fff',

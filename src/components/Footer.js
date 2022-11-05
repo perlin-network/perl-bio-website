@@ -122,7 +122,12 @@ export default function Footer() {
                     {/* <LangList /> */}
                   </Box>
                   <img src={Logo} alt="Bioeconomy" style={{ width: 138 }} />
-                  <Typography color="textSecondary" fontSize="12px" mt={2}>
+                  <Typography
+                    color="textSecondary"
+                    textAlign={{ xs: 'center', md: 'left' }}
+                    fontSize="12px"
+                    mt={2}
+                  >
                     Copyright © Bioeconomy {new Date().getFullYear()}. All
                     rights reserved
                   </Typography>
