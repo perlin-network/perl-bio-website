@@ -38,7 +38,7 @@ import { tigerSummaryList, gorillaSummaryList } from './data';
 export default function Work() {
   return (
     <Root>
-      <HeroTitle>Tiger Carbon</HeroTitle>
+      <HeroTitle id="tiger">Tiger Carbon</HeroTitle>
       <Box>
         <ImageTile image={TigerTile1}>
           Tiger carbon restores and protects 130,090 hectares of peatland
@@ -69,7 +69,14 @@ export default function Work() {
             }}
           >
             Stories of hope in the powerful Discovery+ film{' '}
-            <strong>Frontier Sumatra</strong>
+            <Link
+              href="https://www.frontiersumatra.com/"
+              target="_blank"
+              rel="noopener"
+              underline="none"
+            >
+              <strong>Frontier Sumatra</strong>
+            </Link>
           </Typography>
         </Container>
         <FeaturedVideo>
@@ -121,7 +128,12 @@ export default function Work() {
             <Link
               href="https://www.rekoforest.org/climate/a-landscape-approach-on-the-kampar-peninsula/"
               target="_blank"
-              sx={{ display: 'block', maxWidth: 450, margin: '24px auto' }}
+              rel="noopener"
+              sx={{
+                display: 'block',
+                maxWidth: 450,
+                margin: '24px auto',
+              }}
             >
               <FullImage src={RestorasiEkosistemRiau} />
             </Link>
@@ -165,7 +177,7 @@ export default function Work() {
           <TalkToUs top={contactTop} width={contactWidth} />
         </SummaryInner>
       </Summary>
-      <HeroTitle>Gorilla Carbon</HeroTitle>
+      <HeroTitle id="gorilla">Gorilla Carbon</HeroTitle>
       <Box>
         <ImageTile image={GorillaTile1}>
           Gorilla carbon was Africa's first sustainable forest management REDD+

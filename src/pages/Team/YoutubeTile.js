@@ -10,7 +10,7 @@ export default function YoutubeTile({ url, inverted, children }) {
     <Root>
       <VideoColumn inverted={inverted}>
         <AspectRatioWrapper>
-          <ReactPlayer url={url} muted loop width="100%" height="100%" />
+          <ReactPlayer url={url} controls width="100%" height="100%" />
         </AspectRatioWrapper>
       </VideoColumn>
       <DetailsColumn

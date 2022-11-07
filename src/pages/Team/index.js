@@ -37,7 +37,7 @@ export default function Team() {
         </Typography>
       </Container>
       <Box>
-        <YoutubeTile url="https://youtu.be/AGcTCvn-a6g">
+        <YoutubeTile url="https://www.youtube.com/watch?v=t7CD1v-AzBQ">
           Understand the start of Dorjee's personal journey in the award winning
           2009 documentary film The Burning Season
         </YoutubeTile>

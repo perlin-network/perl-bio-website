@@ -34,7 +34,7 @@ export default function HighlightedProjects() {
             planting 70 different native tree varieties, contributing to
             sustainable livelihoods for 17,000 people in the local community
           </ProjectDesc>
-          <LearnMore href="#">learn more</LearnMore>
+          <LearnMore href="/work/#tiger">learn more</LearnMore>
         </Project>
       </ProjectVideo>
       <ProjectVideo url="" preview={GorillaImage} alt="gorilla carbon" inverted>
@@ -47,7 +47,7 @@ export default function HighlightedProjects() {
             protecting 6,000+ lowland gorillas, one of 60 mammal species within
             the conservation area
           </ProjectDesc>
-          <LearnMore href="#">learn more</LearnMore>
+          <LearnMore href="/work/#gorilla">learn more</LearnMore>
         </Project>
       </ProjectVideo>
     </Root>
