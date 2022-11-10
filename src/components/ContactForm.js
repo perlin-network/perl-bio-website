@@ -80,8 +80,8 @@ export default function Contact() {
                 fontSize={{ xs: 24, md: 36 }}
                 fontWeight="600"
               >
-                Our solutions deliver results for our partners, investors and
-                customers and deliver support for the biosphere
+                Our solutions deliver results for our partners, investors and 
+                customers, and most importantly, for our biosphere
               </Typography>
               <LogoCompact />
             </Box>

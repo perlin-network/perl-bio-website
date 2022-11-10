@@ -118,10 +118,10 @@ export default function Work() {
               fontSize={{ xs: 20, md: 24 }}
               fontWeight={600}
             >
-              Tiger carbon is from the Bioeconomy developed Restorasi Ekosistem
+              Tiger carbon is from the Bioeconomy-developed Restorasi Ekosistem
               Riau (RER) project, reducing carbon in the atmosphere by more than
-              300 million tonnes, learn more about the project or see the VERRA
-              registry here:
+              expected 300 million tonnes. Learn more about the project or see the 
+              VERRA registry here:
             </Typography>
             <Stack
               direction="row"
@@ -214,7 +214,7 @@ export default function Work() {
           project protecting 92,530 hectares of forest in the Congo Basin
         </ImageTile>
         <ImageTile image={GorillaTile2} inverted>
-          Located in the Sangha province within the Republic of Congo the
+          Located in the Sangha province within the Republic of Congo, the
           project protects 60 mammal species including African Forest Elephants,
           leopards and is home to 6,000 Lowland Gorillas
         </ImageTile>
@@ -250,9 +250,9 @@ export default function Work() {
               fontSize={{ xs: 20, md: 24 }}
               fontWeight={600}
             >
-              Gorilla carbon is from the Bioeconomy developed North Pikounda
-              project, reducing carbon in the atmosphere by more than 4 million
-              tonnes, learn more about the project via the VERRA registry here:
+              Gorilla carbon is from the Bioeconomy-developed North Pikounda
+              project, reducing carbon in the atmosphere by more than expected 4 million
+              tonnes. Learn more about the project via the VERRA registry here:
             </Typography>
             <Link
               sx={{ display: 'block', maxWidth: 230, margin: '24px auto' }}
