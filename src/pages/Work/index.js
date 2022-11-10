@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
+// import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 import ReactPlayer from 'react-player/lazy';
 
 import { ReactComponent as LogoSvg } from '../../assets/logo.svg';
