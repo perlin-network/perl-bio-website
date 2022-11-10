@@ -48,7 +48,7 @@ export const gorillaSummaryList = [
   {
     icon: ForestIcon,
     primaryText: '1 st',
-    secondaryText: "Africa's first sustainable forest management REDD- project",
+    secondaryText: "Africa's first sustainable forest management REDD+ project",
   },
   {
     icon: AreaIcon,

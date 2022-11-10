@@ -126,7 +126,7 @@ export default function Work() {
               registry here:
             </Typography>
             <Link
-              href="https://www.rekoforest.org/climate/a-landscape-approach-on-the-kampar-peninsula/"
+              href="https://registry.verra.org/"
               target="_blank"
               rel="noopener"
               sx={{

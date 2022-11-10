@@ -28,7 +28,7 @@ export default function Team() {
           fontSize={{ xs: 16, md: 24 }}
           fontWeight={600}
         >
-          Dorjee Sun, is Bioeconomy's founder and Chief Executive Officer.
+          Dorjee Sun is Bioeconomy's founder and Chief Executive Officer.
           Dorjee is a TIME Magazine Hero of the Environment, winner of the Earth
           Day Species Award and Special Advisor to the International Chamber of
           Commerce. Dorjee's tireless campaigning for the recognision of forest
@@ -94,16 +94,16 @@ export default function Team() {
           in Central and East Africa and the Sudano-Sahel region. Paul is lead
           director for the Wildlife Conservation Society and responsbile for
           several aerial surveys as part of the Great Elephant Census as well as
-          analysis or conservation security across multiple regions.
+          analysis on conservation security across multiple regions.
         </ImageTile>
         <ImageTile src={MarkImage} alt="Mark Harding" inverted>
         Mark Harding is a co-founder of Bioeconomy and 
         specialist in sustainability, carbon project development 
         and biodiversity. Mark is head of Sustainablitiy & CDM 
-        at leading carbon conservation companies since 2008.  
+        at a number of leading carbon conservation companies since 2008.  
         His is a Barrister and Solicitor of the High Courts of New 
         South Wales, Australia and New Zealand and founded 
-        CDM management company in China.  Mark holds an 
+        a CDM management company in China.  Mark holds an 
         LLB Hons, BSc major in Biology and Ecology, University of 
         Auckland.
         </ImageTile>
@@ -112,12 +112,12 @@ export default function Team() {
           years of capital markets, M&A, structured finance & corporate
           structuring experience to the leadership team. Byron is a former M&A
           investment banker and former country manager and senior trader at one
-          of the world latest commodity trading firms. Byron is a Chartered
+          of the world latest commodity trading firms. He is a Chartered
           Accountant and CFA Charterholder
         </ImageTile>
         <ImageTile src={GarryImage} alt="Garry Walsh" inverted>
           Garry Walsh is Chief Communications Officer at Bioeconomy, bringing
-          more than 20 years experience in public affairs, government relation &
+          more than 20 years experience in public affairs, government relations &
           strategic communications. Garry started his career in UK politics
           before spending several years in Brussels. He was formerly the
           regional chair for Asia Pacific of a global communications

@@ -144,13 +144,20 @@ export default function Footer() {
 
 const SocialIcons = () => (
   <Stack direction="row" spacing={6} sx={{ opacity: 0.8 }}>
-    <Link href="#">
+    <Link 
+        href="https://twitter.com/Bioeconomy_co"
+        target="_blank"
+        rel="noopener">
       <TwitterIcon />
     </Link>
-    <Link href="#">
+    <Link href="https://sg.linkedin.com/company/bioeconomyco"
+        target="_blank"
+        rel="noopener">
       <LinkedInIcon />
     </Link>
-    <Link href="#">
+    <Link href="https://www.youtube.com/channel/UC5V248elOeMQ5eCNtJzHrrw"
+        target="_blank"
+        rel="noopener">
       <YouTubeIcon />
     </Link>
   </Stack>

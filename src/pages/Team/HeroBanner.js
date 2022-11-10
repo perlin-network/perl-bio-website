@@ -54,7 +54,7 @@ export default function HeroBanner() {
                  truly embraces the biosphere and
                  places nature at the centre of the
                  value equation is the ultimate purpose
-                 of Bioeconomy” - read Bioeconomy’s
+                 of Bioeconomy“ - read Bioeconomy’s
                  latest news articles here
               </Typography>
               <Stack
