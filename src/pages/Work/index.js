@@ -19,6 +19,7 @@ import TigerTile5 from '../../assets/projects/tiger/tile-05.jpg';
 import TigerTile6 from '../../assets/projects/tiger/tile-06.jpg';
 import FrontierSumatra from '../../assets/video/frontier-sumatra.jpg';
 import RestorasiEkosistemRiau from '../../assets/projects/tiger/rer-logo.png';
+import VerraLogo from '../../assets/projects/tiger/verra-logo.png';
 import TigerPartners from '../../assets/projects/tiger/partners-logo.png';
 import GorillaTile1 from '../../assets/projects/gorilla/tile-01.jpg';
 import GorillaTile2 from '../../assets/projects/gorilla/tile-02.jpg';
@@ -81,14 +82,11 @@ export default function Work() {
         </Container>
         <FeaturedVideo>
           <ReactPlayer
-            url="https://s3.amazonaws.com/static.memoriverse/_DSC6775.mp4"
+            url="https://www.youtube.com/watch?v=r-xgiwThYuk"
             light={FrontierSumatra}
-            playIcon={
-              <PlayArrowRoundedIcon sx={{ fontSize: { xs: 60, md: 180 } }} />
-            }
+            playIcon={<></>}
             playing
-            muted
-            loop
+            controls
             width="100%"
             height="100%"
           />
@@ -125,18 +123,50 @@ export default function Work() {
               300 million tonnes, learn more about the project or see the VERRA
               registry here:
             </Typography>
-            <Link
-              href="https://registry.verra.org/"
-              target="_blank"
-              rel="noopener"
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="center"
+              spacing={6}
+              p={6}
               sx={{
-                display: 'block',
-                maxWidth: 450,
-                margin: '24px auto',
+                img: {
+                  display: 'block',
+                  maxWidth: '100%',
+                  transform: 'scale(1, 1)',
+                  transition: '0.15s ease-in',
+                  '&:hover': {
+                    transform: 'scale(1.08, 1.08)',
+                  },
+                },
               }}
             >
-              <FullImage src={RestorasiEkosistemRiau} />
-            </Link>
+              <Link
+                href="https://www.rekoforest.org/climate/a-landscape-approach-on-the-kampar-peninsula/"
+                target="_blank"
+                rel="noopener"
+                sx={{
+                  display: 'block',
+                  maxWidth: 190,
+                }}
+              >
+                <img
+                  src={RestorasiEkosistemRiau}
+                  alt="Restorasi Ekosistem Riau"
+                />
+              </Link>
+              <Link
+                href="https://registry.verra.org/"
+                target="_blank"
+                rel="noopener"
+                sx={{
+                  display: 'block',
+                  maxWidth: 190,
+                }}
+              >
+                <img src={VerraLogo} alt="Verra Registry" />
+              </Link>
+            </Stack>
           </Box>
         </Grid>
       </Grid>
@@ -224,11 +254,12 @@ export default function Work() {
               project, reducing carbon in the atmosphere by more than 4 million
               tonnes, learn more about the project via the VERRA registry here:
             </Typography>
-            <Link 
-               sx={{ display: 'block', maxWidth: 230, margin: '24px auto' }}
-               href="https://registry.verra.org/"
-               target="_blank"
-               rel="noopener">
+            <Link
+              sx={{ display: 'block', maxWidth: 230, margin: '24px auto' }}
+              href="https://registry.verra.org/"
+              target="_blank"
+              rel="noopener"
+            >
               <FullImage src={VerifiedCarbonLogo} />
             </Link>
           </Box>
