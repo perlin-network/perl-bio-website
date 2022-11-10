@@ -1,5 +1,18 @@
 import { useState } from 'react';
 
+const url = 'https://sls-api.bioeconomy.dev/dev/v1/send-email-notification';
+
+async function postData(data = {}) {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+  return response.json();
+}
+
 export const useFormControls = (initialFormValues) => {
   const [values, setValues] = useState(initialFormValues);
   const [errors, setErrors] = useState({});
@@ -76,8 +89,11 @@ export const useFormControls = (initialFormValues) => {
     const isValid =
       Object.values(errors).every((x) => x === '') && formIsValid();
     if (isValid) {
-      console.log('Submit');
-      // await PostContactForm(values, handleSuccess, handleError);
+      return await postData({
+        toMailbox: 'mike@bioeconomy.co',
+        subject: 'Bioeconomy Notification',
+        message: `${values.name} ${values.email} ${values.phone} ${values.message}`,
+      });
     }
   };
 

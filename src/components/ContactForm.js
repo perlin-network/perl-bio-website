@@ -11,6 +11,10 @@ import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 import { useFormControls } from '../hooks/useFormControls';
 import { ReactComponent as LogoCompact } from '../assets/logo-compact.svg';
@@ -38,6 +42,9 @@ const formControls = [
 
 export default function Contact() {
   const [checked, setChecked] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [alertVisible, setAlertVisible] = useState(false);
+
   const { handleInputValue, handleFormSubmit, formIsValid, errors } =
     useFormControls({
       name: '',
@@ -47,6 +54,15 @@ export default function Contact() {
       // formSubmitted: false,
       // success: false,
     });
+
+  const onSubmit = async (e) => {
+    setIsLoading(true);
+    const result = await handleFormSubmit(e);
+    setIsLoading(false);
+    if (result === 'OK') {
+      setAlertVisible(true);
+    }
+  };
 
   return (
     <Root component="section">
@@ -75,7 +91,7 @@ export default function Contact() {
               component="form"
               autoComplete="off"
               noValidate
-              onSubmit={handleFormSubmit}
+              onSubmit={onSubmit}
             >
               <Typography pb={{ xs: 2, md: 8 }} fontSize={24} fontWeight="700">
                 be part of the solution,
@@ -158,6 +174,28 @@ export default function Contact() {
           </Grid>
         </Grid>
       </Container>
+      {/* <Button onClick={() => setAlertVisible(true)}>Test Alert</Button> */}
+      <Backdrop
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={isLoading}
+        onClick={() => setIsLoading(false)}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
+      <Snackbar
+        open={alertVisible}
+        autoHideDuration={7000}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        onClose={() => setAlertVisible(false)}
+      >
+        <Alert
+          onClose={() => setAlertVisible(false)}
+          severity="success"
+          variant="filled"
+        >
+          Thank you for contacting us, we will get back to you soon.
+        </Alert>
+      </Snackbar>
     </Root>
   );
 }
