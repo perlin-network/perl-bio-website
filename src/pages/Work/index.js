@@ -224,7 +224,11 @@ export default function Work() {
               project, reducing carbon in the atmosphere by more than 4 million
               tonnes, learn more about the project via the VERRA registry here:
             </Typography>
-            <Link sx={{ display: 'block', maxWidth: 230, margin: '24px auto' }}>
+            <Link 
+               sx={{ display: 'block', maxWidth: 230, margin: '24px auto' }}
+               href="https://registry.verra.org/"
+               target="_blank"
+               rel="noopener">
               <FullImage src={VerifiedCarbonLogo} />
             </Link>
           </Box>
