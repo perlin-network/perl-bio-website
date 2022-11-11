@@ -18,8 +18,7 @@ export default function Team() {
     <Root component="section">
       <Container>
         <Headline mt={{ xs: 14, md: 26 }} mb={{ xs: 14, md: 18 }}>
-          Made possible by a team of highly experienced professionals with a
-          passion for creating climate solutions
+        Made possible by a team of highly-skilled professionals with decades of experience creating nature-based climate solutions
         </Headline>
       </Container>
       <Box>

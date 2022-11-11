@@ -132,7 +132,7 @@ export default function Contact() {
                   }
                   label={
                     <Typography component="span" fontSize={18} fontWeight="500">
-                      Tickbox for terms of use / privacy policy consent{' '}
+                      Tick box for terms of use / privacy policy consent{' '}
                       <strong>
                         (I agree to the{' '}
                         <Link href={'/terms'} target="_blank" rel="noopener">
