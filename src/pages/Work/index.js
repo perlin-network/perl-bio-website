@@ -42,7 +42,7 @@ export default function Work() {
       <HeroTitle id="tiger">Tiger Carbon</HeroTitle>
       <Box>
         <ImageTile image={TigerTile1}>
-          Tiger carbon restores and protects 130,090 hectares of peatland
+          Tiger Carbon restores and protects 130,090 ha of peatland
           ecosystem located in the Kampar Peninsula, Indonesia, an area twice
           the size of Singapore
         </ImageTile>
@@ -51,7 +51,7 @@ export default function Work() {
           two distinct landscapes dominated by peat swamp forests and lakes
         </ImageTile>
         <ImageTile image={TigerTile3}>
-          Protecting over 790 species of plant and animal life including the
+          Protecting over 790 species of plants and animals including the
           Sumatran Tiger, Storm's Stork, Rhinoceros Hornbill, Malayan Sun Bear
           and the Flat-headed Cat
         </ImageTile>
@@ -118,10 +118,10 @@ export default function Work() {
               fontSize={{ xs: 20, md: 24 }}
               fontWeight={600}
             >
-              Tiger carbon is from the Bioeconomy developed Restorasi Ekosistem
-              Riau (RER) project, reducing carbon in the atmosphere by more than
-              300 million tonnes, learn more about the project or see the VERRA
-              registry here:
+              Tiger Carbon is from the Bioeconomy-developed Restorasi Ekosistem 
+              Riau (RER) project, which is anticipated to reduce 370+ million 
+              tonnes of CO2 over its lifetime. Learn more about the project or see the 
+              VERRA registry here:
             </Typography>
             <Stack
               direction="row"
@@ -210,18 +210,18 @@ export default function Work() {
       <HeroTitle id="gorilla">Gorilla Carbon</HeroTitle>
       <Box>
         <ImageTile image={GorillaTile1}>
-          Gorilla carbon was Africa's first sustainable forest management REDD+
-          project protecting 92,530 hectares of forest in the Congo Basin
+          Gorilla Carbon was Africa's first sustainable forest management REDD+
+          project protecting 92,530 ha of forest in the Congo Basin
         </ImageTile>
         <ImageTile image={GorillaTile2} inverted>
-          Located in the Sangha province within the Republic of Congo the
+          Located in the Sangha province within the Republic of Congo, the
           project protects 60 mammal species including African Forest Elephants,
           leopards and is home to 6,000 Lowland Gorillas
         </ImageTile>
         <ImageTile image={GorillaTile3}>
           Avoiding 4.9 million tonnes of carbon emissions over the next thirty
           years while providing opportunities for local communities through
-          carbon credit revenue sharing as well as community investment
+          carbon credit revenue sharing as well as community investment.
         </ImageTile>
       </Box>
       <Grid container>
@@ -250,9 +250,10 @@ export default function Work() {
               fontSize={{ xs: 20, md: 24 }}
               fontWeight={600}
             >
-              Gorilla carbon is from the Bioeconomy developed North Pikounda
-              project, reducing carbon in the atmosphere by more than 4 million
-              tonnes, learn more about the project via the VERRA registry here:
+              Gorilla Carbon is from the Bioeconomy-developed North Pikounda 
+              project, which is anticipated to reduce 4+ million tonnes of 
+              CO2 over its lifetime. Learn more about the project via 
+              the VERRA registry here:
             </Typography>
             <Link
               sx={{ display: 'block', maxWidth: 230, margin: '24px auto' }}

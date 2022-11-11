@@ -9,22 +9,22 @@ export default function VideoGrid() {
   return (
     <Root component="section">
       <VideoTile url="https://s3.amazonaws.com/static.memoriverse/Glacier_Calving_in_Blackstone_Bay_Whittier_AK+(1).mp4">
-        <Headline>prevent the destruction of our natural environment</Headline>
+        <Headline>Prevent the destruction of our natural environment</Headline>
       </VideoTile>
       <VideoTile
         url="https://s3.amazonaws.com/static.memoriverse/Refinery027+(1).mp4"
         inverted
       >
-        <Headline>providing pathways to net-zero goals</Headline>
+        <Headline>Providing pathways to net-zero goals</Headline>
       </VideoTile>
       <VideoTile url="https://s3.amazonaws.com/static.memoriverse/Bee_on_flower.mp4">
-        <Headline>with carbon credits that protect biodiversity</Headline>
+        <Headline>With carbon credits that protect biodiversity</Headline>
       </VideoTile>
       <VideoTile
         url="https://s3.amazonaws.com/static.memoriverse/_DSC6775.mp4"
         inverted
       >
-        <Headline>putting nature at the heart of the value equation</Headline>
+        <Headline>Putting nature at the heart of the value equation</Headline>
       </VideoTile>
     </Root>
   );

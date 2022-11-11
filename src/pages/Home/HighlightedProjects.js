@@ -18,17 +18,17 @@ export default function HighlightedProjects() {
             This is why we deliver the highest quality carbon reduction
             solutions
           </Title>
-          <Text mb={{ xs: 8, md: 0 }}>
-            With projects that reduce carbon in the atmosphere while protecting
+          <Title variant="h2" mb={8}>
+            While protecting
             biodiverse ecosystems on land and in water
-          </Text>
+          </Title>
         </Box>
       </Container>
       <ProjectVideo url="" preview={TigerImage} alt="tiger carbon">
         <Project>
           {/* <ProjectName>Tiger carbon ensures</ProjectName> */}
           <ProjectDesc>
-            tiger carbon ensures 130,090ha are protected and restored, achieving
+            tiger carbon ensures 130,090 ha are protected and restored, achieving
             6.4+ million tonnes in emissions reductions each year and over 370
             million tonnes over the next fifty years, protecting 797 species,
             planting 70 different native tree varieties, contributing to
@@ -42,7 +42,7 @@ export default function HighlightedProjects() {
           {/* <ProjectName>Gorilla carbon</ProjectName> */}
           <ProjectDesc>
             gorilla carbon was the first of Africa's sustainable forest
-            management REDD+ projects, protecting 92,530ha of the Congo Basin,
+            management REDD+ projects, protecting 92,530 ha of the Congo Basin,
             avoiding 4.9 million tonnes of CO2 over the next thirty years while
             protecting 6,000+ lowland gorillas, one of 60 mammal species within
             the conservation area
@@ -66,15 +66,6 @@ const Title = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const Text = styled(Typography)(({ theme }) => ({
-  color: theme.palette.text.primary,
-  fontSize: 36,
-  fontWeight: 600,
-  lineHeight: 77 / 36,
-  [theme.breakpoints.down('md')]: {
-    lineHeight: 48 / 36,
-  },
-}));
 
 const Project = styled((props) => (
   <Box px={{ xs: 4, md: 10 }} py={{ xs: 8, md: 6 }} {...props} />

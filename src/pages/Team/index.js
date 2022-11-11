@@ -28,7 +28,7 @@ export default function Team() {
           fontSize={{ xs: 16, md: 24 }}
           fontWeight={600}
         >
-          Dorjee Sun is Bioeconomy's founder and Chief Executive Officer.
+          Dorjee Sun is Bioeconomy's Founder and Chief Executive Officer.
           Dorjee is a TIME Magazine Hero of the Environment, winner of the Earth
           Day Species Award and Special Advisor to the International Chamber of
           Commerce. Dorjee's tireless campaigning for the recognision of forest
@@ -80,40 +80,36 @@ export default function Team() {
           Bioeconomy's Yen Hoang on the importance of avoiding greenwashing
         </YoutubeTile> */}
         <ImageTile src={RalphImage} alt="Ralph Streble" inverted>
-          Ralph Streble is Head of Carbon and Chief Legal Officer as-well-as
-          being one of Bioeconomy's co-founders. Ralph is Chairman of the
-          Greenhouse Gas Management Institute (GGMI) as well as being a Director
-          of Greenlaw International. He developed the world's first REDD+
-          Improved Forest Management project in Africa and was the lead author
-          of the Republic of Congo's successful application to join the World
-          Bank's Forest Carbon Partnership Facility.
+        Ralph Strebel is Head of Carbon, Chief Legal Officer, 
+        and  one of Bioeconomy's co-founders. Ralph is the Chairman of the 
+        Greenhouse Gas Management Institute (GGMI) and a Director of Greenlaw International.  
+        He developed the world's first REDD+ Improved Forest Management 
+        project in Africa and was the lead author of the Republic of Congo's successful 
+        application to join the World Bank's Forest Carbon Partnership Facility.
         </ImageTile>
         <ImageTile src={PaulImage} alt="Dr Paul Elkin">
-          Dr Paul Elkin is Bioeconomy's Chief Conservation Officer, bringing
-          more that 30 years experience in conservation and wildlife protection
-          in Central and East Africa and the Sudano-Sahel region. Paul is lead
-          director for the Wildlife Conservation Society and responsbile for
-          several aerial surveys as part of the Great Elephant Census as well as
-          analysis on conservation security across multiple regions.
+        Dr. Paul Elkan is Bioeconomy's Chief Conservation Officer, 
+        with more than 30 years of experience in conservation and wildlife 
+        protection in Central and East Africa and the Sudano-Sahel region. 
+        Paul is a lead director for the Wildlife Conservation Society, where 
+        he has provided critical analyses of conservation security across 
+        multiple regions, including by leading aerial surveys 
+        for the Great Elephant Census.
         </ImageTile>
         <ImageTile src={MarkImage} alt="Mark Harding" inverted>
-        Mark Harding is a co-founder of Bioeconomy and 
-        specialist in sustainability, carbon project development 
-        and biodiversity. Mark is head of Sustainablitiy & CDM 
-        at a number of leading carbon conservation companies since 2008.  
-        His is a Barrister and Solicitor of the High Courts of New 
-        South Wales, Australia and New Zealand and founded 
-        a CDM management company in China.  Mark holds an 
-        LLB Hons, BSc major in Biology and Ecology, University of 
-        Auckland.
+        Mark Harding is a co-founder of Bioeconomy and a specialist in sustainability, 
+        carbon project development and biodiversity. Mark has acted as head of Sustainability & 
+        CDM at a number of leading carbon conservation companies since 2008. He is a Barrister and 
+        Solicitor of the High Courts of New South Wales, Australia and New Zealand and founded a 
+        CDM management company in China. Mark holds an LLB Hons, BSc major in Biology and Ecology, 
+        from the University of Auckland.
         </ImageTile>
         <ImageTile src={ByronImage} alt="Byron Grigoratos">
-          Byron Grigoratos is Bioeconomy's Chief Commercial Officer bringing 16
-          years of capital markets, M&A, structured finance & corporate
-          structuring experience to the leadership team. Byron is a former M&A
-          investment banker and former country manager and senior trader at one
-          of the world latest commodity trading firms. He is a Chartered
-          Accountant and CFA Charterholder
+        Byron Grigoratos is Bioeconomy's Chief Commercial Officer, bringing 16 years of 
+        capital markets, M&A, structured finance and, corporate structuring experience 
+        to the leadership team. Byron is a former M&A investment banker and former 
+        country manager and senior trader at one of the world’s latest commodity 
+        trading firms. He is a Chartered Accountant and CFA Charterholder.
         </ImageTile>
         <ImageTile src={GarryImage} alt="Garry Walsh" inverted>
           Garry Walsh is Chief Communications Officer at Bioeconomy, bringing
@@ -132,12 +128,12 @@ export default function Team() {
           several high profile blockchain projects.
         </ImageTile>
         <ImageTile src={YenImage} alt="Yen Hoang" inverted>
-          Yen Hoang is In-House Counsel at Bioeconomy with 12 years experience
-          in environmental, food and drug litigation and regulatory compliance.
-          Yen is a former Associate Chief Counsel for the U.S. Food and Drug
-          Administration and former Attorney Advisor to the U.S. Environmental
-          Protection Agency. She is a graduate of Stanford University, Cornell
-          Law School and a Member of the New York Bar.
+        Yen Hoang is Legal Counsel at Bioeconomy with 12 years of experience in federal 
+        environmental, food, and drug litigation and compliance. Previously, Yen served 
+        as Associate Chief Counsel for the U.S. Food and Drug Administration and as 
+        Attorney Advisor for the U.S. Environmental Protection Agency. She holds a BA in 
+        Human Biology  from Stanford University, a JD from Cornell Law School, and is a 
+        member of the New York Bar.
         </ImageTile>
       </Box>
       <ContactBg>

@@ -80,8 +80,8 @@ export default function Contact() {
                 fontSize={{ xs: 24, md: 36 }}
                 fontWeight="600"
               >
-                Our solutions deliver results for our partners, investors and
-                customers and deliver support for the biosphere
+                Our solutions deliver results for our partners, investors and 
+                customers, and most importantly, for our biosphere
               </Typography>
               <LogoCompact />
             </Box>
@@ -132,7 +132,7 @@ export default function Contact() {
                   }
                   label={
                     <Typography component="span" fontSize={18} fontWeight="500">
-                      Tickbox for terms of use / privacy policy consent{' '}
+                      Tick box for terms of use / privacy policy consent{' '}
                       <strong>
                         (I agree to the{' '}
                         <Link href={'/terms'} target="_blank" rel="noopener">
