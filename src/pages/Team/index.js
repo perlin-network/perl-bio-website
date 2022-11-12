@@ -31,7 +31,7 @@ export default function Team() {
           Dorjee Sun is Bioeconomy's Founder and Chief Executive Officer.
           Dorjee is a TIME Magazine Hero of the Environment, winner of the Earth
           Day Species Award and Special Advisor to the International Chamber of
-          Commerce. Dorjee's tireless campaigning for the recognision of forest
+          Commerce. Dorjee's tireless campaigning for the recognition of forest
           carbon as a pathway to net-zero was featured in the award-winning
           documentary The Burning Season
         </Typography>
@@ -113,7 +113,7 @@ export default function Team() {
         </ImageTile>
         <ImageTile src={GarryImage} alt="Garry Walsh" inverted>
           Garry Walsh is Chief Communications Officer at Bioeconomy, bringing
-          more than 20 years experience in public affairs, government relations &
+          more than 20 years-experience in public affairs, government relations &
           strategic communications. Garry started his career in UK politics
           before spending several years in Brussels. He was formerly the
           regional chair for Asia Pacific of a global communications
