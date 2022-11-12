@@ -5,9 +5,9 @@ import Grid from '@mui/material/Grid';
 import MediaGridItem from '../../components/MediaGridItem';
 import DetailsGridItem from '../../components/DetailsGridItem';
 
-export default function ImageTile({ src, alt, inverted, children }) {
+export default function ImageTile({ id, src, alt, inverted, children }) {
   return (
-    <Grid container>
+    <Grid container id={id}>
       <Media inverted={inverted}>
         <img src={src} alt={alt} />
       </Media>

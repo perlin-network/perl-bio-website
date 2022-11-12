@@ -50,12 +50,10 @@ export default function HeroBanner() {
                 fontSize={{ xs: 20, md: 24 }}
                 fontWeight="600"
               >
-                “evolving an economic model that
-                 truly embraces the biosphere and
-                 places nature at the centre of the
-                 value equation is the ultimate purpose
-                 of Bioeconomy“ - read Bioeconomy’s
-                 latest news articles here
+                “evolving an economic model that truly embraces the biosphere
+                and places nature at the centre of the value equation is the
+                ultimate purpose of Bioeconomy“ - read Bioeconomy's latest news
+                articles here
               </Typography>
               <Stack
                 direction="row"
@@ -112,10 +110,10 @@ const Root = styled(PageRoot)(({ theme }) => ({
     },
   },
   a: {
-    transform: 'scale(1, 1)',
+    transform: 'scale(1)',
     transition: '0.15s ease-in',
     '&:hover': {
-      transform: 'scale(1.08, 1.08)',
+      transform: 'scale(1.08)',
     },
   },
 }));

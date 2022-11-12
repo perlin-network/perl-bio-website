@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import Link from '@mui/material/Link';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -18,15 +19,30 @@ export default function Team() {
     <Root component="section">
       <Container>
         <Headline mt={{ xs: 14, md: 26 }} mb={{ xs: 14, md: 18 }}>
-        Made possible by a team of highly-skilled professionals with decades of experience creating nature-based climate solutions
+          Made possible by a team of highly-skilled professionals with decades
+          of experience creating nature-based climate solutions
         </Headline>
       </Container>
       <Box>
         <ImageList cols={isMobile ? 2 : 4} rowHeight={360} gap={0}>
           {data.map((item) => (
-            <TeamMember key={item.id} sx={{}}>
-              <img src={item.image} alt={item.name} />
-              <ImageListItemBar title={item.name} subtitle={item.title} />
+            <TeamMember key={item.id}>
+              <Link
+                href={`/team#${item.id}`}
+                sx={{
+                  '&:hover img': {
+                    transform: 'scale(1.05)',
+                    transition: '0.15s ease-out',
+                  },
+                }}
+              >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  style={{ maxWidth: '100%' }}
+                />
+                <ImageListItemBar title={item.name} subtitle={item.title} />
+              </Link>
             </TeamMember>
           ))}
         </ImageList>

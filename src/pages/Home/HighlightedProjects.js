@@ -19,8 +19,7 @@ export default function HighlightedProjects() {
             solutions
           </Title>
           <Title variant="h2" mb={8}>
-            While protecting
-            biodiverse ecosystems on land and in water
+            While protecting biodiverse ecosystems on land and in water
           </Title>
         </Box>
       </Container>
@@ -28,13 +27,13 @@ export default function HighlightedProjects() {
         <Project>
           {/* <ProjectName>Tiger carbon ensures</ProjectName> */}
           <ProjectDesc>
-            Tiger Carbon ensures 130,090 ha are protected and restored, achieving
-            6.4+ million tonnes in emissions reductions each year and over 370
-            million tonnes over the next fifty years, protecting 797 species,
-            planting 70 different native tree varieties, contributing to
-            sustainable livelihoods for 17,000 people in the local community
+            Tiger Carbon ensures 130,090 ha are protected and restored,
+            achieving 6.4+ million tonnes in emissions reductions each year and
+            over 370 million tonnes over the next fifty years, protecting 797
+            species, planting 70 different native tree varieties, contributing
+            to sustainable livelihoods for 17,000 people in the local community
           </ProjectDesc>
-          <LearnMore href="/work/#tiger">learn more</LearnMore>
+          <LearnMore href="/work#tiger">learn more</LearnMore>
         </Project>
       </ProjectVideo>
       <ProjectVideo url="" preview={GorillaImage} alt="gorilla carbon" inverted>
@@ -47,7 +46,7 @@ export default function HighlightedProjects() {
             protecting 6,000+ lowland gorillas, one of 60 mammal species within
             the conservation area
           </ProjectDesc>
-          <LearnMore href="/work/#gorilla">learn more</LearnMore>
+          <LearnMore href="/work#gorilla">learn more</LearnMore>
         </Project>
       </ProjectVideo>
     </Root>
@@ -65,7 +64,6 @@ const Title = styled(Typography)(({ theme }) => ({
     lineHeight: 58 / 48,
   },
 }));
-
 
 const Project = styled((props) => (
   <Box px={{ xs: 4, md: 10 }} py={{ xs: 8, md: 6 }} {...props} />
