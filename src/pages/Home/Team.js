@@ -27,24 +27,14 @@ export default function Team() {
         <ImageList cols={isMobile ? 2 : 4} rowHeight={360} gap={0}>
           {data.map((item) => (
             <TeamMember key={item.id}>
-              <Link
-                href={`/team#${item.id}`}
-                sx={{
-                  display: 'block',
-                  height: 360,
-                  '&:hover img': {
-                    transform: 'scale(1.05)',
-                    transition: '0.15s ease-out',
-                  },
-                }}
-              >
+              <ImageLink href={`/team#${item.id}`}>
                 <img
                   src={item.image}
                   alt={item.name}
                   style={{ maxWidth: '100%', height: '100%' }}
                 />
                 <ImageListItemBar title={item.name} subtitle={item.title} />
-              </Link>
+              </ImageLink>
             </TeamMember>
           ))}
         </ImageList>
@@ -88,5 +78,16 @@ const TeamMember = styled(ImageListItem)(({ theme }) => ({
     [theme.breakpoints.down('md')]: {
       fontSize: 8,
     },
+  },
+}));
+
+const ImageLink = styled(Link)(({ theme }) => ({
+  display: 'block',
+  [theme.breakpoints.up('lg')]: {
+    height: 360,
+  },
+  '&:hover img': {
+    transform: 'scale(1.05)',
+    transition: '0.15s ease-out',
   },
 }));
