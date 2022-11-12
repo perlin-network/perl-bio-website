@@ -36,6 +36,7 @@ export const darkTheme = {
       styleOverrides: {
         body: {
           color: '#FFF',
+          overflowX: 'hidden',
         },
         svg: {
           maxWidth: '100%',

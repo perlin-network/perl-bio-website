@@ -26,7 +26,7 @@ export default function ProjectVideo({
           width="100%"
           height="100%"
         /> */}
-        <img src={preview} alt={alt} />
+        <img src={preview} alt={alt} style={{ width: '100%' }} />
       </MediaGridItem>
       <DetailsGridItem inverted={inverted}>{children}</DetailsGridItem>
     </Grid>

@@ -30,6 +30,8 @@ export default function Team() {
               <Link
                 href={`/team#${item.id}`}
                 sx={{
+                  display: 'block',
+                  height: 360,
                   '&:hover img': {
                     transform: 'scale(1.05)',
                     transition: '0.15s ease-out',
@@ -39,7 +41,7 @@ export default function Team() {
                 <img
                   src={item.image}
                   alt={item.name}
-                  style={{ maxWidth: '100%' }}
+                  style={{ maxWidth: '100%', height: '100%' }}
                 />
                 <ImageListItemBar title={item.name} subtitle={item.title} />
               </Link>
