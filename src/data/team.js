@@ -5,16 +5,19 @@ import RalphQr from '../assets/team/ralph-j-strebel-qr.png';
 import MarkPng from '../assets/team/mark-harding.png';
 import MarkQr from '../assets/team/mark-harding-qr.png';
 import PaulPng from '../assets/team/dr-paul-elkan.png';
+import DarrenPng from '../assets/team/darren-toh.png';
+import DarrenQr from '../assets/team/darren-qr.png';
 import GarryPng from '../assets/team/garry-walsh.png';
 import ByronPng from '../assets/team/byron-grigoratos.png';
 import ByronQr from '../assets/team/byron-grigoratos-qr.png';
-import AnniePng from '../assets/team/annie-ye.png';
+import YenPng from '../assets/team/yen-hoang.png';
+// import AnniePng from '../assets/team/annie-ye.png';
 
 const team = [
   {
     id: 'dorjee',
     name: 'Dorjee Sun',
-    title: 'CEO and Founder',
+    title: 'Founder & Chief Executive',
     image: DorjeePng,
     qrCode: DorjeeQr,
     experience: [
@@ -29,7 +32,7 @@ const team = [
   {
     id: 'ralph',
     name: 'Ralph J Strebel',
-    title: 'Co-founder, Head of Carbon & Legal Counsel',
+    title: 'Co-Founder & Head of Carbon',
     image: RalphPng,
     qrCode: RalphQr,
     experience: [
@@ -44,7 +47,7 @@ const team = [
   {
     id: 'mark',
     name: 'Mark Harding',
-    title: 'Co-founder and Project Lead',
+    title: 'Co-Founder & Project Leader',
     image: MarkPng,
     qrCode: MarkQr,
     experience: [
@@ -71,7 +74,7 @@ const team = [
   },
   {
     id: 'paul',
-    name: 'Dr Paul Elkan',
+    name: 'Paul Elkan',
     title: 'Chief Conservation Officer',
     image: PaulPng,
     qrCode: null,
@@ -82,6 +85,13 @@ const team = [
       'Lead director for Wildlife Conservation Society and responsible for several aerial survey efforts as part of the Great Elephant Census + analysis of conservation security for multiple regions',
       'PHD in Conservation Biology & US FAA Commercial Pilot',
     ],
+  },
+  {
+    id: 'darren',
+    name: 'Darren Toh',
+    title: 'Project Director',
+    image: DarrenPng,
+    qrCode: DarrenQr,
   },
   {
     id: 'garry',
@@ -99,19 +109,26 @@ const team = [
     ],
   },
   {
-    id: 'annie',
-    name: 'Annie Ye',
-    title: 'Financial Analyst',
-    image: AnniePng,
+    id: 'yen',
+    name: 'Yen Hoang',
+    title: 'Legal Counsel',
+    image: YenPng,
     qrCode: null,
-    experience: [
-      '20 years of experience in corporate finance, strategy and economics',
-      'Former commercial advisor at BP America and Treasury advisor at BP Singapore',
-      'Former investment account analyst at Goldman Sachs affiliates',
-      'Specialized in Financial Modeling and Analysis. Led a number of oil and gas major project developments, M&A activities in North America, and project financing in Asia (all $2bn+ scope)',
-      'PhD in Biology and MBA; 10+ journal and book publications',
-    ],
   },
+  // {
+  //   id: 'annie',
+  //   name: 'Annie Ye',
+  //   title: 'Financial Analyst',
+  //   image: AnniePng,
+  //   qrCode: null,
+  //   experience: [
+  //     '20 years of experience in corporate finance, strategy and economics',
+  //     'Former commercial advisor at BP America and Treasury advisor at BP Singapore',
+  //     'Former investment account analyst at Goldman Sachs affiliates',
+  //     'Specialized in Financial Modeling and Analysis. Led a number of oil and gas major project developments, M&A activities in North America, and project financing in Asia (all $2bn+ scope)',
+  //     'PhD in Biology and MBA; 10+ journal and book publications',
+  //   ],
+  // },
 ];
 
 export default team;
