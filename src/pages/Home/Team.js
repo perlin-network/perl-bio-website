@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -24,7 +25,7 @@ export default function Team() {
         </Headline>
       </Container>
       <Box>
-        <ImageList cols={isMobile ? 2 : 4} rowHeight={360} gap={0}>
+        {/* <ImageList cols={isMobile ? 2 : 4} rowHeight={360} gap={0}>
           {data.map((item) => (
             <TeamMember key={item.id}>
               <ImageLink href={`/team#${item.id}`}>
@@ -37,7 +38,26 @@ export default function Team() {
               </ImageLink>
             </TeamMember>
           ))}
-        </ImageList>
+        </ImageList> */}
+        <Grid container>
+          {data.map((item) => (
+            <Grid item xs={6} md={3} key={item.id}>
+              <ImageLink href={`/team#${item.id}`}>
+                <ProfilePicture src={item.image} alt={item.name} />
+                <ProfileInfo>
+                  <Box>
+                    <Typography fontSize={{ xs: 14, md: 24 }} fontWeight={700}>
+                      {item.name}
+                    </Typography>
+                    <Typography fontSize={{ xs: 10, md: 14 }} fontWeight={700}>
+                      {item.title}
+                    </Typography>
+                  </Box>
+                </ProfileInfo>
+              </ImageLink>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </Root>
   );
@@ -83,11 +103,36 @@ const TeamMember = styled(ImageListItem)(({ theme }) => ({
 
 const ImageLink = styled(Link)(({ theme }) => ({
   display: 'block',
-  [theme.breakpoints.up('lg')]: {
-    height: 360,
+  position: 'relative',
+  overflow: 'hidden',
+  img: {
+    transition: '0.15s ease-out',
   },
   '&:hover img': {
     transform: 'scale(1.05)',
-    transition: '0.15s ease-out',
+  },
+}));
+
+const ProfilePicture = styled('img')(({ theme }) => ({
+  display: 'block',
+  maxWidth: '100%',
+  width: 360,
+  height: 'auto',
+  margin: '0 auto',
+}));
+
+const ProfileInfo = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  bottom: 0,
+  height: 78,
+  background: 'rgba(0, 0, 0, 0.6)',
+  textAlign: 'center',
+  [theme.breakpoints.down('md')]: {
+    height: 48,
   },
 }));
