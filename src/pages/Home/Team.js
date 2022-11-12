@@ -3,19 +3,19 @@ import styled from '@emotion/styled';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
+// import ImageList from '@mui/material/ImageList';
+// import ImageListItem from '@mui/material/ImageListItem';
+// import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+// import { useTheme } from '@mui/material/styles';
+// import useMediaQuery from '@mui/material/useMediaQuery';
 
 import data from '../../data/team';
 
 export default function Team() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  // const theme = useTheme();
+  // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <Root component="section">
       <Container>
@@ -82,24 +82,24 @@ const Headline = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const TeamMember = styled(ImageListItem)(({ theme }) => ({
-  overflow: 'hidden',
-  '.MuiImageListItemBar-title': {
-    fontSize: 24,
-    fontWeight: 700,
-    [theme.breakpoints.down('md')]: {
-      fontSize: 14,
-    },
-  },
-  '.MuiImageListItemBar-subtitle': {
-    marginTop: 4,
-    fontSize: 14,
-    fontWeight: 700,
-    [theme.breakpoints.down('md')]: {
-      fontSize: 8,
-    },
-  },
-}));
+// const TeamMember = styled(ImageListItem)(({ theme }) => ({
+//   overflow: 'hidden',
+//   '.MuiImageListItemBar-title': {
+//     fontSize: 24,
+//     fontWeight: 700,
+//     [theme.breakpoints.down('md')]: {
+//       fontSize: 14,
+//     },
+//   },
+//   '.MuiImageListItemBar-subtitle': {
+//     marginTop: 4,
+//     fontSize: 14,
+//     fontWeight: 700,
+//     [theme.breakpoints.down('md')]: {
+//       fontSize: 8,
+//     },
+//   },
+// }));
 
 const ImageLink = styled(Link)(({ theme }) => ({
   display: 'block',
