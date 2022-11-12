@@ -3,16 +3,10 @@
   "name": "Tokenized real-world ecological assets",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "favicon.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "icon.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "96x96"
     }
-
   ],
   "start_url": ".",
   "display": "standalone",
