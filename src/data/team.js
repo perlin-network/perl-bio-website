@@ -47,7 +47,7 @@ const team = [
   {
     id: 'mark',
     name: 'Mark Harding',
-    title: 'Co-Founder & Project Leader',
+    title: 'Co-Founder & Head of Projects',
     image: MarkPng,
     qrCode: MarkQr,
     experience: [

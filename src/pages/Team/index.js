@@ -97,13 +97,11 @@ export default function Team() {
           including by leading aerial surveys for the Great Elephant Census.
         </ImageTile>
         <ImageTile src={MarkImage} id="mark" alt="Mark Harding" inverted>
-          Mark Harding is a co-founder of Bioeconomy and a specialist in
-          sustainability, carbon project development and biodiversity. Mark has
-          acted as head of Sustainability & CDM at a number of leading carbon
-          conservation companies since 2008. He is a Barrister and Solicitor of
-          the High Courts of New South Wales, Australia and New Zealand and
-          founded a CDM management company in China. Mark holds an LLB Hons, BSc
-          major in Biology and Ecology, from the University of Auckland.
+          Mark Harding is Head of Projects and one of Bioeconomy’s co-founders. 
+          Mark has been successfully developing carbon and nature based projects 
+          for 15 years, leading and developing a number different projects across 
+          different classes.  Mark also has specialist sustainability and biodiversity 
+          expertise, was an energy and resources lawyer, and holds law and biology degrees.
         </ImageTile>
         <ImageTile src={ByronImage} id="byron" alt="Byron Grigoratos">
           Byron Grigoratos is Bioeconomy's Chief Commercial Officer, bringing 16
