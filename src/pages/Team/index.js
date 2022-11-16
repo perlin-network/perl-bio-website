@@ -104,12 +104,12 @@ export default function Team() {
           expertise, was an energy and resources lawyer, and holds law and biology degrees.
         </ImageTile>
         <ImageTile src={ByronImage} id="byron" alt="Byron Grigoratos">
-          Byron Grigoratos is Bioeconomy's Chief Commercial Officer, bringing 16
-          years of capital markets, M&A, structured finance and, corporate
-          structuring experience to the leadership team. Byron is a former M&A
-          investment banker and former country manager and senior trader at one
-          of the world’s latest commodity trading firms. He is a Chartered
-          Accountant and CFA Charterholder.
+          Byron Grigoratos is Bioeconomy's Chief Commercial Officer, bringing 16 years 
+          of capital markets, M&A, structured finance and corporate structuring experience 
+          to the leadership team. Byron is a former M&A investment banker and has held 
+          positions as regional manager and senior trader at one of the world’s largest 
+          commodity trading firms. He is a Chartered Accountant and CFA Charterholder, 
+          with a focus on revenue generation and business development.
         </ImageTile>
         <ImageTile src={GarryImage} id="garry" alt="Garry Walsh" inverted>
           Garry Walsh is Chief Communications Officer at Bioeconomy, bringing

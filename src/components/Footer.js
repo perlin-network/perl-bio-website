@@ -10,6 +10,7 @@ import Divider from '@mui/material/Divider';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 import Logo from '../assets/logo.svg';
 import { routes } from './Navbar';
@@ -145,7 +146,7 @@ export default function Footer() {
 const SocialIcons = () => (
   <Stack direction="row" spacing={6} sx={{ opacity: 0.8 }}>
     <Link
-      href="https://twitter.com/Bioeconomy_co"
+      href="https://twitter.com/Bioeconomy_Com"
       target="_blank"
       rel="noopener"
     >
@@ -165,6 +166,13 @@ const SocialIcons = () => (
     >
       <YouTubeIcon />
     </Link>
+    <Link
+      href="https://www.instagram.com/bioeconomy.co/"
+      target="_blank"
+      rel="noopener"
+    >
+      <InstagramIcon />
+    </Link>   
   </Stack>
 );
 
