@@ -89,12 +89,12 @@ export default function Team() {
           Partnership Facility.
         </ImageTile>
         <ImageTile src={PaulImage} id="paul" alt="Dr Paul Elkin">
-          Dr. Paul Elkan is Bioeconomy's Chief Conservation Officer, with more
-          than 30 years of experience in conservation and wildlife protection in
-          Central and East Africa and the Sudano-Sahel region. Paul is a lead
-          director for the Wildlife Conservation Society, where he has provided
-          critical analyses of conservation security across multiple regions,
-          including by leading aerial surveys for the Great Elephant Census.
+        Dr. Paul Elkan is Bioeconomy's Chief Conservation Officer, with more than 
+        30 years of experience in conservation, wildlife protection, and natural 
+        resource management in Central and East Africa and the Sudano-Sahel region. 
+        Paul has led major forest and savanna landscape conservation efforts across 
+        the continent,  provided critical analyses on conservation and  security, 
+        and is a leader on elephant and other key species conservation in Africa.
         </ImageTile>
         <ImageTile src={MarkImage} id="mark" alt="Mark Harding" inverted>
           Mark Harding is Head of Projects and one of Bioeconomy’s co-founders. 
