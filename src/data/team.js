@@ -32,7 +32,7 @@ const team = [
   {
     id: 'ralph',
     name: 'Ralph J Strebel',
-    title: 'Co-Founder & Head of Carbon',
+    title: 'Co-Founder, Head of Carbon & Legal',
     image: RalphPng,
     qrCode: RalphQr,
     experience: [

@@ -119,8 +119,8 @@ export default function Work() {
               fontWeight={600}
             >
               Tiger Carbon is from the Bioeconomy-developed Restorasi Ekosistem 
-              Riau (RER) project, which is anticipated to reduce 370+ million 
-              tonnes of CO2 over its lifetime. Learn more about the project or see the 
+              Riau (RER) project, which is anticipated to reduce 357+ million CO2e 
+              over its lifetime. Learn more about the project or see the 
               VERRA registry here:
             </Typography>
             <Stack
@@ -252,7 +252,7 @@ export default function Work() {
             >
               Gorilla Carbon is from the Bioeconomy-developed North Pikounda 
               project, which is anticipated to reduce 4+ million tonnes of 
-              CO2 over its lifetime. Learn more about the project via 
+              CO2e over its lifetime. Learn more about the project via 
               the VERRA registry here:
             </Typography>
             <Link

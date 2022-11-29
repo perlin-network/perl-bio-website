@@ -93,7 +93,7 @@ const cards = {
   ralph: {
     id: 'ralph',
     name: 'Ralph\nStrebel',
-    title: 'Head of Carbon &\nLegal Counsel',
+    title: 'Co-Founder, Head of Carbon &\n Legal',
     email: 'ralph@bioeconomy.co',
     phone: '+1 303 476 36 18',
     image: RalphPng,

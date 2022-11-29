@@ -80,13 +80,15 @@ export default function Team() {
           Bioeconomy's Yen Hoang on the importance of avoiding greenwashing
         </YoutubeTile> */}
         <ImageTile src={RalphImage} id="ralph" alt="Ralph Streble" inverted>
-          Ralph Strebel is Head of Carbon, Chief Legal Officer, and one of
-          Bioeconomy's co-founders. Ralph is the Chairman of the Greenhouse Gas
-          Management Institute (GGMI) and a Director of Greenlaw International.
-          He developed the world's first REDD+ Improved Forest Management
-          project in Africa and was the lead author of the Republic of Congo's
-          successful application to join the World Bank's Forest Carbon
-          Partnership Facility.
+        Ralph Strebel is Head of Carbon, Chief Legal Officer, and one of Bioeconomy's 
+        co-founders. Ralph is a licensed lawyer and has been involved with forest-based 
+        carbon activities since 2005. He has worked extensively in REDD+ in Indonesia 
+        and has led the development the largest peatland conservation project in Sumatra. 
+        In the past, he developed the world's first REDD+ Improved Forest Management 
+        project in Africa and was the lead author of the Republic of Congo's successful 
+        application to join the World Bank's Forest Carbon Partnership Facility (FCPF). 
+        Ralph is a long-term board member of the Greenhouse Gas Management Institute (GHGMI) 
+        where he has been the Chairperson, since 2018.
         </ImageTile>
         <ImageTile src={PaulImage} id="paul" alt="Dr Paul Elkin">
         Dr. Paul Elkan is Bioeconomy's Chief Conservation Officer, with more than 

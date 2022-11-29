@@ -17,12 +17,12 @@ export const tigerSummaryList = [
   },
   {
     icon: Co2EmissionReduction,
-    primaryText: '6.4+ million',
+    primaryText: '5.6+ million',
     secondaryText: 'tonnes of emissions reductions expected per year',
   },
   {
     icon: Co2EmissionAvoid,
-    primaryText: '373 million',
+    primaryText: '357 million',
     secondaryText: 'tonnes of emissions expected to be avoided over 57 years',
   },
   {
@@ -62,7 +62,7 @@ export const gorillaSummaryList = [
   },
   {
     icon: Co2EmissionReduction,
-    primaryText: '4,9 million',
+    primaryText: '4.9 million',
     secondaryText: 'tonnes of emissions expected to be avoided over 30 years',
   },
   {
