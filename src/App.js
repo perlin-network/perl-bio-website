@@ -29,35 +29,42 @@ function App() {
           <Router>
             <div className="App">
               <Switch>
+                <Route exact path="/">
+                  <Navbar />
+                  <Home />
+                  <Footer />
+                </Route>
+                <Route exact path="/team">
+                  <Navbar />
+                  <Team />
+                  <Footer />
+                </Route>
+                <Route exact path="/work">
+                  <Navbar />
+                  <Work />
+                  <Footer />
+                </Route>
+                <Route exact path="/contact">
+                  <Navbar />
+                  <Contact />
+                  <Footer />
+                </Route>
+                <Route exact path="/terms">
+                  <Navbar />
+                  <Terms />
+                  <Footer />
+                </Route>
+                <Route exact path="/privacy">
+                  <Navbar />
+                  <Privacy />
+                  <Footer />
+                </Route>
                 <Route path="/cards/:cardId">
                   <ContactCard />
                 </Route>
-
-                <>
-                  <Navbar />
-
-                  <Route exact path="/">
-                    <Home />
-                  </Route>
-                  <Route exact path="/team">
-                    <Team />
-                  </Route>
-                  <Route exact path="/work">
-                    <Work />
-                  </Route>
-                  <Route exact path="/contact">
-                    <Contact />
-                  </Route>
-                  <Route exact path="/terms">
-                    <Terms />
-                  </Route>
-                  <Route exact path="/privacy">
-                    <Privacy />
-                  </Route>
+                <Route path="*">
                   <Redirect to="/" />
-
-                  <Footer />
-                </>
+                </Route>
               </Switch>
 
               <CookieConsent
