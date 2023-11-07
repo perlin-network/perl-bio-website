@@ -14,7 +14,6 @@ import PaulImage from '../../assets/team/dr-paul-elkan-tile.jpg';
 import MarkImage from '../../assets/team/mark-harding-tile.jpg';
 // import ByronImage from '../../assets/team/byron-grigoratos-tile.jpg';
 import GarryImage from '../../assets/team/garry-walsh-tile.jpg';
-import DarrenImage from '../../assets/team/darren-toh-tile.jpg';
 // import YenImage from '../../assets/team/yen-hoang-tile.jpg';
 import AnnieImage from '../../assets/team/annie-ye-tile.jpg';
 import SophiaImage from '../../assets/team/sophia-tile.jpg';
@@ -74,11 +73,6 @@ export default function Team() {
           responsibility agenda is discussed by Bioeconomy's chief
           communications officer Garry Walsh
         </YoutubeTile>
-        <YoutubeTile url="https://youtu.be/AGcTCvn-a6g" inverted>
-          Lean how technology is changing the shape of community engagement with
-          Bioeconomy's Darren Toh talking about the development of the Green
-          Guardian App
-        </YoutubeTile>
         <YoutubeTile url="https://youtu.be/AGcTCvn-a6g">
           Climate change-related litigation is on the rise, hear from
           Bioeconomy's Yen Hoang on the importance of avoiding greenwashing
@@ -131,13 +125,6 @@ export default function Team() {
             the regional chair for Asia Pacific of a global communications
             consultancy. He has worked with several governments supporting their
             sovereign economic communications.
-          </ImageTile>
-          <ImageTile src={DarrenImage} id="darren" alt="Darren Toh">
-            Darren Toh is Project Director at Bioeconomy with a strong focus on
-            technology and innovation. Darren is a veteran lawyer, previously
-            working for the Australian Competition Commission, NSW Ombudsman and
-            KPMG. He is a co-founder of PERL.eco and Blockcoms PR and advisor to
-            several high profile blockchain projects.
           </ImageTile>
           {/* <ImageTile src={YenImage} id="yen" alt="Yen Hoang" inverted>
             Yen Hoang is Legal Counsel at Bioeconomy with 12 years of experience

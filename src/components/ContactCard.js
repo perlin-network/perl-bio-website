@@ -15,8 +15,6 @@ import DorjeeQr from '../assets/team/dorjee-sun-qr.png';
 import ByronPng from '../assets/team/byron-grigoratos.png';
 import ByronQr from '../assets/team/byron-grigoratos-qr.png';
 import AmandaQr from '../assets/team/amanda-qr.png';
-import DarrenPng from '../assets/team/darren-toh.png';
-import DarrenQr from '../assets/team/darren-qr.png';
 import MarkPng from '../assets/team/mark-harding.png';
 import MarkQr from '../assets/team/mark-harding-qr.png';
 import RalphPng from '../assets/team/ralph-j-strebel.png';
@@ -68,16 +66,6 @@ const cards = {
     phone: '+65 8894 8041',
     image: null,
     qrCode: AmandaQr,
-    ...companyData,
-  },
-  darren: {
-    id: 'darren',
-    name: 'Darren\nToh',
-    title: 'Project\nDirector',
-    email: 'darren@bioeconomy.co',
-    phone: '+65 9428 9181',
-    image: DarrenPng,
-    qrCode: DarrenQr,
     ...companyData,
   },
   mark: {
