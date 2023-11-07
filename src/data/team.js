@@ -5,8 +5,6 @@ import RalphQr from '../assets/team/ralph-j-strebel-qr.png';
 import MarkPng from '../assets/team/mark-harding.png';
 import MarkQr from '../assets/team/mark-harding-qr.png';
 import PaulPng from '../assets/team/dr-paul-elkan.png';
-import DarrenPng from '../assets/team/darren-toh.png';
-import DarrenQr from '../assets/team/darren-qr.png';
 import GarryPng from '../assets/team/garry-walsh.png';
 // import ByronPng from '../assets/team/byron-grigoratos.png';
 // import ByronQr from '../assets/team/byron-grigoratos-qr.png';
@@ -86,13 +84,6 @@ const team = [
       'Lead director for Wildlife Conservation Society and responsible for several aerial survey efforts as part of the Great Elephant Census + analysis of conservation security for multiple regions',
       'PHD in Conservation Biology & US FAA Commercial Pilot',
     ],
-  },
-  {
-    id: 'darren',
-    name: 'Darren Toh',
-    title: 'Project Director',
-    image: DarrenPng,
-    qrCode: DarrenQr,
   },
   {
     id: 'garry',
