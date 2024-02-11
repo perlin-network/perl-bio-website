@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 // import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
-import ReactPlayer from 'react-player/lazy';
+// import ReactPlayer from 'react-player/lazy';
 
 import { ReactComponent as LogoSvg } from '../../assets/logo.svg';
 import HeroImage from '../../assets/hero-image.jpg';
@@ -17,8 +17,8 @@ import TigerTile3 from '../../assets/projects/tiger/tile-03.jpg';
 import TigerTile4 from '../../assets/projects/tiger/tile-04.jpg';
 import TigerTile5 from '../../assets/projects/tiger/tile-05.jpg';
 import TigerTile6 from '../../assets/projects/tiger/tile-06.jpg';
-import FrontierSumatra from '../../assets/video/frontier-sumatra.jpg';
-import RestorasiEkosistemRiau from '../../assets/projects/tiger/rer-logo.png';
+// import FrontierSumatra from '../../assets/video/frontier-sumatra.jpg';
+// import RestorasiEkosistemRiau from '../../assets/projects/tiger/rer-logo.png';
 import VerraLogo from '../../assets/projects/tiger/verra-logo.png';
 import TigerPartners from '../../assets/projects/tiger/partners-logo.png';
 import GorillaTile1 from '../../assets/projects/gorilla/tile-01.jpg';
@@ -61,37 +61,6 @@ export default function Work() {
           forest stewardship
         </ImageTile>
       </Box>
-      <Box pt={10} textAlign="center">
-        <Container maxWidth="md" sx={{ position: 'relative', zIndex: 2 }}>
-          <Typography
-            fontSize={{ xs: 18, md: 48 }}
-            sx={{
-              transform: { xs: 'translateY(-100%)', md: 'translateY(50%)' },
-            }}
-          >
-            Stories of hope in the powerful Discovery+ film{' '}
-            <Link
-              href="https://www.frontiersumatra.com/"
-              target="_blank"
-              rel="noopener"
-              underline="none"
-            >
-              <strong>Frontier Sumatra</strong>
-            </Link>
-          </Typography>
-        </Container>
-        <FeaturedVideo>
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=r-xgiwThYuk"
-            light={FrontierSumatra}
-            playIcon={<></>}
-            playing
-            controls
-            width="100%"
-            height="100%"
-          />
-        </FeaturedVideo>
-      </Box>
       <Grid container>
         <Grid
           item
@@ -118,10 +87,8 @@ export default function Work() {
               fontSize={{ xs: 20, md: 24 }}
               fontWeight={600}
             >
-              Tiger Carbon is from the Bioeconomy-developed Restorasi Ekosistem 
-              Riau (RER) project, which is anticipated to reduce 357+ million CO2e 
-              over its lifetime. Learn more about the project or see the 
-              VERRA registry here:
+              Tiger Carbon is from a Bioeconomy-developed project which is anticipated to reduce 357+ million 
+              CO2e over its lifetime.
             </Typography>
             <Stack
               direction="row"
@@ -141,20 +108,6 @@ export default function Work() {
                 },
               }}
             >
-              <Link
-                href="https://www.rekoforest.org/climate/a-landscape-approach-on-the-kampar-peninsula/"
-                target="_blank"
-                rel="noopener"
-                sx={{
-                  display: 'block',
-                  maxWidth: 190,
-                }}
-              >
-                <img
-                  src={RestorasiEkosistemRiau}
-                  alt="Restorasi Ekosistem Riau"
-                />
-              </Link>
               <Link
                 href="https://registry.verra.org/"
                 target="_blank"
@@ -364,26 +317,26 @@ const Headline = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const FeaturedVideo = styled(Box)(({ theme }) => ({
-  position: 'relative',
-  height: 420,
-  fontSize: 28,
-  [theme.breakpoints.down('md')]: {
-    height: 120,
-  },
-  '&::after': {
-    content: '""',
-    position: 'absolute',
-    inset: 0,
-    background:
-      'linear-gradient(0deg, rgba(17, 17, 18, 0.1) 50%, #111112 100%)',
-    pointerEvents: 'none',
-    zIndex: 1,
-  },
-  '& video': {
-    objectFit: 'cover',
-  },
-}));
+// const FeaturedVideo = styled(Box)(({ theme }) => ({
+//   position: 'relative',
+//   height: 420,
+//   fontSize: 28,
+//   [theme.breakpoints.down('md')]: {
+//     height: 120,
+//   },
+//   '&::after': {
+//     content: '""',
+//     position: 'absolute',
+//     inset: 0,
+//     background:
+//       'linear-gradient(0deg, rgba(17, 17, 18, 0.1) 50%, #111112 100%)',
+//     pointerEvents: 'none',
+//     zIndex: 1,
+//   },
+//   '& video': {
+//     objectFit: 'cover',
+//   },
+// }));
 
 const contactTop = 240;
 const contactWidth = 580;
