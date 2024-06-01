@@ -31,7 +31,7 @@ export default function HeroVideo() {
       >
         <Box width="100%" height="100%">
           <ReactPlayer
-            url="https://s3.amazonaws.com/static.memoriverse/mountain_forest3.mp4"
+            url="https://s3.amazonaws.com/static.memoriverse/Homepage+Banner.mp4"
             playing={shouldPlay}
             muted
             loop
