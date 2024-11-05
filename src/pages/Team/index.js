@@ -78,28 +78,6 @@ export default function Team() {
           Bioeconomy's Yen Hoang on the importance of avoiding greenwashing
         </YoutubeTile> */}
         <Grid pt={8}>
-          <ImageTile src={RalphImage} id="ralph" alt="Ralph Streble" inverted>
-            Ralph Strebel is Head of Carbon, Chief Legal Officer, and one of
-            Bioeconomy's co-founders. Ralph is a licensed lawyer and has been
-            involved with forest-based carbon activities since 2005. He has
-            worked extensively in REDD+ in Indonesia and has led the development
-            the largest peatland conservation project in Sumatra. In the past,
-            he developed the world's first REDD+ Improved Forest Management
-            project in Africa and was the lead author of the Republic of Congo's
-            successful application to join the World Bank's Forest Carbon
-            Partnership Facility (FCPF). Ralph is a long-term board member of
-            the Greenhouse Gas Management Institute (GHGMI) where he has been
-            the Chairperson, since 2018.
-          </ImageTile>
-          <ImageTile src={PaulImage} id="paul" alt="Dr. Paul Elkin">
-            Dr. Paul Elkan is Bioeconomy's Chief Conservation Officer, with more
-            than 30 years of experience in conservation, wildlife protection,
-            and natural resource management in Central and East Africa and the
-            Sudano-Sahel region. Paul has led major forest and savanna landscape
-            conservation efforts across the continent, provided critical
-            analyses on conservation and security, and is a leader on elephant
-            and other key species conservation in Africa.
-          </ImageTile>
           <ImageTile src={MarkImage} id="mark" alt="Mark Harding" inverted>
             Mark Harding is Head of Projects and one of Bioeconomy’s
             co-founders. Mark has been successfully developing carbon and nature
@@ -135,26 +113,6 @@ export default function Team() {
             from Stanford University, a JD from Cornell Law School, and is a
             member of the New York Bar.
           </ImageTile> */}
-          <ImageTile src={AnnieImage} id="annie" alt="Annie Ye">
-            Annie Ye is Bioeconomy's Financial Analyst with more than 20 years
-            of experience in corporate finance, strategy and economics. Annie
-            previously worked as a commercial and treasury advisor at one of the
-            world's largest corporate enterprises. She is a specialist in
-            financial modelling and analysis and has led a number of $2bn +
-            M&amp;A and project financing activities in North America and Asia.
-            Annie holds both a PhD in Biology as well as an MBA and has been
-            published in over ten books and journals.
-          </ImageTile>
-          <ImageTile src={SophiaImage} id="sophia" alt="Dr. Chang (Sophia) Xu">
-            Dr. Chang (Sophia) Xu is a carbon technical manager of Bioeconomy.
-            Sophia has 5 years of experience in carbon development projects.
-            Sophia holds a PhD in Environmental Science, from Monash University
-            on inundation effects on greenhouse gas emissions (GHGs) and carbon
-            storage from coastal wetland soils. She is a former visiting
-            researcher at the University of Helsinki and a former research
-            assistant at the school of the environment at Tsinghua University,
-            China.
-          </ImageTile>
         </Grid>
       </Box>
       <ContactBg>

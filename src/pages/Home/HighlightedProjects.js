@@ -23,19 +23,6 @@ export default function HighlightedProjects() {
           </Title>
         </Box>
       </Container>
-      <ProjectVideo url="" preview={TigerImage} alt="tiger carbon">
-        <Project>
-          {/* <ProjectName>Tiger carbon ensures</ProjectName> */}
-          <ProjectDesc>
-            Tiger Carbon ensures 130,090 ha are protected and restored,
-            achieving 5.7+ million tonnes in emissions reductions (CO2e) each year and
-            over 357 million tonnes over the next fifty years, protecting 797
-            species, planting 70 different native tree varieties, contributing
-            to sustainable livelihoods for 17,000 people in the local community
-          </ProjectDesc>
-          <LearnMore href="/work#tiger">learn more</LearnMore>
-        </Project>
-      </ProjectVideo>
       <ProjectVideo url="" preview={GorillaImage} alt="gorilla carbon" inverted>
         <Project>
           {/* <ProjectName>Gorilla carbon</ProjectName> */}
