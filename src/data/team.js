@@ -29,21 +29,6 @@ const team = [
     ],
   },
   {
-    id: 'ralph',
-    name: 'Ralph J Strebel',
-    title: 'Co-Founder, Head of Carbon & Legal',
-    image: RalphPng,
-    qrCode: RalphQr,
-    experience: [
-      'Lead advisor to Carbon Conservation',
-      'Chairman of Greenhouse Gas Management Institute (GHGMI)',
-      'Developed the world’s first REDD+ Improved Forest Management project in Africa',
-      'Lead author of the Republic of Congo’s successful application to join the World Bank’s',
-      'Forest Carbon Partnership Facility',
-      'Head of Carbon at Perlin',
-    ],
-  },
-  {
     id: 'mark',
     name: 'Mark Harding',
     title: 'Co-Founder & Head of Projects',
@@ -72,20 +57,6 @@ const team = [
   //   ],
   // },
   {
-    id: 'paul',
-    name: 'Paul Elkan',
-    title: 'Chief Conservation Officer',
-    image: PaulPng,
-    qrCode: null,
-    experience: [
-      'Former lead director for Wildlife',
-      '30 years of conservation and wildlife protection of Central and East Africa and the Sudano-Sahel region',
-      'Led c. $200 million conservation funding from well known bilateral, multilateral, and private donors in Africa',
-      'Lead director for Wildlife Conservation Society and responsible for several aerial survey efforts as part of the Great Elephant Census + analysis of conservation security for multiple regions',
-      'PHD in Conservation Biology & US FAA Commercial Pilot',
-    ],
-  },
-  {
     id: 'garry',
     name: 'Garry Walsh',
     title: 'Chief Communications Officer',
@@ -107,27 +78,7 @@ const team = [
   //   image: YenPng,
   //   qrCode: null,
   // },
-  {
-    id: 'annie',
-    name: 'Annie Ye',
-    title: 'Financial Analyst',
-    image: AnnieJpg,
-    qrCode: null,
-    experience: [
-      '20 years of experience in corporate finance, strategy and economics',
-      'Former commercial advisor at BP America and Treasury advisor at BP Singapore',
-      'Former investment account analyst at Goldman Sachs affiliates',
-      'Specialized in Financial Modeling and Analysis. Led a number of oil and gas major project developments, M&A activities in North America, and project financing in Asia (all $2bn+ scope)',
-      'PhD in Biology and MBA; 10+ journal and book publications',
-    ],
-  },
-  {
-    id: 'sophia',
-    name: 'Dr. Chang (Sophia) Xu',
-    title: 'Carbon Technical Manager',
-    image: SophiaJpg,
-    qrCode: null,
-  },
+
 ];
 
 export default team;
