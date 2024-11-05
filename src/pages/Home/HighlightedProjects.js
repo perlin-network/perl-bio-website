@@ -6,7 +6,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
 import ProjectVideo from './ProjectVideo';
-import TigerImage from '../../assets/video/project-tiger.jpg';
 import GorillaImage from '../../assets/video/project-gorilla.jpg';
 
 export default function HighlightedProjects() {
