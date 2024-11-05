@@ -1,16 +1,8 @@
 import DorjeePng from '../assets/team/dorjee-sun.png';
 import DorjeeQr from '../assets/team/dorjee-sun-qr.png';
-import RalphPng from '../assets/team/ralph-j-strebel.png';
-import RalphQr from '../assets/team/ralph-j-strebel-qr.png';
 import MarkPng from '../assets/team/mark-harding.png';
 import MarkQr from '../assets/team/mark-harding-qr.png';
-import PaulPng from '../assets/team/dr-paul-elkan.png';
 import GarryPng from '../assets/team/garry-walsh.png';
-// import ByronPng from '../assets/team/byron-grigoratos.png';
-// import ByronQr from '../assets/team/byron-grigoratos-qr.png';
-// import YenPng from '../assets/team/yen-hoang.png';
-import AnnieJpg from '../assets/team/annie-ye.jpg';
-import SophiaJpg from '../assets/team/sophia.jpg';
 
 const team = [
   {

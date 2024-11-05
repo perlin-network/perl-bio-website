@@ -9,14 +9,8 @@ import YoutubeTile from './YoutubeTile';
 import ImageTile from './ImageTile';
 import ContactForm from '../../components/ContactForm';
 
-import RalphImage from '../../assets/team/ralph-j-strebel-tile.jpg';
-import PaulImage from '../../assets/team/dr-paul-elkan-tile.jpg';
 import MarkImage from '../../assets/team/mark-harding-tile.jpg';
-// import ByronImage from '../../assets/team/byron-grigoratos-tile.jpg';
 import GarryImage from '../../assets/team/garry-walsh-tile.jpg';
-// import YenImage from '../../assets/team/yen-hoang-tile.jpg';
-import AnnieImage from '../../assets/team/annie-ye-tile.jpg';
-import SophiaImage from '../../assets/team/sophia-tile.jpg';
 import HeroImage from '../../assets/hero-image.jpg';
 
 export default function Team() {

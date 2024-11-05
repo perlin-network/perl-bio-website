@@ -11,16 +11,8 @@ import Link from '@mui/material/Link';
 
 import { ReactComponent as LogoSvg } from '../../assets/logo.svg';
 import HeroImage from '../../assets/hero-image.jpg';
-import TigerTile1 from '../../assets/projects/tiger/tile-01.jpg';
-import TigerTile2 from '../../assets/projects/tiger/tile-02.jpg';
-import TigerTile3 from '../../assets/projects/tiger/tile-03.jpg';
-import TigerTile4 from '../../assets/projects/tiger/tile-04.jpg';
-import TigerTile5 from '../../assets/projects/tiger/tile-05.jpg';
-import TigerTile6 from '../../assets/projects/tiger/tile-06.jpg';
 // import FrontierSumatra from '../../assets/video/frontier-sumatra.jpg';
 // import RestorasiEkosistemRiau from '../../assets/projects/tiger/rer-logo.png';
-import VerraLogo from '../../assets/projects/tiger/verra-logo.png';
-import TigerPartners from '../../assets/projects/tiger/partners-logo.png';
 import GorillaTile1 from '../../assets/projects/gorilla/tile-01.jpg';
 import GorillaTile2 from '../../assets/projects/gorilla/tile-02.jpg';
 import GorillaTile3 from '../../assets/projects/gorilla/tile-03.jpg';
@@ -34,7 +26,7 @@ import DetailsGridItem from '../../components/DetailsGridItem';
 import ShadowBox from '../../components/ShadowBox';
 import TalkToUs from './TalkToUs';
 import SummaryList from './SummaryList';
-import { tigerSummaryList, gorillaSummaryList } from './data';
+import { gorillaSummaryList } from './data';
 
 export default function Work() {
   return (
